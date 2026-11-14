@@ -1,0 +1,773 @@
+track,season,driver,driver_name,team,grid,position,status
+Monaco,2000,COU,David Coulthard,McLaren,3,1,Finished
+Monaco,2000,BAR,Rubens Barrichello,Ferrari,6,2,Finished
+Monaco,2000,FIS,Giancarlo Fisichella,Benetton,8,3,Finished
+Monaco,2000,IRV,Eddie Irvine,Jaguar,10,4,Finished
+Monaco,2000,SAL,Mika Salo,Sauber,13,5,Finished
+Monaco,2000,HÄK,Mika Häkkinen,McLaren,5,6,+1 Lap
+Monaco,2000,VIL,Jacques Villeneuve,BAR,17,7,+1 Lap
+Monaco,2000,HEI,Nick Heidfeld,Prost,18,8,+1 Lap
+Monaco,2000,HER,Johnny Herbert,Jaguar,11,9,+2 Laps
+Monaco,2000,FRE,Heinz-Harald Frentzen,Jordan,4,10,Spun off
+Monaco,2000,VER,Jos Verstappen,Arrows,15,11,Spun off
+Monaco,2000,MSC,Michael Schumacher,Ferrari,1,12,Suspension
+Monaco,2000,ZON,Ricardo Zonta,BAR,20,13,Spun off
+Monaco,2000,SCH,Ralf Schumacher,Williams,9,14,Spun off
+Monaco,2000,TRU,Jarno Trulli,Jordan,2,15,Gearbox
+Monaco,2000,DIN,Pedro Diniz,Sauber,19,16,Spun off
+Monaco,2000,ALE,Jean Alesi,Prost,7,17,Transmission
+Monaco,2000,MAZ,Gastón Mazzacane,Minardi,22,18,Spun off
+Monaco,2000,GEN,Marc Gené,Minardi,21,19,Gearbox
+Monaco,2000,WUR,Alexander Wurz,Benetton,12,20,Spun off
+Monaco,2000,BUT,Jenson Button,Williams,14,21,Engine
+Monaco,2000,DLR,Pedro de la Rosa,Arrows,16,22,Not restarted
+Monaco,2001,MSC,Michael Schumacher,Ferrari,2,1,Finished
+Monaco,2001,BAR,Rubens Barrichello,Ferrari,4,2,Finished
+Monaco,2001,IRV,Eddie Irvine,Jaguar,6,3,Finished
+Monaco,2001,VIL,Jacques Villeneuve,BAR,9,4,Finished
+Monaco,2001,COU,David Coulthard,McLaren,1,5,+1 Lap
+Monaco,2001,ALE,Jean Alesi,Prost,11,6,+1 Lap
+Monaco,2001,BUT,Jenson Button,Benetton,17,7,+1 Lap
+Monaco,2001,VER,Jos Verstappen,Arrows,19,8,+1 Lap
+Monaco,2001,BER,Enrique Bernoldi,Arrows,20,9,+2 Laps
+Monaco,2001,RAI,Kimi Räikkönen,Sauber,15,10,+5 Laps
+Monaco,2001,SCH,Ralf Schumacher,Williams,5,11,Electrical
+Monaco,2001,MAR,Tarso Marques,Minardi,22,12,Transmission
+Monaco,2001,ALO,Fernando Alonso,Minardi,18,13,Gearbox
+Monaco,2001,FRE,Heinz-Harald Frentzen,Jordan,13,14,Accident
+Monaco,2001,FIS,Giancarlo Fisichella,Benetton,10,15,Gearbox
+Monaco,2001,TRU,Jarno Trulli,Jordan,8,16,Hydraulics
+Monaco,2001,BUR,Luciano Burti,Prost,21,17,Gearbox
+Monaco,2001,DLR,Pedro de la Rosa,Jaguar,14,18,Hydraulics
+Monaco,2001,HÄK,Mika Häkkinen,McLaren,3,19,Steering
+Monaco,2001,PAN,Olivier Panis,BAR,12,20,Steering
+Monaco,2001,MON,Juan Pablo Montoya,Williams,7,21,Spun off
+Monaco,2001,HEI,Nick Heidfeld,Sauber,16,22,Collision
+Monaco,2002,COU,David Coulthard,McLaren,2,1,Finished
+Monaco,2002,MSC,Michael Schumacher,Ferrari,3,2,Finished
+Monaco,2002,SCH,Ralf Schumacher,Williams,4,3,Finished
+Monaco,2002,TRU,Jarno Trulli,Renault,7,4,+1 Lap
+Monaco,2002,FIS,Giancarlo Fisichella,Jordan,11,5,+1 Lap
+Monaco,2002,FRE,Heinz-Harald Frentzen,Arrows,12,6,+1 Lap
+Monaco,2002,BAR,Rubens Barrichello,Ferrari,5,7,+1 Lap
+Monaco,2002,HEI,Nick Heidfeld,Sauber,15,8,+2 Laps
+Monaco,2002,IRV,Eddie Irvine,Jaguar,19,9,+2 Laps
+Monaco,2002,DLR,Pedro de la Rosa,Jaguar,17,10,+2 Laps
+Monaco,2002,WEB,Mark Webber,Minardi,20,11,+2 Laps
+Monaco,2002,BER,Enrique Bernoldi,Arrows,21,12,+2 Laps
+Monaco,2002,SAL,Mika Salo,Toyota,9,13,Brakes
+Monaco,2002,MAS,Felipe Massa,Sauber,13,14,Accident
+Monaco,2002,PAN,Olivier Panis,BAR,18,15,Collision
+Monaco,2002,BUT,Jenson Button,Renault,8,16,Collision
+Monaco,2002,MON,Juan Pablo Montoya,Williams,1,17,Engine
+Monaco,2002,VIL,Jacques Villeneuve,BAR,14,18,Mechanical
+Monaco,2002,RAI,Kimi Räikkönen,McLaren,6,19,Collision
+Monaco,2002,YOO,Alex Yoong,Minardi,22,20,Accident
+Monaco,2002,SAT,Takuma Sato,Jordan,16,21,Spun off
+Monaco,2002,MCN,Allan McNish,Toyota,10,22,Accident
+Monaco,2003,MON,Juan Pablo Montoya,Williams,3,1,Finished
+Monaco,2003,RAI,Kimi Räikkönen,McLaren,2,2,Finished
+Monaco,2003,MSC,Michael Schumacher,Ferrari,5,3,Finished
+Monaco,2003,SCH,Ralf Schumacher,Williams,1,4,Finished
+Monaco,2003,ALO,Fernando Alonso,Renault,8,5,Finished
+Monaco,2003,TRU,Jarno Trulli,Renault,4,6,Finished
+Monaco,2003,COU,David Coulthard,McLaren,6,7,Finished
+Monaco,2003,BAR,Rubens Barrichello,Ferrari,7,8,Finished
+Monaco,2003,DA ,Cristiano da Matta,Toyota,10,9,+1 Lap
+Monaco,2003,FIS,Giancarlo Fisichella,Jordan,12,10,+1 Lap
+Monaco,2003,HEI,Nick Heidfeld,Sauber,14,11,+2 Laps
+Monaco,2003,FIR,Ralph Firman,Jordan,16,12,+2 Laps
+Monaco,2003,PAN,Olivier Panis,Toyota,17,13,+4 Laps
+Monaco,2003,VIL,Jacques Villeneuve,BAR,11,14,Engine
+Monaco,2003,WIL,Justin Wilson,Minardi,19,15,Fuel system
+Monaco,2003,VER,Jos Verstappen,Minardi,18,16,Fuel system
+Monaco,2003,WEB,Mark Webber,Jaguar,9,17,Hydraulics
+Monaco,2003,PIZ,Antônio Pizzonia,Jaguar,13,18,Electrical
+Monaco,2003,FRE,Heinz-Harald Frentzen,Sauber,15,19,Accident
+Monaco,2003,BUT,Jenson Button,BAR,20,20,Injured
+Monaco,2004,TRU,Jarno Trulli,Renault,1,1,Finished
+Monaco,2004,BUT,Jenson Button,BAR,2,2,Finished
+Monaco,2004,BAR,Rubens Barrichello,Ferrari,6,3,Finished
+Monaco,2004,MON,Juan Pablo Montoya,Williams,9,4,+1 Lap
+Monaco,2004,MAS,Felipe Massa,Sauber,16,5,+1 Lap
+Monaco,2004,DA ,Cristiano da Matta,Toyota,15,6,+1 Lap
+Monaco,2004,HEI,Nick Heidfeld,Jordan,17,7,+2 Laps
+Monaco,2004,PAN,Olivier Panis,Toyota,13,8,+3 Laps
+Monaco,2004,BAU,Zsolt Baumgartner,Minardi,19,9,+6 Laps
+Monaco,2004,SCH,Ralf Schumacher,Williams,12,10,Gearbox
+Monaco,2004,MSC,Michael Schumacher,Ferrari,4,11,Collision
+Monaco,2004,ALO,Fernando Alonso,Renault,3,12,Accident
+Monaco,2004,RAI,Kimi Räikkönen,McLaren,5,13,Pneumatics
+Monaco,2004,BRU,Gianmaria Bruni,Minardi,20,14,Gearbox
+Monaco,2004,PAN,Giorgio Pantano,Jordan,18,15,Transmission
+Monaco,2004,WEB,Mark Webber,Jaguar,11,16,Gearbox
+Monaco,2004,SAT,Takuma Sato,BAR,7,17,Engine
+Monaco,2004,COU,David Coulthard,McLaren,8,18,Collision
+Monaco,2004,FIS,Giancarlo Fisichella,Sauber,10,19,Collision
+Monaco,2004,KLI,Christian Klien,Jaguar,14,20,Accident
+Monaco,2005,RAI,Kimi Räikkönen,McLaren,1,1,Finished
+Monaco,2005,HEI,Nick Heidfeld,Williams,6,2,Finished
+Monaco,2005,WEB,Mark Webber,Williams,3,3,Finished
+Monaco,2005,ALO,Fernando Alonso,Renault,2,4,Finished
+Monaco,2005,MON,Juan Pablo Montoya,McLaren,16,5,Finished
+Monaco,2005,SCH,Ralf Schumacher,Toyota,18,6,Finished
+Monaco,2005,MSC,Michael Schumacher,Ferrari,8,7,Finished
+Monaco,2005,BAR,Rubens Barrichello,Ferrari,10,8,Finished
+Monaco,2005,MAS,Felipe Massa,Sauber,11,9,+1 Lap
+Monaco,2005,TRU,Jarno Trulli,Toyota,5,10,+1 Lap
+Monaco,2005,VIL,Jacques Villeneuve,Sauber,9,11,+1 Lap
+Monaco,2005,FIS,Giancarlo Fisichella,Renault,4,12,+1 Lap
+Monaco,2005,TMO,Tiago Monteiro,Jordan,15,13,+3 Laps
+Monaco,2005,ALB,Christijan Albers,Minardi,14,14,+5 Laps
+Monaco,2005,LIU,Vitantonio Liuzzi,Red Bull,12,15,Accident
+Monaco,2005,FRI,Patrick Friesacher,Minardi,13,16,Accident
+Monaco,2005,COU,David Coulthard,Red Bull,7,17,Accident
+Monaco,2005,KAR,Narain Karthikeyan,Jordan,17,18,Hydraulics
+Monaco,2006,ALO,Fernando Alonso,Renault,1,1,Finished
+Monaco,2006,MON,Juan Pablo Montoya,McLaren,4,2,Finished
+Monaco,2006,COU,David Coulthard,Red Bull,7,3,Finished
+Monaco,2006,BAR,Rubens Barrichello,Honda,5,4,Finished
+Monaco,2006,MSC,Michael Schumacher,Ferrari,22,5,Finished
+Monaco,2006,FIS,Giancarlo Fisichella,Renault,9,6,Finished
+Monaco,2006,HEI,Nick Heidfeld,BMW Sauber,15,7,+1 Lap
+Monaco,2006,SCH,Ralf Schumacher,Toyota,10,8,+1 Lap
+Monaco,2006,MAS,Felipe Massa,Ferrari,21,9,+1 Lap
+Monaco,2006,LIU,Vitantonio Liuzzi,Toro Rosso,12,10,+1 Lap
+Monaco,2006,BUT,Jenson Button,Honda,13,11,+1 Lap
+Monaco,2006,ALB,Christijan Albers,MF1,16,12,+1 Lap
+Monaco,2006,SPE,Scott Speed,Toro Rosso,18,13,+1 Lap
+Monaco,2006,VIL,Jacques Villeneuve,BMW Sauber,14,14,+1 Lap
+Monaco,2006,TMO,Tiago Monteiro,MF1,17,15,+2 Laps
+Monaco,2006,FMO,Franck Montagny,Super Aguri,20,16,+3 Laps
+Monaco,2006,TRU,Jarno Trulli,Toyota,6,17,Hydraulics
+Monaco,2006,KLI,Christian Klien,Red Bull,11,18,Transmission
+Monaco,2006,ROS,Nico Rosberg,Williams,8,19,Accident
+Monaco,2006,RAI,Kimi Räikkönen,McLaren,3,20,Heat shield fire
+Monaco,2006,WEB,Mark Webber,Williams,2,21,Exhaust
+Monaco,2006,SAT,Takuma Sato,Super Aguri,19,22,Electrical
+Monaco,2007,ALO,Fernando Alonso,McLaren,1,1,Finished
+Monaco,2007,HAM,Lewis Hamilton,McLaren,2,2,Finished
+Monaco,2007,MAS,Felipe Massa,Ferrari,3,3,Finished
+Monaco,2007,FIS,Giancarlo Fisichella,Renault,4,4,+1 Lap
+Monaco,2007,KUB,Robert Kubica,BMW Sauber,8,5,+1 Lap
+Monaco,2007,HEI,Nick Heidfeld,BMW Sauber,7,6,+1 Lap
+Monaco,2007,WUR,Alexander Wurz,Williams,11,7,+1 Lap
+Monaco,2007,RAI,Kimi Räikkönen,Ferrari,16,8,+1 Lap
+Monaco,2007,SPE,Scott Speed,Toro Rosso,18,9,+1 Lap
+Monaco,2007,BAR,Rubens Barrichello,Honda,9,10,+1 Lap
+Monaco,2007,BUT,Jenson Button,Honda,10,11,+1 Lap
+Monaco,2007,ROS,Nico Rosberg,Williams,5,12,+1 Lap
+Monaco,2007,KOV,Heikki Kovalainen,Renault,15,13,Engine
+Monaco,2007,COU,David Coulthard,Red Bull,13,14,+2 Laps
+Monaco,2007,TRU,Jarno Trulli,Toyota,14,15,+2 Laps
+Monaco,2007,SCH,Ralf Schumacher,Toyota,20,16,+2 Laps
+Monaco,2007,SAT,Takuma Sato,Super Aguri,21,17,+2 Laps
+Monaco,2007,DAV,Anthony Davidson,Super Aguri,17,18,+2 Laps
+Monaco,2007,ALB,Christijan Albers,Spyker,22,19,Driveshaft
+Monaco,2007,SUT,Adrian Sutil,Spyker,19,20,Accident
+Monaco,2007,WEB,Mark Webber,Red Bull,6,21,Gearbox
+Monaco,2007,LIU,Vitantonio Liuzzi,Toro Rosso,12,22,Accident
+Monaco,2008,HAM,Lewis Hamilton,McLaren,3,1,Finished
+Monaco,2008,KUB,Robert Kubica,BMW Sauber,5,2,Finished
+Monaco,2008,MAS,Felipe Massa,Ferrari,1,3,Finished
+Monaco,2008,WEB,Mark Webber,Red Bull,9,4,Finished
+Monaco,2008,VET,Sebastian Vettel,Toro Rosso,19,5,Finished
+Monaco,2008,BAR,Rubens Barrichello,Honda,14,6,Finished
+Monaco,2008,NAK,Kazuki Nakajima,Williams,13,7,Finished
+Monaco,2008,KOV,Heikki Kovalainen,McLaren,4,8,Finished
+Monaco,2008,RAI,Kimi Räikkönen,Ferrari,2,9,Finished
+Monaco,2008,ALO,Fernando Alonso,Renault,7,10,+1 Lap
+Monaco,2008,BUT,Jenson Button,Honda,11,11,+1 Lap
+Monaco,2008,GLO,Timo Glock,Toyota,10,12,+1 Lap
+Monaco,2008,TRU,Jarno Trulli,Toyota,8,13,+1 Lap
+Monaco,2008,HEI,Nick Heidfeld,BMW Sauber,12,14,+4 Laps
+Monaco,2008,SUT,Adrian Sutil,Force India,18,15,Collision
+Monaco,2008,ROS,Nico Rosberg,Williams,6,16,Accident
+Monaco,2008,PIQ,Nelson Piquet Jr.,Renault,17,17,Accident
+Monaco,2008,FIS,Giancarlo Fisichella,Force India,20,18,Gearbox
+Monaco,2008,COU,David Coulthard,Red Bull,15,19,Accident
+Monaco,2008,BOU,Sébastien Bourdais,Toro Rosso,16,20,Collision
+Monaco,2009,BUT,Jenson Button,Brawn,1,1,Finished
+Monaco,2009,BAR,Rubens Barrichello,Brawn,3,2,Finished
+Monaco,2009,RAI,Kimi Räikkönen,Ferrari,2,3,Finished
+Monaco,2009,MAS,Felipe Massa,Ferrari,5,4,Finished
+Monaco,2009,WEB,Mark Webber,Red Bull,8,5,Finished
+Monaco,2009,ROS,Nico Rosberg,Williams,6,6,Finished
+Monaco,2009,ALO,Fernando Alonso,Renault,9,7,Finished
+Monaco,2009,BOU,Sébastien Bourdais,Toro Rosso,14,8,Finished
+Monaco,2009,FIS,Giancarlo Fisichella,Force India,13,9,Finished
+Monaco,2009,GLO,Timo Glock,Toyota,20,10,+1 Lap
+Monaco,2009,HEI,Nick Heidfeld,BMW Sauber,16,11,+1 Lap
+Monaco,2009,HAM,Lewis Hamilton,McLaren,19,12,+1 Lap
+Monaco,2009,TRU,Jarno Trulli,Toyota,18,13,+1 Lap
+Monaco,2009,SUT,Adrian Sutil,Force India,15,14,+1 Lap
+Monaco,2009,NAK,Kazuki Nakajima,Williams,10,15,Accident
+Monaco,2009,KOV,Heikki Kovalainen,McLaren,7,16,Accident
+Monaco,2009,KUB,Robert Kubica,BMW Sauber,17,17,Brakes
+Monaco,2009,VET,Sebastian Vettel,Red Bull,4,18,Accident
+Monaco,2009,PIQ,Nelson Piquet Jr.,Renault,12,19,Collision
+Monaco,2009,BUE,Sébastien Buemi,Toro Rosso,11,20,Collision
+Monaco,2010,WEB,Mark Webber,Red Bull,1,1,Finished
+Monaco,2010,VET,Sebastian Vettel,Red Bull,3,2,Finished
+Monaco,2010,KUB,Robert Kubica,Renault,2,3,Finished
+Monaco,2010,MAS,Felipe Massa,Ferrari,4,4,Finished
+Monaco,2010,HAM,Lewis Hamilton,McLaren,5,5,Finished
+Monaco,2010,ALO,Fernando Alonso,Ferrari,24,6,Finished
+Monaco,2010,ROS,Nico Rosberg,Mercedes,6,7,Finished
+Monaco,2010,SUT,Adrian Sutil,Force India,12,8,Finished
+Monaco,2010,LIU,Vitantonio Liuzzi,Force India,10,9,Finished
+Monaco,2010,BUE,Sébastien Buemi,Toro Rosso,13,10,Finished
+Monaco,2010,ALG,Jaime Alguersuari,Toro Rosso,17,11,Finished
+Monaco,2010,MSC,Michael Schumacher,Mercedes,7,12,Finished
+Monaco,2010,PET,Vitaly Petrov,Renault,14,13,Brakes
+Monaco,2010,CHA,Karun Chandhok,HRT,23,14,Collision
+Monaco,2010,TRU,Jarno Trulli,Lotus,19,15,Collision
+Monaco,2010,KOV,Heikki Kovalainen,Lotus,18,16,Steering
+Monaco,2010,SEN,Bruno Senna,HRT,22,17,Hydraulics
+Monaco,2010,BAR,Rubens Barrichello,Williams,9,18,Suspension
+Monaco,2010,KOB,Kamui Kobayashi,Sauber,16,19,Gearbox
+Monaco,2010,DIG,Lucas di Grassi,Virgin,21,20,Wheel
+Monaco,2010,GLO,Timo Glock,Virgin,20,21,Track rod
+Monaco,2010,DLR,Pedro de la Rosa,Sauber,15,22,Hydraulics
+Monaco,2010,BUT,Jenson Button,McLaren,8,23,Engine
+Monaco,2010,HUL,Nico Hülkenberg,Williams,11,24,Front wing
+Monaco,2011,VET,Sebastian Vettel,Red Bull,1,1,Finished
+Monaco,2011,ALO,Fernando Alonso,Ferrari,4,2,Finished
+Monaco,2011,BUT,Jenson Button,McLaren,2,3,Finished
+Monaco,2011,WEB,Mark Webber,Red Bull,3,4,Finished
+Monaco,2011,KOB,Kamui Kobayashi,Sauber,12,5,Finished
+Monaco,2011,HAM,Lewis Hamilton,McLaren,9,6,Finished
+Monaco,2011,SUT,Adrian Sutil,Force India,14,7,+1 Lap
+Monaco,2011,HEI,Nick Heidfeld,Renault,15,8,+1 Lap
+Monaco,2011,BAR,Rubens Barrichello,Williams,11,9,+1 Lap
+Monaco,2011,BUE,Sébastien Buemi,Toro Rosso,16,10,+1 Lap
+Monaco,2011,ROS,Nico Rosberg,Mercedes,7,11,+2 Laps
+Monaco,2011,DIR,Paul di Resta,Force India,13,12,+2 Laps
+Monaco,2011,TRU,Jarno Trulli,Lotus,18,13,+2 Laps
+Monaco,2011,KOV,Heikki Kovalainen,Lotus,17,14,+2 Laps
+Monaco,2011,DAM,Jérôme d'Ambrosio,Virgin,21,15,+3 Laps
+Monaco,2011,LIU,Vitantonio Liuzzi,HRT,23,16,+3 Laps
+Monaco,2011,KAR,Narain Karthikeyan,HRT,22,17,+4 Laps
+Monaco,2011,MAL,Pastor Maldonado,Williams,8,18,Accident
+Monaco,2011,PET,Vitaly Petrov,Renault,10,19,Collision
+Monaco,2011,ALG,Jaime Alguersuari,Toro Rosso,19,20,Collision
+Monaco,2011,MAS,Felipe Massa,Ferrari,6,21,Accident
+Monaco,2011,MSC,Michael Schumacher,Mercedes,5,22,Engine
+Monaco,2011,GLO,Timo Glock,Virgin,20,23,Suspension
+Monaco,2011,PER,Sergio Pérez,Sauber,0,24,Injury
+Monaco,2012,WEB,Mark Webber,Red Bull,1,1,Finished
+Monaco,2012,ROS,Nico Rosberg,Mercedes,2,2,Finished
+Monaco,2012,ALO,Fernando Alonso,Ferrari,5,3,Finished
+Monaco,2012,VET,Sebastian Vettel,Red Bull,9,4,Finished
+Monaco,2012,HAM,Lewis Hamilton,McLaren,3,5,Finished
+Monaco,2012,MAS,Felipe Massa,Ferrari,7,6,Finished
+Monaco,2012,DIR,Paul di Resta,Force India,14,7,Finished
+Monaco,2012,HUL,Nico Hülkenberg,Force India,10,8,Finished
+Monaco,2012,RAI,Kimi Räikkönen,Lotus F1,8,9,Finished
+Monaco,2012,SEN,Bruno Senna,Williams,13,10,Finished
+Monaco,2012,PER,Sergio Pérez,Sauber,23,11,+1 Lap
+Monaco,2012,VER,Jean-Éric Vergne,Toro Rosso,16,12,+1 Lap
+Monaco,2012,KOV,Heikki Kovalainen,Caterham,17,13,+1 Lap
+Monaco,2012,GLO,Timo Glock,Marussia,19,14,+1 Lap
+Monaco,2012,KAR,Narain Karthikeyan,HRT,22,15,+2 Laps
+Monaco,2012,BUT,Jenson Button,McLaren,12,16,Collision
+Monaco,2012,RIC,Daniel Ricciardo,Toro Rosso,15,17,Retired
+Monaco,2012,PIC,Charles Pic,Marussia,21,18,Retired
+Monaco,2012,MSC,Michael Schumacher,Mercedes,6,19,Fuel pressure
+Monaco,2012,PET,Vitaly Petrov,Caterham,18,20,Electrical
+Monaco,2012,KOB,Kamui Kobayashi,Sauber,11,21,Accident
+Monaco,2012,DLR,Pedro de la Rosa,HRT,20,22,Accident
+Monaco,2012,MAL,Pastor Maldonado,Williams,24,23,Accident
+Monaco,2012,GRO,Romain Grosjean,Lotus F1,4,24,Accident
+Monaco,2013,ROS,Nico Rosberg,Mercedes,1,1,Finished
+Monaco,2013,VET,Sebastian Vettel,Red Bull,3,2,Finished
+Monaco,2013,WEB,Mark Webber,Red Bull,4,3,Finished
+Monaco,2013,HAM,Lewis Hamilton,Mercedes,2,4,Finished
+Monaco,2013,SUT,Adrian Sutil,Force India,8,5,Finished
+Monaco,2013,BUT,Jenson Button,McLaren,9,6,Finished
+Monaco,2013,ALO,Fernando Alonso,Ferrari,6,7,Finished
+Monaco,2013,VER,Jean-Éric Vergne,Toro Rosso,10,8,Finished
+Monaco,2013,DIR,Paul di Resta,Force India,17,9,Finished
+Monaco,2013,RAI,Kimi Räikkönen,Lotus F1,5,10,Finished
+Monaco,2013,HUL,Nico Hülkenberg,Sauber,11,11,Finished
+Monaco,2013,BOT,Valtteri Bottas,Williams,14,12,Finished
+Monaco,2013,GUT,Esteban Gutiérrez,Sauber,19,13,Finished
+Monaco,2013,CHI,Max Chilton,Marussia,22,14,Finished
+Monaco,2013,VDG,Giedo van der Garde,Caterham,15,15,Finished
+Monaco,2013,PER,Sergio Pérez,McLaren,7,16,Suspension
+Monaco,2013,GRO,Romain Grosjean,Lotus F1,13,17,Collision
+Monaco,2013,RIC,Daniel Ricciardo,Toro Rosso,12,18,Collision
+Monaco,2013,BIA,Jules Bianchi,Marussia,20,19,Brakes
+Monaco,2013,MAL,Pastor Maldonado,Williams,16,20,Collision
+Monaco,2013,MAS,Felipe Massa,Ferrari,21,21,Accident
+Monaco,2013,PIC,Charles Pic,Caterham,18,22,Gearbox
+Monaco,2014,ROS,Nico Rosberg,Mercedes,1,1,Finished
+Monaco,2014,HAM,Lewis Hamilton,Mercedes,2,2,Finished
+Monaco,2014,RIC,Daniel Ricciardo,Red Bull,3,3,Finished
+Monaco,2014,ALO,Fernando Alonso,Ferrari,5,4,Finished
+Monaco,2014,HUL,Nico Hülkenberg,Force India,11,5,+1 Lap
+Monaco,2014,BUT,Jenson Button,McLaren,12,6,+1 Lap
+Monaco,2014,MAS,Felipe Massa,Williams,16,7,+1 Lap
+Monaco,2014,GRO,Romain Grosjean,Lotus F1,14,8,+1 Lap
+Monaco,2014,BIA,Jules Bianchi,Marussia,21,9,+1 Lap
+Monaco,2014,MAG,Kevin Magnussen,McLaren,8,10,+1 Lap
+Monaco,2014,ERI,Marcus Ericsson,Caterham,22,11,+1 Lap
+Monaco,2014,RAI,Kimi Räikkönen,Ferrari,6,12,+1 Lap
+Monaco,2014,KOB,Kamui Kobayashi,Caterham,20,13,+2 Laps
+Monaco,2014,CHI,Max Chilton,Marussia,19,14,+3 Laps
+Monaco,2014,GUT,Esteban Gutiérrez,Sauber,17,15,Accident
+Monaco,2014,BOT,Valtteri Bottas,Williams,13,16,Engine
+Monaco,2014,VER,Jean-Éric Vergne,Toro Rosso,7,17,Engine
+Monaco,2014,SUT,Adrian Sutil,Sauber,18,18,Accident
+Monaco,2014,KVY,Daniil Kvyat,Toro Rosso,9,19,Mechanical
+Monaco,2014,VET,Sebastian Vettel,Red Bull,4,20,Turbo
+Monaco,2014,PER,Sergio Pérez,Force India,10,21,Collision
+Monaco,2014,MAL,Pastor Maldonado,Lotus F1,15,22,Withdrew
+Monaco,2015,ROS,Nico Rosberg,Mercedes,2,1,Finished
+Monaco,2015,VET,Sebastian Vettel,Ferrari,3,2,Finished
+Monaco,2015,HAM,Lewis Hamilton,Mercedes,1,3,Finished
+Monaco,2015,KVY,Daniil Kvyat,Red Bull,5,4,Finished
+Monaco,2015,RIC,Daniel Ricciardo,Red Bull,4,5,Finished
+Monaco,2015,RAI,Kimi Räikkönen,Ferrari,6,6,Finished
+Monaco,2015,PER,Sergio Pérez,Force India,7,7,Finished
+Monaco,2015,BUT,Jenson Button,McLaren,10,8,Finished
+Monaco,2015,NAS,Felipe Nasr,Sauber,14,9,Finished
+Monaco,2015,SAI,Carlos Sainz,Toro Rosso,0,10,Finished
+Monaco,2015,HUL,Nico Hülkenberg,Force India,11,11,Finished
+Monaco,2015,GRO,Romain Grosjean,Lotus F1,15,12,Finished
+Monaco,2015,ERI,Marcus Ericsson,Sauber,17,13,Finished
+Monaco,2015,BOT,Valtteri Bottas,Williams,16,14,Finished
+Monaco,2015,MAS,Felipe Massa,Williams,12,15,+1 Lap
+Monaco,2015,MER,Roberto Merhi,Manor Marussia,19,16,+2 Laps
+Monaco,2015,STE,Will Stevens,Manor Marussia,18,17,+2 Laps
+Monaco,2015,VER,Max Verstappen,Toro Rosso,9,18,Accident
+Monaco,2015,ALO,Fernando Alonso,McLaren,13,19,Gearbox
+Monaco,2015,MAL,Pastor Maldonado,Lotus F1,8,20,Brakes
+Monaco,2016,HAM,Lewis Hamilton,Mercedes,3,1,Finished
+Monaco,2016,RIC,Daniel Ricciardo,Red Bull,1,2,Finished
+Monaco,2016,PER,Sergio Pérez,Force India,7,3,Finished
+Monaco,2016,VET,Sebastian Vettel,Ferrari,4,4,Finished
+Monaco,2016,ALO,Fernando Alonso,McLaren,9,5,Finished
+Monaco,2016,HUL,Nico Hülkenberg,Force India,5,6,Finished
+Monaco,2016,ROS,Nico Rosberg,Mercedes,2,7,Finished
+Monaco,2016,SAI,Carlos Sainz,Toro Rosso,6,8,+1 Lap
+Monaco,2016,BUT,Jenson Button,McLaren,13,9,+1 Lap
+Monaco,2016,MAS,Felipe Massa,Williams,14,10,+1 Lap
+Monaco,2016,GUT,Esteban Gutiérrez,Haas F1 Team,12,11,+1 Lap
+Monaco,2016,BOT,Valtteri Bottas,Williams,10,12,+1 Lap
+Monaco,2016,GRO,Romain Grosjean,Haas F1 Team,15,13,+2 Laps
+Monaco,2016,WEH,Pascal Wehrlein,Manor Marussia,20,14,+2 Laps
+Monaco,2016,HAR,Rio Haryanto,Manor Marussia,19,15,+4 Laps
+Monaco,2016,ERI,Marcus Ericsson,Sauber,17,16,Collision
+Monaco,2016,NAS,Felipe Nasr,Sauber,0,17,Retired
+Monaco,2016,VER,Max Verstappen,Red Bull,0,18,Accident
+Monaco,2016,MAG,Kevin Magnussen,Renault,16,19,Retired
+Monaco,2016,KVY,Daniil Kvyat,Toro Rosso,8,20,Accident
+Monaco,2016,RAI,Kimi Räikkönen,Ferrari,11,21,Accident
+Monaco,2016,PAL,Jolyon Palmer,Renault,18,22,Accident
+Monaco,2017,VET,Sebastian Vettel,Ferrari,2,1,Finished
+Monaco,2017,RAI,Kimi Räikkönen,Ferrari,1,2,Finished
+Monaco,2017,RIC,Daniel Ricciardo,Red Bull,5,3,Finished
+Monaco,2017,BOT,Valtteri Bottas,Mercedes,3,4,Finished
+Monaco,2017,VER,Max Verstappen,Red Bull,4,5,Finished
+Monaco,2017,SAI,Carlos Sainz,Toro Rosso,6,6,Finished
+Monaco,2017,HAM,Lewis Hamilton,Mercedes,13,7,Finished
+Monaco,2017,GRO,Romain Grosjean,Haas F1 Team,8,8,Finished
+Monaco,2017,MAS,Felipe Massa,Williams,14,9,Finished
+Monaco,2017,MAG,Kevin Magnussen,Haas F1 Team,11,10,Finished
+Monaco,2017,PAL,Jolyon Palmer,Renault,16,11,Finished
+Monaco,2017,OCO,Esteban Ocon,Force India,15,12,Finished
+Monaco,2017,PER,Sergio Pérez,Force India,7,13,Finished
+Monaco,2017,KVY,Daniil Kvyat,Toro Rosso,9,14,Collision damage
+Monaco,2017,STR,Lance Stroll,Williams,17,15,Brakes
+Monaco,2017,VAN,Stoffel Vandoorne,McLaren,12,16,Accident
+Monaco,2017,ERI,Marcus Ericsson,Sauber,19,17,Accident
+Monaco,2017,BUT,Jenson Button,McLaren,20,18,Collision damage
+Monaco,2017,WEH,Pascal Wehrlein,Sauber,18,19,Collision
+Monaco,2017,HUL,Nico Hülkenberg,Renault,10,20,Gearbox
+Monaco,2018,RIC,Daniel Ricciardo,Red Bull,1,1,Finished
+Monaco,2018,VET,Sebastian Vettel,Ferrari,2,2,Finished
+Monaco,2018,HAM,Lewis Hamilton,Mercedes,3,3,Finished
+Monaco,2018,RAI,Kimi Räikkönen,Ferrari,4,4,Finished
+Monaco,2018,BOT,Valtteri Bottas,Mercedes,5,5,Finished
+Monaco,2018,OCO,Esteban Ocon,Force India,6,6,Finished
+Monaco,2018,GAS,Pierre Gasly,Toro Rosso,10,7,Finished
+Monaco,2018,HUL,Nico Hülkenberg,Renault,11,8,Finished
+Monaco,2018,VER,Max Verstappen,Red Bull,20,9,Finished
+Monaco,2018,SAI,Carlos Sainz,Renault,8,10,Finished
+Monaco,2018,ERI,Marcus Ericsson,Sauber,16,11,Finished
+Monaco,2018,PER,Sergio Pérez,Force India,9,12,Finished
+Monaco,2018,MAG,Kevin Magnussen,Haas F1 Team,19,13,Finished
+Monaco,2018,VAN,Stoffel Vandoorne,McLaren,12,14,+1 Lap
+Monaco,2018,GRO,Romain Grosjean,Haas F1 Team,18,15,+1 Lap
+Monaco,2018,SIR,Sergey Sirotkin,Williams,13,16,+1 Lap
+Monaco,2018,STR,Lance Stroll,Williams,17,17,+2 Laps
+Monaco,2018,LEC,Charles Leclerc,Sauber,14,18,Collision
+Monaco,2018,HAR,Brendon Hartley,Toro Rosso,15,19,Collision
+Monaco,2018,ALO,Fernando Alonso,McLaren,7,20,Gearbox
+Monaco,2019,HAM,Lewis Hamilton,Mercedes,1,1,Finished
+Monaco,2019,VET,Sebastian Vettel,Ferrari,4,2,Finished
+Monaco,2019,BOT,Valtteri Bottas,Mercedes,2,3,Finished
+Monaco,2019,VER,Max Verstappen,Red Bull,3,4,Finished
+Monaco,2019,GAS,Pierre Gasly,Red Bull,8,5,Finished
+Monaco,2019,SAI,Carlos Sainz,McLaren,9,6,Finished
+Monaco,2019,KVY,Daniil Kvyat,Toro Rosso,7,7,Finished
+Monaco,2019,ALB,Alexander Albon,Toro Rosso,10,8,Finished
+Monaco,2019,RIC,Daniel Ricciardo,Renault,6,9,Finished
+Monaco,2019,GRO,Romain Grosjean,Haas F1 Team,13,10,Finished
+Monaco,2019,NOR,Lando Norris,McLaren,12,11,Finished
+Monaco,2019,PER,Sergio Pérez,Racing Point,16,12,+1 Lap
+Monaco,2019,HUL,Nico Hülkenberg,Renault,11,13,+1 Lap
+Monaco,2019,MAG,Kevin Magnussen,Haas F1 Team,5,14,+1 Lap
+Monaco,2019,RUS,George Russell,Williams,19,15,+1 Lap
+Monaco,2019,STR,Lance Stroll,Racing Point,17,16,+1 Lap
+Monaco,2019,RAI,Kimi Räikkönen,Alfa Romeo,14,17,+1 Lap
+Monaco,2019,KUB,Robert Kubica,Williams,20,18,+1 Lap
+Monaco,2019,GIO,Antonio Giovinazzi,Alfa Romeo,18,19,+2 Laps
+Monaco,2019,LEC,Charles Leclerc,Ferrari,15,20,Collision
+Monaco,2021,VER,Max Verstappen,Red Bull,2,1,Finished
+Monaco,2021,SAI,Carlos Sainz,Ferrari,4,2,Finished
+Monaco,2021,NOR,Lando Norris,McLaren,5,3,Finished
+Monaco,2021,PER,Sergio Pérez,Red Bull,9,4,Finished
+Monaco,2021,VET,Sebastian Vettel,Aston Martin,8,5,Finished
+Monaco,2021,GAS,Pierre Gasly,AlphaTauri,6,6,Finished
+Monaco,2021,HAM,Lewis Hamilton,Mercedes,7,7,Finished
+Monaco,2021,STR,Lance Stroll,Aston Martin,13,8,+1 Lap
+Monaco,2021,OCO,Esteban Ocon,Alpine F1 Team,11,9,+1 Lap
+Monaco,2021,GIO,Antonio Giovinazzi,Alfa Romeo,10,10,+1 Lap
+Monaco,2021,RAI,Kimi Räikkönen,Alfa Romeo,14,11,+1 Lap
+Monaco,2021,RIC,Daniel Ricciardo,McLaren,12,12,+1 Lap
+Monaco,2021,ALO,Fernando Alonso,Alpine F1 Team,17,13,+1 Lap
+Monaco,2021,RUS,George Russell,Williams,15,14,+1 Lap
+Monaco,2021,LAT,Nicholas Latifi,Williams,18,15,+1 Lap
+Monaco,2021,TSU,Yuki Tsunoda,AlphaTauri,16,16,+1 Lap
+Monaco,2021,MAZ,Nikita Mazepin,Haas F1 Team,19,17,+3 Laps
+Monaco,2021,MSC,Mick Schumacher,Haas F1 Team,20,18,+3 Laps
+Monaco,2021,BOT,Valtteri Bottas,Mercedes,3,19,Wheel nut
+Monaco,2021,LEC,Charles Leclerc,Ferrari,1,20,Driveshaft
+Monaco,2022,PER,Sergio Pérez,Red Bull,3,1,Finished
+Monaco,2022,SAI,Carlos Sainz,Ferrari,2,2,Finished
+Monaco,2022,VER,Max Verstappen,Red Bull,4,3,Finished
+Monaco,2022,LEC,Charles Leclerc,Ferrari,1,4,Finished
+Monaco,2022,RUS,George Russell,Mercedes,6,5,Finished
+Monaco,2022,NOR,Lando Norris,McLaren,5,6,Finished
+Monaco,2022,ALO,Fernando Alonso,Alpine F1 Team,7,7,Finished
+Monaco,2022,HAM,Lewis Hamilton,Mercedes,8,8,Finished
+Monaco,2022,BOT,Valtteri Bottas,Alfa Romeo,12,9,Finished
+Monaco,2022,VET,Sebastian Vettel,Aston Martin,9,10,Finished
+Monaco,2022,GAS,Pierre Gasly,AlphaTauri,17,11,Finished
+Monaco,2022,OCO,Esteban Ocon,Alpine F1 Team,10,12,Finished
+Monaco,2022,RIC,Daniel Ricciardo,McLaren,14,13,Finished
+Monaco,2022,STR,Lance Stroll,Aston Martin,18,14,Finished
+Monaco,2022,LAT,Nicholas Latifi,Williams,19,15,+1 Lap
+Monaco,2022,ZHO,Guanyu Zhou,Alfa Romeo,20,16,+1 Lap
+Monaco,2022,TSU,Yuki Tsunoda,AlphaTauri,11,17,+1 Lap
+Monaco,2022,ALB,Alexander Albon,Williams,16,18,Mechanical
+Monaco,2022,MSC,Mick Schumacher,Haas F1 Team,15,19,Accident
+Monaco,2022,MAG,Kevin Magnussen,Haas F1 Team,13,20,Water pressure
+Monaco,2023,VER,Max Verstappen,Red Bull,1,1,Finished
+Monaco,2023,ALO,Fernando Alonso,Aston Martin,2,2,Finished
+Monaco,2023,OCO,Esteban Ocon,Alpine F1 Team,3,3,Finished
+Monaco,2023,HAM,Lewis Hamilton,Mercedes,5,4,Finished
+Monaco,2023,RUS,George Russell,Mercedes,8,5,Finished
+Monaco,2023,LEC,Charles Leclerc,Ferrari,6,6,Finished
+Monaco,2023,GAS,Pierre Gasly,Alpine F1 Team,7,7,Finished
+Monaco,2023,SAI,Carlos Sainz,Ferrari,4,8,Finished
+Monaco,2023,NOR,Lando Norris,McLaren,10,9,Lapped
+Monaco,2023,PIA,Oscar Piastri,McLaren,11,10,Lapped
+Monaco,2023,BOT,Valtteri Bottas,Alfa Romeo,15,11,Lapped
+Monaco,2023,DEV,Nyck de Vries,AlphaTauri,12,12,Lapped
+Monaco,2023,ZHO,Guanyu Zhou,Alfa Romeo,19,13,Lapped
+Monaco,2023,ALB,Alexander Albon,Williams,13,14,Lapped
+Monaco,2023,TSU,Yuki Tsunoda,AlphaTauri,9,15,Lapped
+Monaco,2023,PER,Sergio Pérez,Red Bull,20,16,Lapped
+Monaco,2023,HUL,Nico Hülkenberg,Haas F1 Team,18,17,Lapped
+Monaco,2023,SAR,Logan Sargeant,Williams,16,18,Lapped
+Monaco,2023,MAG,Kevin Magnussen,Haas F1 Team,17,19,Retired
+Monaco,2023,STR,Lance Stroll,Aston Martin,14,20,Retired
+Monaco,2024,LEC,Charles Leclerc,Ferrari,1,1,Finished
+Monaco,2024,PIA,Oscar Piastri,McLaren,2,2,Finished
+Monaco,2024,SAI,Carlos Sainz,Ferrari,3,3,Finished
+Monaco,2024,NOR,Lando Norris,McLaren,4,4,Finished
+Monaco,2024,RUS,George Russell,Mercedes,5,5,Finished
+Monaco,2024,VER,Max Verstappen,Red Bull,6,6,Finished
+Monaco,2024,HAM,Lewis Hamilton,Mercedes,7,7,Finished
+Monaco,2024,TSU,Yuki Tsunoda,RB F1 Team,8,8,Lapped
+Monaco,2024,ALB,Alexander Albon,Williams,9,9,Lapped
+Monaco,2024,GAS,Pierre Gasly,Alpine F1 Team,10,10,Lapped
+Monaco,2024,ALO,Fernando Alonso,Aston Martin,14,11,Lapped
+Monaco,2024,RIC,Daniel Ricciardo,RB F1 Team,12,12,Lapped
+Monaco,2024,BOT,Valtteri Bottas,Sauber,17,13,Lapped
+Monaco,2024,STR,Lance Stroll,Aston Martin,13,14,Lapped
+Monaco,2024,SAR,Logan Sargeant,Williams,15,15,Lapped
+Monaco,2024,ZHO,Guanyu Zhou,Sauber,18,16,Lapped
+Monaco,2024,OCO,Esteban Ocon,Alpine F1 Team,11,17,Retired
+Monaco,2024,PER,Sergio Pérez,Red Bull,16,18,Retired
+Monaco,2024,HUL,Nico Hülkenberg,Haas F1 Team,19,19,Retired
+Monaco,2024,MAG,Kevin Magnussen,Haas F1 Team,20,20,Retired
+Monaco,2025,NOR,Lando Norris,McLaren,1,1,Finished
+Monaco,2025,LEC,Charles Leclerc,Ferrari,2,2,Finished
+Monaco,2025,PIA,Oscar Piastri,McLaren,3,3,Finished
+Monaco,2025,VER,Max Verstappen,Red Bull,4,4,Finished
+Monaco,2025,HAM,Lewis Hamilton,Ferrari,7,5,Finished
+Monaco,2025,HAD,Isack Hadjar,RB F1 Team,5,6,Lapped
+Monaco,2025,OCO,Esteban Ocon,Haas F1 Team,8,7,Lapped
+Monaco,2025,LAW,Liam Lawson,RB F1 Team,9,8,Lapped
+Monaco,2025,ALB,Alexander Albon,Williams,10,9,Lapped
+Monaco,2025,SAI,Carlos Sainz,Williams,11,10,Lapped
+Monaco,2025,RUS,George Russell,Mercedes,14,11,Lapped
+Monaco,2025,BEA,Oliver Bearman,Haas F1 Team,20,12,Lapped
+Monaco,2025,COL,Franco Colapinto,Alpine F1 Team,18,13,Lapped
+Monaco,2025,BOR,Gabriel Bortoleto,Sauber,16,14,Lapped
+Monaco,2025,STR,Lance Stroll,Aston Martin,19,15,Lapped
+Monaco,2025,HUL,Nico Hülkenberg,Sauber,13,16,Lapped
+Monaco,2025,TSU,Yuki Tsunoda,Red Bull,12,17,Lapped
+Monaco,2025,ANT,Andrea Kimi Antonelli,Mercedes,15,18,Lapped
+Monaco,2025,ALO,Fernando Alonso,Aston Martin,6,19,Retired
+Monaco,2025,GAS,Pierre Gasly,Alpine F1 Team,17,20,Retired
+Monaco,2026,ANT,Andrea Kimi Antonelli,Mercedes,1,1,Finished
+Monaco,2026,HAM,Lewis Hamilton,Ferrari,3,2,Finished
+Monaco,2026,HAD,Isack Hadjar,Red Bull,5,3,Finished
+Monaco,2026,PIA,Oscar Piastri,McLaren,7,4,Finished
+Monaco,2026,LAW,Liam Lawson,RB F1 Team,10,5,Finished
+Monaco,2026,LIN,Arvid Lindblad,RB F1 Team,15,6,Finished
+Monaco,2026,GAS,Pierre Gasly,Alpine F1 Team,9,7,Finished
+Monaco,2026,ALB,Alexander Albon,Williams,11,8,Finished
+Monaco,2026,OCO,Esteban Ocon,Haas F1 Team,17,9,Finished
+Monaco,2026,ALO,Fernando Alonso,Aston Martin,21,10,Finished
+Monaco,2026,BOR,Gabriel Bortoleto,Audi,16,11,Finished
+Monaco,2026,RUS,George Russell,Mercedes,6,12,Finished
+Monaco,2026,HUL,Nico Hülkenberg,Audi,13,13,Finished
+Monaco,2026,COL,Franco Colapinto,Alpine F1 Team,14,14,Finished
+Monaco,2026,PER,Sergio Pérez,Cadillac F1 Team,18,15,Finished
+Monaco,2026,SAI,Carlos Sainz,Williams,12,16,Retired
+Monaco,2026,LEC,Charles Leclerc,Ferrari,4,17,Retired
+Monaco,2026,STR,Lance Stroll,Aston Martin,22,18,Retired
+Monaco,2026,NOR,Lando Norris,McLaren,8,19,Retired
+Monaco,2026,BEA,Oliver Bearman,Haas F1 Team,19,20,Retired
+Monaco,2026,BOT,Valtteri Bottas,Cadillac F1 Team,20,21,Retired
+Monaco,2026,VER,Max Verstappen,Red Bull,2,22,Retired
+Mexico,2015,ROS,Nico Rosberg,Mercedes,1,1,Finished
+Mexico,2015,HAM,Lewis Hamilton,Mercedes,2,2,Finished
+Mexico,2015,BOT,Valtteri Bottas,Williams,6,3,Finished
+Mexico,2015,KVY,Daniil Kvyat,Red Bull,4,4,Finished
+Mexico,2015,RIC,Daniel Ricciardo,Red Bull,5,5,Finished
+Mexico,2015,MAS,Felipe Massa,Williams,7,6,Finished
+Mexico,2015,HUL,Nico Hülkenberg,Force India,10,7,Finished
+Mexico,2015,PER,Sergio Pérez,Force India,9,8,Finished
+Mexico,2015,VER,Max Verstappen,Toro Rosso,8,9,Finished
+Mexico,2015,GRO,Romain Grosjean,Lotus F1,12,10,Finished
+Mexico,2015,MAL,Pastor Maldonado,Lotus F1,13,11,Finished
+Mexico,2015,ERI,Marcus Ericsson,Sauber,14,12,Finished
+Mexico,2015,SAI,Carlos Sainz,Toro Rosso,11,13,Finished
+Mexico,2015,BUT,Jenson Button,McLaren,20,14,Finished
+Mexico,2015,RSS,Alexander Rossi,Manor Marussia,16,15,+2 Laps
+Mexico,2015,STE,Will Stevens,Manor Marussia,17,16,+2 Laps
+Mexico,2015,NAS,Felipe Nasr,Sauber,15,17,Brakes
+Mexico,2015,VET,Sebastian Vettel,Ferrari,3,18,Accident
+Mexico,2015,RAI,Kimi Räikkönen,Ferrari,19,19,Collision
+Mexico,2015,ALO,Fernando Alonso,McLaren,18,20,Retired
+Mexico,2016,HAM,Lewis Hamilton,Mercedes,1,1,Finished
+Mexico,2016,ROS,Nico Rosberg,Mercedes,2,2,Finished
+Mexico,2016,RIC,Daniel Ricciardo,Red Bull,4,3,Finished
+Mexico,2016,VER,Max Verstappen,Red Bull,3,4,Finished
+Mexico,2016,VET,Sebastian Vettel,Ferrari,7,5,Finished
+Mexico,2016,RAI,Kimi Räikkönen,Ferrari,6,6,Finished
+Mexico,2016,HUL,Nico Hülkenberg,Force India,5,7,Finished
+Mexico,2016,BOT,Valtteri Bottas,Williams,8,8,Finished
+Mexico,2016,MAS,Felipe Massa,Williams,9,9,Finished
+Mexico,2016,PER,Sergio Pérez,Force India,12,10,Finished
+Mexico,2016,ERI,Marcus Ericsson,Sauber,15,11,+1 Lap
+Mexico,2016,BUT,Jenson Button,McLaren,13,12,+1 Lap
+Mexico,2016,ALO,Fernando Alonso,McLaren,11,13,+1 Lap
+Mexico,2016,PAL,Jolyon Palmer,Renault,21,14,+1 Lap
+Mexico,2016,NAS,Felipe Nasr,Sauber,19,15,+1 Lap
+Mexico,2016,SAI,Carlos Sainz,Toro Rosso,10,16,+1 Lap
+Mexico,2016,MAG,Kevin Magnussen,Renault,14,17,+1 Lap
+Mexico,2016,KVY,Daniil Kvyat,Toro Rosso,18,18,+1 Lap
+Mexico,2016,GUT,Esteban Gutiérrez,Haas F1 Team,17,19,+1 Lap
+Mexico,2016,GRO,Romain Grosjean,Haas F1 Team,22,20,+1 Lap
+Mexico,2016,OCO,Esteban Ocon,Manor Marussia,20,21,+2 Laps
+Mexico,2016,WEH,Pascal Wehrlein,Manor Marussia,16,22,Collision
+Mexico,2017,VER,Max Verstappen,Red Bull,2,1,Finished
+Mexico,2017,BOT,Valtteri Bottas,Mercedes,4,2,Finished
+Mexico,2017,RAI,Kimi Räikkönen,Ferrari,5,3,Finished
+Mexico,2017,VET,Sebastian Vettel,Ferrari,1,4,Finished
+Mexico,2017,OCO,Esteban Ocon,Force India,6,5,+1 Lap
+Mexico,2017,STR,Lance Stroll,Williams,11,6,+1 Lap
+Mexico,2017,PER,Sergio Pérez,Force India,9,7,+1 Lap
+Mexico,2017,MAG,Kevin Magnussen,Haas F1 Team,14,8,+1 Lap
+Mexico,2017,HAM,Lewis Hamilton,Mercedes,3,9,+1 Lap
+Mexico,2017,ALO,Fernando Alonso,McLaren,18,10,+1 Lap
+Mexico,2017,MAS,Felipe Massa,Williams,10,11,+1 Lap
+Mexico,2017,VAN,Stoffel Vandoorne,McLaren,19,12,+1 Lap
+Mexico,2017,GAS,Pierre Gasly,Toro Rosso,20,13,+1 Lap
+Mexico,2017,WEH,Pascal Wehrlein,Sauber,13,14,+2 Laps
+Mexico,2017,GRO,Romain Grosjean,Haas F1 Team,15,15,+2 Laps
+Mexico,2017,SAI,Carlos Sainz,Renault,8,16,Engine
+Mexico,2017,ERI,Marcus Ericsson,Sauber,12,17,Engine
+Mexico,2017,HAR,Brendon Hartley,Toro Rosso,17,18,Engine
+Mexico,2017,HUL,Nico Hülkenberg,Renault,7,19,Electrical
+Mexico,2017,RIC,Daniel Ricciardo,Red Bull,16,20,Engine
+Mexico,2018,VER,Max Verstappen,Red Bull,2,1,Finished
+Mexico,2018,VET,Sebastian Vettel,Ferrari,4,2,Finished
+Mexico,2018,RAI,Kimi Räikkönen,Ferrari,6,3,Finished
+Mexico,2018,HAM,Lewis Hamilton,Mercedes,3,4,Finished
+Mexico,2018,BOT,Valtteri Bottas,Mercedes,5,5,+1 Lap
+Mexico,2018,HUL,Nico Hülkenberg,Renault,7,6,+2 Laps
+Mexico,2018,LEC,Charles Leclerc,Sauber,9,7,+2 Laps
+Mexico,2018,VAN,Stoffel Vandoorne,McLaren,15,8,+2 Laps
+Mexico,2018,ERI,Marcus Ericsson,Sauber,10,9,+2 Laps
+Mexico,2018,GAS,Pierre Gasly,Toro Rosso,20,10,+2 Laps
+Mexico,2018,OCO,Esteban Ocon,Force India,11,11,+2 Laps
+Mexico,2018,STR,Lance Stroll,Williams,17,12,+2 Laps
+Mexico,2018,SIR,Sergey Sirotkin,Williams,19,13,+2 Laps
+Mexico,2018,HAR,Brendon Hartley,Toro Rosso,14,14,+2 Laps
+Mexico,2018,MAG,Kevin Magnussen,Haas F1 Team,16,15,+2 Laps
+Mexico,2018,GRO,Romain Grosjean,Haas F1 Team,18,16,+3 Laps
+Mexico,2018,RIC,Daniel Ricciardo,Red Bull,1,17,Engine
+Mexico,2018,PER,Sergio Pérez,Force India,13,18,Brakes
+Mexico,2018,SAI,Carlos Sainz,Renault,8,19,Suspension
+Mexico,2018,ALO,Fernando Alonso,McLaren,12,20,Engine
+Mexico,2019,HAM,Lewis Hamilton,Mercedes,3,1,Finished
+Mexico,2019,VET,Sebastian Vettel,Ferrari,2,2,Finished
+Mexico,2019,BOT,Valtteri Bottas,Mercedes,6,3,Finished
+Mexico,2019,LEC,Charles Leclerc,Ferrari,1,4,Finished
+Mexico,2019,ALB,Alexander Albon,Red Bull,5,5,Finished
+Mexico,2019,VER,Max Verstappen,Red Bull,4,6,Finished
+Mexico,2019,PER,Sergio Pérez,Racing Point,11,7,Finished
+Mexico,2019,RIC,Daniel Ricciardo,Renault,13,8,Finished
+Mexico,2019,GAS,Pierre Gasly,Toro Rosso,10,9,+1 Lap
+Mexico,2019,HUL,Nico Hülkenberg,Renault,12,10,+1 Lap
+Mexico,2019,KVY,Daniil Kvyat,Toro Rosso,9,11,+1 Lap
+Mexico,2019,STR,Lance Stroll,Racing Point,16,12,+1 Lap
+Mexico,2019,SAI,Carlos Sainz,McLaren,7,13,+1 Lap
+Mexico,2019,GIO,Antonio Giovinazzi,Alfa Romeo,15,14,+1 Lap
+Mexico,2019,MAG,Kevin Magnussen,Haas F1 Team,17,15,+2 Laps
+Mexico,2019,RUS,George Russell,Williams,19,16,+2 Laps
+Mexico,2019,GRO,Romain Grosjean,Haas F1 Team,18,17,+2 Laps
+Mexico,2019,KUB,Robert Kubica,Williams,20,18,+2 Laps
+Mexico,2019,RAI,Kimi Räikkönen,Alfa Romeo,14,19,Overheating
+Mexico,2019,NOR,Lando Norris,McLaren,8,20,Withdrew
+Mexico,2021,VER,Max Verstappen,Red Bull,3,1,Finished
+Mexico,2021,HAM,Lewis Hamilton,Mercedes,2,2,Finished
+Mexico,2021,PER,Sergio Pérez,Red Bull,4,3,Finished
+Mexico,2021,GAS,Pierre Gasly,AlphaTauri,5,4,Finished
+Mexico,2021,LEC,Charles Leclerc,Ferrari,8,5,Finished
+Mexico,2021,SAI,Carlos Sainz,Ferrari,6,6,+1 Lap
+Mexico,2021,VET,Sebastian Vettel,Aston Martin,9,7,+1 Lap
+Mexico,2021,RAI,Kimi Räikkönen,Alfa Romeo,10,8,+1 Lap
+Mexico,2021,ALO,Fernando Alonso,Alpine F1 Team,12,9,+1 Lap
+Mexico,2021,NOR,Lando Norris,McLaren,18,10,+1 Lap
+Mexico,2021,GIO,Antonio Giovinazzi,Alfa Romeo,11,11,+1 Lap
+Mexico,2021,RIC,Daniel Ricciardo,McLaren,7,12,+1 Lap
+Mexico,2021,OCO,Esteban Ocon,Alpine F1 Team,19,13,+1 Lap
+Mexico,2021,STR,Lance Stroll,Aston Martin,20,14,+2 Laps
+Mexico,2021,BOT,Valtteri Bottas,Mercedes,1,15,+2 Laps
+Mexico,2021,RUS,George Russell,Williams,16,16,+2 Laps
+Mexico,2021,LAT,Nicholas Latifi,Williams,13,17,+2 Laps
+Mexico,2021,MAZ,Nikita Mazepin,Haas F1 Team,15,18,+3 Laps
+Mexico,2021,MSC,Mick Schumacher,Haas F1 Team,14,19,Collision
+Mexico,2021,TSU,Yuki Tsunoda,AlphaTauri,17,20,Collision
+Mexico,2022,VER,Max Verstappen,Red Bull,1,1,Finished
+Mexico,2022,HAM,Lewis Hamilton,Mercedes,3,2,Finished
+Mexico,2022,PER,Sergio Pérez,Red Bull,4,3,Finished
+Mexico,2022,RUS,George Russell,Mercedes,2,4,Finished
+Mexico,2022,SAI,Carlos Sainz,Ferrari,5,5,Finished
+Mexico,2022,LEC,Charles Leclerc,Ferrari,7,6,Finished
+Mexico,2022,RIC,Daniel Ricciardo,McLaren,11,7,+1 Lap
+Mexico,2022,OCO,Esteban Ocon,Alpine F1 Team,10,8,+1 Lap
+Mexico,2022,NOR,Lando Norris,McLaren,8,9,+1 Lap
+Mexico,2022,BOT,Valtteri Bottas,Alfa Romeo,6,10,+1 Lap
+Mexico,2022,GAS,Pierre Gasly,AlphaTauri,14,11,+1 Lap
+Mexico,2022,ALB,Alexander Albon,Williams,17,12,+1 Lap
+Mexico,2022,ZHO,Guanyu Zhou,Alfa Romeo,12,13,+1 Lap
+Mexico,2022,VET,Sebastian Vettel,Aston Martin,16,14,+1 Lap
+Mexico,2022,STR,Lance Stroll,Aston Martin,20,15,+1 Lap
+Mexico,2022,MSC,Mick Schumacher,Haas F1 Team,15,16,+1 Lap
+Mexico,2022,MAG,Kevin Magnussen,Haas F1 Team,19,17,+1 Lap
+Mexico,2022,LAT,Nicholas Latifi,Williams,18,18,+2 Laps
+Mexico,2022,ALO,Fernando Alonso,Alpine F1 Team,9,19,Engine
+Mexico,2022,TSU,Yuki Tsunoda,AlphaTauri,13,20,Collision damage
+Mexico,2023,VER,Max Verstappen,Red Bull,3,1,Finished
+Mexico,2023,HAM,Lewis Hamilton,Mercedes,6,2,Finished
+Mexico,2023,LEC,Charles Leclerc,Ferrari,1,3,Finished
+Mexico,2023,SAI,Carlos Sainz,Ferrari,2,4,Finished
+Mexico,2023,NOR,Lando Norris,McLaren,17,5,Finished
+Mexico,2023,RUS,George Russell,Mercedes,8,6,Finished
+Mexico,2023,RIC,Daniel Ricciardo,AlphaTauri,4,7,Finished
+Mexico,2023,PIA,Oscar Piastri,McLaren,7,8,Finished
+Mexico,2023,ALB,Alexander Albon,Williams,14,9,Finished
+Mexico,2023,OCO,Esteban Ocon,Alpine F1 Team,15,10,Finished
+Mexico,2023,GAS,Pierre Gasly,Alpine F1 Team,11,11,Finished
+Mexico,2023,TSU,Yuki Tsunoda,AlphaTauri,18,12,Finished
+Mexico,2023,HUL,Nico Hülkenberg,Haas F1 Team,12,13,Finished
+Mexico,2023,ZHO,Guanyu Zhou,Alfa Romeo,10,14,Finished
+Mexico,2023,BOT,Valtteri Bottas,Alfa Romeo,9,15,Finished
+Mexico,2023,SAR,Logan Sargeant,Williams,19,16,Retired
+Mexico,2023,STR,Lance Stroll,Aston Martin,0,17,Collision damage
+Mexico,2023,ALO,Fernando Alonso,Aston Martin,13,18,Withdrew
+Mexico,2023,MAG,Kevin Magnussen,Haas F1 Team,16,19,Accident
+Mexico,2023,PER,Sergio Pérez,Red Bull,5,20,Collision damage
+Mexico,2024,SAI,Carlos Sainz,Ferrari,1,1,Finished
+Mexico,2024,NOR,Lando Norris,McLaren,3,2,Finished
+Mexico,2024,LEC,Charles Leclerc,Ferrari,4,3,Finished
+Mexico,2024,HAM,Lewis Hamilton,Mercedes,6,4,Finished
+Mexico,2024,RUS,George Russell,Mercedes,5,5,Finished
+Mexico,2024,VER,Max Verstappen,Red Bull,2,6,Finished
+Mexico,2024,MAG,Kevin Magnussen,Haas F1 Team,7,7,Finished
+Mexico,2024,PIA,Oscar Piastri,McLaren,17,8,Finished
+Mexico,2024,HUL,Nico Hülkenberg,Haas F1 Team,10,9,Lapped
+Mexico,2024,GAS,Pierre Gasly,Alpine F1 Team,8,10,Lapped
+Mexico,2024,STR,Lance Stroll,Aston Martin,14,11,Lapped
+Mexico,2024,COL,Franco Colapinto,Williams,16,12,Lapped
+Mexico,2024,OCO,Esteban Ocon,Alpine F1 Team,0,13,Lapped
+Mexico,2024,BOT,Valtteri Bottas,Sauber,15,14,Lapped
+Mexico,2024,ZHO,Guanyu Zhou,Sauber,19,15,Lapped
+Mexico,2024,LAW,Liam Lawson,RB F1 Team,12,16,Lapped
+Mexico,2024,PER,Sergio Pérez,Red Bull,18,17,Lapped
+Mexico,2024,ALO,Fernando Alonso,Aston Martin,13,18,Retired
+Mexico,2024,ALB,Alexander Albon,Williams,9,19,Retired
+Mexico,2024,TSU,Yuki Tsunoda,RB F1 Team,11,20,Retired
+Mexico,2025,NOR,Lando Norris,McLaren,1,1,Finished
+Mexico,2025,LEC,Charles Leclerc,Ferrari,2,2,Finished
+Mexico,2025,VER,Max Verstappen,Red Bull,5,3,Finished
+Mexico,2025,BEA,Oliver Bearman,Haas F1 Team,9,4,Finished
+Mexico,2025,PIA,Oscar Piastri,McLaren,7,5,Finished
+Mexico,2025,ANT,Andrea Kimi Antonelli,Mercedes,6,6,Finished
+Mexico,2025,RUS,George Russell,Mercedes,4,7,Finished
+Mexico,2025,HAM,Lewis Hamilton,Ferrari,3,8,Finished
+Mexico,2025,OCO,Esteban Ocon,Haas F1 Team,11,9,Finished
+Mexico,2025,BOR,Gabriel Bortoleto,Sauber,16,10,Finished
+Mexico,2025,TSU,Yuki Tsunoda,Red Bull,10,11,Finished
+Mexico,2025,ALB,Alexander Albon,Williams,17,12,Lapped
+Mexico,2025,HAD,Isack Hadjar,RB F1 Team,8,13,Lapped
+Mexico,2025,STR,Lance Stroll,Aston Martin,19,14,Lapped
+Mexico,2025,GAS,Pierre Gasly,Alpine F1 Team,18,15,Lapped
+Mexico,2025,COL,Franco Colapinto,Alpine F1 Team,20,16,Lapped
+Mexico,2025,SAI,Carlos Sainz,Williams,12,17,Retired
+Mexico,2025,ALO,Fernando Alonso,Aston Martin,14,18,Retired
+Mexico,2025,HUL,Nico Hülkenberg,Sauber,13,19,Retired
+Mexico,2025,LAW,Liam Lawson,RB F1 Team,15,20,Retired
+Mexico,2026,VER,Max Verstappen,Red Bull,5,1,Finished
+Mexico,2026,HAM,Lewis Hamilton,Ferrari,1,2,Finished
+Mexico,2026,ANT,Andrea Kimi Antonelli,Mercedes,4,3,Finished
+Mexico,2026,LEC,Charles Leclerc,Ferrari,3,4,Finished
+Mexico,2026,NOR,Lando Norris,McLaren,6,5,Finished
+Mexico,2026,RUS,George Russell,Mercedes,2,6,Finished
+Mexico,2026,LAW,Liam Lawson,RB F1 Team,22,7,Finished
+Mexico,2026,BOR,Gabriel Bortoleto,Audi,13,8,Finished
+Mexico,2026,HAD,Isack Hadjar,Red Bull,7,9,Finished
+Mexico,2026,HIR,Ryo Hirakawa,Haas F1 Team,18,10,Finished
+Mexico,2026,ALB,Alexander Albon,Williams,16,11,Finished
+Mexico,2026,SAI,Carlos Sainz,Williams,15,12,Finished
+Mexico,2026,PIA,Oscar Piastri,McLaren,12,13,Finished
+Mexico,2026,HUL,Nico Hülkenberg,Audi,10,14,Finished
+Mexico,2026,COL,Franco Colapinto,Alpine F1 Team,11,15,Finished
+Mexico,2026,PER,Sergio Pérez,Cadillac F1 Team,20,16,Finished
+Mexico,2026,GAS,Pierre Gasly,Alpine F1 Team,9,17,Finished
+Mexico,2026,LIN,Arvid Lindblad,RB F1 Team,8,18,Retired
+Mexico,2026,BEA,Oliver Bearman,Haas F1 Team,14,19,Retired
+Mexico,2026,BOT,Valtteri Bottas,Cadillac F1 Team,21,20,Retired
+Mexico,2026,STR,Lance Stroll,Aston Martin,19,21,Retired
+Mexico,2026,ALO,Fernando Alonso,Aston Martin,17,22,Retired
