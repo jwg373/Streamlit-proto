@@ -1,4 +1,4 @@
-"""F1 Circuit Explorer: Streamlit prototype (Monaco + Mexico City).
+"""F1 Circuit Explorer: Streamlit prototype covering every circuit on the 2026 F1 calendar.
 
 Grid history and the track outline are pre-built into ./data by
 scripts/build_data.py (FastF1's Jolpica-F1/Ergast interface, OpenF1 positions,
@@ -15,13 +15,11 @@ import pandas as pd
 import plotly.graph_objects as go
 import streamlit as st
 
-from f1data import LAP_SEASONS, clean_laps
+from f1data import LAP_SEASONS, TRACK_LABEL, TRACKS, clean_laps
 
 st.set_page_config(page_title="F1 Circuit Explorer", page_icon="🏁", layout="wide")
 
 DATA = Path(__file__).parent / "data"
-TRACKS = ["Monaco", "Mexico"]
-TRACK_LABEL = {"Monaco": "Monaco (Circuit de Monaco)", "Mexico": "Mexico (Autódromo Hermanos Rodríguez)"}
 GRID_SLOTS = 20
 METRICS = {"win": "Win %", "podium": "Podium %", "finish": "Avg finish"}
 SECTORS = {0: "Full lap", 1: "Sector 1", 2: "Sector 2", 3: "Sector 3"}
@@ -325,7 +323,8 @@ with g_right:
 # --------------------------------------------------------------------------- 2. segment explorer
 st.markdown("<div class='rule' style='border-color:#e1e0d9;border-width:1px;margin-top:1rem'></div>",
             unsafe_allow_html=True)
-lap_seasons = LAP_SEASONS
+# seasons with OpenF1 lap timing (2023+) in which this circuit actually held a race
+lap_seasons = sorted(set(LAP_SEASONS) & set(seasons_grid.unique()), reverse=True) or LAP_SEASONS
 if st.session_state.season not in lap_seasons:
     st.session_state.season = int(lap_seasons[0])
 
@@ -359,6 +358,11 @@ def track_figure(track: str, sector: int) -> go.Figure:
     tm = TRACK_MAP[TRACK_MAP.track == track]
     cn = CORNERS[CORNERS.track == track]
     fig = go.Figure()
+    if tm.empty:
+        fig.add_annotation(text="No track outline available", showarrow=False, font=dict(color=MUTED))
+        fig.update_layout(height=420, xaxis=dict(visible=False), yaxis=dict(visible=False),
+                          paper_bgcolor="rgba(0,0,0,0)", plot_bgcolor="rgba(0,0,0,0)")
+        return fig
     fig.add_trace(go.Scatter(x=tm.x, y=tm.y, mode="lines", hoverinfo="skip", showlegend=False,
                              line=dict(color="rgba(137,135,129,.25)", width=16)))
     for s in (1, 2, 3):
