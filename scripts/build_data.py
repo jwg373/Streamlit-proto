@@ -10,9 +10,9 @@ credentials as the app, from .streamlit/secrets.toml:
 (or the F1_USERNAME / F1_PASSWORD environment variables). The access token is
 kept in memory only. Run it with:
 
-    uv run python scripts/build_data.py                    # everything
-    uv run python scripts/build_data.py --only laps        # add races not built yet
-    uv run python scripts/build_data.py --only map --tracks Hungary
+    uv run --group data python scripts/build_data.py                  # everything
+    uv run --group data python scripts/build_data.py --only laps      # add races not built yet
+    uv run --group data python scripts/build_data.py --only map --tracks Hungary
 
 Sources (all FastF1)
 --------------------
@@ -23,15 +23,14 @@ Sources (all FastF1)
 Outputs
 -------
 data/grid_results.csv  one row per driver per race: race date, grid slot and finish
-data/lap_bins.csv      the field's clean laps per race, counted in fine time bins
-                       (0.05 s for laps, 0.01 s for sectors): the app's distributions
-data/lap_stats.csv     exact lap count, median and fastest time per race and metric
-data/race_drivers.csv  who set clean laps in each race (fills the driver picker)
+data/laps.csv.gz       every clean race lap, 2018 onward: track, season, driver, lap,
+                       lap / sector 1-3 times (s). The app's field and driver distributions
+data/race_drivers.csv  who set clean laps in each race: name, team (fills the driver picker)
 data/track_map.csv     track outline (x, y), tagged by timing sector
 data/corners.csv       corner numbers and positions for map labels
 
-Individual drivers' laps aren't stored: the app loads the race from FastF1 when a
-driver is picked for comparison.
+The app itself never talks to FastF1: everything it shows is pre-built here, so it needs
+no credentials and loads instantly.
 """
 
 from __future__ import annotations
@@ -62,7 +61,7 @@ CACHE = ROOT / ".fastf1_cache"
 SECRETS = ROOT / ".streamlit" / "secrets.toml"
 
 FIRST_SEASON = 2000                       # race results history for the grid explorer
-BIN_WIDTH = {"lap_time": 0.05, "s1": 0.01, "s2": 0.01, "s3": 0.01}   # seconds
+LAP_COLUMNS = ["track", "season", "driver", "lap", "lap_time", "s1", "s2", "s3"]
 RACE_KEY = ["track", "season"]
 
 log = logging.getLogger("build_data")
@@ -134,20 +133,12 @@ def timed_races(grid: pd.DataFrame, tracks: list[str]) -> pd.DataFrame:
     return races.drop_duplicates(RACE_KEY).sort_values("season", ascending=False, ignore_index=True)
 
 
-# --------------------------------------------------------------------------- lap aggregates
-def race_aggregates(track: str, season: int, laps: pd.DataFrame):
-    """Fine-binned lap counts, exact stats and the driver list for one race's clean laps."""
-    bins, stats = [], []
-    for m, w in BIN_WIDTH.items():
-        idx = np.round(laps[m] / w).astype(int)
-        counts = idx.value_counts().sort_index()
-        bins.append(pd.DataFrame({"track": track, "season": season, "metric": m,
-                                  "t": (counts.index * w).round(3), "laps": counts.values}))
-        stats.append({"track": track, "season": season, "metric": m, "laps": len(laps),
-                      "median": round(float(laps[m].median()), 3), "fastest": round(float(laps[m].min()), 3)})
+# --------------------------------------------------------------------------- laps
+def race_drivers(track: str, season: int, laps: pd.DataFrame) -> pd.DataFrame:
+    """Who set clean laps in one race, with their name and team (the driver picker)."""
     drivers = (laps.groupby(["driver", "driver_name", "team"]).size().rename("laps").reset_index()
                .assign(track=track, season=season))
-    return pd.concat(bins), pd.DataFrame(stats), drivers[["track", "season", "driver", "driver_name", "team", "laps"]]
+    return drivers[["track", "season", "driver", "driver_name", "team", "laps"]]
 
 
 def load_with_wait(season: int, date: str, telemetry: bool = False):
@@ -161,10 +152,13 @@ def load_with_wait(season: int, date: str, telemetry: bool = False):
     raise RuntimeError("FastF1 rate limit didn't clear")
 
 
-def lap_data(races: pd.DataFrame, existing: dict[str, pd.DataFrame]):
-    """Aggregates for each race not already in `existing`. One failed race is skipped, not fatal."""
-    done = set(map(tuple, existing["stats"][RACE_KEY].drop_duplicates().to_numpy())) if len(existing["stats"]) else set()
-    out = {k: [v] for k, v in existing.items()}
+def lap_data(races: pd.DataFrame, laps_old: pd.DataFrame, drivers_old: pd.DataFrame):
+    """Clean laps and driver lists for each race not already in laps_old. One failed race is
+    skipped, not fatal."""
+    done = set(map(tuple, laps_old[RACE_KEY].drop_duplicates().to_numpy())) if len(laps_old) else set()
+    if len(drivers_old):   # keep driver rows only for races whose laps are kept
+        drivers_old = drivers_old[[tuple(k) in done for k in drivers_old[RACE_KEY].to_numpy()]]
+    laps_out, drivers_out = [laps_old], [drivers_old]
     for r in races.itertuples():
         if (r.track, r.season) in done:
             continue
@@ -176,10 +170,11 @@ def lap_data(races: pd.DataFrame, existing: dict[str, pd.DataFrame]):
         if len(laps) < 20:
             log.warning("laps %s %s: only %d clean laps, skipped", r.track, r.season, len(laps))
             continue
-        b, s, d = race_aggregates(r.track, r.season, laps)
-        out["bins"].append(b); out["stats"].append(s); out["drivers"].append(d)
-        log.info("laps %s %s: %d clean laps from %d drivers", r.track, r.season, len(laps), len(d))
-    return {k: pd.concat(v, ignore_index=True) for k, v in out.items()}
+        laps_out.append(laps.assign(track=r.track, season=r.season)[LAP_COLUMNS])
+        drivers_out.append(race_drivers(r.track, r.season, laps))
+        log.info("laps %s %s: %d clean laps from %d drivers", r.track, r.season, len(laps), laps.driver.nunique())
+    return (pd.concat([d for d in laps_out if len(d)], ignore_index=True),
+            pd.concat([d for d in drivers_out if len(d)], ignore_index=True))
 
 
 # --------------------------------------------------------------------------- track map
@@ -447,20 +442,26 @@ def main() -> None:
         sign_in_from_secrets()
 
     if args.only in (None, "laps"):
-        existing = {"bins": read_or_empty("lap_bins"), "stats": read_or_empty("lap_stats"),
-                    "drivers": read_or_empty("race_drivers")}
+        laps_path = DATA / "laps.csv.gz"
+        laps_old = pd.read_csv(laps_path) if laps_path.exists() else pd.DataFrame(columns=LAP_COLUMNS)
+        drivers_old = read_or_empty("race_drivers")
         if args.rebuild:   # drop the races we're about to rebuild
-            for k, df in existing.items():
-                existing[k] = df[~df.track.isin(tracks)] if len(df) else df
-        built = lap_data(races, existing)
-        for name, key in (("lap_bins", "bins"), ("lap_stats", "stats"), ("race_drivers", "drivers")):
-            df = built[key].copy()
-            df["order"] = df.track.map(TRACKS.index)
-            df = df.sort_values(["order", "season"], ascending=[True, False], kind="stable").drop(columns="order")
-            df.to_csv(DATA / f"{name}.csv", index=False)
-        st = built["stats"][built["stats"].metric == "lap_time"]
-        print(f"\nLap aggregates: {st.groupby(RACE_KEY).ngroups} races, {int(st.laps.sum()):,} clean laps")
-        missing = sorted(set(map(tuple, races[RACE_KEY].to_numpy())) - set(map(tuple, st[RACE_KEY].to_numpy())))
+            laps_old = laps_old[~laps_old.track.isin(tracks)]
+            drivers_old = drivers_old[~drivers_old.track.isin(tracks)] if len(drivers_old) else drivers_old
+        laps, drivers = lap_data(races, laps_old, drivers_old)
+
+        def in_order(df):
+            df = df.assign(order=df.track.map(TRACKS.index))
+            sort = ["order", "season", "driver"] + (["lap"] if "lap" in df else [])
+            asc = [True, False, True] + ([True] if "lap" in df else [])
+            return df.sort_values(sort, ascending=asc, kind="stable").drop(columns="order")
+
+        # mtime=0 keeps the gzip bytes identical when the laps haven't changed (no git churn)
+        in_order(laps).to_csv(laps_path, index=False, compression={"method": "gzip", "mtime": 0})
+        in_order(drivers).to_csv(DATA / "race_drivers.csv", index=False)
+        print(f"\nLaps: {laps.groupby(RACE_KEY).ngroups} races, {len(laps):,} clean laps "
+              f"({laps_path.stat().st_size / 1e6:.1f} MB)")
+        missing = sorted(set(map(tuple, races[RACE_KEY].to_numpy())) - set(map(tuple, laps[RACE_KEY].to_numpy())))
         if missing:
             print("No lap data for:", ", ".join(f"{t} {s}" for t, s in missing))
 

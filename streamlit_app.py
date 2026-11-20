@@ -1,9 +1,8 @@
 """F1 Circuit Explorer: Streamlit prototype covering every circuit on the 2026 F1 calendar.
 
-All data comes from FastF1. Grid history, track outlines and the field's lap/sector
-time distributions are pre-built into ./data by scripts/build_data.py. A single
-driver's laps are loaded live from FastF1 when that driver is picked, which needs
-F1 account credentials in st.secrets (see README).
+All data comes from FastF1, pre-built into ./data by scripts/build_data.py: grid
+history, track outlines and every clean race lap since 2018 (data/laps.csv.gz). The
+app itself never calls FastF1, so it needs no credentials and no network access.
 """
 
 from __future__ import annotations
@@ -15,7 +14,7 @@ import pandas as pd
 import plotly.graph_objects as go
 import streamlit as st
 
-from f1data import TRACK_LABEL, TRACKS, clean_laps, is_signed_in, load_race, setup_cache, sign_in
+from f1data import TRACK_LABEL, TRACKS
 
 st.set_page_config(page_title="F1 Circuit Explorer", page_icon="🏁", layout="wide")
 
@@ -57,52 +56,31 @@ st.markdown(
 # --------------------------------------------------------------------------- data
 @st.cache_data
 def load_data():
-    return tuple(pd.read_csv(DATA / f"{name}.csv") for name in
-                 ("grid_results", "track_map", "corners", "lap_bins", "lap_stats", "race_drivers"))
+    names = ("grid_results", "track_map", "corners", "race_drivers")
+    laps = pd.read_csv(DATA / "laps.csv.gz")
+    return (*(pd.read_csv(DATA / f"{name}.csv") for name in names), laps)
 
 
-GRID, TRACK_MAP, CORNERS, LAP_BINS, LAP_STATS, RACE_DRIVERS = load_data()
+GRID, TRACK_MAP, CORNERS, RACE_DRIVERS, LAPS = load_data()
 
 
-class NoCredentials(Exception):
-    pass
-
-
-@st.cache_resource(show_spinner=False)
-def fastf1_setup() -> None:
-    setup_cache()
-
-
-def ensure_signed_in() -> None:
-    """Sign in to the F1 account FastF1 needs, with [f1_credentials] from st.secrets."""
-    if is_signed_in():
-        return
-    try:
-        creds = st.secrets["f1_credentials"]
-        user, pw = creds["username"], creds["password"]
-    except Exception as exc:
-        raise NoCredentials from exc
-    sign_in(user, pw)
-
-
-@st.cache_data(ttl=24 * 3600, show_spinner=False, max_entries=8)
+@st.cache_data
 def race_laps(track: str, season: int) -> pd.DataFrame:
-    """Every clean lap of one race, loaded live from FastF1 (first load ~10-30 s), cached for a day."""
-    fastf1_setup()
-    ensure_signed_in()
-    date = GRID.loc[(GRID.track == track) & (GRID.season == season), "date"].iloc[0]
-    return clean_laps(load_race(int(season), date))
+    """Every clean lap of one race (pre-built)."""
+    return LAPS[(LAPS.track == track) & (LAPS.season == season)].reset_index(drop=True)
 
 
 def field_bins(track: str, season: int, metric: str) -> tuple[np.ndarray, np.ndarray]:
-    """The field's clean laps for one race as (bin time, lap count) from the pre-built bins."""
-    b = LAP_BINS[(LAP_BINS.track == track) & (LAP_BINS.season == season) & (LAP_BINS.metric == metric)]
-    return b.t.to_numpy(float), b.laps.to_numpy(float)
+    """The field's clean laps for one race as (time, weight); every lap counts once."""
+    t = race_laps(track, season)[metric].to_numpy(float)
+    return t, np.ones_like(t)
 
 
 def field_stat(track: str, season: int, metric: str, stat: str) -> float:
-    row = LAP_STATS[(LAP_STATS.track == track) & (LAP_STATS.season == season) & (LAP_STATS.metric == metric)]
-    return float(row[stat].iloc[0]) if len(row) else np.nan
+    t = race_laps(track, season)[metric]
+    if t.empty:
+        return np.nan
+    return float(t.median() if stat == "median" else t.min())
 
 
 def weighted_percentile(values: np.ndarray, weights: np.ndarray, q: list[float]) -> np.ndarray:
@@ -367,8 +345,8 @@ with g_right:
 # --------------------------------------------------------------------------- 2. segment explorer
 st.markdown("<div class='rule' style='border-color:#e1e0d9;border-width:1px;margin-top:1rem'></div>",
             unsafe_allow_html=True)
-# seasons with pre-built lap timing (FastF1 timing starts in 2018) for this circuit
-lap_seasons = sorted(LAP_STATS.loc[LAP_STATS.track == track, "season"].unique().tolist(), reverse=True) or [None]
+# seasons with lap timing for this circuit (FastF1 timing starts in 2018)
+lap_seasons = sorted(LAPS.loc[LAPS.track == track, "season"].unique().tolist(), reverse=True) or [None]
 if st.session_state.season not in lap_seasons:
     st.session_state.season = int(lap_seasons[0])
 
@@ -473,17 +451,8 @@ with m_left:
                     selection_mode="points", use_container_width=True, config={"displayModeBar": False})
 
     drv = st.session_state.driver
-    dtimes = np.array([])
-    if drv:
-        try:
-            with st.spinner(f"Loading {labels[drv]}'s laps from FastF1 (the first load of a race takes ~20 s)…"):
-                rl = race_laps(track, season)
-            dtimes = rl.loc[rl.driver == drv, col].to_numpy()
-        except NoCredentials:
-            st.warning("Driver comparison loads laps live from FastF1, which needs F1 account credentials "
-                       "in the app's secrets (`[f1_credentials]`).")
-        except Exception as exc:
-            st.warning(f"Couldn't load {drv}'s laps from FastF1 right now ({exc}). Try again in a minute.")
+    rl = race_laps(track, season)
+    dtimes = rl.loc[rl.driver == drv, col].to_numpy() if drv else np.array([])
     field_median = field_stat(track, season, col, "median")
     k1, k2, k3 = st.columns(3)
     k1.metric(f"{SECTORS[sector]} median", fmt_time(field_median, is_lap))
@@ -558,5 +527,4 @@ with m_right:
 
 st.caption("Data: all via FastF1. Race results through its Jolpica-F1 (Ergast) interface, lap/sector timing "
            "and car positions from F1 live timing, track outline and corners from MultiViewer. Grid, maps and "
-           "the field's time distributions are pre-built by `scripts/build_data.py`; a picked driver's laps are "
-           "loaded live from FastF1 and cached. Prototype for DS 511.")
+           "every clean race lap are pre-built by `scripts/build_data.py`. Prototype for DS 511.")
