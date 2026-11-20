@@ -437,12 +437,18 @@ with m_right:
                              hovertemplate="%{customdata[1]} – %{customdata[2]}<br>%{customdata[0]} laps "
                                            "(%{y:.1f}%)<extra></extra>", showlegend=False))
         xs = np.linspace(lo, hi, 300)
-        fig.add_trace(go.Scatter(x=xs, y=kde(times, xs) * width * 100, mode="lines", name="Overall (all drivers)",
+        overall = kde(times, xs) * width * 100
+        fig.add_trace(go.Scatter(x=xs, y=overall, mode="lines", name="Overall (all drivers)",
                                  line=dict(color=BLUE, width=2.5), hoverinfo="skip"))
+        y_top = max(pct.max(), overall.max())
         if len(dtimes):
-            fig.add_trace(go.Scatter(x=xs, y=kde(dtimes, xs) * width * 100, mode="lines", name=labels[drv],
+            driver_curve = kde(dtimes, xs) * width * 100
+            fig.add_trace(go.Scatter(x=xs, y=driver_curve, mode="lines", name=labels[drv],
                                      line=dict(color=ORANGE, width=2.5), hoverinfo="skip"))
             fig.add_vline(x=float(np.median(dtimes)), line=dict(color=ORANGE, dash="dot", width=1.5))
+            y_top = max(y_top, driver_curve.max())
+        # size the axis to the tallest of the bars and both curves so no curve is clipped
+        fig.update_yaxes(range=[0, y_top * 1.08])
         fig.add_vline(x=float(np.median(times)), line=dict(color=BLUE, dash="dot", width=1.5))
         step = next(s for s in (0.1, 0.2, 0.25, 0.5, 1, 2, 5, 10) if (hi - lo) / s <= 8)
         ticks = np.arange(np.ceil(lo / step) * step, hi, step)
