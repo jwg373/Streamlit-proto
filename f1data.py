@@ -1,13 +1,12 @@
-"""Track list, F1 account sign-in and clean race laps, all through FastF1.
+"""Track list, plus FastF1 sign-in, race lookup and clean race laps for the data build.
 
-Shared by the Streamlit app (which loads one race live when a driver is picked)
-and by scripts/build_data.py (which pre-builds the field's lap distributions,
-driver lists, grid history and track maps).
+The Streamlit app only uses the track list; it never imports FastF1. Everything else
+here is for scripts/build_data.py, which pre-builds all of data/ through FastF1, so
+FastF1 is imported inside the functions that need it.
 
 FastF1's timing data needs a signed-in Formula 1 account. Credentials are never
-stored here: the app reads them from st.secrets (.streamlit/secrets.toml locally,
-the Community Cloud secrets console when deployed) and the build script reads the
-same local file. The access token FastF1 gets back is kept in memory only.
+stored here: the build script reads them from .streamlit/secrets.toml (git-ignored).
+The access token FastF1 gets back is kept in memory only.
 """
 
 from __future__ import annotations
@@ -15,7 +14,6 @@ from __future__ import annotations
 import tempfile
 from pathlib import Path
 
-import fastf1
 import pandas as pd
 
 # The 2026 calendar, in round order: app name -> (dropdown label, Jolpica/Ergast circuit id).
@@ -58,6 +56,8 @@ _signed_in = False
 
 def setup_cache(path: str | Path | None = None) -> None:
     """FastF1's HTTP/parse cache (a temp dir unless a path is given)."""
+    import fastf1
+
     path = Path(path) if path else Path(tempfile.gettempdir()) / "fastf1_cache"
     path.mkdir(parents=True, exist_ok=True)
     fastf1.Cache.enable_cache(str(path))
@@ -86,6 +86,8 @@ def is_signed_in() -> bool:
 def race_session(season: int, race_date: str):
     """The race session of the event held on race_date (YYYY-MM-DD, from Jolpica).
     Matched by date, since cancelled rounds can shift round numbers between sources."""
+    import fastf1
+
     schedule = fastf1.get_event_schedule(season, include_testing=False)
     gap = (schedule.EventDate.dt.normalize() - pd.Timestamp(race_date)).abs()
     if gap.min() > pd.Timedelta(days=1):
