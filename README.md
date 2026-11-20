@@ -12,17 +12,26 @@ Live app: https://blank-app-t8weoxwxcf.streamlit.app/
 
 ## Data
 
-| Data | Source | How it gets into the app |
+Everything comes from **FastF1**:
+
+| Data | FastF1 source | How it gets into the app |
 |---|---|---|
-| Grid slot + finish for every driver at each circuit (2000–2026) | FastF1 → Jolpica-F1 (Ergast) | `data/grid_results.csv`, built by `scripts/build_data.py` |
-| Track outline split into timing sectors | FastF1 (MultiViewer) outline + OpenF1 car positions at the sector split times, oriented like formula1.com's circuit maps | `data/track_map.csv`, `data/corners.csv`, built by `scripts/build_data.py` |
-| Clean race laps with sector times (2023–2026) | OpenF1 API | fetched on demand by `f1data.py`, cached for 24 h |
+| Grid slot + finish for every driver at each circuit (2000–2026) | Jolpica-F1 (Ergast) interface | `data/grid_results.csv` |
+| The field's lap / sector time distribution per race (2018–2026) | F1 live timing | `data/lap_bins.csv` (fine time bins), `data/lap_stats.csv`, `data/race_drivers.csv` |
+| Track outline split into timing sectors | MultiViewer outline + car positions at the sector split times, oriented like formula1.com's circuit maps | `data/track_map.csv`, `data/corners.csv` |
+| One driver's laps (the comparison overlay) | F1 live timing | loaded live when a driver is picked, cached for a day |
 
-FastF1's own live-timing loader now requires an F1TV subscription, so lap timing and car
-positions come from OpenF1's free historical API instead. No account is needed.
+All `data/` files are built by `scripts/build_data.py`. The track list (app name, Jolpica
+circuit id) lives in `TRACK_INFO` in `f1data.py`.
 
-The track list (app name, Jolpica circuit id, OpenF1 circuit name) lives in `TRACK_INFO` in
-`f1data.py`. To add a circuit, add a row there and re-run `scripts/build_data.py`.
+### F1 account credentials
+
+FastF1's timing data needs a signed-in Formula 1 account. Copy
+`.streamlit/secrets.toml.example` to `.streamlit/secrets.toml` (git-ignored) and fill in
+`[f1_credentials]`. Both the build script and the app read it from there; the access token
+FastF1 gets back is kept in memory only. On Streamlit Community Cloud, paste the same
+section into the app's **Settings → Secrets**. Without credentials the app still works;
+only the live driver comparison is unavailable.
 
 ## Run it locally
 
@@ -35,9 +44,10 @@ uv run streamlit run streamlit_app.py
 
 Streamlit Community Cloud installs from `requirements.txt`. Locally, `pyproject.toml` is used by uv.
 
-Refresh the pre-built data (installs the optional `data` group with FastF1):
+Refresh the pre-built data (needs the credentials above):
 
 ```
-uv run --group data python scripts/build_data.py              # everything
-uv run --group data python scripts/build_data.py --only map   # just the track outline
+uv run python scripts/build_data.py                        # everything
+uv run python scripts/build_data.py --only laps            # add races that aren't built yet
+uv run python scripts/build_data.py --only map --tracks Hungary
 ```

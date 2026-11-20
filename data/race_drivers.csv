@@ -1,0 +1,2975 @@
+track,season,driver,driver_name,team,laps
+Australia,2026,ALB,Alexander Albon,Williams,47
+Australia,2026,ALO,Fernando Alonso,Aston Martin,10
+Australia,2026,ANT,Kimi Antonelli,Mercedes,49
+Australia,2026,BEA,Oliver Bearman,Haas F1 Team,49
+Australia,2026,BOR,Gabriel Bortoleto,Audi,49
+Australia,2026,BOT,Valtteri Bottas,Cadillac,6
+Australia,2026,COL,Franco Colapinto,Alpine,43
+Australia,2026,GAS,Pierre Gasly,Alpine,49
+Australia,2026,HAD,Isack Hadjar,Red Bull Racing,9
+Australia,2026,HAM,Lewis Hamilton,Ferrari,48
+Australia,2026,LAW,Liam Lawson,Racing Bulls,46
+Australia,2026,LEC,Charles Leclerc,Ferrari,48
+Australia,2026,LIN,Arvid Lindblad,Racing Bulls,46
+Australia,2026,NOR,Lando Norris,McLaren,49
+Australia,2026,OCO,Esteban Ocon,Haas F1 Team,49
+Australia,2026,PER,Sergio Perez,Cadillac,25
+Australia,2026,RUS,George Russell,Mercedes,50
+Australia,2026,SAI,Carlos Sainz,Williams,41
+Australia,2026,STR,Lance Stroll,Aston Martin,19
+Australia,2026,VER,Max Verstappen,Red Bull Racing,48
+Australia,2025,ALB,Alexander Albon,Williams,2
+Australia,2025,ANT,Andrea Kimi Antonelli,Mercedes,2
+Australia,2025,BEA,Oliver Bearman,Haas F1 Team,1
+Australia,2025,BOR,Gabriel Bortoleto,Kick Sauber,2
+Australia,2025,GAS,Pierre Gasly,Alpine,1
+Australia,2025,HAM,Lewis Hamilton,Ferrari,2
+Australia,2025,HUL,Nico Hulkenberg,Kick Sauber,2
+Australia,2025,LAW,Liam Lawson,Red Bull Racing,2
+Australia,2025,LEC,Charles Leclerc,Ferrari,2
+Australia,2025,NOR,Lando Norris,McLaren,6
+Australia,2025,OCO,Esteban Ocon,Haas F1 Team,1
+Australia,2025,PIA,Oscar Piastri,McLaren,3
+Australia,2025,RUS,George Russell,Mercedes,2
+Australia,2025,STR,Lance Stroll,Aston Martin,2
+Australia,2025,TSU,Yuki Tsunoda,Racing Bulls,2
+Australia,2025,VER,Max Verstappen,Red Bull Racing,3
+Australia,2024,ALB,Alexander Albon,Williams,49
+Australia,2024,ALO,Fernando Alonso,Aston Martin,50
+Australia,2024,BOT,Valtteri Bottas,Kick Sauber,47
+Australia,2024,GAS,Pierre Gasly,Alpine,50
+Australia,2024,HAM,Lewis Hamilton,Mercedes,12
+Australia,2024,HUL,Nico Hulkenberg,Haas F1 Team,51
+Australia,2024,LEC,Charles Leclerc,Ferrari,49
+Australia,2024,MAG,Kevin Magnussen,Haas F1 Team,50
+Australia,2024,NOR,Lando Norris,McLaren,49
+Australia,2024,OCO,Esteban Ocon,Alpine,47
+Australia,2024,PER,Sergio Perez,Red Bull Racing,49
+Australia,2024,PIA,Oscar Piastri,McLaren,49
+Australia,2024,RIC,Daniel Ricciardo,RB,49
+Australia,2024,RUS,George Russell,Mercedes,49
+Australia,2024,SAI,Carlos Sainz,Ferrari,51
+Australia,2024,STR,Lance Stroll,Aston Martin,49
+Australia,2024,TSU,Yuki Tsunoda,RB,49
+Australia,2024,VER,Max Verstappen,Red Bull Racing,2
+Australia,2024,ZHO,Guanyu Zhou,Kick Sauber,48
+Australia,2023,ALB,Alexander Albon,Williams,3
+Australia,2023,ALO,Fernando Alonso,Aston Martin,43
+Australia,2023,BOT,Valtteri Bottas,Alfa Romeo,42
+Australia,2023,DEV,Nyck De Vries,AlphaTauri,39
+Australia,2023,GAS,Pierre Gasly,Alpine,43
+Australia,2023,HAM,Lewis Hamilton,Mercedes,43
+Australia,2023,HUL,Nico Hulkenberg,Haas F1 Team,43
+Australia,2023,MAG,Kevin Magnussen,Haas F1 Team,43
+Australia,2023,NOR,Lando Norris,McLaren,43
+Australia,2023,OCO,Esteban Ocon,Alpine,43
+Australia,2023,PER,Sergio Perez,Red Bull Racing,42
+Australia,2023,PIA,Oscar Piastri,McLaren,43
+Australia,2023,RUS,George Russell,Mercedes,9
+Australia,2023,SAI,Carlos Sainz,Ferrari,43
+Australia,2023,SAR,Logan Sargeant,Williams,40
+Australia,2023,STR,Lance Stroll,Aston Martin,43
+Australia,2023,TSU,Yuki Tsunoda,AlphaTauri,43
+Australia,2023,VER,Max Verstappen,Red Bull Racing,43
+Australia,2023,ZHO,Guanyu Zhou,Alfa Romeo,43
+Australia,2022,ALB,Alexander Albon,Williams,34
+Australia,2022,ALO,Fernando Alonso,Alpine,35
+Australia,2022,BOT,Valtteri Bottas,Alfa Romeo,36
+Australia,2022,GAS,Pierre Gasly,AlphaTauri,38
+Australia,2022,HAM,Lewis Hamilton,Mercedes,43
+Australia,2022,LAT,Nicholas Latifi,Williams,34
+Australia,2022,LEC,Charles Leclerc,Ferrari,45
+Australia,2022,MAG,Kevin Magnussen,Haas F1 Team,39
+Australia,2022,MSC,Mick Schumacher,Haas F1 Team,35
+Australia,2022,NOR,Lando Norris,McLaren,42
+Australia,2022,OCO,Esteban Ocon,Alpine,40
+Australia,2022,PER,Sergio Perez,Red Bull Racing,43
+Australia,2022,RIC,Daniel Ricciardo,McLaren,41
+Australia,2022,RUS,George Russell,Mercedes,45
+Australia,2022,STR,Lance Stroll,Aston Martin,36
+Australia,2022,TSU,Yuki Tsunoda,AlphaTauri,33
+Australia,2022,VER,Max Verstappen,Red Bull Racing,25
+Australia,2022,VET,Sebastian Vettel,Aston Martin,7
+Australia,2022,ZHO,Guanyu Zhou,Alfa Romeo,33
+Australia,2019,ALB,Alexander Albon,Toro Rosso,49
+Australia,2019,BOT,Valtteri Bottas,Mercedes,54
+Australia,2019,GAS,Pierre Gasly,Red Bull Racing,51
+Australia,2019,GIO,Antonio Giovinazzi,Alfa Romeo Racing,41
+Australia,2019,GRO,Romain Grosjean,Haas F1 Team,26
+Australia,2019,HAM,Lewis Hamilton,Mercedes,54
+Australia,2019,HUL,Nico Hulkenberg,Renault,53
+Australia,2019,KUB,Robert Kubica,Williams,21
+Australia,2019,KVY,Daniil Kvyat,Toro Rosso,49
+Australia,2019,LEC,Charles Leclerc,Ferrari,52
+Australia,2019,MAG,Kevin Magnussen,Haas F1 Team,54
+Australia,2019,NOR,Lando Norris,McLaren,50
+Australia,2019,PER,Sergio Perez,Racing Point,48
+Australia,2019,RAI,Kimi Räikkönen,Alfa Romeo Racing,53
+Australia,2019,RIC,Daniel Ricciardo,Renault,24
+Australia,2019,RUS,George Russell,Williams,23
+Australia,2019,SAI,Carlos Sainz,McLaren,5
+Australia,2019,STR,Lance Stroll,Racing Point,51
+Australia,2019,VER,Max Verstappen,Red Bull Racing,54
+Australia,2019,VET,Sebastian Vettel,Ferrari,54
+Australia,2018,ALO,Fernando Alonso,McLaren,41
+Australia,2018,BOT,Valtteri Bottas,Mercedes,41
+Australia,2018,GAS,Pierre Gasly,Toro Rosso,5
+Australia,2018,GRO,Romain Grosjean,Haas F1 Team,14
+Australia,2018,HAM,Lewis Hamilton,Mercedes,40
+Australia,2018,HAR,Brendon Hartley,Toro Rosso,37
+Australia,2018,HUL,Nico Hulkenberg,Renault,41
+Australia,2018,LEC,Charles Leclerc,Sauber,37
+Australia,2018,MAG,Kevin Magnussen,Haas F1 Team,13
+Australia,2018,OCO,Esteban Ocon,Force India,39
+Australia,2018,PER,Sergio Perez,Force India,40
+Australia,2018,RAI,Kimi Räikkönen,Ferrari,39
+Australia,2018,RIC,Daniel Ricciardo,Red Bull Racing,41
+Australia,2018,SAI,Carlos Sainz,Renault,39
+Australia,2018,STR,Lance Stroll,Williams,40
+Australia,2018,VAN,Stoffel Vandoorne,McLaren,40
+Australia,2018,VER,Max Verstappen,Red Bull Racing,39
+Australia,2018,VET,Sebastian Vettel,Ferrari,42
+China,2026,ALO,Fernando Alonso,Aston Martin,20
+China,2026,ANT,Kimi Antonelli,Mercedes,47
+China,2026,BEA,Oliver Bearman,Haas F1 Team,47
+China,2026,BOT,Valtteri Bottas,Cadillac,45
+China,2026,COL,Franco Colapinto,Alpine,44
+China,2026,GAS,Pierre Gasly,Alpine,46
+China,2026,HAD,Isack Hadjar,Red Bull Racing,45
+China,2026,HAM,Lewis Hamilton,Ferrari,47
+China,2026,HUL,Nico Hulkenberg,Audi,42
+China,2026,LAW,Liam Lawson,Racing Bulls,44
+China,2026,LEC,Charles Leclerc,Ferrari,47
+China,2026,LIN,Arvid Lindblad,Racing Bulls,43
+China,2026,OCO,Esteban Ocon,Haas F1 Team,41
+China,2026,PER,Sergio Perez,Cadillac,43
+China,2026,RUS,George Russell,Mercedes,47
+China,2026,SAI,Carlos Sainz,Williams,44
+China,2026,STR,Lance Stroll,Aston Martin,8
+China,2026,VER,Max Verstappen,Red Bull Racing,34
+China,2025,ALB,Alexander Albon,Williams,50
+China,2025,ANT,Kimi Antonelli,Mercedes,51
+China,2025,BEA,Oliver Bearman,Haas F1 Team,50
+China,2025,BOR,Gabriel Bortoleto,Kick Sauber,50
+China,2025,DOO,Jack Doohan,Alpine,50
+China,2025,GAS,Pierre Gasly,Alpine,50
+China,2025,HAD,Isack Hadjar,Racing Bulls,48
+China,2025,HAM,Lewis Hamilton,Ferrari,49
+China,2025,HUL,Nico Hulkenberg,Kick Sauber,48
+China,2025,LAW,Liam Lawson,Red Bull Racing,48
+China,2025,LEC,Charles Leclerc,Ferrari,51
+China,2025,NOR,Lando Norris,McLaren,51
+China,2025,OCO,Esteban Ocon,Haas F1 Team,50
+China,2025,PIA,Oscar Piastri,McLaren,51
+China,2025,RUS,George Russell,Mercedes,51
+China,2025,SAI,Carlos Sainz,Williams,50
+China,2025,STR,Lance Stroll,Aston Martin,50
+China,2025,TSU,Yuki Tsunoda,Racing Bulls,45
+China,2025,VER,Max Verstappen,Red Bull Racing,51
+China,2024,ALB,Alexander Albon,Williams,41
+China,2024,ALO,Fernando Alonso,Aston Martin,39
+China,2024,BOT,Valtteri Bottas,Kick Sauber,16
+China,2024,GAS,Pierre Gasly,Alpine,39
+China,2024,HAM,Lewis Hamilton,Mercedes,41
+China,2024,HUL,Nico Hulkenberg,Haas F1 Team,41
+China,2024,LEC,Charles Leclerc,Ferrari,43
+China,2024,MAG,Kevin Magnussen,Haas F1 Team,41
+China,2024,NOR,Lando Norris,McLaren,44
+China,2024,OCO,Esteban Ocon,Alpine,41
+China,2024,PER,Sergio Perez,Red Bull Racing,41
+China,2024,PIA,Oscar Piastri,McLaren,41
+China,2024,RIC,Daniel Ricciardo,RB,17
+China,2024,RUS,George Russell,Mercedes,41
+China,2024,SAI,Carlos Sainz,Ferrari,41
+China,2024,SAR,Logan Sargeant,Williams,41
+China,2024,STR,Lance Stroll,Aston Martin,39
+China,2024,TSU,Yuki Tsunoda,RB,16
+China,2024,VER,Max Verstappen,Red Bull Racing,42
+China,2024,ZHO,Guanyu Zhou,Kick Sauber,39
+China,2019,ALB,Alexander Albon,Toro Rosso,47
+China,2019,BOT,Valtteri Bottas,Mercedes,50
+China,2019,GAS,Pierre Gasly,Red Bull Racing,48
+China,2019,GIO,Antonio Giovinazzi,Alfa Romeo Racing,41
+China,2019,GRO,Romain Grosjean,Haas F1 Team,46
+China,2019,HAM,Lewis Hamilton,Mercedes,50
+China,2019,HUL,Nico Hulkenberg,Renault,10
+China,2019,KUB,Robert Kubica,Williams,17
+China,2019,KVY,Daniil Kvyat,Toro Rosso,29
+China,2019,LEC,Charles Leclerc,Ferrari,50
+China,2019,MAG,Kevin Magnussen,Haas F1 Team,41
+China,2019,NOR,Lando Norris,McLaren,40
+China,2019,PER,Sergio Perez,Racing Point,49
+China,2019,RAI,Kimi Räikkönen,Alfa Romeo Racing,47
+China,2019,RIC,Daniel Ricciardo,Renault,51
+China,2019,RUS,George Russell,Williams,20
+China,2019,SAI,Carlos Sainz,McLaren,49
+China,2019,STR,Lance Stroll,Racing Point,43
+China,2019,VER,Max Verstappen,Red Bull Racing,50
+China,2019,VET,Sebastian Vettel,Ferrari,50
+China,2018,ALO,Fernando Alonso,McLaren,20
+China,2018,BOT,Valtteri Bottas,Mercedes,20
+China,2018,ERI,Marcus Ericsson,Sauber,20
+China,2018,GAS,Pierre Gasly,Toro Rosso,21
+China,2018,GRO,Romain Grosjean,Haas F1 Team,18
+China,2018,HAM,Lewis Hamilton,Mercedes,20
+China,2018,HAR,Brendon Hartley,Toro Rosso,14
+China,2018,HUL,Nico Hulkenberg,Renault,20
+China,2018,LEC,Charles Leclerc,Sauber,20
+China,2018,MAG,Kevin Magnussen,Haas F1 Team,20
+China,2018,OCO,Esteban Ocon,Force India,20
+China,2018,PER,Sergio Perez,Force India,20
+China,2018,RAI,Kimi Räikkönen,Ferrari,20
+China,2018,RIC,Daniel Ricciardo,Red Bull Racing,20
+China,2018,SAI,Carlos Sainz,Renault,20
+China,2018,SIR,Sergey Sirotkin,Williams,21
+China,2018,STR,Lance Stroll,Williams,19
+China,2018,VAN,Stoffel Vandoorne,McLaren,19
+China,2018,VER,Max Verstappen,Red Bull Racing,20
+China,2018,VET,Sebastian Vettel,Ferrari,20
+Japan,2026,ALB,Alexander Albon,Williams,37
+Japan,2026,ALO,Fernando Alonso,Aston Martin,42
+Japan,2026,ANT,Kimi Antonelli,Mercedes,46
+Japan,2026,BEA,Oliver Bearman,Haas F1 Team,17
+Japan,2026,BOR,Gabriel Bortoleto,Audi,44
+Japan,2026,BOT,Valtteri Bottas,Cadillac,34
+Japan,2026,COL,Franco Colapinto,Alpine,43
+Japan,2026,GAS,Pierre Gasly,Alpine,46
+Japan,2026,HAD,Isack Hadjar,Red Bull Racing,43
+Japan,2026,HAM,Lewis Hamilton,Ferrari,46
+Japan,2026,HUL,Nico Hulkenberg,Audi,45
+Japan,2026,LAW,Liam Lawson,Racing Bulls,44
+Japan,2026,LEC,Charles Leclerc,Ferrari,44
+Japan,2026,LIN,Arvid Lindblad,Racing Bulls,43
+Japan,2026,NOR,Lando Norris,McLaren,44
+Japan,2026,OCO,Esteban Ocon,Haas F1 Team,43
+Japan,2026,PER,Sergio Perez,Cadillac,44
+Japan,2026,PIA,Oscar Piastri,McLaren,44
+Japan,2026,RUS,George Russell,Mercedes,45
+Japan,2026,SAI,Carlos Sainz,Williams,45
+Japan,2026,STR,Lance Stroll,Aston Martin,21
+Japan,2026,VER,Max Verstappen,Red Bull Racing,46
+Japan,2025,ALB,Alexander Albon,Williams,50
+Japan,2025,ALO,Fernando Alonso,Aston Martin,50
+Japan,2025,ANT,Kimi Antonelli,Mercedes,50
+Japan,2025,BEA,Oliver Bearman,Haas F1 Team,50
+Japan,2025,BOR,Gabriel Bortoleto,Kick Sauber,50
+Japan,2025,DOO,Jack Doohan,Alpine,50
+Japan,2025,GAS,Pierre Gasly,Alpine,50
+Japan,2025,HAD,Isack Hadjar,Racing Bulls,50
+Japan,2025,HAM,Lewis Hamilton,Ferrari,50
+Japan,2025,HUL,Nico Hulkenberg,Kick Sauber,50
+Japan,2025,LAW,Liam Lawson,Racing Bulls,50
+Japan,2025,LEC,Charles Leclerc,Ferrari,50
+Japan,2025,NOR,Lando Norris,McLaren,50
+Japan,2025,OCO,Esteban Ocon,Haas F1 Team,50
+Japan,2025,PIA,Oscar Piastri,McLaren,50
+Japan,2025,RUS,George Russell,Mercedes,50
+Japan,2025,SAI,Carlos Sainz,Williams,50
+Japan,2025,STR,Lance Stroll,Aston Martin,46
+Japan,2025,TSU,Yuki Tsunoda,Red Bull Racing,50
+Japan,2025,VER,Max Verstappen,Red Bull Racing,50
+Japan,2024,ALO,Fernando Alonso,Aston Martin,45
+Japan,2024,BOT,Valtteri Bottas,Kick Sauber,41
+Japan,2024,GAS,Pierre Gasly,Alpine,35
+Japan,2024,HAM,Lewis Hamilton,Mercedes,43
+Japan,2024,HUL,Nico Hulkenberg,Haas F1 Team,42
+Japan,2024,LEC,Charles Leclerc,Ferrari,47
+Japan,2024,MAG,Kevin Magnussen,Haas F1 Team,43
+Japan,2024,NOR,Lando Norris,McLaren,45
+Japan,2024,OCO,Esteban Ocon,Alpine,32
+Japan,2024,PER,Sergio Perez,Red Bull Racing,45
+Japan,2024,PIA,Oscar Piastri,McLaren,45
+Japan,2024,RUS,George Russell,Mercedes,43
+Japan,2024,SAI,Carlos Sainz,Ferrari,45
+Japan,2024,SAR,Logan Sargeant,Williams,39
+Japan,2024,STR,Lance Stroll,Aston Martin,42
+Japan,2024,TSU,Yuki Tsunoda,RB,43
+Japan,2024,VER,Max Verstappen,Red Bull Racing,45
+Japan,2024,ZHO,Guanyu Zhou,Kick Sauber,5
+Japan,2023,ALB,Alexander Albon,Williams,13
+Japan,2023,ALO,Fernando Alonso,Aston Martin,40
+Japan,2023,GAS,Pierre Gasly,Alpine,40
+Japan,2023,HAM,Lewis Hamilton,Mercedes,43
+Japan,2023,HUL,Nico Hulkenberg,Haas F1 Team,38
+Japan,2023,LAW,Liam Lawson,AlphaTauri,38
+Japan,2023,LEC,Charles Leclerc,Ferrari,43
+Japan,2023,MAG,Kevin Magnussen,Haas F1 Team,39
+Japan,2023,NOR,Lando Norris,McLaren,43
+Japan,2023,OCO,Esteban Ocon,Alpine,40
+Japan,2023,PER,Sergio Perez,Red Bull Racing,6
+Japan,2023,PIA,Oscar Piastri,McLaren,44
+Japan,2023,RUS,George Russell,Mercedes,45
+Japan,2023,SAI,Carlos Sainz,Ferrari,43
+Japan,2023,SAR,Logan Sargeant,Williams,8
+Japan,2023,STR,Lance Stroll,Aston Martin,11
+Japan,2023,TSU,Yuki Tsunoda,AlphaTauri,39
+Japan,2023,VER,Max Verstappen,Red Bull Racing,43
+Japan,2023,ZHO,Guanyu Zhou,Alfa Romeo,37
+Japan,2022,ALO,Fernando Alonso,Alpine,17
+Japan,2022,BOT,Valtteri Bottas,Alfa Romeo,20
+Japan,2022,GAS,Pierre Gasly,AlphaTauri,18
+Japan,2022,HAM,Lewis Hamilton,Mercedes,20
+Japan,2022,LAT,Nicholas Latifi,Williams,22
+Japan,2022,LEC,Charles Leclerc,Ferrari,21
+Japan,2022,MAG,Kevin Magnussen,Haas F1 Team,19
+Japan,2022,MSC,Mick Schumacher,Haas F1 Team,13
+Japan,2022,NOR,Lando Norris,McLaren,21
+Japan,2022,OCO,Esteban Ocon,Alpine,20
+Japan,2022,PER,Sergio Perez,Red Bull Racing,20
+Japan,2022,RIC,Daniel Ricciardo,McLaren,19
+Japan,2022,RUS,George Russell,Mercedes,20
+Japan,2022,STR,Lance Stroll,Aston Martin,18
+Japan,2022,TSU,Yuki Tsunoda,AlphaTauri,18
+Japan,2022,VER,Max Verstappen,Red Bull Racing,21
+Japan,2022,VET,Sebastian Vettel,Aston Martin,22
+Japan,2022,ZHO,Guanyu Zhou,Alfa Romeo,16
+Japan,2019,ALB,Alexander Albon,Red Bull Racing,45
+Japan,2019,BOT,Valtteri Bottas,Mercedes,46
+Japan,2019,GAS,Pierre Gasly,Toro Rosso,46
+Japan,2019,GIO,Antonio Giovinazzi,Alfa Romeo Racing,35
+Japan,2019,GRO,Romain Grosjean,Haas F1 Team,35
+Japan,2019,HAM,Lewis Hamilton,Mercedes,46
+Japan,2019,HUL,Nico Hulkenberg,Renault,43
+Japan,2019,KUB,Robert Kubica,Williams,7
+Japan,2019,KVY,Daniil Kvyat,Toro Rosso,36
+Japan,2019,LEC,Charles Leclerc,Ferrari,43
+Japan,2019,MAG,Kevin Magnussen,Haas F1 Team,34
+Japan,2019,NOR,Lando Norris,McLaren,43
+Japan,2019,PER,Sergio Perez,Racing Point,42
+Japan,2019,RAI,Kimi Räikkönen,Alfa Romeo Racing,34
+Japan,2019,RIC,Daniel Ricciardo,Renault,43
+Japan,2019,RUS,George Russell,Williams,20
+Japan,2019,SAI,Carlos Sainz,McLaren,47
+Japan,2019,STR,Lance Stroll,Racing Point,45
+Japan,2019,VER,Max Verstappen,Red Bull Racing,2
+Japan,2019,VET,Sebastian Vettel,Ferrari,46
+Japan,2018,ALO,Fernando Alonso,McLaren,39
+Japan,2018,BOT,Valtteri Bottas,Mercedes,42
+Japan,2018,ERI,Marcus Ericsson,Sauber,38
+Japan,2018,GAS,Pierre Gasly,Toro Rosso,39
+Japan,2018,GRO,Romain Grosjean,Haas F1 Team,42
+Japan,2018,HAM,Lewis Hamilton,Mercedes,42
+Japan,2018,HAR,Brendon Hartley,Toro Rosso,38
+Japan,2018,HUL,Nico Hulkenberg,Renault,24
+Japan,2018,LEC,Charles Leclerc,Sauber,26
+Japan,2018,OCO,Esteban Ocon,Racing Point,42
+Japan,2018,PER,Sergio Perez,Racing Point,42
+Japan,2018,RAI,Kimi Räikkönen,Ferrari,43
+Japan,2018,RIC,Daniel Ricciardo,Red Bull Racing,43
+Japan,2018,SAI,Carlos Sainz,Renault,39
+Japan,2018,SIR,Sergey Sirotkin,Williams,34
+Japan,2018,STR,Lance Stroll,Williams,36
+Japan,2018,VAN,Stoffel Vandoorne,McLaren,35
+Japan,2018,VER,Max Verstappen,Red Bull Racing,42
+Japan,2018,VET,Sebastian Vettel,Ferrari,41
+Miami,2026,ALB,Alexander Albon,Williams,44
+Miami,2026,ALO,Fernando Alonso,Aston Martin,43
+Miami,2026,ANT,Kimi Antonelli,Mercedes,44
+Miami,2026,BEA,Oliver Bearman,Haas F1 Team,43
+Miami,2026,BOR,Gabriel Bortoleto,Audi,43
+Miami,2026,BOT,Valtteri Bottas,Cadillac,30
+Miami,2026,COL,Franco Colapinto,Alpine,44
+Miami,2026,GAS,Pierre Gasly,Alpine,3
+Miami,2026,HAD,Isack Hadjar,Red Bull Racing,3
+Miami,2026,HAM,Lewis Hamilton,Ferrari,44
+Miami,2026,HUL,Nico Hulkenberg,Audi,2
+Miami,2026,LAW,Liam Lawson,Racing Bulls,3
+Miami,2026,LEC,Charles Leclerc,Ferrari,44
+Miami,2026,LIN,Arvid Lindblad,Racing Bulls,41
+Miami,2026,NOR,Lando Norris,McLaren,44
+Miami,2026,OCO,Esteban Ocon,Haas F1 Team,43
+Miami,2026,PER,Sergio Perez,Cadillac,43
+Miami,2026,PIA,Oscar Piastri,McLaren,44
+Miami,2026,RUS,George Russell,Mercedes,44
+Miami,2026,SAI,Carlos Sainz,Williams,44
+Miami,2026,STR,Lance Stroll,Aston Martin,40
+Miami,2026,VER,Max Verstappen,Red Bull Racing,46
+Miami,2025,ALB,Alexander Albon,Williams,49
+Miami,2025,ALO,Fernando Alonso,Aston Martin,48
+Miami,2025,ANT,Kimi Antonelli,Mercedes,49
+Miami,2025,BEA,Oliver Bearman,Haas F1 Team,24
+Miami,2025,BOR,Gabriel Bortoleto,Kick Sauber,22
+Miami,2025,GAS,Pierre Gasly,Alpine,50
+Miami,2025,HAD,Isack Hadjar,Racing Bulls,48
+Miami,2025,HAM,Lewis Hamilton,Ferrari,51
+Miami,2025,HUL,Nico Hulkenberg,Kick Sauber,47
+Miami,2025,LAW,Liam Lawson,Racing Bulls,28
+Miami,2025,LEC,Charles Leclerc,Ferrari,51
+Miami,2025,NOR,Lando Norris,McLaren,50
+Miami,2025,OCO,Esteban Ocon,Haas F1 Team,48
+Miami,2025,PIA,Oscar Piastri,McLaren,50
+Miami,2025,RUS,George Russell,Mercedes,51
+Miami,2025,SAI,Carlos Sainz,Williams,49
+Miami,2025,STR,Lance Stroll,Aston Martin,47
+Miami,2025,TSU,Yuki Tsunoda,Red Bull Racing,49
+Miami,2025,VER,Max Verstappen,Red Bull Racing,48
+Miami,2024,ALB,Alexander Albon,Williams,45
+Miami,2024,ALO,Fernando Alonso,Aston Martin,49
+Miami,2024,BOT,Valtteri Bottas,Kick Sauber,47
+Miami,2024,GAS,Pierre Gasly,Alpine,47
+Miami,2024,HAM,Lewis Hamilton,Mercedes,48
+Miami,2024,HUL,Nico Hulkenberg,Haas F1 Team,47
+Miami,2024,LEC,Charles Leclerc,Ferrari,48
+Miami,2024,MAG,Kevin Magnussen,Haas F1 Team,49
+Miami,2024,NOR,Lando Norris,McLaren,50
+Miami,2024,OCO,Esteban Ocon,Alpine,49
+Miami,2024,PER,Sergio Perez,Red Bull Racing,47
+Miami,2024,PIA,Oscar Piastri,McLaren,47
+Miami,2024,RIC,Daniel Ricciardo,RB,49
+Miami,2024,RUS,George Russell,Mercedes,47
+Miami,2024,SAI,Carlos Sainz,Ferrari,49
+Miami,2024,SAR,Logan Sargeant,Williams,22
+Miami,2024,STR,Lance Stroll,Aston Martin,47
+Miami,2024,TSU,Yuki Tsunoda,RB,49
+Miami,2024,VER,Max Verstappen,Red Bull Racing,49
+Miami,2024,ZHO,Guanyu Zhou,Kick Sauber,49
+Miami,2023,ALB,Alexander Albon,Williams,54
+Miami,2023,ALO,Fernando Alonso,Aston Martin,54
+Miami,2023,BOT,Valtteri Bottas,Alfa Romeo,54
+Miami,2023,DEV,Nyck De Vries,AlphaTauri,54
+Miami,2023,GAS,Pierre Gasly,Alpine,54
+Miami,2023,HAM,Lewis Hamilton,Mercedes,54
+Miami,2023,HUL,Nico Hulkenberg,Haas F1 Team,54
+Miami,2023,LEC,Charles Leclerc,Ferrari,54
+Miami,2023,MAG,Kevin Magnussen,Haas F1 Team,54
+Miami,2023,NOR,Lando Norris,McLaren,54
+Miami,2023,OCO,Esteban Ocon,Alpine,54
+Miami,2023,PER,Sergio Perez,Red Bull Racing,54
+Miami,2023,PIA,Oscar Piastri,McLaren,52
+Miami,2023,RUS,George Russell,Mercedes,54
+Miami,2023,SAI,Carlos Sainz,Ferrari,54
+Miami,2023,SAR,Logan Sargeant,Williams,53
+Miami,2023,STR,Lance Stroll,Aston Martin,54
+Miami,2023,TSU,Yuki Tsunoda,AlphaTauri,54
+Miami,2023,VER,Max Verstappen,Red Bull Racing,54
+Miami,2023,ZHO,Guanyu Zhou,Alfa Romeo,54
+Miami,2022,ALB,Alexander Albon,Williams,42
+Miami,2022,ALO,Fernando Alonso,Alpine,42
+Miami,2022,BOT,Valtteri Bottas,Alfa Romeo,43
+Miami,2022,GAS,Pierre Gasly,AlphaTauri,34
+Miami,2022,HAM,Lewis Hamilton,Mercedes,43
+Miami,2022,LAT,Nicholas Latifi,Williams,38
+Miami,2022,LEC,Charles Leclerc,Ferrari,44
+Miami,2022,MAG,Kevin Magnussen,Haas F1 Team,40
+Miami,2022,MSC,Mick Schumacher,Haas F1 Team,41
+Miami,2022,NOR,Lando Norris,McLaren,35
+Miami,2022,OCO,Esteban Ocon,Alpine,45
+Miami,2022,PER,Sergio Perez,Red Bull Racing,42
+Miami,2022,RIC,Daniel Ricciardo,McLaren,41
+Miami,2022,RUS,George Russell,Mercedes,44
+Miami,2022,SAI,Carlos Sainz,Ferrari,44
+Miami,2022,STR,Lance Stroll,Aston Martin,43
+Miami,2022,TSU,Yuki Tsunoda,AlphaTauri,41
+Miami,2022,VER,Max Verstappen,Red Bull Racing,44
+Miami,2022,VET,Sebastian Vettel,Aston Martin,41
+Miami,2022,ZHO,Guanyu Zhou,Alfa Romeo,4
+Canada,2026,ALB,Alexander Albon,Williams,6
+Canada,2026,ANT,Kimi Antonelli,Mercedes,55
+Canada,2026,BEA,Oliver Bearman,Haas F1 Team,47
+Canada,2026,BOR,Gabriel Bortoleto,Audi,45
+Canada,2026,BOT,Valtteri Bottas,Cadillac,21
+Canada,2026,COL,Franco Colapinto,Alpine,50
+Canada,2026,GAS,Pierre Gasly,Alpine,47
+Canada,2026,HAD,Isack Hadjar,Red Bull Racing,52
+Canada,2026,HAM,Lewis Hamilton,Ferrari,52
+Canada,2026,HUL,Nico Hulkenberg,Audi,44
+Canada,2026,LAW,Liam Lawson,Racing Bulls,48
+Canada,2026,LEC,Charles Leclerc,Ferrari,54
+Canada,2026,NOR,Lando Norris,McLaren,24
+Canada,2026,OCO,Esteban Ocon,Haas F1 Team,38
+Canada,2026,PER,Sergio Perez,Cadillac,22
+Canada,2026,PIA,Oscar Piastri,McLaren,47
+Canada,2026,RUS,George Russell,Mercedes,23
+Canada,2026,SAI,Carlos Sainz,Williams,49
+Canada,2026,STR,Lance Stroll,Aston Martin,10
+Canada,2026,VER,Max Verstappen,Red Bull Racing,53
+Canada,2025,ALB,Alexander Albon,Williams,40
+Canada,2025,ALO,Fernando Alonso,Aston Martin,59
+Canada,2025,ANT,Kimi Antonelli,Mercedes,59
+Canada,2025,BEA,Oliver Bearman,Haas F1 Team,58
+Canada,2025,BOR,Gabriel Bortoleto,Kick Sauber,58
+Canada,2025,COL,Franco Colapinto,Alpine,60
+Canada,2025,GAS,Pierre Gasly,Alpine,59
+Canada,2025,HAD,Isack Hadjar,Racing Bulls,59
+Canada,2025,HAM,Lewis Hamilton,Ferrari,59
+Canada,2025,HUL,Nico Hulkenberg,Kick Sauber,61
+Canada,2025,LAW,Liam Lawson,Racing Bulls,47
+Canada,2025,LEC,Charles Leclerc,Ferrari,58
+Canada,2025,NOR,Lando Norris,McLaren,61
+Canada,2025,OCO,Esteban Ocon,Haas F1 Team,60
+Canada,2025,PIA,Oscar Piastri,McLaren,59
+Canada,2025,RUS,George Russell,Mercedes,59
+Canada,2025,SAI,Carlos Sainz,Williams,58
+Canada,2025,STR,Lance Stroll,Aston Martin,56
+Canada,2025,TSU,Yuki Tsunoda,Red Bull Racing,59
+Canada,2025,VER,Max Verstappen,Red Bull Racing,59
+Canada,2024,ALB,Alexander Albon,Williams,2
+Canada,2024,ALO,Fernando Alonso,Aston Martin,12
+Canada,2024,BOT,Valtteri Bottas,Kick Sauber,10
+Canada,2024,GAS,Pierre Gasly,Alpine,12
+Canada,2024,HAM,Lewis Hamilton,Mercedes,12
+Canada,2024,HUL,Nico Hulkenberg,Haas F1 Team,12
+Canada,2024,MAG,Kevin Magnussen,Haas F1 Team,10
+Canada,2024,NOR,Lando Norris,McLaren,12
+Canada,2024,OCO,Esteban Ocon,Alpine,12
+Canada,2024,PER,Sergio Perez,Red Bull Racing,2
+Canada,2024,PIA,Oscar Piastri,McLaren,12
+Canada,2024,RIC,Daniel Ricciardo,RB,12
+Canada,2024,RUS,George Russell,Mercedes,11
+Canada,2024,SAI,Carlos Sainz,Ferrari,1
+Canada,2024,STR,Lance Stroll,Aston Martin,12
+Canada,2024,TSU,Yuki Tsunoda,RB,11
+Canada,2024,VER,Max Verstappen,Red Bull Racing,12
+Canada,2024,ZHO,Guanyu Zhou,Kick Sauber,9
+Canada,2023,ALB,Alexander Albon,Williams,58
+Canada,2023,ALO,Fernando Alonso,Aston Martin,57
+Canada,2023,BOT,Valtteri Bottas,Alfa Romeo,56
+Canada,2023,DEV,Nyck De Vries,AlphaTauri,54
+Canada,2023,GAS,Pierre Gasly,Alpine,55
+Canada,2023,HAM,Lewis Hamilton,Mercedes,57
+Canada,2023,HUL,Nico Hulkenberg,Haas F1 Team,55
+Canada,2023,LEC,Charles Leclerc,Ferrari,56
+Canada,2023,MAG,Kevin Magnussen,Haas F1 Team,52
+Canada,2023,NOR,Lando Norris,McLaren,56
+Canada,2023,OCO,Esteban Ocon,Alpine,57
+Canada,2023,PER,Sergio Perez,Red Bull Racing,55
+Canada,2023,PIA,Oscar Piastri,McLaren,55
+Canada,2023,RUS,George Russell,Mercedes,42
+Canada,2023,SAI,Carlos Sainz,Ferrari,57
+Canada,2023,SAR,Logan Sargeant,Williams,4
+Canada,2023,STR,Lance Stroll,Aston Martin,57
+Canada,2023,TSU,Yuki Tsunoda,AlphaTauri,57
+Canada,2023,VER,Max Verstappen,Red Bull Racing,57
+Canada,2023,ZHO,Guanyu Zhou,Alfa Romeo,54
+Canada,2022,ALB,Alexander Albon,Williams,55
+Canada,2022,ALO,Fernando Alonso,Alpine,55
+Canada,2022,BOT,Valtteri Bottas,Alfa Romeo,56
+Canada,2022,GAS,Pierre Gasly,AlphaTauri,52
+Canada,2022,HAM,Lewis Hamilton,Mercedes,55
+Canada,2022,LAT,Nicholas Latifi,Williams,48
+Canada,2022,LEC,Charles Leclerc,Ferrari,54
+Canada,2022,MAG,Kevin Magnussen,Haas F1 Team,54
+Canada,2022,MSC,Mick Schumacher,Haas F1 Team,14
+Canada,2022,NOR,Lando Norris,McLaren,53
+Canada,2022,OCO,Esteban Ocon,Alpine,57
+Canada,2022,PER,Sergio Perez,Red Bull Racing,5
+Canada,2022,RIC,Daniel Ricciardo,McLaren,57
+Canada,2022,RUS,George Russell,Mercedes,55
+Canada,2022,SAI,Carlos Sainz,Ferrari,57
+Canada,2022,STR,Lance Stroll,Aston Martin,55
+Canada,2022,TSU,Yuki Tsunoda,AlphaTauri,39
+Canada,2022,VER,Max Verstappen,Red Bull Racing,56
+Canada,2022,VET,Sebastian Vettel,Aston Martin,54
+Canada,2022,ZHO,Guanyu Zhou,Alfa Romeo,56
+Canada,2019,ALB,Alexander Albon,Toro Rosso,26
+Canada,2019,BOT,Valtteri Bottas,Mercedes,57
+Canada,2019,GAS,Pierre Gasly,Red Bull Racing,55
+Canada,2019,GIO,Antonio Giovinazzi,Alfa Romeo Racing,44
+Canada,2019,GRO,Romain Grosjean,Haas F1 Team,37
+Canada,2019,HAM,Lewis Hamilton,Mercedes,58
+Canada,2019,HUL,Nico Hulkenberg,Renault,55
+Canada,2019,KUB,Robert Kubica,Williams,15
+Canada,2019,KVY,Daniil Kvyat,Toro Rosso,49
+Canada,2019,LEC,Charles Leclerc,Ferrari,58
+Canada,2019,MAG,Kevin Magnussen,Haas F1 Team,16
+Canada,2019,NOR,Lando Norris,McLaren,2
+Canada,2019,PER,Sergio Perez,Racing Point,46
+Canada,2019,RAI,Kimi Räikkönen,Alfa Romeo Racing,43
+Canada,2019,RIC,Daniel Ricciardo,Renault,58
+Canada,2019,RUS,George Russell,Williams,25
+Canada,2019,SAI,Carlos Sainz,McLaren,52
+Canada,2019,STR,Lance Stroll,Racing Point,51
+Canada,2019,VER,Max Verstappen,Red Bull Racing,59
+Canada,2019,VET,Sebastian Vettel,Ferrari,58
+Canada,2018,ALO,Fernando Alonso,McLaren,33
+Canada,2018,BOT,Valtteri Bottas,Mercedes,64
+Canada,2018,ERI,Marcus Ericsson,Sauber,54
+Canada,2018,GAS,Pierre Gasly,Toro Rosso,62
+Canada,2018,GRO,Romain Grosjean,Haas F1 Team,61
+Canada,2018,HAM,Lewis Hamilton,Mercedes,64
+Canada,2018,HUL,Nico Hulkenberg,Renault,62
+Canada,2018,LEC,Charles Leclerc,Sauber,62
+Canada,2018,MAG,Kevin Magnussen,Haas F1 Team,61
+Canada,2018,OCO,Esteban Ocon,Force India,62
+Canada,2018,PER,Sergio Perez,Force India,59
+Canada,2018,RAI,Kimi Räikkönen,Ferrari,64
+Canada,2018,RIC,Daniel Ricciardo,Red Bull Racing,64
+Canada,2018,SAI,Carlos Sainz,Renault,62
+Canada,2018,SIR,Sergey Sirotkin,Williams,50
+Canada,2018,VAN,Stoffel Vandoorne,McLaren,55
+Canada,2018,VER,Max Verstappen,Red Bull Racing,64
+Canada,2018,VET,Sebastian Vettel,Ferrari,64
+Monaco,2026,ALB,Alexander Albon,Williams,13
+Monaco,2026,ALO,Fernando Alonso,Aston Martin,5
+Monaco,2026,ANT,Kimi Antonelli,Mercedes,63
+Monaco,2026,BEA,Oliver Bearman,Haas F1 Team,4
+Monaco,2026,BOR,Gabriel Bortoleto,Audi,28
+Monaco,2026,COL,Franco Colapinto,Alpine,11
+Monaco,2026,GAS,Pierre Gasly,Alpine,40
+Monaco,2026,HAD,Isack Hadjar,Red Bull Racing,42
+Monaco,2026,HAM,Lewis Hamilton,Ferrari,62
+Monaco,2026,HUL,Nico Hulkenberg,Audi,17
+Monaco,2026,LAW,Liam Lawson,Racing Bulls,29
+Monaco,2026,LEC,Charles Leclerc,Ferrari,56
+Monaco,2026,LIN,Arvid Lindblad,Racing Bulls,13
+Monaco,2026,NOR,Lando Norris,McLaren,23
+Monaco,2026,OCO,Esteban Ocon,Haas F1 Team,22
+Monaco,2026,PER,Sergio Perez,Cadillac,8
+Monaco,2026,PIA,Oscar Piastri,McLaren,44
+Monaco,2026,RUS,George Russell,Mercedes,41
+Monaco,2026,SAI,Carlos Sainz,Williams,12
+Monaco,2025,ALB,Alexander Albon,Williams,39
+Monaco,2025,ALO,Fernando Alonso,Aston Martin,22
+Monaco,2025,ANT,Kimi Antonelli,Mercedes,16
+Monaco,2025,BEA,Oliver Bearman,Haas F1 Team,31
+Monaco,2025,BOR,Gabriel Bortoleto,Kick Sauber,33
+Monaco,2025,COL,Franco Colapinto,Alpine,31
+Monaco,2025,GAS,Pierre Gasly,Alpine,1
+Monaco,2025,HAD,Isack Hadjar,Racing Bulls,55
+Monaco,2025,HAM,Lewis Hamilton,Ferrari,61
+Monaco,2025,HUL,Nico Hulkenberg,Kick Sauber,30
+Monaco,2025,LAW,Liam Lawson,Racing Bulls,51
+Monaco,2025,LEC,Charles Leclerc,Ferrari,62
+Monaco,2025,NOR,Lando Norris,McLaren,63
+Monaco,2025,OCO,Esteban Ocon,Haas F1 Team,54
+Monaco,2025,PIA,Oscar Piastri,McLaren,62
+Monaco,2025,RUS,George Russell,Mercedes,29
+Monaco,2025,SAI,Carlos Sainz,Williams,37
+Monaco,2025,STR,Lance Stroll,Aston Martin,28
+Monaco,2025,TSU,Yuki Tsunoda,Red Bull Racing,22
+Monaco,2025,VER,Max Verstappen,Red Bull Racing,62
+Monaco,2024,ALB,Alexander Albon,Williams,23
+Monaco,2024,ALO,Fernando Alonso,Aston Martin,23
+Monaco,2024,BOT,Valtteri Bottas,Kick Sauber,25
+Monaco,2024,GAS,Pierre Gasly,Alpine,18
+Monaco,2024,HAM,Lewis Hamilton,Mercedes,50
+Monaco,2024,LEC,Charles Leclerc,Ferrari,59
+Monaco,2024,NOR,Lando Norris,McLaren,56
+Monaco,2024,PIA,Oscar Piastri,McLaren,58
+Monaco,2024,RIC,Daniel Ricciardo,RB,22
+Monaco,2024,RUS,George Russell,Mercedes,49
+Monaco,2024,SAI,Carlos Sainz,Ferrari,54
+Monaco,2024,SAR,Logan Sargeant,Williams,14
+Monaco,2024,STR,Lance Stroll,Aston Martin,28
+Monaco,2024,TSU,Yuki Tsunoda,RB,20
+Monaco,2024,VER,Max Verstappen,Red Bull Racing,48
+Monaco,2024,ZHO,Guanyu Zhou,Kick Sauber,10
+Monaco,2023,ALB,Alexander Albon,Williams,42
+Monaco,2023,ALO,Fernando Alonso,Aston Martin,47
+Monaco,2023,BOT,Valtteri Bottas,Alfa Romeo,46
+Monaco,2023,DEV,Nyck De Vries,AlphaTauri,45
+Monaco,2023,GAS,Pierre Gasly,Alpine,46
+Monaco,2023,HAM,Lewis Hamilton,Mercedes,46
+Monaco,2023,HUL,Nico Hulkenberg,Haas F1 Team,40
+Monaco,2023,LEC,Charles Leclerc,Ferrari,46
+Monaco,2023,MAG,Kevin Magnussen,Haas F1 Team,45
+Monaco,2023,NOR,Lando Norris,McLaren,45
+Monaco,2023,OCO,Esteban Ocon,Alpine,46
+Monaco,2023,PER,Sergio Perez,Red Bull Racing,40
+Monaco,2023,PIA,Oscar Piastri,McLaren,45
+Monaco,2023,RUS,George Russell,Mercedes,47
+Monaco,2023,SAI,Carlos Sainz,Ferrari,46
+Monaco,2023,SAR,Logan Sargeant,Williams,35
+Monaco,2023,STR,Lance Stroll,Aston Martin,43
+Monaco,2023,TSU,Yuki Tsunoda,AlphaTauri,46
+Monaco,2023,VER,Max Verstappen,Red Bull Racing,46
+Monaco,2023,ZHO,Guanyu Zhou,Alfa Romeo,41
+Monaco,2022,ALB,Alexander Albon,Williams,14
+Monaco,2022,ALO,Fernando Alonso,Alpine,21
+Monaco,2022,BOT,Valtteri Bottas,Alfa Romeo,22
+Monaco,2022,GAS,Pierre Gasly,AlphaTauri,20
+Monaco,2022,HAM,Lewis Hamilton,Mercedes,20
+Monaco,2022,LAT,Nicholas Latifi,Williams,17
+Monaco,2022,LEC,Charles Leclerc,Ferrari,27
+Monaco,2022,NOR,Lando Norris,McLaren,25
+Monaco,2022,OCO,Esteban Ocon,Alpine,21
+Monaco,2022,PER,Sergio Perez,Red Bull Racing,28
+Monaco,2022,RIC,Daniel Ricciardo,McLaren,21
+Monaco,2022,RUS,George Russell,Mercedes,28
+Monaco,2022,SAI,Carlos Sainz,Ferrari,28
+Monaco,2022,STR,Lance Stroll,Aston Martin,21
+Monaco,2022,TSU,Yuki Tsunoda,AlphaTauri,19
+Monaco,2022,VER,Max Verstappen,Red Bull Racing,27
+Monaco,2022,VET,Sebastian Vettel,Aston Martin,21
+Monaco,2022,ZHO,Guanyu Zhou,Alfa Romeo,17
+Monaco,2021,ALO,Fernando Alonso,Alpine,60
+Monaco,2021,BOT,Valtteri Bottas,Mercedes,28
+Monaco,2021,GAS,Pierre Gasly,AlphaTauri,72
+Monaco,2021,GIO,Antonio Giovinazzi,Alfa Romeo Racing,59
+Monaco,2021,HAM,Lewis Hamilton,Mercedes,68
+Monaco,2021,LAT,Nicholas Latifi,Williams,43
+Monaco,2021,MAZ,Nikita Mazepin,Haas F1 Team,28
+Monaco,2021,MSC,Mick Schumacher,Haas F1 Team,33
+Monaco,2021,NOR,Lando Norris,McLaren,74
+Monaco,2021,OCO,Esteban Ocon,Alpine,59
+Monaco,2021,PER,Sergio Perez,Red Bull Racing,68
+Monaco,2021,RAI,Kimi Räikkönen,Alfa Romeo Racing,59
+Monaco,2021,RIC,Daniel Ricciardo,McLaren,60
+Monaco,2021,RUS,George Russell,Williams,41
+Monaco,2021,SAI,Carlos Sainz,Ferrari,74
+Monaco,2021,STR,Lance Stroll,Aston Martin,61
+Monaco,2021,TSU,Yuki Tsunoda,AlphaTauri,45
+Monaco,2021,VER,Max Verstappen,Red Bull Racing,75
+Monaco,2021,VET,Sebastian Vettel,Aston Martin,72
+Monaco,2019,ALB,Alexander Albon,Toro Rosso,57
+Monaco,2019,BOT,Valtteri Bottas,Mercedes,65
+Monaco,2019,GAS,Pierre Gasly,Red Bull Racing,58
+Monaco,2019,GIO,Antonio Giovinazzi,Alfa Romeo Racing,37
+Monaco,2019,GRO,Romain Grosjean,Haas F1 Team,55
+Monaco,2019,HAM,Lewis Hamilton,Mercedes,67
+Monaco,2019,HUL,Nico Hulkenberg,Renault,42
+Monaco,2019,KUB,Robert Kubica,Williams,45
+Monaco,2019,KVY,Daniil Kvyat,Toro Rosso,58
+Monaco,2019,LEC,Charles Leclerc,Ferrari,2
+Monaco,2019,MAG,Kevin Magnussen,Haas F1 Team,42
+Monaco,2019,NOR,Lando Norris,McLaren,48
+Monaco,2019,PER,Sergio Perez,Racing Point,48
+Monaco,2019,RAI,Kimi Räikkönen,Alfa Romeo Racing,37
+Monaco,2019,RIC,Daniel Ricciardo,Renault,43
+Monaco,2019,RUS,George Russell,Williams,39
+Monaco,2019,SAI,Carlos Sainz,McLaren,58
+Monaco,2019,STR,Lance Stroll,Racing Point,34
+Monaco,2019,VER,Max Verstappen,Red Bull Racing,67
+Monaco,2019,VET,Sebastian Vettel,Ferrari,66
+Monaco,2018,ALO,Fernando Alonso,McLaren,37
+Monaco,2018,BOT,Valtteri Bottas,Mercedes,59
+Monaco,2018,ERI,Marcus Ericsson,Sauber,42
+Monaco,2018,GAS,Pierre Gasly,Toro Rosso,57
+Monaco,2018,GRO,Romain Grosjean,Haas F1 Team,40
+Monaco,2018,HAM,Lewis Hamilton,Mercedes,58
+Monaco,2018,HAR,Brendon Hartley,Toro Rosso,37
+Monaco,2018,HUL,Nico Hulkenberg,Renault,48
+Monaco,2018,LEC,Charles Leclerc,Sauber,37
+Monaco,2018,MAG,Kevin Magnussen,Haas F1 Team,42
+Monaco,2018,OCO,Esteban Ocon,Force India,61
+Monaco,2018,PER,Sergio Perez,Force India,45
+Monaco,2018,RAI,Kimi Räikkönen,Ferrari,59
+Monaco,2018,RIC,Daniel Ricciardo,Red Bull Racing,52
+Monaco,2018,SAI,Carlos Sainz,Renault,51
+Monaco,2018,SIR,Sergey Sirotkin,Williams,32
+Monaco,2018,STR,Lance Stroll,Williams,38
+Monaco,2018,VAN,Stoffel Vandoorne,McLaren,42
+Monaco,2018,VER,Max Verstappen,Red Bull Racing,54
+Monaco,2018,VET,Sebastian Vettel,Ferrari,51
+Barcelona,2026,ALB,Alexander Albon,Williams,33
+Barcelona,2026,ALO,Fernando Alonso,Aston Martin,3
+Barcelona,2026,ANT,Kimi Antonelli,Mercedes,53
+Barcelona,2026,BEA,Oliver Bearman,Haas F1 Team,36
+Barcelona,2026,BOR,Gabriel Bortoleto,Audi,39
+Barcelona,2026,COL,Franco Colapinto,Alpine,49
+Barcelona,2026,GAS,Pierre Gasly,Alpine,49
+Barcelona,2026,HAD,Isack Hadjar,Red Bull Racing,50
+Barcelona,2026,HAM,Lewis Hamilton,Ferrari,55
+Barcelona,2026,HUL,Nico Hulkenberg,Audi,24
+Barcelona,2026,LAW,Liam Lawson,Racing Bulls,53
+Barcelona,2026,LEC,Charles Leclerc,Ferrari,55
+Barcelona,2026,LIN,Arvid Lindblad,Racing Bulls,42
+Barcelona,2026,NOR,Lando Norris,McLaren,54
+Barcelona,2026,OCO,Esteban Ocon,Haas F1 Team,34
+Barcelona,2026,PER,Sergio Perez,Cadillac,26
+Barcelona,2026,PIA,Oscar Piastri,McLaren,56
+Barcelona,2026,RUS,George Russell,Mercedes,54
+Barcelona,2026,SAI,Carlos Sainz,Williams,44
+Barcelona,2026,VER,Max Verstappen,Red Bull Racing,56
+Barcelona,2025,ALB,Alexander Albon,Williams,3
+Barcelona,2025,ALO,Fernando Alonso,Aston Martin,18
+Barcelona,2025,ANT,Kimi Antonelli,Mercedes,26
+Barcelona,2025,BEA,Oliver Bearman,Haas F1 Team,19
+Barcelona,2025,BOR,Gabriel Bortoleto,Kick Sauber,12
+Barcelona,2025,COL,Franco Colapinto,Alpine,14
+Barcelona,2025,GAS,Pierre Gasly,Alpine,16
+Barcelona,2025,HAD,Isack Hadjar,Racing Bulls,28
+Barcelona,2025,HAM,Lewis Hamilton,Ferrari,40
+Barcelona,2025,HUL,Nico Hulkenberg,Kick Sauber,13
+Barcelona,2025,LAW,Liam Lawson,Racing Bulls,16
+Barcelona,2025,LEC,Charles Leclerc,Ferrari,43
+Barcelona,2025,NOR,Lando Norris,McLaren,52
+Barcelona,2025,OCO,Esteban Ocon,Haas F1 Team,14
+Barcelona,2025,PIA,Oscar Piastri,McLaren,51
+Barcelona,2025,RUS,George Russell,Mercedes,37
+Barcelona,2025,SAI,Carlos Sainz,Williams,20
+Barcelona,2025,TSU,Yuki Tsunoda,Red Bull Racing,24
+Barcelona,2025,VER,Max Verstappen,Red Bull Racing,49
+Barcelona,2024,ALB,Alexander Albon,Williams,49
+Barcelona,2024,ALO,Fernando Alonso,Aston Martin,54
+Barcelona,2024,BOT,Valtteri Bottas,Kick Sauber,49
+Barcelona,2024,GAS,Pierre Gasly,Alpine,60
+Barcelona,2024,HAM,Lewis Hamilton,Mercedes,61
+Barcelona,2024,HUL,Nico Hulkenberg,Haas F1 Team,61
+Barcelona,2024,LEC,Charles Leclerc,Ferrari,61
+Barcelona,2024,MAG,Kevin Magnussen,Haas F1 Team,55
+Barcelona,2024,NOR,Lando Norris,McLaren,61
+Barcelona,2024,OCO,Esteban Ocon,Alpine,60
+Barcelona,2024,PER,Sergio Perez,Red Bull Racing,59
+Barcelona,2024,PIA,Oscar Piastri,McLaren,61
+Barcelona,2024,RIC,Daniel Ricciardo,RB,53
+Barcelona,2024,RUS,George Russell,Mercedes,61
+Barcelona,2024,SAI,Carlos Sainz,Ferrari,61
+Barcelona,2024,SAR,Logan Sargeant,Williams,37
+Barcelona,2024,STR,Lance Stroll,Aston Martin,58
+Barcelona,2024,TSU,Yuki Tsunoda,RB,47
+Barcelona,2024,VER,Max Verstappen,Red Bull Racing,61
+Barcelona,2024,ZHO,Guanyu Zhou,Kick Sauber,55
+Barcelona,2023,ALB,Alexander Albon,Williams,45
+Barcelona,2023,ALO,Fernando Alonso,Aston Martin,58
+Barcelona,2023,BOT,Valtteri Bottas,Alfa Romeo,43
+Barcelona,2023,DEV,Nyck De Vries,AlphaTauri,53
+Barcelona,2023,GAS,Pierre Gasly,Alpine,56
+Barcelona,2023,HAM,Lewis Hamilton,Mercedes,60
+Barcelona,2023,HUL,Nico Hulkenberg,Haas F1 Team,49
+Barcelona,2023,LEC,Charles Leclerc,Ferrari,54
+Barcelona,2023,MAG,Kevin Magnussen,Haas F1 Team,47
+Barcelona,2023,NOR,Lando Norris,McLaren,51
+Barcelona,2023,OCO,Esteban Ocon,Alpine,58
+Barcelona,2023,PER,Sergio Perez,Red Bull Racing,58
+Barcelona,2023,PIA,Oscar Piastri,McLaren,53
+Barcelona,2023,RUS,George Russell,Mercedes,60
+Barcelona,2023,SAI,Carlos Sainz,Ferrari,60
+Barcelona,2023,SAR,Logan Sargeant,Williams,40
+Barcelona,2023,STR,Lance Stroll,Aston Martin,60
+Barcelona,2023,TSU,Yuki Tsunoda,AlphaTauri,58
+Barcelona,2023,VER,Max Verstappen,Red Bull Racing,61
+Barcelona,2023,ZHO,Guanyu Zhou,Alfa Romeo,57
+Barcelona,2022,ALB,Alexander Albon,Williams,21
+Barcelona,2022,ALO,Fernando Alonso,Alpine,50
+Barcelona,2022,BOT,Valtteri Bottas,Alfa Romeo,57
+Barcelona,2022,GAS,Pierre Gasly,AlphaTauri,40
+Barcelona,2022,HAM,Lewis Hamilton,Mercedes,52
+Barcelona,2022,LAT,Nicholas Latifi,Williams,28
+Barcelona,2022,LEC,Charles Leclerc,Ferrari,21
+Barcelona,2022,MAG,Kevin Magnussen,Haas F1 Team,33
+Barcelona,2022,MSC,Mick Schumacher,Haas F1 Team,35
+Barcelona,2022,NOR,Lando Norris,McLaren,53
+Barcelona,2022,OCO,Esteban Ocon,Alpine,55
+Barcelona,2022,PER,Sergio Perez,Red Bull Racing,56
+Barcelona,2022,RIC,Daniel Ricciardo,McLaren,41
+Barcelona,2022,RUS,George Russell,Mercedes,55
+Barcelona,2022,SAI,Carlos Sainz,Ferrari,56
+Barcelona,2022,STR,Lance Stroll,Aston Martin,41
+Barcelona,2022,TSU,Yuki Tsunoda,AlphaTauri,50
+Barcelona,2022,VER,Max Verstappen,Red Bull Racing,57
+Barcelona,2022,VET,Sebastian Vettel,Aston Martin,39
+Barcelona,2022,ZHO,Guanyu Zhou,Alfa Romeo,10
+Barcelona,2021,ALO,Fernando Alonso,Alpine,3
+Barcelona,2021,BOT,Valtteri Bottas,Mercedes,37
+Barcelona,2021,GAS,Pierre Gasly,AlphaTauri,16
+Barcelona,2021,GIO,Antonio Giovinazzi,Alfa Romeo Racing,20
+Barcelona,2021,HAM,Lewis Hamilton,Mercedes,55
+Barcelona,2021,LAT,Nicholas Latifi,Williams,13
+Barcelona,2021,LEC,Charles Leclerc,Ferrari,33
+Barcelona,2021,MSC,Mick Schumacher,Haas F1 Team,9
+Barcelona,2021,NOR,Lando Norris,McLaren,22
+Barcelona,2021,OCO,Esteban Ocon,Alpine,8
+Barcelona,2021,PER,Sergio Perez,Red Bull Racing,36
+Barcelona,2021,RAI,Kimi Räikkönen,Alfa Romeo Racing,19
+Barcelona,2021,RIC,Daniel Ricciardo,McLaren,35
+Barcelona,2021,RUS,George Russell,Williams,2
+Barcelona,2021,SAI,Carlos Sainz,Ferrari,32
+Barcelona,2021,STR,Lance Stroll,Aston Martin,14
+Barcelona,2021,VER,Max Verstappen,Red Bull Racing,57
+Barcelona,2021,VET,Sebastian Vettel,Aston Martin,18
+Barcelona,2020,ALB,Alexander Albon,Red Bull Racing,17
+Barcelona,2020,BOT,Valtteri Bottas,Mercedes,39
+Barcelona,2020,GAS,Pierre Gasly,AlphaTauri,17
+Barcelona,2020,GIO,Antonio Giovinazzi,Alfa Romeo Racing,18
+Barcelona,2020,GRO,Romain Grosjean,Haas F1 Team,6
+Barcelona,2020,HAM,Lewis Hamilton,Mercedes,46
+Barcelona,2020,KVY,Daniil Kvyat,AlphaTauri,18
+Barcelona,2020,LAT,Nicholas Latifi,Williams,15
+Barcelona,2020,MAG,Kevin Magnussen,Haas F1 Team,1
+Barcelona,2020,NOR,Lando Norris,McLaren,17
+Barcelona,2020,OCO,Esteban Ocon,Renault,12
+Barcelona,2020,PER,Sergio Perez,Racing Point,13
+Barcelona,2020,RAI,Kimi Räikkönen,Alfa Romeo Racing,20
+Barcelona,2020,RIC,Daniel Ricciardo,Renault,15
+Barcelona,2020,RUS,George Russell,Williams,2
+Barcelona,2020,SAI,Carlos Sainz,McLaren,21
+Barcelona,2020,STR,Lance Stroll,Racing Point,21
+Barcelona,2020,VER,Max Verstappen,Red Bull Racing,44
+Barcelona,2020,VET,Sebastian Vettel,Ferrari,10
+Barcelona,2019,ALB,Alexander Albon,Toro Rosso,35
+Barcelona,2019,BOT,Valtteri Bottas,Mercedes,55
+Barcelona,2019,GAS,Pierre Gasly,Red Bull Racing,52
+Barcelona,2019,GIO,Antonio Giovinazzi,Alfa Romeo Racing,13
+Barcelona,2019,GRO,Romain Grosjean,Haas F1 Team,43
+Barcelona,2019,HAM,Lewis Hamilton,Mercedes,56
+Barcelona,2019,HUL,Nico Hulkenberg,Renault,26
+Barcelona,2019,KUB,Robert Kubica,Williams,9
+Barcelona,2019,KVY,Daniil Kvyat,Toro Rosso,36
+Barcelona,2019,LEC,Charles Leclerc,Ferrari,52
+Barcelona,2019,MAG,Kevin Magnussen,Haas F1 Team,39
+Barcelona,2019,NOR,Lando Norris,McLaren,17
+Barcelona,2019,PER,Sergio Perez,Racing Point,30
+Barcelona,2019,RAI,Kimi Räikkönen,Alfa Romeo Racing,24
+Barcelona,2019,RIC,Daniel Ricciardo,Renault,32
+Barcelona,2019,RUS,George Russell,Williams,10
+Barcelona,2019,SAI,Carlos Sainz,McLaren,31
+Barcelona,2019,STR,Lance Stroll,Racing Point,19
+Barcelona,2019,VER,Max Verstappen,Red Bull Racing,53
+Barcelona,2019,VET,Sebastian Vettel,Ferrari,52
+Barcelona,2018,ALO,Fernando Alonso,McLaren,37
+Barcelona,2018,BOT,Valtteri Bottas,Mercedes,53
+Barcelona,2018,ERI,Marcus Ericsson,Sauber,29
+Barcelona,2018,HAM,Lewis Hamilton,Mercedes,54
+Barcelona,2018,HAR,Brendon Hartley,Toro Rosso,32
+Barcelona,2018,LEC,Charles Leclerc,Sauber,34
+Barcelona,2018,MAG,Kevin Magnussen,Haas F1 Team,49
+Barcelona,2018,OCO,Esteban Ocon,Force India,16
+Barcelona,2018,PER,Sergio Perez,Force India,34
+Barcelona,2018,RAI,Kimi Räikkönen,Ferrari,16
+Barcelona,2018,RIC,Daniel Ricciardo,Red Bull Racing,54
+Barcelona,2018,SAI,Carlos Sainz,Renault,43
+Barcelona,2018,SIR,Sergey Sirotkin,Williams,22
+Barcelona,2018,STR,Lance Stroll,Williams,33
+Barcelona,2018,VAN,Stoffel Vandoorne,McLaren,14
+Barcelona,2018,VER,Max Verstappen,Red Bull Racing,54
+Barcelona,2018,VET,Sebastian Vettel,Ferrari,55
+Austria,2026,ALB,Alexander Albon,Williams,53
+Austria,2026,ALO,Fernando Alonso,Aston Martin,37
+Austria,2026,ANT,Kimi Antonelli,Mercedes,64
+Austria,2026,BEA,Oliver Bearman,Haas F1 Team,56
+Austria,2026,BOR,Gabriel Bortoleto,Audi,60
+Austria,2026,COL,Franco Colapinto,Alpine,54
+Austria,2026,GAS,Pierre Gasly,Alpine,59
+Austria,2026,HAD,Isack Hadjar,Red Bull Racing,61
+Austria,2026,HAM,Lewis Hamilton,Ferrari,61
+Austria,2026,HUL,Nico Hulkenberg,Audi,59
+Austria,2026,LAW,Liam Lawson,Racing Bulls,60
+Austria,2026,LEC,Charles Leclerc,Ferrari,59
+Austria,2026,LIN,Arvid Lindblad,Racing Bulls,60
+Austria,2026,NOR,Lando Norris,McLaren,62
+Austria,2026,OCO,Esteban Ocon,Haas F1 Team,50
+Austria,2026,PER,Sergio Perez,Cadillac,2
+Austria,2026,PIA,Oscar Piastri,McLaren,61
+Austria,2026,RUS,George Russell,Mercedes,61
+Austria,2026,SAI,Carlos Sainz,Williams,16
+Austria,2026,STR,Lance Stroll,Aston Martin,20
+Austria,2026,VER,Max Verstappen,Red Bull Racing,61
+Austria,2025,ALB,Alexander Albon,Williams,9
+Austria,2025,ALO,Fernando Alonso,Aston Martin,62
+Austria,2025,BEA,Oliver Bearman,Haas F1 Team,59
+Austria,2025,BOR,Gabriel Bortoleto,Kick Sauber,61
+Austria,2025,COL,Franco Colapinto,Alpine,58
+Austria,2025,GAS,Pierre Gasly,Alpine,59
+Austria,2025,HAD,Isack Hadjar,Racing Bulls,61
+Austria,2025,HAM,Lewis Hamilton,Ferrari,62
+Austria,2025,HUL,Nico Hulkenberg,Kick Sauber,61
+Austria,2025,LAW,Liam Lawson,Racing Bulls,62
+Austria,2025,LEC,Charles Leclerc,Ferrari,62
+Austria,2025,NOR,Lando Norris,McLaren,62
+Austria,2025,OCO,Esteban Ocon,Haas F1 Team,61
+Austria,2025,PIA,Oscar Piastri,McLaren,62
+Austria,2025,RUS,George Russell,Mercedes,62
+Austria,2025,STR,Lance Stroll,Aston Martin,56
+Austria,2025,TSU,Yuki Tsunoda,Red Bull Racing,56
+Austria,2024,ALB,Alexander Albon,Williams,60
+Austria,2024,ALO,Fernando Alonso,Aston Martin,55
+Austria,2024,BOT,Valtteri Bottas,Kick Sauber,57
+Austria,2024,GAS,Pierre Gasly,Alpine,60
+Austria,2024,HAM,Lewis Hamilton,Mercedes,63
+Austria,2024,HUL,Nico Hulkenberg,Haas F1 Team,62
+Austria,2024,LEC,Charles Leclerc,Ferrari,60
+Austria,2024,MAG,Kevin Magnussen,Haas F1 Team,63
+Austria,2024,NOR,Lando Norris,McLaren,58
+Austria,2024,OCO,Esteban Ocon,Alpine,61
+Austria,2024,PER,Sergio Perez,Red Bull Racing,62
+Austria,2024,PIA,Oscar Piastri,McLaren,64
+Austria,2024,RIC,Daniel Ricciardo,RB,63
+Austria,2024,RUS,George Russell,Mercedes,64
+Austria,2024,SAI,Carlos Sainz,Ferrari,64
+Austria,2024,SAR,Logan Sargeant,Williams,45
+Austria,2024,STR,Lance Stroll,Aston Martin,57
+Austria,2024,TSU,Yuki Tsunoda,RB,56
+Austria,2024,VER,Max Verstappen,Red Bull Racing,63
+Austria,2024,ZHO,Guanyu Zhou,Kick Sauber,46
+Austria,2023,ALB,Alexander Albon,Williams,58
+Austria,2023,ALO,Fernando Alonso,Aston Martin,61
+Austria,2023,BOT,Valtteri Bottas,Alfa Romeo,44
+Austria,2023,DEV,Nyck De Vries,AlphaTauri,48
+Austria,2023,GAS,Pierre Gasly,Alpine,59
+Austria,2023,HAM,Lewis Hamilton,Mercedes,62
+Austria,2023,HUL,Nico Hulkenberg,Haas F1 Team,5
+Austria,2023,LEC,Charles Leclerc,Ferrari,62
+Austria,2023,MAG,Kevin Magnussen,Haas F1 Team,30
+Austria,2023,NOR,Lando Norris,McLaren,62
+Austria,2023,OCO,Esteban Ocon,Alpine,58
+Austria,2023,PER,Sergio Perez,Red Bull Racing,59
+Austria,2023,PIA,Oscar Piastri,McLaren,52
+Austria,2023,RUS,George Russell,Mercedes,60
+Austria,2023,SAI,Carlos Sainz,Ferrari,62
+Austria,2023,SAR,Logan Sargeant,Williams,53
+Austria,2023,STR,Lance Stroll,Aston Martin,56
+Austria,2023,TSU,Yuki Tsunoda,AlphaTauri,42
+Austria,2023,VER,Max Verstappen,Red Bull Racing,58
+Austria,2023,ZHO,Guanyu Zhou,Alfa Romeo,49
+Austria,2022,ALB,Alexander Albon,Williams,48
+Austria,2022,ALO,Fernando Alonso,Alpine,42
+Austria,2022,BOT,Valtteri Bottas,Alfa Romeo,50
+Austria,2022,GAS,Pierre Gasly,AlphaTauri,48
+Austria,2022,HAM,Lewis Hamilton,Mercedes,60
+Austria,2022,LAT,Nicholas Latifi,Williams,12
+Austria,2022,LEC,Charles Leclerc,Ferrari,61
+Austria,2022,MAG,Kevin Magnussen,Haas F1 Team,51
+Austria,2022,MSC,Mick Schumacher,Haas F1 Team,51
+Austria,2022,NOR,Lando Norris,McLaren,53
+Austria,2022,OCO,Esteban Ocon,Alpine,58
+Austria,2022,PER,Sergio Perez,Red Bull Racing,3
+Austria,2022,RIC,Daniel Ricciardo,McLaren,48
+Austria,2022,RUS,George Russell,Mercedes,61
+Austria,2022,SAI,Carlos Sainz,Ferrari,50
+Austria,2022,STR,Lance Stroll,Aston Martin,40
+Austria,2022,TSU,Yuki Tsunoda,AlphaTauri,35
+Austria,2022,VER,Max Verstappen,Red Bull Racing,62
+Austria,2022,VET,Sebastian Vettel,Aston Martin,44
+Austria,2022,ZHO,Guanyu Zhou,Alfa Romeo,41
+Austria,2021,ALO,Fernando Alonso,Alpine,62
+Austria,2021,BOT,Valtteri Bottas,Mercedes,68
+Austria,2021,GIO,Antonio Giovinazzi,Alfa Romeo Racing,55
+Austria,2021,HAM,Lewis Hamilton,Mercedes,66
+Austria,2021,LAT,Nicholas Latifi,Williams,46
+Austria,2021,LEC,Charles Leclerc,Ferrari,64
+Austria,2021,MAZ,Nikita Mazepin,Haas F1 Team,16
+Austria,2021,MSC,Mick Schumacher,Haas F1 Team,30
+Austria,2021,NOR,Lando Norris,McLaren,65
+Austria,2021,OCO,Esteban Ocon,Alpine,55
+Austria,2021,PER,Sergio Perez,Red Bull Racing,66
+Austria,2021,RAI,Kimi Räikkönen,Alfa Romeo Racing,56
+Austria,2021,RIC,Daniel Ricciardo,McLaren,55
+Austria,2021,RUS,George Russell,Williams,23
+Austria,2021,SAI,Carlos Sainz,Ferrari,58
+Austria,2021,STR,Lance Stroll,Aston Martin,55
+Austria,2021,TSU,Yuki Tsunoda,AlphaTauri,61
+Austria,2021,VER,Max Verstappen,Red Bull Racing,68
+Austria,2021,VET,Sebastian Vettel,Aston Martin,58
+Austria,2020,ALB,Alexander Albon,Red Bull Racing,33
+Austria,2020,BOT,Valtteri Bottas,Mercedes,39
+Austria,2020,GAS,Pierre Gasly,AlphaTauri,36
+Austria,2020,GIO,Antonio Giovinazzi,Alfa Romeo Racing,33
+Austria,2020,GRO,Romain Grosjean,Haas F1 Team,25
+Austria,2020,HAM,Lewis Hamilton,Mercedes,37
+Austria,2020,KVY,Daniil Kvyat,AlphaTauri,34
+Austria,2020,LAT,Nicholas Latifi,Williams,32
+Austria,2020,LEC,Charles Leclerc,Ferrari,38
+Austria,2020,MAG,Kevin Magnussen,Haas F1 Team,15
+Austria,2020,NOR,Lando Norris,McLaren,38
+Austria,2020,OCO,Esteban Ocon,Renault,36
+Austria,2020,PER,Sergio Perez,Racing Point,38
+Austria,2020,RAI,Kimi Räikkönen,Alfa Romeo Racing,33
+Austria,2020,RIC,Daniel Ricciardo,Renault,9
+Austria,2020,RUS,George Russell,Williams,32
+Austria,2020,SAI,Carlos Sainz,McLaren,37
+Austria,2020,STR,Lance Stroll,Racing Point,10
+Austria,2020,VER,Max Verstappen,Red Bull Racing,8
+Austria,2020,VET,Sebastian Vettel,Ferrari,37
+Austria,2019,ALB,Alexander Albon,Toro Rosso,63
+Austria,2019,BOT,Valtteri Bottas,Mercedes,68
+Austria,2019,GAS,Pierre Gasly,Red Bull Racing,67
+Austria,2019,GIO,Antonio Giovinazzi,Alfa Romeo Racing,66
+Austria,2019,GRO,Romain Grosjean,Haas F1 Team,61
+Austria,2019,HAM,Lewis Hamilton,Mercedes,68
+Austria,2019,HUL,Nico Hulkenberg,Renault,66
+Austria,2019,KUB,Robert Kubica,Williams,37
+Austria,2019,KVY,Daniil Kvyat,Toro Rosso,62
+Austria,2019,LEC,Charles Leclerc,Ferrari,68
+Austria,2019,MAG,Kevin Magnussen,Haas F1 Team,50
+Austria,2019,NOR,Lando Norris,McLaren,67
+Austria,2019,PER,Sergio Perez,Racing Point,66
+Austria,2019,RAI,Kimi Räikkönen,Alfa Romeo Racing,67
+Austria,2019,RIC,Daniel Ricciardo,Renault,64
+Austria,2019,RUS,George Russell,Williams,55
+Austria,2019,SAI,Carlos Sainz,McLaren,62
+Austria,2019,STR,Lance Stroll,Racing Point,65
+Austria,2019,VER,Max Verstappen,Red Bull Racing,68
+Austria,2019,VET,Sebastian Vettel,Ferrari,65
+Austria,2018,ALO,Fernando Alonso,McLaren,55
+Austria,2018,BOT,Valtteri Bottas,Mercedes,9
+Austria,2018,ERI,Marcus Ericsson,Sauber,52
+Austria,2018,GAS,Pierre Gasly,Toro Rosso,53
+Austria,2018,GRO,Romain Grosjean,Haas F1 Team,54
+Austria,2018,HAM,Lewis Hamilton,Mercedes,47
+Austria,2018,HAR,Brendon Hartley,Toro Rosso,41
+Austria,2018,HUL,Nico Hulkenberg,Renault,8
+Austria,2018,LEC,Charles Leclerc,Sauber,56
+Austria,2018,MAG,Kevin Magnussen,Haas F1 Team,55
+Austria,2018,OCO,Esteban Ocon,Force India,57
+Austria,2018,PER,Sergio Perez,Force India,53
+Austria,2018,RAI,Kimi Räikkönen,Ferrari,57
+Austria,2018,RIC,Daniel Ricciardo,Red Bull Racing,44
+Austria,2018,SAI,Carlos Sainz,Renault,55
+Austria,2018,SIR,Sergey Sirotkin,Williams,52
+Austria,2018,STR,Lance Stroll,Williams,49
+Austria,2018,VAN,Stoffel Vandoorne,McLaren,36
+Austria,2018,VER,Max Verstappen,Red Bull Racing,56
+Austria,2018,VET,Sebastian Vettel,Ferrari,57
+Britain,2026,ALB,Alexander Albon,Williams,27
+Britain,2026,ALO,Fernando Alonso,Aston Martin,15
+Britain,2026,ANT,Kimi Antonelli,Mercedes,35
+Britain,2026,BEA,Oliver Bearman,Haas F1 Team,37
+Britain,2026,BOR,Gabriel Bortoleto,Audi,38
+Britain,2026,BOT,Valtteri Bottas,Cadillac,31
+Britain,2026,COL,Franco Colapinto,Alpine,39
+Britain,2026,GAS,Pierre Gasly,Alpine,38
+Britain,2026,HAD,Isack Hadjar,Red Bull Racing,38
+Britain,2026,HAM,Lewis Hamilton,Ferrari,39
+Britain,2026,HUL,Nico Hulkenberg,Audi,29
+Britain,2026,LAW,Liam Lawson,Racing Bulls,39
+Britain,2026,LEC,Charles Leclerc,Ferrari,40
+Britain,2026,LIN,Arvid Lindblad,Racing Bulls,38
+Britain,2026,NOR,Lando Norris,McLaren,39
+Britain,2026,OCO,Esteban Ocon,Haas F1 Team,39
+Britain,2026,PER,Sergio Perez,Cadillac,37
+Britain,2026,PIA,Oscar Piastri,McLaren,38
+Britain,2026,RUS,George Russell,Mercedes,37
+Britain,2026,SAI,Carlos Sainz,Williams,39
+Britain,2026,STR,Lance Stroll,Aston Martin,12
+Britain,2026,VER,Max Verstappen,Red Bull Racing,39
+Britain,2025,ALB,Alexander Albon,Williams,9
+Britain,2025,ALO,Fernando Alonso,Aston Martin,9
+Britain,2025,BEA,Oliver Bearman,Haas F1 Team,9
+Britain,2025,GAS,Pierre Gasly,Alpine,8
+Britain,2025,HAM,Lewis Hamilton,Ferrari,8
+Britain,2025,HUL,Nico Hulkenberg,Kick Sauber,8
+Britain,2025,LEC,Charles Leclerc,Ferrari,8
+Britain,2025,NOR,Lando Norris,McLaren,7
+Britain,2025,OCO,Esteban Ocon,Haas F1 Team,8
+Britain,2025,PIA,Oscar Piastri,McLaren,8
+Britain,2025,RUS,George Russell,Mercedes,8
+Britain,2025,SAI,Carlos Sainz,Williams,8
+Britain,2025,STR,Lance Stroll,Aston Martin,8
+Britain,2025,TSU,Yuki Tsunoda,Red Bull Racing,6
+Britain,2025,VER,Max Verstappen,Red Bull Racing,8
+Britain,2024,ALB,Alexander Albon,Williams,32
+Britain,2024,ALO,Fernando Alonso,Aston Martin,32
+Britain,2024,BOT,Valtteri Bottas,Kick Sauber,28
+Britain,2024,HAM,Lewis Hamilton,Mercedes,33
+Britain,2024,HUL,Nico Hulkenberg,Haas F1 Team,31
+Britain,2024,LEC,Charles Leclerc,Ferrari,28
+Britain,2024,MAG,Kevin Magnussen,Haas F1 Team,33
+Britain,2024,NOR,Lando Norris,McLaren,34
+Britain,2024,OCO,Esteban Ocon,Alpine,20
+Britain,2024,PER,Sergio Perez,Red Bull Racing,24
+Britain,2024,PIA,Oscar Piastri,McLaren,35
+Britain,2024,RIC,Daniel Ricciardo,RB,29
+Britain,2024,RUS,George Russell,Mercedes,19
+Britain,2024,SAI,Carlos Sainz,Ferrari,31
+Britain,2024,SAR,Logan Sargeant,Williams,31
+Britain,2024,STR,Lance Stroll,Aston Martin,30
+Britain,2024,TSU,Yuki Tsunoda,RB,32
+Britain,2024,VER,Max Verstappen,Red Bull Racing,32
+Britain,2024,ZHO,Guanyu Zhou,Kick Sauber,19
+Britain,2023,ALB,Alexander Albon,Williams,44
+Britain,2023,ALO,Fernando Alonso,Aston Martin,44
+Britain,2023,BOT,Valtteri Bottas,Alfa Romeo,43
+Britain,2023,DEV,Nyck De Vries,AlphaTauri,42
+Britain,2023,GAS,Pierre Gasly,Alpine,35
+Britain,2023,HAM,Lewis Hamilton,Mercedes,44
+Britain,2023,HUL,Nico Hulkenberg,Haas F1 Team,42
+Britain,2023,LEC,Charles Leclerc,Ferrari,42
+Britain,2023,MAG,Kevin Magnussen,Haas F1 Team,30
+Britain,2023,NOR,Lando Norris,McLaren,45
+Britain,2023,OCO,Esteban Ocon,Alpine,7
+Britain,2023,PER,Sergio Perez,Red Bull Racing,42
+Britain,2023,PIA,Oscar Piastri,McLaren,42
+Britain,2023,RUS,George Russell,Mercedes,42
+Britain,2023,SAI,Carlos Sainz,Ferrari,42
+Britain,2023,SAR,Logan Sargeant,Williams,42
+Britain,2023,STR,Lance Stroll,Aston Martin,43
+Britain,2023,TSU,Yuki Tsunoda,AlphaTauri,42
+Britain,2023,VER,Max Verstappen,Red Bull Racing,45
+Britain,2023,ZHO,Guanyu Zhou,Alfa Romeo,42
+Britain,2022,ALO,Fernando Alonso,Alpine,42
+Britain,2022,BOT,Valtteri Bottas,Alfa Romeo,14
+Britain,2022,GAS,Pierre Gasly,AlphaTauri,19
+Britain,2022,HAM,Lewis Hamilton,Mercedes,42
+Britain,2022,LAT,Nicholas Latifi,Williams,40
+Britain,2022,LEC,Charles Leclerc,Ferrari,42
+Britain,2022,MAG,Kevin Magnussen,Haas F1 Team,40
+Britain,2022,MSC,Mick Schumacher,Haas F1 Team,40
+Britain,2022,NOR,Lando Norris,McLaren,42
+Britain,2022,OCO,Esteban Ocon,Alpine,31
+Britain,2022,PER,Sergio Perez,Red Bull Racing,41
+Britain,2022,RIC,Daniel Ricciardo,McLaren,38
+Britain,2022,SAI,Carlos Sainz,Ferrari,42
+Britain,2022,STR,Lance Stroll,Aston Martin,40
+Britain,2022,TSU,Yuki Tsunoda,AlphaTauri,39
+Britain,2022,VER,Max Verstappen,Red Bull Racing,39
+Britain,2022,VET,Sebastian Vettel,Aston Martin,39
+Britain,2021,ALO,Fernando Alonso,Alpine,41
+Britain,2021,BOT,Valtteri Bottas,Mercedes,45
+Britain,2021,GAS,Pierre Gasly,AlphaTauri,38
+Britain,2021,GIO,Antonio Giovinazzi,Alfa Romeo Racing,36
+Britain,2021,HAM,Lewis Hamilton,Mercedes,45
+Britain,2021,LAT,Nicholas Latifi,Williams,34
+Britain,2021,LEC,Charles Leclerc,Ferrari,45
+Britain,2021,MAZ,Nikita Mazepin,Haas F1 Team,22
+Britain,2021,MSC,Mick Schumacher,Haas F1 Team,19
+Britain,2021,NOR,Lando Norris,McLaren,45
+Britain,2021,OCO,Esteban Ocon,Alpine,41
+Britain,2021,PER,Sergio Perez,Red Bull Racing,34
+Britain,2021,RAI,Kimi Räikkönen,Alfa Romeo Racing,37
+Britain,2021,RIC,Daniel Ricciardo,McLaren,45
+Britain,2021,RUS,George Russell,Williams,36
+Britain,2021,SAI,Carlos Sainz,Ferrari,45
+Britain,2021,STR,Lance Stroll,Aston Martin,42
+Britain,2021,TSU,Yuki Tsunoda,AlphaTauri,37
+Britain,2021,VET,Sebastian Vettel,Aston Martin,30
+Britain,2020,ALB,Alexander Albon,Red Bull Racing,32
+Britain,2020,BOT,Valtteri Bottas,Mercedes,37
+Britain,2020,GAS,Pierre Gasly,AlphaTauri,32
+Britain,2020,GIO,Antonio Giovinazzi,Alfa Romeo Racing,31
+Britain,2020,GRO,Romain Grosjean,Haas F1 Team,30
+Britain,2020,HAM,Lewis Hamilton,Mercedes,38
+Britain,2020,KVY,Daniil Kvyat,AlphaTauri,1
+Britain,2020,LAT,Nicholas Latifi,Williams,30
+Britain,2020,LEC,Charles Leclerc,Ferrari,37
+Britain,2020,NOR,Lando Norris,McLaren,35
+Britain,2020,OCO,Esteban Ocon,Renault,33
+Britain,2020,RAI,Kimi Räikkönen,Alfa Romeo Racing,26
+Britain,2020,RIC,Daniel Ricciardo,Renault,35
+Britain,2020,RUS,George Russell,Williams,30
+Britain,2020,SAI,Carlos Sainz,McLaren,34
+Britain,2020,STR,Lance Stroll,Racing Point,34
+Britain,2020,VER,Max Verstappen,Red Bull Racing,37
+Britain,2020,VET,Sebastian Vettel,Ferrari,31
+Britain,2019,ALB,Alexander Albon,Toro Rosso,38
+Britain,2019,BOT,Valtteri Bottas,Mercedes,40
+Britain,2019,GAS,Pierre Gasly,Red Bull Racing,41
+Britain,2019,GIO,Antonio Giovinazzi,Alfa Romeo Racing,12
+Britain,2019,HAM,Lewis Hamilton,Mercedes,45
+Britain,2019,HUL,Nico Hulkenberg,Renault,36
+Britain,2019,KUB,Robert Kubica,Williams,21
+Britain,2019,KVY,Daniil Kvyat,Toro Rosso,36
+Britain,2019,LEC,Charles Leclerc,Ferrari,40
+Britain,2019,MAG,Kevin Magnussen,Haas F1 Team,1
+Britain,2019,NOR,Lando Norris,McLaren,38
+Britain,2019,PER,Sergio Perez,Racing Point,37
+Britain,2019,RAI,Kimi Räikkönen,Alfa Romeo Racing,37
+Britain,2019,RIC,Daniel Ricciardo,Renault,39
+Britain,2019,RUS,George Russell,Williams,23
+Britain,2019,SAI,Carlos Sainz,McLaren,41
+Britain,2019,STR,Lance Stroll,Racing Point,34
+Britain,2019,VER,Max Verstappen,Red Bull Racing,41
+Britain,2019,VET,Sebastian Vettel,Ferrari,41
+Britain,2018,ALO,Fernando Alonso,McLaren,32
+Britain,2018,BOT,Valtteri Bottas,Mercedes,32
+Britain,2018,ERI,Marcus Ericsson,Sauber,24
+Britain,2018,GAS,Pierre Gasly,Toro Rosso,33
+Britain,2018,GRO,Romain Grosjean,Haas F1 Team,24
+Britain,2018,HAM,Lewis Hamilton,Mercedes,31
+Britain,2018,HUL,Nico Hulkenberg,Renault,33
+Britain,2018,LEC,Charles Leclerc,Sauber,14
+Britain,2018,MAG,Kevin Magnussen,Haas F1 Team,32
+Britain,2018,OCO,Esteban Ocon,Force India,34
+Britain,2018,PER,Sergio Perez,Force India,32
+Britain,2018,RAI,Kimi Räikkönen,Ferrari,31
+Britain,2018,RIC,Daniel Ricciardo,Red Bull Racing,30
+Britain,2018,SAI,Carlos Sainz,Renault,24
+Britain,2018,SIR,Sergey Sirotkin,Williams,24
+Britain,2018,STR,Lance Stroll,Williams,27
+Britain,2018,VAN,Stoffel Vandoorne,McLaren,32
+Britain,2018,VER,Max Verstappen,Red Bull Racing,27
+Britain,2018,VET,Sebastian Vettel,Ferrari,33
+Belgium,2026,ALB,Alexander Albon,Williams,36
+Belgium,2026,ALO,Fernando Alonso,Aston Martin,21
+Belgium,2026,ANT,Kimi Antonelli,Mercedes,35
+Belgium,2026,BEA,Oliver Bearman,Haas F1 Team,36
+Belgium,2026,BOR,Gabriel Bortoleto,Audi,36
+Belgium,2026,BOT,Valtteri Bottas,Cadillac,33
+Belgium,2026,COL,Franco Colapinto,Alpine,35
+Belgium,2026,GAS,Pierre Gasly,Alpine,34
+Belgium,2026,HAD,Isack Hadjar,Red Bull Racing,36
+Belgium,2026,HAM,Lewis Hamilton,Ferrari,35
+Belgium,2026,HUL,Nico Hulkenberg,Audi,36
+Belgium,2026,LAW,Liam Lawson,Racing Bulls,34
+Belgium,2026,LEC,Charles Leclerc,Ferrari,36
+Belgium,2026,LIN,Arvid Lindblad,Racing Bulls,34
+Belgium,2026,NOR,Lando Norris,McLaren,34
+Belgium,2026,OCO,Esteban Ocon,Haas F1 Team,35
+Belgium,2026,PER,Sergio Perez,Cadillac,5
+Belgium,2026,PIA,Oscar Piastri,McLaren,36
+Belgium,2026,SAI,Carlos Sainz,Williams,33
+Belgium,2026,STR,Lance Stroll,Aston Martin,12
+Belgium,2026,VER,Max Verstappen,Red Bull Racing,35
+Belgium,2025,ALB,Alexander Albon,Williams,31
+Belgium,2025,ALO,Fernando Alonso,Aston Martin,28
+Belgium,2025,ANT,Kimi Antonelli,Mercedes,29
+Belgium,2025,BEA,Oliver Bearman,Haas F1 Team,30
+Belgium,2025,BOR,Gabriel Bortoleto,Kick Sauber,31
+Belgium,2025,COL,Franco Colapinto,Alpine,29
+Belgium,2025,GAS,Pierre Gasly,Alpine,31
+Belgium,2025,HAD,Isack Hadjar,Racing Bulls,27
+Belgium,2025,HAM,Lewis Hamilton,Ferrari,32
+Belgium,2025,HUL,Nico Hulkenberg,Kick Sauber,29
+Belgium,2025,LAW,Liam Lawson,Racing Bulls,31
+Belgium,2025,LEC,Charles Leclerc,Ferrari,31
+Belgium,2025,NOR,Lando Norris,McLaren,30
+Belgium,2025,OCO,Esteban Ocon,Haas F1 Team,30
+Belgium,2025,PIA,Oscar Piastri,McLaren,31
+Belgium,2025,RUS,George Russell,Mercedes,31
+Belgium,2025,SAI,Carlos Sainz,Williams,29
+Belgium,2025,STR,Lance Stroll,Aston Martin,31
+Belgium,2025,TSU,Yuki Tsunoda,Red Bull Racing,30
+Belgium,2025,VER,Max Verstappen,Red Bull Racing,31
+Belgium,2024,ALB,Alexander Albon,Williams,38
+Belgium,2024,ALO,Fernando Alonso,Aston Martin,40
+Belgium,2024,BOT,Valtteri Bottas,Kick Sauber,38
+Belgium,2024,GAS,Pierre Gasly,Alpine,38
+Belgium,2024,HAM,Lewis Hamilton,Mercedes,38
+Belgium,2024,HUL,Nico Hulkenberg,Haas F1 Team,38
+Belgium,2024,LEC,Charles Leclerc,Ferrari,38
+Belgium,2024,MAG,Kevin Magnussen,Haas F1 Team,39
+Belgium,2024,NOR,Lando Norris,McLaren,39
+Belgium,2024,OCO,Esteban Ocon,Alpine,38
+Belgium,2024,PER,Sergio Perez,Red Bull Racing,36
+Belgium,2024,PIA,Oscar Piastri,McLaren,38
+Belgium,2024,RIC,Daniel Ricciardo,RB,38
+Belgium,2024,RUS,George Russell,Mercedes,40
+Belgium,2024,SAI,Carlos Sainz,Ferrari,38
+Belgium,2024,SAR,Logan Sargeant,Williams,36
+Belgium,2024,STR,Lance Stroll,Aston Martin,40
+Belgium,2024,TSU,Yuki Tsunoda,RB,39
+Belgium,2024,VER,Max Verstappen,Red Bull Racing,38
+Belgium,2023,ALB,Alexander Albon,Williams,34
+Belgium,2023,ALO,Fernando Alonso,Aston Martin,35
+Belgium,2023,BOT,Valtteri Bottas,Alfa Romeo,35
+Belgium,2023,GAS,Pierre Gasly,Alpine,35
+Belgium,2023,HAM,Lewis Hamilton,Mercedes,34
+Belgium,2023,HUL,Nico Hulkenberg,Haas F1 Team,34
+Belgium,2023,LEC,Charles Leclerc,Ferrari,36
+Belgium,2023,MAG,Kevin Magnussen,Haas F1 Team,35
+Belgium,2023,NOR,Lando Norris,McLaren,35
+Belgium,2023,OCO,Esteban Ocon,Alpine,35
+Belgium,2023,PER,Sergio Perez,Red Bull Racing,36
+Belgium,2023,RIC,Daniel Ricciardo,AlphaTauri,35
+Belgium,2023,RUS,George Russell,Mercedes,36
+Belgium,2023,SAI,Carlos Sainz,Ferrari,11
+Belgium,2023,SAR,Logan Sargeant,Williams,34
+Belgium,2023,STR,Lance Stroll,Aston Martin,37
+Belgium,2023,TSU,Yuki Tsunoda,AlphaTauri,33
+Belgium,2023,VER,Max Verstappen,Red Bull Racing,37
+Belgium,2023,ZHO,Guanyu Zhou,Alfa Romeo,35
+Belgium,2022,ALB,Alexander Albon,Williams,35
+Belgium,2022,ALO,Fernando Alonso,Alpine,35
+Belgium,2022,GAS,Pierre Gasly,AlphaTauri,33
+Belgium,2022,LAT,Nicholas Latifi,Williams,29
+Belgium,2022,LEC,Charles Leclerc,Ferrari,35
+Belgium,2022,MAG,Kevin Magnussen,Haas F1 Team,33
+Belgium,2022,MSC,Mick Schumacher,Haas F1 Team,29
+Belgium,2022,NOR,Lando Norris,McLaren,35
+Belgium,2022,OCO,Esteban Ocon,Alpine,35
+Belgium,2022,PER,Sergio Perez,Red Bull Racing,35
+Belgium,2022,RIC,Daniel Ricciardo,McLaren,35
+Belgium,2022,RUS,George Russell,Mercedes,35
+Belgium,2022,SAI,Carlos Sainz,Ferrari,35
+Belgium,2022,STR,Lance Stroll,Aston Martin,35
+Belgium,2022,TSU,Yuki Tsunoda,AlphaTauri,34
+Belgium,2022,VER,Max Verstappen,Red Bull Racing,36
+Belgium,2022,VET,Sebastian Vettel,Aston Martin,35
+Belgium,2022,ZHO,Guanyu Zhou,Alfa Romeo,34
+Belgium,2021,ALO,Fernando Alonso,Alpine,1
+Belgium,2021,BOT,Valtteri Bottas,Mercedes,1
+Belgium,2021,GAS,Pierre Gasly,AlphaTauri,1
+Belgium,2021,GIO,Antonio Giovinazzi,Alfa Romeo Racing,1
+Belgium,2021,HAM,Lewis Hamilton,Mercedes,1
+Belgium,2021,LAT,Nicholas Latifi,Williams,1
+Belgium,2021,LEC,Charles Leclerc,Ferrari,1
+Belgium,2021,MAZ,Nikita Mazepin,Haas F1 Team,1
+Belgium,2021,MSC,Mick Schumacher,Haas F1 Team,1
+Belgium,2021,NOR,Lando Norris,McLaren,1
+Belgium,2021,OCO,Esteban Ocon,Alpine,1
+Belgium,2021,PER,Sergio Perez,Red Bull Racing,1
+Belgium,2021,RAI,Kimi Räikkönen,Alfa Romeo Racing,1
+Belgium,2021,RIC,Daniel Ricciardo,McLaren,1
+Belgium,2021,RUS,George Russell,Williams,1
+Belgium,2021,SAI,Carlos Sainz,Ferrari,1
+Belgium,2021,STR,Lance Stroll,Aston Martin,1
+Belgium,2021,TSU,Yuki Tsunoda,AlphaTauri,1
+Belgium,2021,VER,Max Verstappen,Red Bull Racing,1
+Belgium,2021,VET,Sebastian Vettel,Aston Martin,1
+Belgium,2020,ALB,Alexander Albon,Red Bull Racing,37
+Belgium,2020,BOT,Valtteri Bottas,Mercedes,39
+Belgium,2020,GAS,Pierre Gasly,AlphaTauri,35
+Belgium,2020,GIO,Antonio Giovinazzi,Alfa Romeo Racing,8
+Belgium,2020,GRO,Romain Grosjean,Haas F1 Team,37
+Belgium,2020,HAM,Lewis Hamilton,Mercedes,39
+Belgium,2020,KVY,Daniil Kvyat,AlphaTauri,37
+Belgium,2020,LAT,Nicholas Latifi,Williams,35
+Belgium,2020,LEC,Charles Leclerc,Ferrari,35
+Belgium,2020,MAG,Kevin Magnussen,Haas F1 Team,35
+Belgium,2020,NOR,Lando Norris,McLaren,37
+Belgium,2020,OCO,Esteban Ocon,Renault,37
+Belgium,2020,PER,Sergio Perez,Racing Point,35
+Belgium,2020,RAI,Kimi Räikkönen,Alfa Romeo Racing,37
+Belgium,2020,RIC,Daniel Ricciardo,Renault,38
+Belgium,2020,RUS,George Russell,Williams,8
+Belgium,2020,STR,Lance Stroll,Racing Point,37
+Belgium,2020,VER,Max Verstappen,Red Bull Racing,38
+Belgium,2020,VET,Sebastian Vettel,Ferrari,37
+Belgium,2019,ALB,Alexander Albon,Red Bull Racing,35
+Belgium,2019,BOT,Valtteri Bottas,Mercedes,37
+Belgium,2019,GAS,Pierre Gasly,Toro Rosso,36
+Belgium,2019,GIO,Antonio Giovinazzi,Alfa Romeo Racing,35
+Belgium,2019,GRO,Romain Grosjean,Haas F1 Team,35
+Belgium,2019,HAM,Lewis Hamilton,Mercedes,37
+Belgium,2019,HUL,Nico Hulkenberg,Renault,33
+Belgium,2019,KUB,Robert Kubica,Williams,31
+Belgium,2019,KVY,Daniil Kvyat,Toro Rosso,35
+Belgium,2019,LEC,Charles Leclerc,Ferrari,37
+Belgium,2019,MAG,Kevin Magnussen,Haas F1 Team,35
+Belgium,2019,NOR,Lando Norris,McLaren,36
+Belgium,2019,PER,Sergio Perez,Racing Point,35
+Belgium,2019,RAI,Kimi Räikkönen,Alfa Romeo Racing,33
+Belgium,2019,RIC,Daniel Ricciardo,Renault,35
+Belgium,2019,RUS,George Russell,Williams,32
+Belgium,2019,STR,Lance Stroll,Racing Point,33
+Belgium,2019,VET,Sebastian Vettel,Ferrari,35
+Belgium,2018,BOT,Valtteri Bottas,Mercedes,35
+Belgium,2018,ERI,Marcus Ericsson,Sauber,36
+Belgium,2018,GAS,Pierre Gasly,Toro Rosso,37
+Belgium,2018,GRO,Romain Grosjean,Haas F1 Team,37
+Belgium,2018,HAM,Lewis Hamilton,Mercedes,37
+Belgium,2018,HAR,Brendon Hartley,Toro Rosso,32
+Belgium,2018,MAG,Kevin Magnussen,Haas F1 Team,37
+Belgium,2018,OCO,Esteban Ocon,Racing Point,37
+Belgium,2018,PER,Sergio Perez,Racing Point,37
+Belgium,2018,RIC,Daniel Ricciardo,Red Bull Racing,23
+Belgium,2018,SAI,Carlos Sainz,Renault,35
+Belgium,2018,SIR,Sergey Sirotkin,Williams,36
+Belgium,2018,STR,Lance Stroll,Williams,35
+Belgium,2018,VAN,Stoffel Vandoorne,McLaren,32
+Belgium,2018,VER,Max Verstappen,Red Bull Racing,37
+Belgium,2018,VET,Sebastian Vettel,Ferrari,38
+Hungary,2026,ALB,Alexander Albon,Williams,28
+Hungary,2026,ALO,Fernando Alonso,Aston Martin,39
+Hungary,2026,ANT,Kimi Antonelli,Mercedes,61
+Hungary,2026,BEA,Oliver Bearman,Haas F1 Team,27
+Hungary,2026,BOR,Gabriel Bortoleto,Audi,47
+Hungary,2026,COL,Franco Colapinto,Alpine,38
+Hungary,2026,GAS,Pierre Gasly,Alpine,53
+Hungary,2026,HAD,Isack Hadjar,Red Bull Racing,60
+Hungary,2026,HAM,Lewis Hamilton,Ferrari,61
+Hungary,2026,HUL,Nico Hulkenberg,Audi,55
+Hungary,2026,LAW,Liam Lawson,Racing Bulls,57
+Hungary,2026,LEC,Charles Leclerc,Ferrari,61
+Hungary,2026,LIN,Arvid Lindblad,Racing Bulls,52
+Hungary,2026,NOR,Lando Norris,McLaren,62
+Hungary,2026,OCO,Esteban Ocon,Haas F1 Team,42
+Hungary,2026,PER,Sergio Perez,Cadillac,9
+Hungary,2026,PIA,Oscar Piastri,McLaren,48
+Hungary,2026,RUS,George Russell,Mercedes,61
+Hungary,2026,SAI,Carlos Sainz,Williams,29
+Hungary,2026,STR,Lance Stroll,Aston Martin,50
+Hungary,2026,VER,Max Verstappen,Red Bull Racing,61
+Hungary,2025,ALB,Alexander Albon,Williams,64
+Hungary,2025,ALO,Fernando Alonso,Aston Martin,67
+Hungary,2025,ANT,Kimi Antonelli,Mercedes,65
+Hungary,2025,BEA,Oliver Bearman,Haas F1 Team,44
+Hungary,2025,BOR,Gabriel Bortoleto,Kick Sauber,67
+Hungary,2025,COL,Franco Colapinto,Alpine,63
+Hungary,2025,GAS,Pierre Gasly,Alpine,65
+Hungary,2025,HAD,Isack Hadjar,Racing Bulls,65
+Hungary,2025,HAM,Lewis Hamilton,Ferrari,65
+Hungary,2025,HUL,Nico Hulkenberg,Kick Sauber,64
+Hungary,2025,LAW,Liam Lawson,Racing Bulls,66
+Hungary,2025,LEC,Charles Leclerc,Ferrari,65
+Hungary,2025,NOR,Lando Norris,McLaren,67
+Hungary,2025,OCO,Esteban Ocon,Haas F1 Team,64
+Hungary,2025,PIA,Oscar Piastri,McLaren,65
+Hungary,2025,RUS,George Russell,Mercedes,65
+Hungary,2025,SAI,Carlos Sainz,Williams,63
+Hungary,2025,STR,Lance Stroll,Aston Martin,66
+Hungary,2025,TSU,Yuki Tsunoda,Red Bull Racing,62
+Hungary,2025,VER,Max Verstappen,Red Bull Racing,65
+Hungary,2024,ALB,Alexander Albon,Williams,54
+Hungary,2024,ALO,Fernando Alonso,Aston Martin,58
+Hungary,2024,BOT,Valtteri Bottas,Kick Sauber,50
+Hungary,2024,GAS,Pierre Gasly,Alpine,19
+Hungary,2024,HAM,Lewis Hamilton,Mercedes,64
+Hungary,2024,HUL,Nico Hulkenberg,Haas F1 Team,52
+Hungary,2024,LEC,Charles Leclerc,Ferrari,64
+Hungary,2024,MAG,Kevin Magnussen,Haas F1 Team,53
+Hungary,2024,NOR,Lando Norris,McLaren,63
+Hungary,2024,OCO,Esteban Ocon,Alpine,50
+Hungary,2024,PER,Sergio Perez,Red Bull Racing,58
+Hungary,2024,PIA,Oscar Piastri,McLaren,64
+Hungary,2024,RIC,Daniel Ricciardo,RB,54
+Hungary,2024,RUS,George Russell,Mercedes,57
+Hungary,2024,SAI,Carlos Sainz,Ferrari,63
+Hungary,2024,SAR,Logan Sargeant,Williams,52
+Hungary,2024,STR,Lance Stroll,Aston Martin,59
+Hungary,2024,TSU,Yuki Tsunoda,RB,59
+Hungary,2024,VER,Max Verstappen,Red Bull Racing,63
+Hungary,2024,ZHO,Guanyu Zhou,Kick Sauber,47
+Hungary,2023,ALB,Alexander Albon,Williams,59
+Hungary,2023,ALO,Fernando Alonso,Aston Martin,61
+Hungary,2023,BOT,Valtteri Bottas,Alfa Romeo,58
+Hungary,2023,HAM,Lewis Hamilton,Mercedes,64
+Hungary,2023,HUL,Nico Hulkenberg,Haas F1 Team,53
+Hungary,2023,LEC,Charles Leclerc,Ferrari,63
+Hungary,2023,MAG,Kevin Magnussen,Haas F1 Team,40
+Hungary,2023,NOR,Lando Norris,McLaren,64
+Hungary,2023,PER,Sergio Perez,Red Bull Racing,61
+Hungary,2023,PIA,Oscar Piastri,McLaren,64
+Hungary,2023,RIC,Daniel Ricciardo,AlphaTauri,51
+Hungary,2023,RUS,George Russell,Mercedes,60
+Hungary,2023,SAI,Carlos Sainz,Ferrari,62
+Hungary,2023,SAR,Logan Sargeant,Williams,48
+Hungary,2023,STR,Lance Stroll,Aston Martin,56
+Hungary,2023,TSU,Yuki Tsunoda,AlphaTauri,57
+Hungary,2023,VER,Max Verstappen,Red Bull Racing,64
+Hungary,2023,ZHO,Guanyu Zhou,Alfa Romeo,55
+Hungary,2022,ALB,Alexander Albon,Williams,53
+Hungary,2022,ALO,Fernando Alonso,Alpine,56
+Hungary,2022,BOT,Valtteri Bottas,Alfa Romeo,53
+Hungary,2022,GAS,Pierre Gasly,AlphaTauri,54
+Hungary,2022,HAM,Lewis Hamilton,Mercedes,57
+Hungary,2022,LAT,Nicholas Latifi,Williams,52
+Hungary,2022,LEC,Charles Leclerc,Ferrari,55
+Hungary,2022,MAG,Kevin Magnussen,Haas F1 Team,51
+Hungary,2022,MSC,Mick Schumacher,Haas F1 Team,53
+Hungary,2022,NOR,Lando Norris,McLaren,54
+Hungary,2022,OCO,Esteban Ocon,Alpine,58
+Hungary,2022,PER,Sergio Perez,Red Bull Racing,57
+Hungary,2022,RIC,Daniel Ricciardo,McLaren,54
+Hungary,2022,RUS,George Russell,Mercedes,56
+Hungary,2022,SAI,Carlos Sainz,Ferrari,58
+Hungary,2022,STR,Lance Stroll,Aston Martin,55
+Hungary,2022,TSU,Yuki Tsunoda,AlphaTauri,49
+Hungary,2022,VER,Max Verstappen,Red Bull Racing,57
+Hungary,2022,VET,Sebastian Vettel,Aston Martin,56
+Hungary,2022,ZHO,Guanyu Zhou,Alfa Romeo,52
+Hungary,2021,ALO,Fernando Alonso,Alpine,46
+Hungary,2021,GAS,Pierre Gasly,AlphaTauri,45
+Hungary,2021,GIO,Antonio Giovinazzi,Alfa Romeo Racing,38
+Hungary,2021,HAM,Lewis Hamilton,Mercedes,50
+Hungary,2021,LAT,Nicholas Latifi,Williams,42
+Hungary,2021,MSC,Mick Schumacher,Haas F1 Team,30
+Hungary,2021,OCO,Esteban Ocon,Alpine,50
+Hungary,2021,RAI,Kimi Räikkönen,Alfa Romeo Racing,42
+Hungary,2021,RIC,Daniel Ricciardo,McLaren,29
+Hungary,2021,RUS,George Russell,Williams,38
+Hungary,2021,SAI,Carlos Sainz,Ferrari,44
+Hungary,2021,TSU,Yuki Tsunoda,AlphaTauri,40
+Hungary,2021,VER,Max Verstappen,Red Bull Racing,36
+Hungary,2021,VET,Sebastian Vettel,Aston Martin,52
+Hungary,2020,ALB,Alexander Albon,Red Bull Racing,32
+Hungary,2020,BOT,Valtteri Bottas,Mercedes,43
+Hungary,2020,GIO,Antonio Giovinazzi,Alfa Romeo Racing,28
+Hungary,2020,GRO,Romain Grosjean,Haas F1 Team,26
+Hungary,2020,HAM,Lewis Hamilton,Mercedes,53
+Hungary,2020,KVY,Daniil Kvyat,AlphaTauri,34
+Hungary,2020,LAT,Nicholas Latifi,Williams,5
+Hungary,2020,LEC,Charles Leclerc,Ferrari,31
+Hungary,2020,MAG,Kevin Magnussen,Haas F1 Team,27
+Hungary,2020,NOR,Lando Norris,McLaren,29
+Hungary,2020,OCO,Esteban Ocon,Renault,27
+Hungary,2020,PER,Sergio Perez,Racing Point,33
+Hungary,2020,RAI,Kimi Räikkönen,Alfa Romeo Racing,26
+Hungary,2020,RIC,Daniel Ricciardo,Renault,30
+Hungary,2020,RUS,George Russell,Williams,28
+Hungary,2020,SAI,Carlos Sainz,McLaren,25
+Hungary,2020,STR,Lance Stroll,Racing Point,38
+Hungary,2020,VER,Max Verstappen,Red Bull Racing,43
+Hungary,2020,VET,Sebastian Vettel,Ferrari,34
+Hungary,2019,ALB,Alexander Albon,Toro Rosso,21
+Hungary,2019,BOT,Valtteri Bottas,Mercedes,36
+Hungary,2019,GAS,Pierre Gasly,Red Bull Racing,34
+Hungary,2019,HAM,Lewis Hamilton,Mercedes,62
+Hungary,2019,HUL,Nico Hulkenberg,Renault,19
+Hungary,2019,KVY,Daniil Kvyat,Toro Rosso,13
+Hungary,2019,LEC,Charles Leclerc,Ferrari,43
+Hungary,2019,MAG,Kevin Magnussen,Haas F1 Team,20
+Hungary,2019,NOR,Lando Norris,McLaren,30
+Hungary,2019,PER,Sergio Perez,Racing Point,15
+Hungary,2019,RAI,Kimi Räikkönen,Alfa Romeo Racing,32
+Hungary,2019,RIC,Daniel Ricciardo,Renault,18
+Hungary,2019,RUS,George Russell,Williams,3
+Hungary,2019,SAI,Carlos Sainz,McLaren,32
+Hungary,2019,STR,Lance Stroll,Racing Point,6
+Hungary,2019,VER,Max Verstappen,Red Bull Racing,63
+Hungary,2019,VET,Sebastian Vettel,Ferrari,38
+Hungary,2018,ALO,Fernando Alonso,McLaren,53
+Hungary,2018,BOT,Valtteri Bottas,Mercedes,55
+Hungary,2018,ERI,Marcus Ericsson,Sauber,44
+Hungary,2018,GAS,Pierre Gasly,Toro Rosso,57
+Hungary,2018,GRO,Romain Grosjean,Haas F1 Team,54
+Hungary,2018,HAM,Lewis Hamilton,Mercedes,59
+Hungary,2018,HAR,Brendon Hartley,Toro Rosso,54
+Hungary,2018,HUL,Nico Hulkenberg,Renault,53
+Hungary,2018,MAG,Kevin Magnussen,Haas F1 Team,56
+Hungary,2018,OCO,Esteban Ocon,Force India,52
+Hungary,2018,PER,Sergio Perez,Force India,50
+Hungary,2018,RAI,Kimi Räikkönen,Ferrari,57
+Hungary,2018,RIC,Daniel Ricciardo,Red Bull Racing,58
+Hungary,2018,SAI,Carlos Sainz,Renault,53
+Hungary,2018,SIR,Sergey Sirotkin,Williams,34
+Hungary,2018,STR,Lance Stroll,Williams,34
+Hungary,2018,VAN,Stoffel Vandoorne,McLaren,36
+Hungary,2018,VET,Sebastian Vettel,Ferrari,59
+Netherlands,2026,ALB,Alexander Albon,Williams,40
+Netherlands,2026,ALO,Fernando Alonso,Aston Martin,53
+Netherlands,2026,ANT,Kimi Antonelli,Mercedes,58
+Netherlands,2026,BOR,Gabriel Bortoleto,Audi,47
+Netherlands,2026,BOT,Valtteri Bottas,Cadillac,11
+Netherlands,2026,COL,Franco Colapinto,Alpine,41
+Netherlands,2026,GAS,Pierre Gasly,Alpine,50
+Netherlands,2026,HAM,Lewis Hamilton,Ferrari,59
+Netherlands,2026,HUL,Nico Hulkenberg,Audi,54
+Netherlands,2026,LAW,Liam Lawson,Red Bull Racing,58
+Netherlands,2026,LEC,Charles Leclerc,Ferrari,57
+Netherlands,2026,LIN,Arvid Lindblad,Racing Bulls,48
+Netherlands,2026,NOR,Lando Norris,McLaren,58
+Netherlands,2026,OCO,Esteban Ocon,Haas F1 Team,35
+Netherlands,2026,PER,Sergio Perez,Cadillac,28
+Netherlands,2026,PIA,Oscar Piastri,McLaren,57
+Netherlands,2026,RUS,George Russell,Mercedes,57
+Netherlands,2026,SAI,Carlos Sainz,Williams,31
+Netherlands,2026,STR,Lance Stroll,Aston Martin,23
+Netherlands,2026,TSU,Yuki Tsunoda,Racing Bulls,51
+Netherlands,2025,ALB,Alexander Albon,Williams,55
+Netherlands,2025,ALO,Fernando Alonso,Aston Martin,48
+Netherlands,2025,ANT,Kimi Antonelli,Mercedes,51
+Netherlands,2025,BEA,Oliver Bearman,Haas F1 Team,45
+Netherlands,2025,BOR,Gabriel Bortoleto,Kick Sauber,35
+Netherlands,2025,COL,Franco Colapinto,Alpine,45
+Netherlands,2025,GAS,Pierre Gasly,Alpine,44
+Netherlands,2025,HAD,Isack Hadjar,Racing Bulls,55
+Netherlands,2025,HAM,Lewis Hamilton,Ferrari,21
+Netherlands,2025,HUL,Nico Hulkenberg,Kick Sauber,42
+Netherlands,2025,LAW,Liam Lawson,Racing Bulls,51
+Netherlands,2025,LEC,Charles Leclerc,Ferrari,42
+Netherlands,2025,NOR,Lando Norris,McLaren,51
+Netherlands,2025,OCO,Esteban Ocon,Haas F1 Team,43
+Netherlands,2025,PIA,Oscar Piastri,McLaren,55
+Netherlands,2025,RUS,George Russell,Mercedes,54
+Netherlands,2025,SAI,Carlos Sainz,Williams,50
+Netherlands,2025,STR,Lance Stroll,Aston Martin,47
+Netherlands,2025,TSU,Yuki Tsunoda,Red Bull Racing,49
+Netherlands,2025,VER,Max Verstappen,Red Bull Racing,55
+Netherlands,2024,ALB,Alexander Albon,Williams,64
+Netherlands,2024,ALO,Fernando Alonso,Aston Martin,68
+Netherlands,2024,BOT,Valtteri Bottas,Kick Sauber,65
+Netherlands,2024,GAS,Pierre Gasly,Alpine,66
+Netherlands,2024,HAM,Lewis Hamilton,Mercedes,67
+Netherlands,2024,HUL,Nico Hulkenberg,Haas F1 Team,68
+Netherlands,2024,LEC,Charles Leclerc,Ferrari,69
+Netherlands,2024,MAG,Kevin Magnussen,Haas F1 Team,66
+Netherlands,2024,NOR,Lando Norris,McLaren,69
+Netherlands,2024,OCO,Esteban Ocon,Alpine,66
+Netherlands,2024,PER,Sergio Perez,Red Bull Racing,69
+Netherlands,2024,PIA,Oscar Piastri,McLaren,69
+Netherlands,2024,RIC,Daniel Ricciardo,RB,67
+Netherlands,2024,RUS,George Russell,Mercedes,67
+Netherlands,2024,SAI,Carlos Sainz,Ferrari,69
+Netherlands,2024,SAR,Logan Sargeant,Williams,65
+Netherlands,2024,STR,Lance Stroll,Aston Martin,68
+Netherlands,2024,TSU,Yuki Tsunoda,RB,66
+Netherlands,2024,VER,Max Verstappen,Red Bull Racing,69
+Netherlands,2024,ZHO,Guanyu Zhou,Kick Sauber,61
+Netherlands,2023,ALB,Alexander Albon,Williams,42
+Netherlands,2023,ALO,Fernando Alonso,Aston Martin,41
+Netherlands,2023,BOT,Valtteri Bottas,Alfa Romeo,39
+Netherlands,2023,GAS,Pierre Gasly,Alpine,39
+Netherlands,2023,HAM,Lewis Hamilton,Mercedes,39
+Netherlands,2023,HUL,Nico Hulkenberg,Haas F1 Team,40
+Netherlands,2023,LAW,Liam Lawson,AlphaTauri,38
+Netherlands,2023,LEC,Charles Leclerc,Ferrari,19
+Netherlands,2023,MAG,Kevin Magnussen,Haas F1 Team,40
+Netherlands,2023,NOR,Lando Norris,McLaren,39
+Netherlands,2023,OCO,Esteban Ocon,Alpine,40
+Netherlands,2023,PER,Sergio Perez,Red Bull Racing,38
+Netherlands,2023,PIA,Oscar Piastri,McLaren,40
+Netherlands,2023,RUS,George Russell,Mercedes,41
+Netherlands,2023,SAI,Carlos Sainz,Ferrari,40
+Netherlands,2023,SAR,Logan Sargeant,Williams,3
+Netherlands,2023,STR,Lance Stroll,Aston Martin,39
+Netherlands,2023,TSU,Yuki Tsunoda,AlphaTauri,40
+Netherlands,2023,VER,Max Verstappen,Red Bull Racing,40
+Netherlands,2023,ZHO,Guanyu Zhou,Alfa Romeo,39
+Netherlands,2022,ALB,Alexander Albon,Williams,50
+Netherlands,2022,ALO,Fernando Alonso,Alpine,56
+Netherlands,2022,BOT,Valtteri Bottas,Alfa Romeo,36
+Netherlands,2022,GAS,Pierre Gasly,AlphaTauri,51
+Netherlands,2022,HAM,Lewis Hamilton,Mercedes,55
+Netherlands,2022,LAT,Nicholas Latifi,Williams,39
+Netherlands,2022,LEC,Charles Leclerc,Ferrari,54
+Netherlands,2022,MAG,Kevin Magnussen,Haas F1 Team,48
+Netherlands,2022,MSC,Mick Schumacher,Haas F1 Team,52
+Netherlands,2022,NOR,Lando Norris,McLaren,56
+Netherlands,2022,OCO,Esteban Ocon,Alpine,57
+Netherlands,2022,PER,Sergio Perez,Red Bull Racing,54
+Netherlands,2022,RIC,Daniel Ricciardo,McLaren,49
+Netherlands,2022,RUS,George Russell,Mercedes,55
+Netherlands,2022,SAI,Carlos Sainz,Ferrari,56
+Netherlands,2022,STR,Lance Stroll,Aston Martin,53
+Netherlands,2022,TSU,Yuki Tsunoda,AlphaTauri,35
+Netherlands,2022,VER,Max Verstappen,Red Bull Racing,55
+Netherlands,2022,VET,Sebastian Vettel,Aston Martin,49
+Netherlands,2022,ZHO,Guanyu Zhou,Alfa Romeo,49
+Netherlands,2021,ALO,Fernando Alonso,Alpine,26
+Netherlands,2021,BOT,Valtteri Bottas,Mercedes,62
+Netherlands,2021,GAS,Pierre Gasly,AlphaTauri,36
+Netherlands,2021,GIO,Antonio Giovinazzi,Alfa Romeo Racing,17
+Netherlands,2021,HAM,Lewis Hamilton,Mercedes,63
+Netherlands,2021,KUB,Robert Kubica,Alfa Romeo Racing,14
+Netherlands,2021,LAT,Nicholas Latifi,Williams,1
+Netherlands,2021,LEC,Charles Leclerc,Ferrari,33
+Netherlands,2021,MSC,Mick Schumacher,Haas F1 Team,2
+Netherlands,2021,NOR,Lando Norris,McLaren,25
+Netherlands,2021,OCO,Esteban Ocon,Alpine,25
+Netherlands,2021,PER,Sergio Perez,Red Bull Racing,34
+Netherlands,2021,RIC,Daniel Ricciardo,McLaren,24
+Netherlands,2021,RUS,George Russell,Williams,12
+Netherlands,2021,SAI,Carlos Sainz,Ferrari,29
+Netherlands,2021,STR,Lance Stroll,Aston Martin,13
+Netherlands,2021,TSU,Yuki Tsunoda,AlphaTauri,2
+Netherlands,2021,VER,Max Verstappen,Red Bull Racing,65
+Netherlands,2021,VET,Sebastian Vettel,Aston Martin,21
+Italy,2026,ALB,Alexander Albon,Williams,41
+Italy,2026,ALO,Fernando Alonso,Aston Martin,14
+Italy,2026,ANT,Kimi Antonelli,Mercedes,45
+Italy,2026,BEA,Oliver Bearman,Haas F1 Team,46
+Italy,2026,BOR,Gabriel Bortoleto,Audi,46
+Italy,2026,BOT,Valtteri Bottas,Cadillac,35
+Italy,2026,COL,Franco Colapinto,Alpine,46
+Italy,2026,GAS,Pierre Gasly,Alpine,45
+Italy,2026,HAM,Lewis Hamilton,Ferrari,46
+Italy,2026,HUL,Nico Hulkenberg,Audi,44
+Italy,2026,LAW,Liam Lawson,Red Bull Racing,43
+Italy,2026,LIN,Arvid Lindblad,Racing Bulls,45
+Italy,2026,NOR,Lando Norris,McLaren,45
+Italy,2026,OCO,Esteban Ocon,Haas F1 Team,44
+Italy,2026,PER,Sergio Perez,Cadillac,40
+Italy,2026,PIA,Oscar Piastri,McLaren,46
+Italy,2026,RUS,George Russell,Mercedes,46
+Italy,2026,SAI,Carlos Sainz,Williams,45
+Italy,2026,STR,Lance Stroll,Aston Martin,11
+Italy,2026,TSU,Yuki Tsunoda,Racing Bulls,44
+Italy,2026,VER,Max Verstappen,Red Bull Racing,46
+Italy,2025,ALB,Alexander Albon,Williams,49
+Italy,2025,ALO,Fernando Alonso,Aston Martin,20
+Italy,2025,ANT,Kimi Antonelli,Mercedes,49
+Italy,2025,BEA,Oliver Bearman,Haas F1 Team,49
+Italy,2025,BOR,Gabriel Bortoleto,Kick Sauber,49
+Italy,2025,COL,Franco Colapinto,Alpine,47
+Italy,2025,GAS,Pierre Gasly,Alpine,48
+Italy,2025,HAD,Isack Hadjar,Racing Bulls,48
+Italy,2025,HAM,Lewis Hamilton,Ferrari,49
+Italy,2025,LAW,Liam Lawson,Racing Bulls,48
+Italy,2025,LEC,Charles Leclerc,Ferrari,49
+Italy,2025,NOR,Lando Norris,McLaren,49
+Italy,2025,OCO,Esteban Ocon,Haas F1 Team,48
+Italy,2025,PIA,Oscar Piastri,McLaren,49
+Italy,2025,RUS,George Russell,Mercedes,49
+Italy,2025,SAI,Carlos Sainz,Williams,49
+Italy,2025,STR,Lance Stroll,Aston Martin,48
+Italy,2025,TSU,Yuki Tsunoda,Red Bull Racing,49
+Italy,2025,VER,Max Verstappen,Red Bull Racing,48
+Italy,2024,ALB,Alexander Albon,Williams,50
+Italy,2024,ALO,Fernando Alonso,Aston Martin,47
+Italy,2024,BOT,Valtteri Bottas,Kick Sauber,44
+Italy,2024,COL,Franco Colapinto,Williams,47
+Italy,2024,GAS,Pierre Gasly,Alpine,45
+Italy,2024,HAM,Lewis Hamilton,Mercedes,48
+Italy,2024,HUL,Nico Hulkenberg,Haas F1 Team,45
+Italy,2024,LEC,Charles Leclerc,Ferrari,50
+Italy,2024,MAG,Kevin Magnussen,Haas F1 Team,49
+Italy,2024,NOR,Lando Norris,McLaren,48
+Italy,2024,OCO,Esteban Ocon,Alpine,47
+Italy,2024,PER,Sergio Perez,Red Bull Racing,48
+Italy,2024,PIA,Oscar Piastri,McLaren,48
+Italy,2024,RIC,Daniel Ricciardo,RB,49
+Italy,2024,RUS,George Russell,Mercedes,48
+Italy,2024,SAI,Carlos Sainz,Ferrari,50
+Italy,2024,STR,Lance Stroll,Aston Martin,42
+Italy,2024,TSU,Yuki Tsunoda,RB,2
+Italy,2024,VER,Max Verstappen,Red Bull Racing,48
+Italy,2024,ZHO,Guanyu Zhou,Kick Sauber,44
+Italy,2023,ALB,Alexander Albon,Williams,48
+Italy,2023,ALO,Fernando Alonso,Aston Martin,48
+Italy,2023,BOT,Valtteri Bottas,Alfa Romeo,47
+Italy,2023,GAS,Pierre Gasly,Alpine,45
+Italy,2023,HAM,Lewis Hamilton,Mercedes,48
+Italy,2023,HUL,Nico Hulkenberg,Haas F1 Team,45
+Italy,2023,LAW,Liam Lawson,AlphaTauri,45
+Italy,2023,LEC,Charles Leclerc,Ferrari,48
+Italy,2023,MAG,Kevin Magnussen,Haas F1 Team,45
+Italy,2023,NOR,Lando Norris,McLaren,48
+Italy,2023,OCO,Esteban Ocon,Alpine,35
+Italy,2023,PER,Sergio Perez,Red Bull Racing,48
+Italy,2023,PIA,Oscar Piastri,McLaren,45
+Italy,2023,RUS,George Russell,Mercedes,48
+Italy,2023,SAI,Carlos Sainz,Ferrari,48
+Italy,2023,SAR,Logan Sargeant,Williams,47
+Italy,2023,STR,Lance Stroll,Aston Martin,46
+Italy,2023,VER,Max Verstappen,Red Bull Racing,48
+Italy,2023,ZHO,Guanyu Zhou,Alfa Romeo,45
+Italy,2022,ALO,Fernando Alonso,Alpine,27
+Italy,2022,BOT,Valtteri Bottas,Alfa Romeo,40
+Italy,2022,DEV,Nyck De Vries,Williams,40
+Italy,2022,GAS,Pierre Gasly,AlphaTauri,40
+Italy,2022,HAM,Lewis Hamilton,Mercedes,40
+Italy,2022,LAT,Nicholas Latifi,Williams,39
+Italy,2022,LEC,Charles Leclerc,Ferrari,41
+Italy,2022,MAG,Kevin Magnussen,Haas F1 Team,40
+Italy,2022,MSC,Mick Schumacher,Haas F1 Team,39
+Italy,2022,NOR,Lando Norris,McLaren,40
+Italy,2022,OCO,Esteban Ocon,Alpine,40
+Italy,2022,PER,Sergio Perez,Red Bull Racing,37
+Italy,2022,RIC,Daniel Ricciardo,McLaren,40
+Italy,2022,RUS,George Russell,Mercedes,40
+Italy,2022,SAI,Carlos Sainz,Ferrari,41
+Italy,2022,STR,Lance Stroll,Aston Martin,33
+Italy,2022,TSU,Yuki Tsunoda,AlphaTauri,40
+Italy,2022,VER,Max Verstappen,Red Bull Racing,41
+Italy,2022,VET,Sebastian Vettel,Aston Martin,9
+Italy,2022,ZHO,Guanyu Zhou,Alfa Romeo,40
+Italy,2021,ALO,Fernando Alonso,Alpine,41
+Italy,2021,BOT,Valtteri Bottas,Mercedes,43
+Italy,2021,GAS,Pierre Gasly,AlphaTauri,1
+Italy,2021,GIO,Antonio Giovinazzi,Alfa Romeo Racing,41
+Italy,2021,HAM,Lewis Hamilton,Mercedes,22
+Italy,2021,KUB,Robert Kubica,Alfa Romeo Racing,43
+Italy,2021,LAT,Nicholas Latifi,Williams,40
+Italy,2021,LEC,Charles Leclerc,Ferrari,42
+Italy,2021,MAZ,Nikita Mazepin,Haas F1 Team,29
+Italy,2021,MSC,Mick Schumacher,Haas F1 Team,40
+Italy,2021,NOR,Lando Norris,McLaren,40
+Italy,2021,OCO,Esteban Ocon,Alpine,42
+Italy,2021,PER,Sergio Perez,Red Bull Racing,42
+Italy,2021,RIC,Daniel Ricciardo,McLaren,40
+Italy,2021,RUS,George Russell,Williams,43
+Italy,2021,SAI,Carlos Sainz,Ferrari,42
+Italy,2021,STR,Lance Stroll,Aston Martin,41
+Italy,2021,VER,Max Verstappen,Red Bull Racing,21
+Italy,2021,VET,Sebastian Vettel,Aston Martin,40
+Italy,2020,ALB,Alexander Albon,Red Bull Racing,41
+Italy,2020,BOT,Valtteri Bottas,Mercedes,41
+Italy,2020,GAS,Pierre Gasly,AlphaTauri,42
+Italy,2020,GIO,Antonio Giovinazzi,Alfa Romeo Racing,39
+Italy,2020,GRO,Romain Grosjean,Haas F1 Team,40
+Italy,2020,HAM,Lewis Hamilton,Mercedes,41
+Italy,2020,KVY,Daniil Kvyat,AlphaTauri,41
+Italy,2020,LAT,Nicholas Latifi,Williams,38
+Italy,2020,LEC,Charles Leclerc,Ferrari,14
+Italy,2020,MAG,Kevin Magnussen,Haas F1 Team,14
+Italy,2020,NOR,Lando Norris,McLaren,40
+Italy,2020,OCO,Esteban Ocon,Renault,41
+Italy,2020,PER,Sergio Perez,Racing Point,40
+Italy,2020,RAI,Kimi Räikkönen,Alfa Romeo Racing,40
+Italy,2020,RIC,Daniel Ricciardo,Renault,40
+Italy,2020,RUS,George Russell,Williams,40
+Italy,2020,SAI,Carlos Sainz,McLaren,40
+Italy,2020,STR,Lance Stroll,Racing Point,42
+Italy,2020,VER,Max Verstappen,Red Bull Racing,17
+Italy,2020,VET,Sebastian Vettel,Ferrari,4
+Italy,2019,ALB,Alexander Albon,Red Bull Racing,45
+Italy,2019,BOT,Valtteri Bottas,Mercedes,44
+Italy,2019,GAS,Pierre Gasly,Toro Rosso,42
+Italy,2019,GIO,Antonio Giovinazzi,Alfa Romeo Racing,43
+Italy,2019,GRO,Romain Grosjean,Haas F1 Team,34
+Italy,2019,HAM,Lewis Hamilton,Mercedes,41
+Italy,2019,HUL,Nico Hulkenberg,Renault,45
+Italy,2019,KUB,Robert Kubica,Williams,21
+Italy,2019,KVY,Daniil Kvyat,Toro Rosso,23
+Italy,2019,LEC,Charles Leclerc,Ferrari,43
+Italy,2019,MAG,Kevin Magnussen,Haas F1 Team,30
+Italy,2019,NOR,Lando Norris,McLaren,40
+Italy,2019,PER,Sergio Perez,Racing Point,44
+Italy,2019,RAI,Kimi Räikkönen,Alfa Romeo Racing,36
+Italy,2019,RIC,Daniel Ricciardo,Renault,46
+Italy,2019,RUS,George Russell,Williams,36
+Italy,2019,SAI,Carlos Sainz,McLaren,23
+Italy,2019,STR,Lance Stroll,Racing Point,41
+Italy,2019,VER,Max Verstappen,Red Bull Racing,45
+Italy,2019,VET,Sebastian Vettel,Ferrari,39
+Madrid,2026,ALB,Alexander Albon,Williams,37
+Madrid,2026,ALO,Fernando Alonso,Aston Martin,33
+Madrid,2026,ANT,Kimi Antonelli,Mercedes,52
+Madrid,2026,BEA,Oliver Bearman,Haas F1 Team,37
+Madrid,2026,BOR,Gabriel Bortoleto,Audi,41
+Madrid,2026,BOT,Valtteri Bottas,Cadillac,9
+Madrid,2026,COL,Franco Colapinto,Alpine,47
+Madrid,2026,GAS,Pierre Gasly,Alpine,41
+Madrid,2026,HAM,Lewis Hamilton,Ferrari,2
+Madrid,2026,HUL,Nico Hulkenberg,Audi,43
+Madrid,2026,LAW,Liam Lawson,Red Bull Racing,49
+Madrid,2026,LEC,Charles Leclerc,Ferrari,50
+Madrid,2026,LIN,Arvid Lindblad,Racing Bulls,44
+Madrid,2026,NOR,Lando Norris,McLaren,51
+Madrid,2026,OCO,Esteban Ocon,Haas F1 Team,44
+Madrid,2026,PER,Sergio Perez,Cadillac,10
+Madrid,2026,PIA,Oscar Piastri,McLaren,43
+Madrid,2026,RUS,George Russell,Mercedes,51
+Madrid,2026,SAI,Carlos Sainz,Williams,16
+Madrid,2026,TSU,Yuki Tsunoda,Racing Bulls,39
+Madrid,2026,VER,Max Verstappen,Red Bull Racing,52
+Azerbaijan,2026,ALB,Alexander Albon,Williams,25
+Azerbaijan,2026,ALO,Fernando Alonso,Aston Martin,10
+Azerbaijan,2026,ANT,Kimi Antonelli,Mercedes,36
+Azerbaijan,2026,BEA,Oliver Bearman,Haas F1 Team,35
+Azerbaijan,2026,BOR,Gabriel Bortoleto,Audi,35
+Azerbaijan,2026,BOT,Valtteri Bottas,Cadillac,27
+Azerbaijan,2026,COL,Franco Colapinto,Alpine,26
+Azerbaijan,2026,GAS,Pierre Gasly,Alpine,27
+Azerbaijan,2026,HAD,Isack Hadjar,Red Bull Racing,37
+Azerbaijan,2026,HAM,Lewis Hamilton,Ferrari,37
+Azerbaijan,2026,HUL,Nico Hulkenberg,Audi,36
+Azerbaijan,2026,LAW,Liam Lawson,Racing Bulls,35
+Azerbaijan,2026,LEC,Charles Leclerc,Ferrari,37
+Azerbaijan,2026,LIN,Arvid Lindblad,Racing Bulls,35
+Azerbaijan,2026,NOR,Lando Norris,McLaren,27
+Azerbaijan,2026,OCO,Esteban Ocon,Haas F1 Team,35
+Azerbaijan,2026,PER,Sergio Perez,Cadillac,36
+Azerbaijan,2026,PIA,Oscar Piastri,McLaren,37
+Azerbaijan,2026,RUS,George Russell,Mercedes,37
+Azerbaijan,2026,SAI,Carlos Sainz,Williams,34
+Azerbaijan,2026,STR,Lance Stroll,Aston Martin,4
+Azerbaijan,2026,VER,Max Verstappen,Red Bull Racing,37
+Azerbaijan,2025,ALB,Alexander Albon,Williams,41
+Azerbaijan,2025,ALO,Fernando Alonso,Aston Martin,41
+Azerbaijan,2025,ANT,Kimi Antonelli,Mercedes,43
+Azerbaijan,2025,BEA,Oliver Bearman,Haas F1 Team,41
+Azerbaijan,2025,BOR,Gabriel Bortoleto,Kick Sauber,41
+Azerbaijan,2025,COL,Franco Colapinto,Alpine,41
+Azerbaijan,2025,GAS,Pierre Gasly,Alpine,40
+Azerbaijan,2025,HAD,Isack Hadjar,Racing Bulls,41
+Azerbaijan,2025,HAM,Lewis Hamilton,Ferrari,41
+Azerbaijan,2025,HUL,Nico Hulkenberg,Kick Sauber,41
+Azerbaijan,2025,LAW,Liam Lawson,Racing Bulls,41
+Azerbaijan,2025,LEC,Charles Leclerc,Ferrari,41
+Azerbaijan,2025,NOR,Lando Norris,McLaren,41
+Azerbaijan,2025,OCO,Esteban Ocon,Haas F1 Team,43
+Azerbaijan,2025,RUS,George Russell,Mercedes,40
+Azerbaijan,2025,SAI,Carlos Sainz,Williams,41
+Azerbaijan,2025,STR,Lance Stroll,Aston Martin,41
+Azerbaijan,2025,TSU,Yuki Tsunoda,Red Bull Racing,41
+Azerbaijan,2025,VER,Max Verstappen,Red Bull Racing,42
+Azerbaijan,2024,ALB,Alexander Albon,Williams,44
+Azerbaijan,2024,ALO,Fernando Alonso,Aston Martin,44
+Azerbaijan,2024,BEA,Oliver Bearman,Haas F1 Team,44
+Azerbaijan,2024,BOT,Valtteri Bottas,Kick Sauber,39
+Azerbaijan,2024,COL,Franco Colapinto,Williams,44
+Azerbaijan,2024,GAS,Pierre Gasly,Alpine,45
+Azerbaijan,2024,HAM,Lewis Hamilton,Mercedes,43
+Azerbaijan,2024,HUL,Nico Hulkenberg,Haas F1 Team,44
+Azerbaijan,2024,LEC,Charles Leclerc,Ferrari,45
+Azerbaijan,2024,NOR,Lando Norris,McLaren,45
+Azerbaijan,2024,OCO,Esteban Ocon,Alpine,44
+Azerbaijan,2024,PER,Sergio Perez,Red Bull Racing,45
+Azerbaijan,2024,PIA,Oscar Piastri,McLaren,45
+Azerbaijan,2024,RIC,Daniel Ricciardo,RB,44
+Azerbaijan,2024,RUS,George Russell,Mercedes,45
+Azerbaijan,2024,SAI,Carlos Sainz,Ferrari,45
+Azerbaijan,2024,STR,Lance Stroll,Aston Martin,38
+Azerbaijan,2024,TSU,Yuki Tsunoda,RB,7
+Azerbaijan,2024,VER,Max Verstappen,Red Bull Racing,44
+Azerbaijan,2024,ZHO,Guanyu Zhou,Kick Sauber,43
+Azerbaijan,2023,ALB,Alexander Albon,Williams,41
+Azerbaijan,2023,ALO,Fernando Alonso,Aston Martin,44
+Azerbaijan,2023,BOT,Valtteri Bottas,Alfa Romeo,38
+Azerbaijan,2023,DEV,Nyck De Vries,AlphaTauri,8
+Azerbaijan,2023,GAS,Pierre Gasly,Alpine,39
+Azerbaijan,2023,HAM,Lewis Hamilton,Mercedes,43
+Azerbaijan,2023,HUL,Nico Hulkenberg,Haas F1 Team,40
+Azerbaijan,2023,LEC,Charles Leclerc,Ferrari,44
+Azerbaijan,2023,MAG,Kevin Magnussen,Haas F1 Team,43
+Azerbaijan,2023,NOR,Lando Norris,McLaren,42
+Azerbaijan,2023,OCO,Esteban Ocon,Alpine,41
+Azerbaijan,2023,PER,Sergio Perez,Red Bull Racing,44
+Azerbaijan,2023,PIA,Oscar Piastri,McLaren,41
+Azerbaijan,2023,RUS,George Russell,Mercedes,43
+Azerbaijan,2023,SAI,Carlos Sainz,Ferrari,44
+Azerbaijan,2023,SAR,Logan Sargeant,Williams,41
+Azerbaijan,2023,STR,Lance Stroll,Aston Martin,44
+Azerbaijan,2023,TSU,Yuki Tsunoda,AlphaTauri,41
+Azerbaijan,2023,VER,Max Verstappen,Red Bull Racing,44
+Azerbaijan,2023,ZHO,Guanyu Zhou,Alfa Romeo,28
+Azerbaijan,2022,ALB,Alexander Albon,Williams,41
+Azerbaijan,2022,ALO,Fernando Alonso,Alpine,41
+Azerbaijan,2022,BOT,Valtteri Bottas,Alfa Romeo,43
+Azerbaijan,2022,GAS,Pierre Gasly,AlphaTauri,44
+Azerbaijan,2022,HAM,Lewis Hamilton,Mercedes,44
+Azerbaijan,2022,LAT,Nicholas Latifi,Williams,35
+Azerbaijan,2022,LEC,Charles Leclerc,Ferrari,15
+Azerbaijan,2022,MAG,Kevin Magnussen,Haas F1 Team,27
+Azerbaijan,2022,MSC,Mick Schumacher,Haas F1 Team,40
+Azerbaijan,2022,NOR,Lando Norris,McLaren,41
+Azerbaijan,2022,OCO,Esteban Ocon,Alpine,43
+Azerbaijan,2022,PER,Sergio Perez,Red Bull Racing,42
+Azerbaijan,2022,RIC,Daniel Ricciardo,McLaren,44
+Azerbaijan,2022,RUS,George Russell,Mercedes,44
+Azerbaijan,2022,SAI,Carlos Sainz,Ferrari,7
+Azerbaijan,2022,STR,Lance Stroll,Aston Martin,35
+Azerbaijan,2022,TSU,Yuki Tsunoda,AlphaTauri,41
+Azerbaijan,2022,VER,Max Verstappen,Red Bull Racing,42
+Azerbaijan,2022,VET,Sebastian Vettel,Aston Martin,43
+Azerbaijan,2022,ZHO,Guanyu Zhou,Alfa Romeo,18
+Azerbaijan,2021,ALO,Fernando Alonso,Alpine,32
+Azerbaijan,2021,BOT,Valtteri Bottas,Mercedes,33
+Azerbaijan,2021,GAS,Pierre Gasly,AlphaTauri,33
+Azerbaijan,2021,GIO,Antonio Giovinazzi,Alfa Romeo Racing,32
+Azerbaijan,2021,HAM,Lewis Hamilton,Mercedes,36
+Azerbaijan,2021,LAT,Nicholas Latifi,Williams,31
+Azerbaijan,2021,LEC,Charles Leclerc,Ferrari,32
+Azerbaijan,2021,MAZ,Nikita Mazepin,Haas F1 Team,29
+Azerbaijan,2021,MSC,Mick Schumacher,Haas F1 Team,30
+Azerbaijan,2021,NOR,Lando Norris,McLaren,32
+Azerbaijan,2021,OCO,Esteban Ocon,Alpine,1
+Azerbaijan,2021,PER,Sergio Perez,Red Bull Racing,34
+Azerbaijan,2021,RAI,Kimi Räikkönen,Alfa Romeo Racing,31
+Azerbaijan,2021,RIC,Daniel Ricciardo,McLaren,33
+Azerbaijan,2021,RUS,George Russell,Williams,32
+Azerbaijan,2021,SAI,Carlos Sainz,Ferrari,33
+Azerbaijan,2021,STR,Lance Stroll,Aston Martin,24
+Azerbaijan,2021,TSU,Yuki Tsunoda,AlphaTauri,32
+Azerbaijan,2021,VER,Max Verstappen,Red Bull Racing,33
+Azerbaijan,2021,VET,Sebastian Vettel,Aston Martin,33
+Azerbaijan,2019,ALB,Alexander Albon,Toro Rosso,32
+Azerbaijan,2019,BOT,Valtteri Bottas,Mercedes,42
+Azerbaijan,2019,GAS,Pierre Gasly,Red Bull Racing,29
+Azerbaijan,2019,GIO,Antonio Giovinazzi,Alfa Romeo Racing,33
+Azerbaijan,2019,GRO,Romain Grosjean,Haas F1 Team,14
+Azerbaijan,2019,HAM,Lewis Hamilton,Mercedes,41
+Azerbaijan,2019,HUL,Nico Hulkenberg,Renault,31
+Azerbaijan,2019,KUB,Robert Kubica,Williams,14
+Azerbaijan,2019,KVY,Daniil Kvyat,Toro Rosso,23
+Azerbaijan,2019,LEC,Charles Leclerc,Ferrari,39
+Azerbaijan,2019,MAG,Kevin Magnussen,Haas F1 Team,34
+Azerbaijan,2019,NOR,Lando Norris,McLaren,39
+Azerbaijan,2019,PER,Sergio Perez,Racing Point,39
+Azerbaijan,2019,RAI,Kimi Räikkönen,Alfa Romeo Racing,39
+Azerbaijan,2019,RIC,Daniel Ricciardo,Renault,19
+Azerbaijan,2019,RUS,George Russell,Williams,13
+Azerbaijan,2019,SAI,Carlos Sainz,McLaren,37
+Azerbaijan,2019,STR,Lance Stroll,Racing Point,38
+Azerbaijan,2019,VER,Max Verstappen,Red Bull Racing,42
+Azerbaijan,2019,VET,Sebastian Vettel,Ferrari,42
+Azerbaijan,2018,ALO,Fernando Alonso,McLaren,28
+Azerbaijan,2018,BOT,Valtteri Bottas,Mercedes,29
+Azerbaijan,2018,ERI,Marcus Ericsson,Sauber,22
+Azerbaijan,2018,GAS,Pierre Gasly,Toro Rosso,23
+Azerbaijan,2018,GRO,Romain Grosjean,Haas F1 Team,26
+Azerbaijan,2018,HAM,Lewis Hamilton,Mercedes,28
+Azerbaijan,2018,HAR,Brendon Hartley,Toro Rosso,23
+Azerbaijan,2018,HUL,Nico Hulkenberg,Renault,2
+Azerbaijan,2018,LEC,Charles Leclerc,Sauber,26
+Azerbaijan,2018,MAG,Kevin Magnussen,Haas F1 Team,26
+Azerbaijan,2018,PER,Sergio Perez,Force India,28
+Azerbaijan,2018,RAI,Kimi Räikkönen,Ferrari,29
+Azerbaijan,2018,RIC,Daniel Ricciardo,Red Bull Racing,25
+Azerbaijan,2018,SAI,Carlos Sainz,Renault,29
+Azerbaijan,2018,STR,Lance Stroll,Williams,26
+Azerbaijan,2018,VAN,Stoffel Vandoorne,McLaren,22
+Azerbaijan,2018,VER,Max Verstappen,Red Bull Racing,25
+Azerbaijan,2018,VET,Sebastian Vettel,Ferrari,29
+Malaysia,2026,ALB,Alexander Albon,Williams,22
+Malaysia,2026,ALO,Fernando Alonso,Aston Martin,28
+Malaysia,2026,ANT,Kimi Antonelli,Mercedes,30
+Malaysia,2026,BEA,Oliver Bearman,Haas F1 Team,25
+Malaysia,2026,BOR,Gabriel Bortoleto,Audi,24
+Malaysia,2026,COL,Franco Colapinto,Alpine,27
+Malaysia,2026,GAS,Pierre Gasly,Alpine,25
+Malaysia,2026,HAD,Isack Hadjar,Red Bull Racing,30
+Malaysia,2026,HAM,Lewis Hamilton,Ferrari,30
+Malaysia,2026,HUL,Nico Hulkenberg,Audi,28
+Malaysia,2026,LAW,Liam Lawson,Racing Bulls,29
+Malaysia,2026,LEC,Charles Leclerc,Ferrari,28
+Malaysia,2026,LIN,Arvid Lindblad,Racing Bulls,27
+Malaysia,2026,NOR,Lando Norris,McLaren,28
+Malaysia,2026,OCO,Esteban Ocon,Haas F1 Team,26
+Malaysia,2026,PER,Sergio Perez,Cadillac,14
+Malaysia,2026,PIA,Oscar Piastri,McLaren,29
+Malaysia,2026,RUS,George Russell,Mercedes,26
+Malaysia,2026,SAI,Carlos Sainz,Williams,27
+Malaysia,2026,STR,Lance Stroll,Aston Martin,27
+Malaysia,2026,VER,Max Verstappen,Red Bull Racing,30
+Singapore,2026,ALB,Alexander Albon,Williams,49
+Singapore,2026,ALO,Fernando Alonso,Aston Martin,52
+Singapore,2026,ANT,Kimi Antonelli,Mercedes,52
+Singapore,2026,BEA,Oliver Bearman,Haas F1 Team,52
+Singapore,2026,BOR,Gabriel Bortoleto,Audi,4
+Singapore,2026,BOT,Valtteri Bottas,Cadillac,18
+Singapore,2026,COL,Franco Colapinto,Alpine,26
+Singapore,2026,GAS,Pierre Gasly,Alpine,54
+Singapore,2026,HAD,Isack Hadjar,Red Bull Racing,53
+Singapore,2026,HAM,Lewis Hamilton,Ferrari,52
+Singapore,2026,HUL,Nico Hulkenberg,Audi,55
+Singapore,2026,LAW,Liam Lawson,Racing Bulls,54
+Singapore,2026,LEC,Charles Leclerc,Ferrari,53
+Singapore,2026,LIN,Arvid Lindblad,Racing Bulls,51
+Singapore,2026,NOR,Lando Norris,McLaren,51
+Singapore,2026,OCO,Esteban Ocon,Haas F1 Team,53
+Singapore,2026,PER,Sergio Perez,Cadillac,45
+Singapore,2026,PIA,Oscar Piastri,McLaren,50
+Singapore,2026,RUS,George Russell,Mercedes,53
+Singapore,2026,SAI,Carlos Sainz,Williams,51
+Singapore,2026,STR,Lance Stroll,Aston Martin,24
+Singapore,2026,VER,Max Verstappen,Red Bull Racing,54
+Singapore,2025,ALB,Alexander Albon,Williams,53
+Singapore,2025,ALO,Fernando Alonso,Aston Martin,55
+Singapore,2025,ANT,Kimi Antonelli,Mercedes,56
+Singapore,2025,BEA,Oliver Bearman,Haas F1 Team,54
+Singapore,2025,BOR,Gabriel Bortoleto,Kick Sauber,53
+Singapore,2025,COL,Franco Colapinto,Alpine,50
+Singapore,2025,GAS,Pierre Gasly,Alpine,51
+Singapore,2025,HAD,Isack Hadjar,Racing Bulls,52
+Singapore,2025,HAM,Lewis Hamilton,Ferrari,51
+Singapore,2025,HUL,Nico Hulkenberg,Kick Sauber,53
+Singapore,2025,LAW,Liam Lawson,Racing Bulls,53
+Singapore,2025,LEC,Charles Leclerc,Ferrari,55
+Singapore,2025,NOR,Lando Norris,McLaren,57
+Singapore,2025,OCO,Esteban Ocon,Haas F1 Team,50
+Singapore,2025,PIA,Oscar Piastri,McLaren,57
+Singapore,2025,RUS,George Russell,Mercedes,57
+Singapore,2025,SAI,Carlos Sainz,Williams,53
+Singapore,2025,STR,Lance Stroll,Aston Martin,55
+Singapore,2025,TSU,Yuki Tsunoda,Red Bull Racing,54
+Singapore,2025,VER,Max Verstappen,Red Bull Racing,57
+Singapore,2024,ALB,Alexander Albon,Williams,11
+Singapore,2024,ALO,Fernando Alonso,Aston Martin,57
+Singapore,2024,BOT,Valtteri Bottas,Kick Sauber,54
+Singapore,2024,COL,Franco Colapinto,Williams,57
+Singapore,2024,GAS,Pierre Gasly,Alpine,53
+Singapore,2024,HAM,Lewis Hamilton,Mercedes,59
+Singapore,2024,HUL,Nico Hulkenberg,Haas F1 Team,57
+Singapore,2024,LEC,Charles Leclerc,Ferrari,59
+Singapore,2024,MAG,Kevin Magnussen,Haas F1 Team,50
+Singapore,2024,NOR,Lando Norris,McLaren,58
+Singapore,2024,OCO,Esteban Ocon,Alpine,57
+Singapore,2024,PER,Sergio Perez,Red Bull Racing,58
+Singapore,2024,PIA,Oscar Piastri,McLaren,59
+Singapore,2024,RIC,Daniel Ricciardo,RB,50
+Singapore,2024,RUS,George Russell,Mercedes,59
+Singapore,2024,SAI,Carlos Sainz,Ferrari,59
+Singapore,2024,STR,Lance Stroll,Aston Martin,55
+Singapore,2024,TSU,Yuki Tsunoda,RB,57
+Singapore,2024,VER,Max Verstappen,Red Bull Racing,59
+Singapore,2024,ZHO,Guanyu Zhou,Kick Sauber,54
+Singapore,2023,ALB,Alexander Albon,Williams,43
+Singapore,2023,ALO,Fernando Alonso,Aston Martin,45
+Singapore,2023,BOT,Valtteri Bottas,Alfa Romeo,36
+Singapore,2023,GAS,Pierre Gasly,Alpine,46
+Singapore,2023,HAM,Lewis Hamilton,Mercedes,47
+Singapore,2023,HUL,Nico Hulkenberg,Haas F1 Team,44
+Singapore,2023,LAW,Liam Lawson,AlphaTauri,46
+Singapore,2023,LEC,Charles Leclerc,Ferrari,48
+Singapore,2023,MAG,Kevin Magnussen,Haas F1 Team,47
+Singapore,2023,NOR,Lando Norris,McLaren,49
+Singapore,2023,OCO,Esteban Ocon,Alpine,34
+Singapore,2023,PER,Sergio Perez,Red Bull Racing,40
+Singapore,2023,PIA,Oscar Piastri,McLaren,46
+Singapore,2023,RUS,George Russell,Mercedes,49
+Singapore,2023,SAI,Carlos Sainz,Ferrari,49
+Singapore,2023,SAR,Logan Sargeant,Williams,47
+Singapore,2023,VER,Max Verstappen,Red Bull Racing,45
+Singapore,2023,ZHO,Guanyu Zhou,Alfa Romeo,45
+Singapore,2022,BOT,Valtteri Bottas,Alfa Romeo,12
+Singapore,2022,GAS,Pierre Gasly,AlphaTauri,13
+Singapore,2022,HAM,Lewis Hamilton,Mercedes,13
+Singapore,2022,LEC,Charles Leclerc,Ferrari,19
+Singapore,2022,MAG,Kevin Magnussen,Haas F1 Team,12
+Singapore,2022,MSC,Mick Schumacher,Haas F1 Team,11
+Singapore,2022,NOR,Lando Norris,McLaren,18
+Singapore,2022,PER,Sergio Perez,Red Bull Racing,19
+Singapore,2022,RIC,Daniel Ricciardo,McLaren,15
+Singapore,2022,RUS,George Russell,Mercedes,8
+Singapore,2022,SAI,Carlos Sainz,Ferrari,17
+Singapore,2022,STR,Lance Stroll,Aston Martin,14
+Singapore,2022,VER,Max Verstappen,Red Bull Racing,18
+Singapore,2022,VET,Sebastian Vettel,Aston Martin,14
+Singapore,2019,ALB,Alexander Albon,Red Bull Racing,33
+Singapore,2019,BOT,Valtteri Bottas,Mercedes,38
+Singapore,2019,GAS,Pierre Gasly,Toro Rosso,33
+Singapore,2019,GIO,Antonio Giovinazzi,Alfa Romeo Racing,35
+Singapore,2019,GRO,Romain Grosjean,Haas F1 Team,19
+Singapore,2019,HAM,Lewis Hamilton,Mercedes,39
+Singapore,2019,HUL,Nico Hulkenberg,Renault,34
+Singapore,2019,KUB,Robert Kubica,Williams,18
+Singapore,2019,KVY,Daniil Kvyat,Toro Rosso,27
+Singapore,2019,LEC,Charles Leclerc,Ferrari,41
+Singapore,2019,MAG,Kevin Magnussen,Haas F1 Team,26
+Singapore,2019,NOR,Lando Norris,McLaren,36
+Singapore,2019,PER,Sergio Perez,Racing Point,20
+Singapore,2019,RAI,Kimi Räikkönen,Alfa Romeo Racing,23
+Singapore,2019,RIC,Daniel Ricciardo,Renault,31
+Singapore,2019,RUS,George Russell,Williams,25
+Singapore,2019,SAI,Carlos Sainz,McLaren,27
+Singapore,2019,STR,Lance Stroll,Racing Point,28
+Singapore,2019,VER,Max Verstappen,Red Bull Racing,40
+Singapore,2019,VET,Sebastian Vettel,Ferrari,42
+Singapore,2018,ALO,Fernando Alonso,McLaren,46
+Singapore,2018,BOT,Valtteri Bottas,Mercedes,55
+Singapore,2018,ERI,Marcus Ericsson,Sauber,36
+Singapore,2018,GAS,Pierre Gasly,Toro Rosso,35
+Singapore,2018,GRO,Romain Grosjean,Haas F1 Team,37
+Singapore,2018,HAM,Lewis Hamilton,Mercedes,54
+Singapore,2018,HAR,Brendon Hartley,Toro Rosso,34
+Singapore,2018,HUL,Nico Hulkenberg,Renault,38
+Singapore,2018,LEC,Charles Leclerc,Sauber,41
+Singapore,2018,MAG,Kevin Magnussen,Haas F1 Team,26
+Singapore,2018,PER,Sergio Perez,Racing Point,40
+Singapore,2018,RAI,Kimi Räikkönen,Ferrari,54
+Singapore,2018,RIC,Daniel Ricciardo,Red Bull Racing,53
+Singapore,2018,SAI,Carlos Sainz,Renault,43
+Singapore,2018,SIR,Sergey Sirotkin,Williams,12
+Singapore,2018,STR,Lance Stroll,Williams,33
+Singapore,2018,VAN,Stoffel Vandoorne,McLaren,38
+Singapore,2018,VER,Max Verstappen,Red Bull Racing,54
+Singapore,2018,VET,Sebastian Vettel,Ferrari,53
+Austin,2026,ALB,Alexander Albon,Williams,39
+Austin,2026,ALO,Fernando Alonso,Aston Martin,41
+Austin,2026,ANT,Kimi Antonelli,Mercedes,47
+Austin,2026,BEA,Oliver Bearman,Haas F1 Team,12
+Austin,2026,BOR,Gabriel Bortoleto,Audi,45
+Austin,2026,BOT,Valtteri Bottas,Cadillac,36
+Austin,2026,COL,Franco Colapinto,Alpine,25
+Austin,2026,GAS,Pierre Gasly,Alpine,47
+Austin,2026,HAD,Isack Hadjar,Red Bull Racing,47
+Austin,2026,HAM,Lewis Hamilton,Ferrari,44
+Austin,2026,HUL,Nico Hulkenberg,Audi,46
+Austin,2026,LAW,Liam Lawson,Racing Bulls,47
+Austin,2026,LEC,Charles Leclerc,Ferrari,44
+Austin,2026,LIN,Arvid Lindblad,Racing Bulls,43
+Austin,2026,NOR,Lando Norris,McLaren,46
+Austin,2026,OCO,Esteban Ocon,Haas F1 Team,44
+Austin,2026,PER,Sergio Perez,Cadillac,42
+Austin,2026,PIA,Oscar Piastri,McLaren,45
+Austin,2026,RUS,George Russell,Mercedes,45
+Austin,2026,SAI,Carlos Sainz,Williams,41
+Austin,2026,STR,Lance Stroll,Aston Martin,41
+Austin,2026,VER,Max Verstappen,Red Bull Racing,44
+Austin,2025,ALB,Alexander Albon,Williams,49
+Austin,2025,ALO,Fernando Alonso,Aston Martin,49
+Austin,2025,ANT,Kimi Antonelli,Mercedes,49
+Austin,2025,BEA,Oliver Bearman,Haas F1 Team,49
+Austin,2025,BOR,Gabriel Bortoleto,Kick Sauber,46
+Austin,2025,COL,Franco Colapinto,Alpine,48
+Austin,2025,GAS,Pierre Gasly,Alpine,48
+Austin,2025,HAD,Isack Hadjar,Racing Bulls,49
+Austin,2025,HAM,Lewis Hamilton,Ferrari,47
+Austin,2025,HUL,Nico Hulkenberg,Kick Sauber,50
+Austin,2025,LAW,Liam Lawson,Racing Bulls,49
+Austin,2025,LEC,Charles Leclerc,Ferrari,48
+Austin,2025,NOR,Lando Norris,McLaren,48
+Austin,2025,OCO,Esteban Ocon,Haas F1 Team,48
+Austin,2025,PIA,Oscar Piastri,McLaren,48
+Austin,2025,RUS,George Russell,Mercedes,50
+Austin,2025,SAI,Carlos Sainz,Williams,4
+Austin,2025,STR,Lance Stroll,Aston Martin,49
+Austin,2025,TSU,Yuki Tsunoda,Red Bull Racing,49
+Austin,2025,VER,Max Verstappen,Red Bull Racing,48
+Austin,2024,ALB,Alexander Albon,Williams,45
+Austin,2024,ALO,Fernando Alonso,Aston Martin,46
+Austin,2024,BOT,Valtteri Bottas,Kick Sauber,45
+Austin,2024,COL,Franco Colapinto,Williams,47
+Austin,2024,GAS,Pierre Gasly,Alpine,47
+Austin,2024,HUL,Nico Hulkenberg,Haas F1 Team,47
+Austin,2024,LAW,Liam Lawson,RB,47
+Austin,2024,LEC,Charles Leclerc,Ferrari,48
+Austin,2024,MAG,Kevin Magnussen,Haas F1 Team,45
+Austin,2024,NOR,Lando Norris,McLaren,48
+Austin,2024,OCO,Esteban Ocon,Alpine,42
+Austin,2024,PER,Sergio Perez,Red Bull Racing,47
+Austin,2024,PIA,Oscar Piastri,McLaren,47
+Austin,2024,RUS,George Russell,Mercedes,47
+Austin,2024,SAI,Carlos Sainz,Ferrari,48
+Austin,2024,STR,Lance Stroll,Aston Martin,44
+Austin,2024,TSU,Yuki Tsunoda,RB,46
+Austin,2024,VER,Max Verstappen,Red Bull Racing,48
+Austin,2024,ZHO,Guanyu Zhou,Kick Sauber,44
+Austin,2023,ALB,Alexander Albon,Williams,50
+Austin,2023,ALO,Fernando Alonso,Aston Martin,42
+Austin,2023,BOT,Valtteri Bottas,Alfa Romeo,50
+Austin,2023,GAS,Pierre Gasly,Alpine,50
+Austin,2023,HAM,Lewis Hamilton,Mercedes,51
+Austin,2023,HUL,Nico Hulkenberg,Haas F1 Team,50
+Austin,2023,LEC,Charles Leclerc,Ferrari,53
+Austin,2023,MAG,Kevin Magnussen,Haas F1 Team,49
+Austin,2023,NOR,Lando Norris,McLaren,51
+Austin,2023,OCO,Esteban Ocon,Alpine,1
+Austin,2023,PER,Sergio Perez,Red Bull Racing,51
+Austin,2023,PIA,Oscar Piastri,McLaren,8
+Austin,2023,RIC,Daniel Ricciardo,AlphaTauri,50
+Austin,2023,RUS,George Russell,Mercedes,51
+Austin,2023,SAI,Carlos Sainz,Ferrari,51
+Austin,2023,SAR,Logan Sargeant,Williams,50
+Austin,2023,STR,Lance Stroll,Aston Martin,50
+Austin,2023,TSU,Yuki Tsunoda,AlphaTauri,48
+Austin,2023,VER,Max Verstappen,Red Bull Racing,51
+Austin,2023,ZHO,Guanyu Zhou,Alfa Romeo,50
+Austin,2022,ALB,Alexander Albon,Williams,42
+Austin,2022,ALO,Fernando Alonso,Alpine,47
+Austin,2022,BOT,Valtteri Bottas,Alfa Romeo,13
+Austin,2022,GAS,Pierre Gasly,AlphaTauri,41
+Austin,2022,HAM,Lewis Hamilton,Mercedes,43
+Austin,2022,LAT,Nicholas Latifi,Williams,42
+Austin,2022,LEC,Charles Leclerc,Ferrari,45
+Austin,2022,MAG,Kevin Magnussen,Haas F1 Team,44
+Austin,2022,MSC,Mick Schumacher,Haas F1 Team,42
+Austin,2022,NOR,Lando Norris,McLaren,42
+Austin,2022,OCO,Esteban Ocon,Alpine,44
+Austin,2022,PER,Sergio Perez,Red Bull Racing,43
+Austin,2022,RIC,Daniel Ricciardo,McLaren,41
+Austin,2022,RUS,George Russell,Mercedes,41
+Austin,2022,STR,Lance Stroll,Aston Martin,13
+Austin,2022,TSU,Yuki Tsunoda,AlphaTauri,42
+Austin,2022,VER,Max Verstappen,Red Bull Racing,43
+Austin,2022,VET,Sebastian Vettel,Aston Martin,45
+Austin,2022,ZHO,Guanyu Zhou,Alfa Romeo,44
+Austin,2021,ALO,Fernando Alonso,Alpine,37
+Austin,2021,BOT,Valtteri Bottas,Mercedes,48
+Austin,2021,GAS,Pierre Gasly,AlphaTauri,9
+Austin,2021,GIO,Antonio Giovinazzi,Alfa Romeo Racing,47
+Austin,2021,HAM,Lewis Hamilton,Mercedes,49
+Austin,2021,LAT,Nicholas Latifi,Williams,44
+Austin,2021,LEC,Charles Leclerc,Ferrari,48
+Austin,2021,MAZ,Nikita Mazepin,Haas F1 Team,24
+Austin,2021,MSC,Mick Schumacher,Haas F1 Team,37
+Austin,2021,NOR,Lando Norris,McLaren,49
+Austin,2021,OCO,Esteban Ocon,Alpine,32
+Austin,2021,PER,Sergio Perez,Red Bull Racing,48
+Austin,2021,RAI,Kimi Räikkönen,Alfa Romeo Racing,45
+Austin,2021,RIC,Daniel Ricciardo,McLaren,49
+Austin,2021,RUS,George Russell,Williams,46
+Austin,2021,SAI,Carlos Sainz,Ferrari,48
+Austin,2021,STR,Lance Stroll,Aston Martin,46
+Austin,2021,TSU,Yuki Tsunoda,AlphaTauri,47
+Austin,2021,VER,Max Verstappen,Red Bull Racing,49
+Austin,2021,VET,Sebastian Vettel,Aston Martin,46
+Austin,2019,ALB,Alexander Albon,Red Bull Racing,42
+Austin,2019,BOT,Valtteri Bottas,Mercedes,47
+Austin,2019,GAS,Pierre Gasly,Toro Rosso,32
+Austin,2019,GIO,Antonio Giovinazzi,Alfa Romeo Racing,28
+Austin,2019,GRO,Romain Grosjean,Haas F1 Team,23
+Austin,2019,HAM,Lewis Hamilton,Mercedes,49
+Austin,2019,HUL,Nico Hulkenberg,Renault,25
+Austin,2019,KVY,Daniil Kvyat,Toro Rosso,30
+Austin,2019,LEC,Charles Leclerc,Ferrari,45
+Austin,2019,MAG,Kevin Magnussen,Haas F1 Team,26
+Austin,2019,NOR,Lando Norris,McLaren,38
+Austin,2019,PER,Sergio Perez,Racing Point,32
+Austin,2019,RAI,Kimi Räikkönen,Alfa Romeo Racing,32
+Austin,2019,RIC,Daniel Ricciardo,Renault,44
+Austin,2019,RUS,George Russell,Williams,16
+Austin,2019,SAI,Carlos Sainz,McLaren,35
+Austin,2019,STR,Lance Stroll,Racing Point,36
+Austin,2019,VER,Max Verstappen,Red Bull Racing,47
+Austin,2019,VET,Sebastian Vettel,Ferrari,4
+Austin,2018,BOT,Valtteri Bottas,Mercedes,48
+Austin,2018,ERI,Marcus Ericsson,Sauber,45
+Austin,2018,GAS,Pierre Gasly,Toro Rosso,45
+Austin,2018,HAM,Lewis Hamilton,Mercedes,48
+Austin,2018,HAR,Brendon Hartley,Toro Rosso,46
+Austin,2018,HUL,Nico Hulkenberg,Renault,48
+Austin,2018,LEC,Charles Leclerc,Sauber,22
+Austin,2018,MAG,Kevin Magnussen,Haas F1 Team,47
+Austin,2018,OCO,Esteban Ocon,Racing Point,49
+Austin,2018,PER,Sergio Perez,Racing Point,47
+Austin,2018,RAI,Kimi Räikkönen,Ferrari,48
+Austin,2018,RIC,Daniel Ricciardo,Red Bull Racing,6
+Austin,2018,SAI,Carlos Sainz,Renault,48
+Austin,2018,SIR,Sergey Sirotkin,Williams,45
+Austin,2018,STR,Lance Stroll,Williams,37
+Austin,2018,VAN,Stoffel Vandoorne,McLaren,46
+Austin,2018,VER,Max Verstappen,Red Bull Racing,48
+Austin,2018,VET,Sebastian Vettel,Ferrari,48
+Mexico,2026,ALB,Alexander Albon,Williams,34
+Mexico,2026,ALO,Fernando Alonso,Aston Martin,1
+Mexico,2026,ANT,Kimi Antonelli,Mercedes,39
+Mexico,2026,BEA,Oliver Bearman,Haas F1 Team,36
+Mexico,2026,BOR,Gabriel Bortoleto,Audi,36
+Mexico,2026,BOT,Valtteri Bottas,Cadillac,35
+Mexico,2026,COL,Franco Colapinto,Alpine,38
+Mexico,2026,GAS,Pierre Gasly,Alpine,36
+Mexico,2026,HAD,Isack Hadjar,Red Bull Racing,36
+Mexico,2026,HAM,Lewis Hamilton,Ferrari,38
+Mexico,2026,HIR,Ryo Hirakawa,Haas F1 Team,36
+Mexico,2026,HUL,Nico Hulkenberg,Audi,36
+Mexico,2026,LAW,Liam Lawson,Racing Bulls,35
+Mexico,2026,LEC,Charles Leclerc,Ferrari,38
+Mexico,2026,LIN,Arvid Lindblad,Racing Bulls,38
+Mexico,2026,NOR,Lando Norris,McLaren,38
+Mexico,2026,PER,Sergio Perez,Cadillac,36
+Mexico,2026,PIA,Oscar Piastri,McLaren,38
+Mexico,2026,RUS,George Russell,Mercedes,38
+Mexico,2026,SAI,Carlos Sainz,Williams,36
+Mexico,2026,STR,Lance Stroll,Aston Martin,2
+Mexico,2026,VER,Max Verstappen,Red Bull Racing,38
+Mexico,2025,ALB,Alexander Albon,Williams,61
+Mexico,2025,ALO,Fernando Alonso,Aston Martin,27
+Mexico,2025,ANT,Kimi Antonelli,Mercedes,61
+Mexico,2025,BEA,Oliver Bearman,Haas F1 Team,61
+Mexico,2025,BOR,Gabriel Bortoleto,Kick Sauber,64
+Mexico,2025,COL,Franco Colapinto,Alpine,62
+Mexico,2025,GAS,Pierre Gasly,Alpine,60
+Mexico,2025,HAD,Isack Hadjar,Racing Bulls,62
+Mexico,2025,HAM,Lewis Hamilton,Ferrari,61
+Mexico,2025,HUL,Nico Hulkenberg,Kick Sauber,19
+Mexico,2025,LAW,Liam Lawson,Racing Bulls,1
+Mexico,2025,LEC,Charles Leclerc,Ferrari,63
+Mexico,2025,NOR,Lando Norris,McLaren,64
+Mexico,2025,OCO,Esteban Ocon,Haas F1 Team,63
+Mexico,2025,PIA,Oscar Piastri,McLaren,61
+Mexico,2025,RUS,George Russell,Mercedes,61
+Mexico,2025,SAI,Carlos Sainz,Williams,58
+Mexico,2025,STR,Lance Stroll,Aston Martin,61
+Mexico,2025,TSU,Yuki Tsunoda,Red Bull Racing,64
+Mexico,2025,VER,Max Verstappen,Red Bull Racing,63
+Mexico,2024,ALO,Fernando Alonso,Aston Martin,5
+Mexico,2024,BOT,Valtteri Bottas,Kick Sauber,55
+Mexico,2024,COL,Franco Colapinto,Williams,56
+Mexico,2024,GAS,Pierre Gasly,Alpine,59
+Mexico,2024,HAM,Lewis Hamilton,Mercedes,62
+Mexico,2024,HUL,Nico Hulkenberg,Haas F1 Team,59
+Mexico,2024,LAW,Liam Lawson,RB,55
+Mexico,2024,LEC,Charles Leclerc,Ferrari,61
+Mexico,2024,MAG,Kevin Magnussen,Haas F1 Team,60
+Mexico,2024,NOR,Lando Norris,McLaren,62
+Mexico,2024,OCO,Esteban Ocon,Alpine,56
+Mexico,2024,PER,Sergio Perez,Red Bull Racing,53
+Mexico,2024,PIA,Oscar Piastri,McLaren,57
+Mexico,2024,RUS,George Russell,Mercedes,63
+Mexico,2024,SAI,Carlos Sainz,Ferrari,63
+Mexico,2024,STR,Lance Stroll,Aston Martin,56
+Mexico,2024,VER,Max Verstappen,Red Bull Racing,61
+Mexico,2024,ZHO,Guanyu Zhou,Kick Sauber,49
+Mexico,2023,ALB,Alexander Albon,Williams,60
+Mexico,2023,ALO,Fernando Alonso,Aston Martin,35
+Mexico,2023,BOT,Valtteri Bottas,Alfa Romeo,57
+Mexico,2023,GAS,Pierre Gasly,Alpine,58
+Mexico,2023,HAM,Lewis Hamilton,Mercedes,60
+Mexico,2023,HUL,Nico Hulkenberg,Haas F1 Team,56
+Mexico,2023,LEC,Charles Leclerc,Ferrari,60
+Mexico,2023,MAG,Kevin Magnussen,Haas F1 Team,25
+Mexico,2023,NOR,Lando Norris,McLaren,58
+Mexico,2023,OCO,Esteban Ocon,Alpine,58
+Mexico,2023,PIA,Oscar Piastri,McLaren,60
+Mexico,2023,RIC,Daniel Ricciardo,AlphaTauri,60
+Mexico,2023,RUS,George Russell,Mercedes,60
+Mexico,2023,SAI,Carlos Sainz,Ferrari,60
+Mexico,2023,SAR,Logan Sargeant,Williams,56
+Mexico,2023,STR,Lance Stroll,Aston Martin,53
+Mexico,2023,TSU,Yuki Tsunoda,AlphaTauri,57
+Mexico,2023,VER,Max Verstappen,Red Bull Racing,60
+Mexico,2023,ZHO,Guanyu Zhou,Alfa Romeo,57
+Mexico,2022,ALB,Alexander Albon,Williams,61
+Mexico,2022,ALO,Fernando Alonso,Alpine,57
+Mexico,2022,BOT,Valtteri Bottas,Alfa Romeo,63
+Mexico,2022,GAS,Pierre Gasly,AlphaTauri,60
+Mexico,2022,HAM,Lewis Hamilton,Mercedes,66
+Mexico,2022,LAT,Nicholas Latifi,Williams,46
+Mexico,2022,LEC,Charles Leclerc,Ferrari,65
+Mexico,2022,MAG,Kevin Magnussen,Haas F1 Team,51
+Mexico,2022,MSC,Mick Schumacher,Haas F1 Team,45
+Mexico,2022,NOR,Lando Norris,McLaren,64
+Mexico,2022,OCO,Esteban Ocon,Alpine,63
+Mexico,2022,PER,Sergio Perez,Red Bull Racing,66
+Mexico,2022,RIC,Daniel Ricciardo,McLaren,62
+Mexico,2022,RUS,George Russell,Mercedes,64
+Mexico,2022,SAI,Carlos Sainz,Ferrari,66
+Mexico,2022,STR,Lance Stroll,Aston Martin,57
+Mexico,2022,TSU,Yuki Tsunoda,AlphaTauri,45
+Mexico,2022,VER,Max Verstappen,Red Bull Racing,66
+Mexico,2022,VET,Sebastian Vettel,Aston Martin,58
+Mexico,2022,ZHO,Guanyu Zhou,Alfa Romeo,62
+Mexico,2021,ALO,Fernando Alonso,Alpine,55
+Mexico,2021,BOT,Valtteri Bottas,Mercedes,40
+Mexico,2021,GAS,Pierre Gasly,AlphaTauri,64
+Mexico,2021,GIO,Antonio Giovinazzi,Alfa Romeo Racing,43
+Mexico,2021,HAM,Lewis Hamilton,Mercedes,65
+Mexico,2021,LAT,Nicholas Latifi,Williams,28
+Mexico,2021,LEC,Charles Leclerc,Ferrari,61
+Mexico,2021,MAZ,Nikita Mazepin,Haas F1 Team,9
+Mexico,2021,NOR,Lando Norris,McLaren,53
+Mexico,2021,OCO,Esteban Ocon,Alpine,45
+Mexico,2021,PER,Sergio Perez,Red Bull Racing,65
+Mexico,2021,RAI,Kimi Räikkönen,Alfa Romeo Racing,58
+Mexico,2021,RIC,Daniel Ricciardo,McLaren,45
+Mexico,2021,RUS,George Russell,Williams,32
+Mexico,2021,SAI,Carlos Sainz,Ferrari,59
+Mexico,2021,STR,Lance Stroll,Aston Martin,48
+Mexico,2021,VER,Max Verstappen,Red Bull Racing,65
+Mexico,2021,VET,Sebastian Vettel,Aston Martin,56
+Mexico,2019,ALB,Alexander Albon,Red Bull Racing,62
+Mexico,2019,BOT,Valtteri Bottas,Mercedes,65
+Mexico,2019,GAS,Pierre Gasly,Toro Rosso,58
+Mexico,2019,GIO,Antonio Giovinazzi,Alfa Romeo Racing,62
+Mexico,2019,GRO,Romain Grosjean,Haas F1 Team,49
+Mexico,2019,HAM,Lewis Hamilton,Mercedes,65
+Mexico,2019,HUL,Nico Hulkenberg,Renault,62
+Mexico,2019,KUB,Robert Kubica,Williams,51
+Mexico,2019,KVY,Daniil Kvyat,Toro Rosso,60
+Mexico,2019,LEC,Charles Leclerc,Ferrari,63
+Mexico,2019,MAG,Kevin Magnussen,Haas F1 Team,57
+Mexico,2019,NOR,Lando Norris,McLaren,37
+Mexico,2019,PER,Sergio Perez,Racing Point,64
+Mexico,2019,RAI,Kimi Räikkönen,Alfa Romeo Racing,47
+Mexico,2019,RIC,Daniel Ricciardo,Renault,64
+Mexico,2019,RUS,George Russell,Williams,53
+Mexico,2019,SAI,Carlos Sainz,McLaren,59
+Mexico,2019,STR,Lance Stroll,Racing Point,62
+Mexico,2019,VER,Max Verstappen,Red Bull Racing,64
+Mexico,2019,VET,Sebastian Vettel,Ferrari,64
+Mexico,2018,ALO,Fernando Alonso,McLaren,1
+Mexico,2018,BOT,Valtteri Bottas,Mercedes,56
+Mexico,2018,ERI,Marcus Ericsson,Sauber,25
+Mexico,2018,GAS,Pierre Gasly,Toro Rosso,39
+Mexico,2018,GRO,Romain Grosjean,Haas F1 Team,14
+Mexico,2018,HAM,Lewis Hamilton,Mercedes,58
+Mexico,2018,HAR,Brendon Hartley,Toro Rosso,21
+Mexico,2018,HUL,Nico Hulkenberg,Renault,35
+Mexico,2018,LEC,Charles Leclerc,Sauber,24
+Mexico,2018,MAG,Kevin Magnussen,Haas F1 Team,17
+Mexico,2018,OCO,Esteban Ocon,Racing Point,23
+Mexico,2018,PER,Sergio Perez,Racing Point,9
+Mexico,2018,RAI,Kimi Räikkönen,Ferrari,60
+Mexico,2018,RIC,Daniel Ricciardo,Red Bull Racing,54
+Mexico,2018,SAI,Carlos Sainz,Renault,13
+Mexico,2018,SIR,Sergey Sirotkin,Williams,20
+Mexico,2018,STR,Lance Stroll,Williams,25
+Mexico,2018,VAN,Stoffel Vandoorne,McLaren,26
+Mexico,2018,VER,Max Verstappen,Red Bull Racing,58
+Mexico,2018,VET,Sebastian Vettel,Ferrari,59
+Brazil,2026,ALB,Alexander Albon,Williams,28
+Brazil,2026,ALO,Fernando Alonso,Aston Martin,30
+Brazil,2026,ANT,Kimi Antonelli,Mercedes,36
+Brazil,2026,BEA,Oliver Bearman,Haas F1 Team,26
+Brazil,2026,BOR,Gabriel Bortoleto,Audi,25
+Brazil,2026,CAM,Rafael Câmara,Haas F1 Team,24
+Brazil,2026,COL,Franco Colapinto,Alpine,31
+Brazil,2026,GAS,Pierre Gasly,Alpine,32
+Brazil,2026,HAD,Isack Hadjar,Red Bull Racing,37
+Brazil,2026,HAM,Lewis Hamilton,Ferrari,33
+Brazil,2026,HUL,Nico Hulkenberg,Audi,33
+Brazil,2026,LAW,Liam Lawson,Racing Bulls,32
+Brazil,2026,LEC,Charles Leclerc,Ferrari,32
+Brazil,2026,LIN,Arvid Lindblad,Racing Bulls,32
+Brazil,2026,NOR,Lando Norris,McLaren,37
+Brazil,2026,PER,Sergio Perez,Cadillac,20
+Brazil,2026,PIA,Oscar Piastri,McLaren,33
+Brazil,2026,RUS,George Russell,Mercedes,34
+Brazil,2026,SAI,Carlos Sainz,Williams,21
+Brazil,2026,STR,Lance Stroll,Aston Martin,1
+Brazil,2026,VER,Max Verstappen,Red Bull Racing,37
+Brazil,2025,ALB,Alexander Albon,Williams,59
+Brazil,2025,ALO,Fernando Alonso,Aston Martin,59
+Brazil,2025,ANT,Kimi Antonelli,Mercedes,59
+Brazil,2025,BEA,Oliver Bearman,Haas F1 Team,59
+Brazil,2025,COL,Franco Colapinto,Alpine,59
+Brazil,2025,GAS,Pierre Gasly,Alpine,59
+Brazil,2025,HAD,Isack Hadjar,Racing Bulls,59
+Brazil,2025,HAM,Lewis Hamilton,Ferrari,24
+Brazil,2025,HUL,Nico Hulkenberg,Kick Sauber,61
+Brazil,2025,LAW,Liam Lawson,Racing Bulls,61
+Brazil,2025,NOR,Lando Norris,McLaren,59
+Brazil,2025,OCO,Esteban Ocon,Haas F1 Team,60
+Brazil,2025,PIA,Oscar Piastri,McLaren,59
+Brazil,2025,RUS,George Russell,Mercedes,59
+Brazil,2025,SAI,Carlos Sainz,Williams,59
+Brazil,2025,STR,Lance Stroll,Aston Martin,59
+Brazil,2025,TSU,Yuki Tsunoda,Red Bull Racing,59
+Brazil,2025,VER,Max Verstappen,Red Bull Racing,59
+Brazil,2024,ALO,Fernando Alonso,Aston Martin,43
+Brazil,2024,BEA,Oliver Bearman,Haas F1 Team,43
+Brazil,2024,BOT,Valtteri Bottas,Kick Sauber,39
+Brazil,2024,COL,Franco Colapinto,Williams,16
+Brazil,2024,GAS,Pierre Gasly,Alpine,42
+Brazil,2024,HAM,Lewis Hamilton,Mercedes,42
+Brazil,2024,HUL,Nico Hulkenberg,Haas F1 Team,19
+Brazil,2024,LAW,Liam Lawson,RB,43
+Brazil,2024,LEC,Charles Leclerc,Ferrari,42
+Brazil,2024,NOR,Lando Norris,McLaren,46
+Brazil,2024,OCO,Esteban Ocon,Alpine,43
+Brazil,2024,PER,Sergio Perez,Red Bull Racing,43
+Brazil,2024,PIA,Oscar Piastri,McLaren,43
+Brazil,2024,RUS,George Russell,Mercedes,47
+Brazil,2024,SAI,Carlos Sainz,Ferrari,16
+Brazil,2024,TSU,Yuki Tsunoda,RB,44
+Brazil,2024,VER,Max Verstappen,Red Bull Racing,44
+Brazil,2024,ZHO,Guanyu Zhou,Kick Sauber,32
+Brazil,2023,ALO,Fernando Alonso,Aston Martin,63
+Brazil,2023,BOT,Valtteri Bottas,Alfa Romeo,26
+Brazil,2023,GAS,Pierre Gasly,Alpine,61
+Brazil,2023,HAM,Lewis Hamilton,Mercedes,62
+Brazil,2023,HUL,Nico Hulkenberg,Haas F1 Team,49
+Brazil,2023,NOR,Lando Norris,McLaren,63
+Brazil,2023,OCO,Esteban Ocon,Alpine,59
+Brazil,2023,PER,Sergio Perez,Red Bull Racing,63
+Brazil,2023,PIA,Oscar Piastri,McLaren,57
+Brazil,2023,RIC,Daniel Ricciardo,AlphaTauri,59
+Brazil,2023,RUS,George Russell,Mercedes,46
+Brazil,2023,SAI,Carlos Sainz,Ferrari,63
+Brazil,2023,SAR,Logan Sargeant,Williams,54
+Brazil,2023,STR,Lance Stroll,Aston Martin,63
+Brazil,2023,TSU,Yuki Tsunoda,AlphaTauri,62
+Brazil,2023,VER,Max Verstappen,Red Bull Racing,63
+Brazil,2023,ZHO,Guanyu Zhou,Alfa Romeo,12
+Brazil,2022,ALB,Alexander Albon,Williams,50
+Brazil,2022,ALO,Fernando Alonso,Alpine,52
+Brazil,2022,BOT,Valtteri Bottas,Alfa Romeo,51
+Brazil,2022,GAS,Pierre Gasly,AlphaTauri,51
+Brazil,2022,HAM,Lewis Hamilton,Mercedes,52
+Brazil,2022,LAT,Nicholas Latifi,Williams,47
+Brazil,2022,LEC,Charles Leclerc,Ferrari,50
+Brazil,2022,MSC,Mick Schumacher,Haas F1 Team,51
+Brazil,2022,NOR,Lando Norris,McLaren,39
+Brazil,2022,OCO,Esteban Ocon,Alpine,51
+Brazil,2022,PER,Sergio Perez,Red Bull Racing,52
+Brazil,2022,RUS,George Russell,Mercedes,52
+Brazil,2022,SAI,Carlos Sainz,Ferrari,52
+Brazil,2022,STR,Lance Stroll,Aston Martin,51
+Brazil,2022,TSU,Yuki Tsunoda,AlphaTauri,49
+Brazil,2022,VER,Max Verstappen,Red Bull Racing,50
+Brazil,2022,VET,Sebastian Vettel,Aston Martin,51
+Brazil,2022,ZHO,Guanyu Zhou,Alfa Romeo,51
+Brazil,2021,ALO,Fernando Alonso,Alpine,42
+Brazil,2021,BOT,Valtteri Bottas,Mercedes,57
+Brazil,2021,GAS,Pierre Gasly,AlphaTauri,50
+Brazil,2021,GIO,Antonio Giovinazzi,Alfa Romeo Racing,34
+Brazil,2021,HAM,Lewis Hamilton,Mercedes,57
+Brazil,2021,LAT,Nicholas Latifi,Williams,29
+Brazil,2021,LEC,Charles Leclerc,Ferrari,56
+Brazil,2021,MAZ,Nikita Mazepin,Haas F1 Team,20
+Brazil,2021,MSC,Mick Schumacher,Haas F1 Team,22
+Brazil,2021,NOR,Lando Norris,McLaren,35
+Brazil,2021,OCO,Esteban Ocon,Alpine,41
+Brazil,2021,PER,Sergio Perez,Red Bull Racing,54
+Brazil,2021,RAI,Kimi Räikkönen,Alfa Romeo Racing,37
+Brazil,2021,RIC,Daniel Ricciardo,McLaren,30
+Brazil,2021,RUS,George Russell,Williams,25
+Brazil,2021,SAI,Carlos Sainz,Ferrari,54
+Brazil,2021,STR,Lance Stroll,Aston Martin,13
+Brazil,2021,TSU,Yuki Tsunoda,AlphaTauri,27
+Brazil,2021,VER,Max Verstappen,Red Bull Racing,57
+Brazil,2021,VET,Sebastian Vettel,Aston Martin,41
+Brazil,2019,ALB,Alexander Albon,Red Bull Racing,52
+Brazil,2019,BOT,Valtteri Bottas,Mercedes,45
+Brazil,2019,GAS,Pierre Gasly,Toro Rosso,51
+Brazil,2019,GIO,Antonio Giovinazzi,Alfa Romeo Racing,49
+Brazil,2019,GRO,Romain Grosjean,Haas F1 Team,47
+Brazil,2019,HAM,Lewis Hamilton,Mercedes,53
+Brazil,2019,HUL,Nico Hulkenberg,Renault,45
+Brazil,2019,KUB,Robert Kubica,Williams,8
+Brazil,2019,KVY,Daniil Kvyat,Toro Rosso,45
+Brazil,2019,LEC,Charles Leclerc,Ferrari,53
+Brazil,2019,MAG,Kevin Magnussen,Haas F1 Team,42
+Brazil,2019,NOR,Lando Norris,McLaren,45
+Brazil,2019,PER,Sergio Perez,Racing Point,46
+Brazil,2019,RAI,Kimi Räikkönen,Alfa Romeo Racing,49
+Brazil,2019,RIC,Daniel Ricciardo,Renault,48
+Brazil,2019,RUS,George Russell,Williams,27
+Brazil,2019,SAI,Carlos Sainz,McLaren,49
+Brazil,2019,STR,Lance Stroll,Racing Point,46
+Brazil,2019,VER,Max Verstappen,Red Bull Racing,53
+Brazil,2019,VET,Sebastian Vettel,Ferrari,51
+Brazil,2018,ALO,Fernando Alonso,McLaren,39
+Brazil,2018,BOT,Valtteri Bottas,Mercedes,62
+Brazil,2018,ERI,Marcus Ericsson,Sauber,2
+Brazil,2018,GAS,Pierre Gasly,Toro Rosso,39
+Brazil,2018,GRO,Romain Grosjean,Haas F1 Team,64
+Brazil,2018,HAM,Lewis Hamilton,Mercedes,66
+Brazil,2018,HAR,Brendon Hartley,Toro Rosso,42
+Brazil,2018,HUL,Nico Hulkenberg,Renault,13
+Brazil,2018,LEC,Charles Leclerc,Sauber,63
+Brazil,2018,MAG,Kevin Magnussen,Haas F1 Team,59
+Brazil,2018,OCO,Esteban Ocon,Racing Point,48
+Brazil,2018,PER,Sergio Perez,Racing Point,51
+Brazil,2018,RAI,Kimi Räikkönen,Ferrari,65
+Brazil,2018,RIC,Daniel Ricciardo,Red Bull Racing,66
+Brazil,2018,SAI,Carlos Sainz,Renault,41
+Brazil,2018,SIR,Sergey Sirotkin,Williams,38
+Brazil,2018,STR,Lance Stroll,Williams,36
+Brazil,2018,VAN,Stoffel Vandoorne,McLaren,34
+Brazil,2018,VER,Max Verstappen,Red Bull Racing,66
+Brazil,2018,VET,Sebastian Vettel,Ferrari,63
+Las Vegas,2025,ALB,Alexander Albon,Williams,27
+Las Vegas,2025,ALO,Fernando Alonso,Aston Martin,44
+Las Vegas,2025,ANT,Kimi Antonelli,Mercedes,45
+Las Vegas,2025,BEA,Oliver Bearman,Haas F1 Team,43
+Las Vegas,2025,COL,Franco Colapinto,Alpine,41
+Las Vegas,2025,GAS,Pierre Gasly,Alpine,45
+Las Vegas,2025,HAD,Isack Hadjar,Racing Bulls,43
+Las Vegas,2025,HAM,Lewis Hamilton,Ferrari,42
+Las Vegas,2025,HUL,Nico Hulkenberg,Kick Sauber,43
+Las Vegas,2025,LAW,Liam Lawson,Racing Bulls,42
+Las Vegas,2025,LEC,Charles Leclerc,Ferrari,43
+Las Vegas,2025,NOR,Lando Norris,McLaren,43
+Las Vegas,2025,OCO,Esteban Ocon,Haas F1 Team,42
+Las Vegas,2025,PIA,Oscar Piastri,McLaren,43
+Las Vegas,2025,RUS,George Russell,Mercedes,43
+Las Vegas,2025,SAI,Carlos Sainz,Williams,43
+Las Vegas,2025,TSU,Yuki Tsunoda,Red Bull Racing,43
+Las Vegas,2025,VER,Max Verstappen,Red Bull Racing,43
+Las Vegas,2024,ALB,Alexander Albon,Williams,20
+Las Vegas,2024,ALO,Fernando Alonso,Aston Martin,43
+Las Vegas,2024,BOT,Valtteri Bottas,Kick Sauber,38
+Las Vegas,2024,COL,Franco Colapinto,Williams,40
+Las Vegas,2024,GAS,Pierre Gasly,Alpine,10
+Las Vegas,2024,HAM,Lewis Hamilton,Mercedes,45
+Las Vegas,2024,HUL,Nico Hulkenberg,Haas F1 Team,45
+Las Vegas,2024,LAW,Liam Lawson,RB,45
+Las Vegas,2024,LEC,Charles Leclerc,Ferrari,44
+Las Vegas,2024,MAG,Kevin Magnussen,Haas F1 Team,41
+Las Vegas,2024,NOR,Lando Norris,McLaren,43
+Las Vegas,2024,OCO,Esteban Ocon,Alpine,43
+Las Vegas,2024,PER,Sergio Perez,Red Bull Racing,43
+Las Vegas,2024,PIA,Oscar Piastri,McLaren,44
+Las Vegas,2024,RUS,George Russell,Mercedes,45
+Las Vegas,2024,SAI,Carlos Sainz,Ferrari,44
+Las Vegas,2024,STR,Lance Stroll,Aston Martin,44
+Las Vegas,2024,TSU,Yuki Tsunoda,RB,44
+Las Vegas,2024,VER,Max Verstappen,Red Bull Racing,45
+Las Vegas,2024,ZHO,Guanyu Zhou,Kick Sauber,45
+Las Vegas,2023,ALB,Alexander Albon,Williams,33
+Las Vegas,2023,ALO,Fernando Alonso,Aston Martin,35
+Las Vegas,2023,BOT,Valtteri Bottas,Alfa Romeo,30
+Las Vegas,2023,GAS,Pierre Gasly,Alpine,32
+Las Vegas,2023,HAM,Lewis Hamilton,Mercedes,33
+Las Vegas,2023,HUL,Nico Hulkenberg,Haas F1 Team,30
+Las Vegas,2023,LEC,Charles Leclerc,Ferrari,34
+Las Vegas,2023,MAG,Kevin Magnussen,Haas F1 Team,34
+Las Vegas,2023,OCO,Esteban Ocon,Alpine,34
+Las Vegas,2023,PER,Sergio Perez,Red Bull Racing,35
+Las Vegas,2023,PIA,Oscar Piastri,McLaren,30
+Las Vegas,2023,RIC,Daniel Ricciardo,AlphaTauri,31
+Las Vegas,2023,RUS,George Russell,Mercedes,34
+Las Vegas,2023,SAI,Carlos Sainz,Ferrari,35
+Las Vegas,2023,SAR,Logan Sargeant,Williams,32
+Las Vegas,2023,STR,Lance Stroll,Aston Martin,34
+Las Vegas,2023,TSU,Yuki Tsunoda,AlphaTauri,27
+Las Vegas,2023,VER,Max Verstappen,Red Bull Racing,34
+Las Vegas,2023,ZHO,Guanyu Zhou,Alfa Romeo,35
+Qatar,2025,ALB,Alexander Albon,Williams,47
+Qatar,2025,ALO,Fernando Alonso,Aston Martin,50
+Qatar,2025,ANT,Kimi Antonelli,Mercedes,50
+Qatar,2025,BEA,Oliver Bearman,Haas F1 Team,30
+Qatar,2025,BOR,Gabriel Bortoleto,Kick Sauber,46
+Qatar,2025,COL,Franco Colapinto,Alpine,45
+Qatar,2025,GAS,Pierre Gasly,Alpine,46
+Qatar,2025,HAD,Isack Hadjar,Racing Bulls,47
+Qatar,2025,HAM,Lewis Hamilton,Ferrari,46
+Qatar,2025,HUL,Nico Hulkenberg,Kick Sauber,4
+Qatar,2025,LAW,Liam Lawson,Racing Bulls,48
+Qatar,2025,LEC,Charles Leclerc,Ferrari,48
+Qatar,2025,NOR,Lando Norris,McLaren,48
+Qatar,2025,OCO,Esteban Ocon,Haas F1 Team,45
+Qatar,2025,PIA,Oscar Piastri,McLaren,48
+Qatar,2025,RUS,George Russell,Mercedes,50
+Qatar,2025,SAI,Carlos Sainz,Williams,50
+Qatar,2025,STR,Lance Stroll,Aston Martin,41
+Qatar,2025,TSU,Yuki Tsunoda,Red Bull Racing,48
+Qatar,2025,VER,Max Verstappen,Red Bull Racing,50
+Qatar,2024,ALB,Alexander Albon,Williams,34
+Qatar,2024,ALO,Fernando Alonso,Aston Martin,40
+Qatar,2024,BOT,Valtteri Bottas,Kick Sauber,33
+Qatar,2024,GAS,Pierre Gasly,Alpine,40
+Qatar,2024,HAM,Lewis Hamilton,Mercedes,39
+Qatar,2024,HUL,Nico Hulkenberg,Haas F1 Team,20
+Qatar,2024,LAW,Liam Lawson,RB,36
+Qatar,2024,LEC,Charles Leclerc,Ferrari,42
+Qatar,2024,MAG,Kevin Magnussen,Haas F1 Team,38
+Qatar,2024,NOR,Lando Norris,McLaren,41
+Qatar,2024,PER,Sergio Perez,Red Bull Racing,28
+Qatar,2024,PIA,Oscar Piastri,McLaren,41
+Qatar,2024,RUS,George Russell,Mercedes,41
+Qatar,2024,SAI,Carlos Sainz,Ferrari,41
+Qatar,2024,TSU,Yuki Tsunoda,RB,34
+Qatar,2024,VER,Max Verstappen,Red Bull Racing,43
+Qatar,2024,ZHO,Guanyu Zhou,Kick Sauber,40
+Qatar,2023,ALB,Alexander Albon,Williams,37
+Qatar,2023,ALO,Fernando Alonso,Aston Martin,43
+Qatar,2023,BOT,Valtteri Bottas,Alfa Romeo,33
+Qatar,2023,GAS,Pierre Gasly,Alpine,38
+Qatar,2023,HUL,Nico Hulkenberg,Haas F1 Team,36
+Qatar,2023,LAW,Liam Lawson,AlphaTauri,28
+Qatar,2023,LEC,Charles Leclerc,Ferrari,42
+Qatar,2023,MAG,Kevin Magnussen,Haas F1 Team,30
+Qatar,2023,NOR,Lando Norris,McLaren,41
+Qatar,2023,OCO,Esteban Ocon,Alpine,40
+Qatar,2023,PER,Sergio Perez,Red Bull Racing,36
+Qatar,2023,PIA,Oscar Piastri,McLaren,43
+Qatar,2023,RUS,George Russell,Mercedes,41
+Qatar,2023,SAR,Logan Sargeant,Williams,22
+Qatar,2023,STR,Lance Stroll,Aston Martin,33
+Qatar,2023,TSU,Yuki Tsunoda,AlphaTauri,38
+Qatar,2023,VER,Max Verstappen,Red Bull Racing,44
+Qatar,2023,ZHO,Guanyu Zhou,Alfa Romeo,35
+Qatar,2021,ALO,Fernando Alonso,Alpine,29
+Qatar,2021,BOT,Valtteri Bottas,Mercedes,24
+Qatar,2021,GAS,Pierre Gasly,AlphaTauri,29
+Qatar,2021,GIO,Antonio Giovinazzi,Alfa Romeo Racing,19
+Qatar,2021,HAM,Lewis Hamilton,Mercedes,43
+Qatar,2021,LAT,Nicholas Latifi,Williams,6
+Qatar,2021,LEC,Charles Leclerc,Ferrari,21
+Qatar,2021,MAZ,Nikita Mazepin,Haas F1 Team,3
+Qatar,2021,MSC,Mick Schumacher,Haas F1 Team,14
+Qatar,2021,NOR,Lando Norris,McLaren,21
+Qatar,2021,OCO,Esteban Ocon,Alpine,25
+Qatar,2021,PER,Sergio Perez,Red Bull Racing,28
+Qatar,2021,RAI,Kimi Räikkönen,Alfa Romeo Racing,18
+Qatar,2021,RIC,Daniel Ricciardo,McLaren,12
+Qatar,2021,RUS,George Russell,Williams,13
+Qatar,2021,SAI,Carlos Sainz,Ferrari,20
+Qatar,2021,STR,Lance Stroll,Aston Martin,27
+Qatar,2021,TSU,Yuki Tsunoda,AlphaTauri,18
+Qatar,2021,VER,Max Verstappen,Red Bull Racing,42
+Qatar,2021,VET,Sebastian Vettel,Aston Martin,19
+Abu Dhabi,2025,ALB,Alexander Albon,Williams,53
+Abu Dhabi,2025,ALO,Fernando Alonso,Aston Martin,55
+Abu Dhabi,2025,ANT,Kimi Antonelli,Mercedes,55
+Abu Dhabi,2025,BEA,Oliver Bearman,Haas F1 Team,55
+Abu Dhabi,2025,BOR,Gabriel Bortoleto,Kick Sauber,55
+Abu Dhabi,2025,COL,Franco Colapinto,Alpine,52
+Abu Dhabi,2025,GAS,Pierre Gasly,Alpine,52
+Abu Dhabi,2025,HAD,Isack Hadjar,Racing Bulls,54
+Abu Dhabi,2025,HAM,Lewis Hamilton,Ferrari,53
+Abu Dhabi,2025,HUL,Nico Hulkenberg,Kick Sauber,53
+Abu Dhabi,2025,LAW,Liam Lawson,Racing Bulls,54
+Abu Dhabi,2025,LEC,Charles Leclerc,Ferrari,53
+Abu Dhabi,2025,NOR,Lando Norris,McLaren,53
+Abu Dhabi,2025,OCO,Esteban Ocon,Haas F1 Team,55
+Abu Dhabi,2025,PIA,Oscar Piastri,McLaren,55
+Abu Dhabi,2025,RUS,George Russell,Mercedes,55
+Abu Dhabi,2025,SAI,Carlos Sainz,Williams,55
+Abu Dhabi,2025,STR,Lance Stroll,Aston Martin,55
+Abu Dhabi,2025,TSU,Yuki Tsunoda,Red Bull Racing,55
+Abu Dhabi,2025,VER,Max Verstappen,Red Bull Racing,55
+Abu Dhabi,2024,ALB,Alexander Albon,Williams,49
+Abu Dhabi,2024,ALO,Fernando Alonso,Aston Martin,47
+Abu Dhabi,2024,BOT,Valtteri Bottas,Kick Sauber,24
+Abu Dhabi,2024,COL,Franco Colapinto,Williams,19
+Abu Dhabi,2024,DOO,Jack Doohan,Alpine,47
+Abu Dhabi,2024,GAS,Pierre Gasly,Alpine,50
+Abu Dhabi,2024,HAM,Lewis Hamilton,Mercedes,50
+Abu Dhabi,2024,HUL,Nico Hulkenberg,Haas F1 Team,50
+Abu Dhabi,2024,LAW,Liam Lawson,RB,46
+Abu Dhabi,2024,LEC,Charles Leclerc,Ferrari,49
+Abu Dhabi,2024,MAG,Kevin Magnussen,Haas F1 Team,47
+Abu Dhabi,2024,NOR,Lando Norris,McLaren,51
+Abu Dhabi,2024,PIA,Oscar Piastri,McLaren,49
+Abu Dhabi,2024,RUS,George Russell,Mercedes,49
+Abu Dhabi,2024,SAI,Carlos Sainz,Ferrari,51
+Abu Dhabi,2024,STR,Lance Stroll,Aston Martin,48
+Abu Dhabi,2024,TSU,Yuki Tsunoda,RB,48
+Abu Dhabi,2024,VER,Max Verstappen,Red Bull Racing,52
+Abu Dhabi,2024,ZHO,Guanyu Zhou,Kick Sauber,47
+Abu Dhabi,2023,ALB,Alexander Albon,Williams,52
+Abu Dhabi,2023,ALO,Fernando Alonso,Aston Martin,53
+Abu Dhabi,2023,BOT,Valtteri Bottas,Alfa Romeo,54
+Abu Dhabi,2023,GAS,Pierre Gasly,Alpine,53
+Abu Dhabi,2023,HAM,Lewis Hamilton,Mercedes,53
+Abu Dhabi,2023,HUL,Nico Hulkenberg,Haas F1 Team,53
+Abu Dhabi,2023,LEC,Charles Leclerc,Ferrari,53
+Abu Dhabi,2023,MAG,Kevin Magnussen,Haas F1 Team,52
+Abu Dhabi,2023,NOR,Lando Norris,McLaren,53
+Abu Dhabi,2023,OCO,Esteban Ocon,Alpine,55
+Abu Dhabi,2023,PER,Sergio Perez,Red Bull Racing,53
+Abu Dhabi,2023,PIA,Oscar Piastri,McLaren,53
+Abu Dhabi,2023,RIC,Daniel Ricciardo,AlphaTauri,53
+Abu Dhabi,2023,RUS,George Russell,Mercedes,53
+Abu Dhabi,2023,SAI,Carlos Sainz,Ferrari,52
+Abu Dhabi,2023,SAR,Logan Sargeant,Williams,52
+Abu Dhabi,2023,STR,Lance Stroll,Aston Martin,53
+Abu Dhabi,2023,TSU,Yuki Tsunoda,AlphaTauri,55
+Abu Dhabi,2023,VER,Max Verstappen,Red Bull Racing,53
+Abu Dhabi,2023,ZHO,Guanyu Zhou,Alfa Romeo,53
+Abu Dhabi,2022,ALB,Alexander Albon,Williams,50
+Abu Dhabi,2022,ALO,Fernando Alonso,Alpine,23
+Abu Dhabi,2022,BOT,Valtteri Bottas,Alfa Romeo,52
+Abu Dhabi,2022,GAS,Pierre Gasly,AlphaTauri,52
+Abu Dhabi,2022,HAM,Lewis Hamilton,Mercedes,50
+Abu Dhabi,2022,LAT,Nicholas Latifi,Williams,47
+Abu Dhabi,2022,LEC,Charles Leclerc,Ferrari,54
+Abu Dhabi,2022,MAG,Kevin Magnussen,Haas F1 Team,51
+Abu Dhabi,2022,MSC,Mick Schumacher,Haas F1 Team,50
+Abu Dhabi,2022,NOR,Lando Norris,McLaren,52
+Abu Dhabi,2022,OCO,Esteban Ocon,Alpine,52
+Abu Dhabi,2022,PER,Sergio Perez,Red Bull Racing,51
+Abu Dhabi,2022,RIC,Daniel Ricciardo,McLaren,54
+Abu Dhabi,2022,RUS,George Russell,Mercedes,53
+Abu Dhabi,2022,SAI,Carlos Sainz,Ferrari,53
+Abu Dhabi,2022,STR,Lance Stroll,Aston Martin,52
+Abu Dhabi,2022,TSU,Yuki Tsunoda,AlphaTauri,53
+Abu Dhabi,2022,VER,Max Verstappen,Red Bull Racing,54
+Abu Dhabi,2022,VET,Sebastian Vettel,Aston Martin,54
+Abu Dhabi,2022,ZHO,Guanyu Zhou,Alfa Romeo,51
+Abu Dhabi,2021,ALO,Fernando Alonso,Alpine,45
+Abu Dhabi,2021,BOT,Valtteri Bottas,Mercedes,45
+Abu Dhabi,2021,GAS,Pierre Gasly,AlphaTauri,45
+Abu Dhabi,2021,GIO,Antonio Giovinazzi,Alfa Romeo Racing,27
+Abu Dhabi,2021,HAM,Lewis Hamilton,Mercedes,45
+Abu Dhabi,2021,LAT,Nicholas Latifi,Williams,38
+Abu Dhabi,2021,LEC,Charles Leclerc,Ferrari,44
+Abu Dhabi,2021,MSC,Mick Schumacher,Haas F1 Team,38
+Abu Dhabi,2021,NOR,Lando Norris,McLaren,42
+Abu Dhabi,2021,OCO,Esteban Ocon,Alpine,44
+Abu Dhabi,2021,PER,Sergio Perez,Red Bull Racing,44
+Abu Dhabi,2021,RAI,Kimi Räikkönen,Alfa Romeo Racing,19
+Abu Dhabi,2021,RIC,Daniel Ricciardo,McLaren,43
+Abu Dhabi,2021,RUS,George Russell,Williams,17
+Abu Dhabi,2021,SAI,Carlos Sainz,Ferrari,44
+Abu Dhabi,2021,STR,Lance Stroll,Aston Martin,41
+Abu Dhabi,2021,TSU,Yuki Tsunoda,AlphaTauri,44
+Abu Dhabi,2021,VER,Max Verstappen,Red Bull Racing,47
+Abu Dhabi,2021,VET,Sebastian Vettel,Aston Martin,43
+Abu Dhabi,2020,ALB,Alexander Albon,Red Bull Racing,50
+Abu Dhabi,2020,BOT,Valtteri Bottas,Mercedes,50
+Abu Dhabi,2020,FIT,Pietro Fittipaldi,Haas F1 Team,42
+Abu Dhabi,2020,GAS,Pierre Gasly,AlphaTauri,49
+Abu Dhabi,2020,GIO,Antonio Giovinazzi,Alfa Romeo Racing,46
+Abu Dhabi,2020,HAM,Lewis Hamilton,Mercedes,50
+Abu Dhabi,2020,KVY,Daniil Kvyat,AlphaTauri,48
+Abu Dhabi,2020,LAT,Nicholas Latifi,Williams,44
+Abu Dhabi,2020,LEC,Charles Leclerc,Ferrari,46
+Abu Dhabi,2020,MAG,Kevin Magnussen,Haas F1 Team,42
+Abu Dhabi,2020,NOR,Lando Norris,McLaren,50
+Abu Dhabi,2020,OCO,Esteban Ocon,Renault,49
+Abu Dhabi,2020,PER,Sergio Perez,Racing Point,7
+Abu Dhabi,2020,RAI,Kimi Räikkönen,Alfa Romeo Racing,48
+Abu Dhabi,2020,RIC,Daniel Ricciardo,Renault,47
+Abu Dhabi,2020,RUS,George Russell,Williams,47
+Abu Dhabi,2020,SAI,Carlos Sainz,McLaren,50
+Abu Dhabi,2020,STR,Lance Stroll,Racing Point,50
+Abu Dhabi,2020,VER,Max Verstappen,Red Bull Racing,50
+Abu Dhabi,2020,VET,Sebastian Vettel,Ferrari,46
+Abu Dhabi,2019,ALB,Alexander Albon,Red Bull Racing,52
+Abu Dhabi,2019,BOT,Valtteri Bottas,Mercedes,49
+Abu Dhabi,2019,GAS,Pierre Gasly,Toro Rosso,46
+Abu Dhabi,2019,GIO,Antonio Giovinazzi,Alfa Romeo Racing,38
+Abu Dhabi,2019,GRO,Romain Grosjean,Haas F1 Team,38
+Abu Dhabi,2019,HAM,Lewis Hamilton,Mercedes,52
+Abu Dhabi,2019,HUL,Nico Hulkenberg,Renault,50
+Abu Dhabi,2019,KUB,Robert Kubica,Williams,21
+Abu Dhabi,2019,KVY,Daniil Kvyat,Toro Rosso,47
+Abu Dhabi,2019,LEC,Charles Leclerc,Ferrari,50
+Abu Dhabi,2019,MAG,Kevin Magnussen,Haas F1 Team,46
+Abu Dhabi,2019,NOR,Lando Norris,McLaren,50
+Abu Dhabi,2019,PER,Sergio Perez,Racing Point,48
+Abu Dhabi,2019,RAI,Kimi Räikkönen,Alfa Romeo Racing,46
+Abu Dhabi,2019,RIC,Daniel Ricciardo,Renault,48
+Abu Dhabi,2019,RUS,George Russell,Williams,26
+Abu Dhabi,2019,SAI,Carlos Sainz,McLaren,48
+Abu Dhabi,2019,STR,Lance Stroll,Racing Point,28
+Abu Dhabi,2019,VER,Max Verstappen,Red Bull Racing,52
+Abu Dhabi,2019,VET,Sebastian Vettel,Ferrari,50
+Abu Dhabi,2018,ALO,Fernando Alonso,McLaren,40
+Abu Dhabi,2018,BOT,Valtteri Bottas,Mercedes,43
+Abu Dhabi,2018,ERI,Marcus Ericsson,Sauber,14
+Abu Dhabi,2018,GAS,Pierre Gasly,Toro Rosso,33
+Abu Dhabi,2018,GRO,Romain Grosjean,Haas F1 Team,42
+Abu Dhabi,2018,HAM,Lewis Hamilton,Mercedes,47
+Abu Dhabi,2018,HAR,Brendon Hartley,Toro Rosso,35
+Abu Dhabi,2018,LEC,Charles Leclerc,Sauber,44
+Abu Dhabi,2018,MAG,Kevin Magnussen,Haas F1 Team,40
+Abu Dhabi,2018,OCO,Esteban Ocon,Racing Point,32
+Abu Dhabi,2018,PER,Sergio Perez,Racing Point,44
+Abu Dhabi,2018,RAI,Kimi Räikkönen,Ferrari,1
+Abu Dhabi,2018,RIC,Daniel Ricciardo,Red Bull Racing,45
+Abu Dhabi,2018,SAI,Carlos Sainz,Renault,43
+Abu Dhabi,2018,SIR,Sergey Sirotkin,Williams,32
+Abu Dhabi,2018,STR,Lance Stroll,Williams,39
+Abu Dhabi,2018,VAN,Stoffel Vandoorne,McLaren,41
+Abu Dhabi,2018,VER,Max Verstappen,Red Bull Racing,45
+Abu Dhabi,2018,VET,Sebastian Vettel,Ferrari,45
