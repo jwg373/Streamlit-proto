@@ -1,9 +1,9 @@
 """F1 Circuit Explorer: Streamlit prototype covering every circuit on the 2026 F1 calendar.
 
-Grid history and the track outline are pre-built into ./data by
-scripts/build_data.py (FastF1's Jolpica-F1/Ergast interface, OpenF1 positions,
-fastf1.mvapi rotation/corners). Lap and sector timing is fetched from the
-OpenF1 API on demand and cached for a day (see f1data.py).
+All data comes from FastF1. Grid history, track outlines and the field's lap/sector
+time distributions are pre-built into ./data by scripts/build_data.py. A single
+driver's laps are loaded live from FastF1 when that driver is picked, which needs
+F1 account credentials in st.secrets (see README).
 """
 
 from __future__ import annotations
@@ -15,7 +15,7 @@ import pandas as pd
 import plotly.graph_objects as go
 import streamlit as st
 
-from f1data import LAP_SEASONS, TRACK_LABEL, TRACKS, clean_laps
+from f1data import TRACK_LABEL, TRACKS, clean_laps, is_signed_in, load_race, setup_cache, sign_in
 
 st.set_page_config(page_title="F1 Circuit Explorer", page_icon="🏁", layout="wide")
 
@@ -57,20 +57,58 @@ st.markdown(
 # --------------------------------------------------------------------------- data
 @st.cache_data
 def load_data():
-    grid = pd.read_csv(DATA / "grid_results.csv")
-    track_map = pd.read_csv(DATA / "track_map.csv")
-    corners = pd.read_csv(DATA / "corners.csv")
-    return grid, track_map, corners
+    return tuple(pd.read_csv(DATA / f"{name}.csv") for name in
+                 ("grid_results", "track_map", "corners", "lap_bins", "lap_stats", "race_drivers"))
 
 
-GRID, TRACK_MAP, CORNERS = load_data()
+GRID, TRACK_MAP, CORNERS, LAP_BINS, LAP_STATS, RACE_DRIVERS = load_data()
 
 
-@st.cache_data(ttl=24 * 3600, show_spinner="Loading race laps from OpenF1…")
-def get_laps(track: str, season: int) -> pd.DataFrame:
-    """Clean race laps for one race, fetched from OpenF1 and cached for a day."""
-    laps, _ = clean_laps(track, season)
-    return laps
+class NoCredentials(Exception):
+    pass
+
+
+@st.cache_resource(show_spinner=False)
+def fastf1_setup() -> None:
+    setup_cache()
+
+
+def ensure_signed_in() -> None:
+    """Sign in to the F1 account FastF1 needs, with [f1_credentials] from st.secrets."""
+    if is_signed_in():
+        return
+    try:
+        creds = st.secrets["f1_credentials"]
+        user, pw = creds["username"], creds["password"]
+    except Exception as exc:
+        raise NoCredentials from exc
+    sign_in(user, pw)
+
+
+@st.cache_data(ttl=24 * 3600, show_spinner=False, max_entries=8)
+def race_laps(track: str, season: int) -> pd.DataFrame:
+    """Every clean lap of one race, loaded live from FastF1 (first load ~10-30 s), cached for a day."""
+    fastf1_setup()
+    ensure_signed_in()
+    date = GRID.loc[(GRID.track == track) & (GRID.season == season), "date"].iloc[0]
+    return clean_laps(load_race(int(season), date))
+
+
+def field_bins(track: str, season: int, metric: str) -> tuple[np.ndarray, np.ndarray]:
+    """The field's clean laps for one race as (bin time, lap count) from the pre-built bins."""
+    b = LAP_BINS[(LAP_BINS.track == track) & (LAP_BINS.season == season) & (LAP_BINS.metric == metric)]
+    return b.t.to_numpy(float), b.laps.to_numpy(float)
+
+
+def field_stat(track: str, season: int, metric: str, stat: str) -> float:
+    row = LAP_STATS[(LAP_STATS.track == track) & (LAP_STATS.season == season) & (LAP_STATS.metric == metric)]
+    return float(row[stat].iloc[0]) if len(row) else np.nan
+
+
+def weighted_percentile(values: np.ndarray, weights: np.ndarray, q: list[float]) -> np.ndarray:
+    order = np.argsort(values)
+    cum = np.cumsum(weights[order]) / weights.sum() * 100
+    return np.interp(q, cum, values[order])
 
 
 @st.cache_data
@@ -105,14 +143,20 @@ def seq_color(t: float) -> str:
     return f"rgb({r},{g},{b})"
 
 
-def kde(values: np.ndarray, xs: np.ndarray) -> np.ndarray:
-    """Gaussian KDE (Silverman bandwidth), returned as a density."""
-    values = values[~np.isnan(values)]
-    if len(values) < 2:
+def kde(values: np.ndarray, xs: np.ndarray, weights: np.ndarray | None = None) -> np.ndarray:
+    """Gaussian KDE (Silverman bandwidth), returned as a density. `weights` lets binned data
+    (bin time, lap count) stand in for the individual laps."""
+    w = np.ones_like(values, dtype=float) if weights is None else np.asarray(weights, dtype=float)
+    keep = ~np.isnan(values)
+    values, w = values[keep], w[keep]
+    n = w.sum()
+    if n < 2:
         return np.zeros_like(xs)
-    bw = 1.06 * values.std() * len(values) ** (-1 / 5) or 0.05
+    mean = (values * w).sum() / n
+    std = np.sqrt((w * (values - mean) ** 2).sum() / n)
+    bw = 1.06 * std * n ** (-1 / 5) or 0.05
     z = (xs[:, None] - values[None, :]) / bw
-    return np.exp(-0.5 * z**2).sum(axis=1) / (len(values) * bw * np.sqrt(2 * np.pi))
+    return (w * np.exp(-0.5 * z**2)).sum(axis=1) / (n * bw * np.sqrt(2 * np.pi))
 
 
 # --------------------------------------------------------------------------- state
@@ -195,7 +239,7 @@ with h2:
 with h3:
     st.markdown("<h1 class='title' style='text-align:right'>F1 Circuit Explorer</h1>"
                 "<div style='text-align:right;color:#898781'>Grid position &amp; sector times · "
-                "data via FastF1 &amp; OpenF1</div>", unsafe_allow_html=True)
+                "data via FastF1</div>", unsafe_allow_html=True)
 with h4:
     if st.button("F1 Primer", type="primary", use_container_width=True):
         primer()
@@ -323,8 +367,8 @@ with g_right:
 # --------------------------------------------------------------------------- 2. segment explorer
 st.markdown("<div class='rule' style='border-color:#e1e0d9;border-width:1px;margin-top:1rem'></div>",
             unsafe_allow_html=True)
-# seasons with OpenF1 lap timing (2023+) in which this circuit actually held a race
-lap_seasons = sorted(set(LAP_SEASONS) & set(seasons_grid.unique()), reverse=True) or LAP_SEASONS
+# seasons with pre-built lap timing (FastF1 timing starts in 2018) for this circuit
+lap_seasons = sorted(LAP_STATS.loc[LAP_STATS.track == track, "season"].unique().tolist(), reverse=True) or [None]
 if st.session_state.season not in lap_seasons:
     st.session_state.season = int(lap_seasons[0])
 
@@ -342,16 +386,11 @@ with s4c:
               use_container_width=True)
 season, sector = st.session_state.season, st.session_state.sector or 0
 
-try:
-    laps = get_laps(track, season)
-except Exception as exc:  # OpenF1 unreachable
-    laps = pd.DataFrame()
-    st.warning(f"Couldn't load lap timing from OpenF1 right now ({exc}). Try again in a minute.")
-if laps.empty:
-    st.info(f"No lap timing available for {track} {season} yet.")
-    laps = pd.DataFrame(columns=["driver", "driver_name", "team", "lap", "lap_time", "s1", "s2", "s3"])
 col = {0: "lap_time", 1: "s1", 2: "s2", 3: "s3"}[sector]
 is_lap = sector == 0
+ft, fw = field_bins(track, season, col)          # the field: bin times + lap counts
+if not len(ft):
+    st.info(f"No lap timing available for {track} {season} yet.")
 
 
 def label_spots(track_xy: np.ndarray, pts: np.ndarray, dist: float) -> np.ndarray:
@@ -384,14 +423,14 @@ def track_figure(track: str, sector: int) -> go.Figure:
         nxt = tm[tm.sector == (s % 3) + 1].head(1)
         part = pd.concat([part, nxt])
         on = sector in (0, s)
-        st_times = laps[f"s{s}"]
         fig.add_trace(go.Scatter(
             x=part.x, y=part.y, mode="lines+markers", name=f"Sector {s}",
             line=dict(color=SECTOR_COLORS[s] if on else MUTED, width=9 if sector == s else 5),
             marker=dict(size=10, color="rgba(0,0,0,0.01)"), opacity=1 if on else 0.45,
             customdata=np.full(len(part), s),
-            hovertemplate=(f"<b>Sector {s}</b><br>Median: {fmt_time(st_times.median(), False)}"
-                           f"<br>Fastest: {fmt_time(st_times.min(), False)}<br>Click to select<extra></extra>"),
+            hovertemplate=(f"<b>Sector {s}</b><br>Median: {fmt_time(field_stat(track, season, f's{s}', 'median'), False)}"
+                           f"<br>Fastest: {fmt_time(field_stat(track, season, f's{s}', 'fastest'), False)}"
+                           "<br>Click to select<extra></extra>"),
         ))
     xy = tm[["x", "y"]].to_numpy(float)
     span = max(np.ptp(xy[:, 0]), np.ptp(xy[:, 1]))
@@ -420,8 +459,8 @@ def track_figure(track: str, sector: int) -> go.Figure:
     return fig
 
 
-driver_opts = (laps.groupby(["driver", "driver_name", "team"]).size().reset_index()
-               .sort_values(["team", "driver_name"]))
+driver_opts = RACE_DRIVERS[(RACE_DRIVERS.track == track) & (RACE_DRIVERS.season == season)].sort_values(
+    ["team", "driver_name"])
 labels = {"": "Driver Name (Team)"} | {r.driver: f"{r.driver_name} ({r.team})" for r in driver_opts.itertuples()}
 if st.session_state.driver not in labels:
     st.session_state.driver = ""
@@ -433,14 +472,24 @@ with m_left:
     st.plotly_chart(track_figure(track, sector), key=f"trackmap_{track}_{nonce}", on_select=on_map_click,
                     selection_mode="points", use_container_width=True, config={"displayModeBar": False})
 
-    times = laps[col].to_numpy()
     drv = st.session_state.driver
-    dtimes = laps.loc[laps.driver == drv, col].to_numpy() if drv else np.array([])
+    dtimes = np.array([])
+    if drv:
+        try:
+            with st.spinner(f"Loading {labels[drv]}'s laps from FastF1 (the first load of a race takes ~20 s)…"):
+                rl = race_laps(track, season)
+            dtimes = rl.loc[rl.driver == drv, col].to_numpy()
+        except NoCredentials:
+            st.warning("Driver comparison loads laps live from FastF1, which needs F1 account credentials "
+                       "in the app's secrets (`[f1_credentials]`).")
+        except Exception as exc:
+            st.warning(f"Couldn't load {drv}'s laps from FastF1 right now ({exc}). Try again in a minute.")
+    field_median = field_stat(track, season, col, "median")
     k1, k2, k3 = st.columns(3)
-    k1.metric(f"{SECTORS[sector]} median", fmt_time(np.median(times), is_lap) if len(times) else "–")
-    k2.metric("Fastest clean lap" if is_lap else "Fastest sector", fmt_time(times.min(), is_lap) if len(times) else "–")
+    k1.metric(f"{SECTORS[sector]} median", fmt_time(field_median, is_lap))
+    k2.metric("Fastest clean lap" if is_lap else "Fastest sector", fmt_time(field_stat(track, season, col, "fastest"), is_lap))
     if len(dtimes):
-        gap = np.median(dtimes) - np.median(times)
+        gap = np.median(dtimes) - field_median
         k3.metric(f"{drv} vs field (median)", f"{gap:+.3f}s",
                   delta=f"{abs(gap):.3f}s {'faster' if gap < 0 else 'slower'}",
                   delta_color="normal" if gap < 0 else "inverse")
@@ -450,14 +499,18 @@ with m_left:
 with m_right:
     st.markdown(f"**Time distribution · {track} {season} · {SECTORS[sector]}**", help=HELP["dist"])
     fig = go.Figure()
-    if len(times):
-        lo, hi = np.percentile(np.concatenate([times, dtimes]) if len(dtimes) else times, [0.5, 99.5])
+    if len(ft):
+        lo, hi = weighted_percentile(ft, fw, [0.5, 99.5])
+        if len(dtimes):
+            dlo, dhi = np.percentile(dtimes, [0.5, 99.5])
+            lo, hi = min(lo, dlo), max(hi, dhi)
         pad = (hi - lo) * 0.05
         lo, hi = lo - pad, hi + pad
         nb = 30
         width = (hi - lo) / nb
-        counts, edges = np.histogram(times, bins=nb, range=(lo, hi))
-        pct = counts / len(times) * 100
+        counts, edges = np.histogram(ft, bins=nb, range=(lo, hi), weights=fw)
+        counts = counts.round().astype(int)
+        pct = counts / fw.sum() * 100
         centers = (edges[:-1] + edges[1:]) / 2
         fig.add_trace(go.Bar(x=centers, y=pct, width=width * 0.92, marker_color="#9ec5f4", name="All laps",
                              customdata=np.stack([counts, [fmt_time(a, is_lap) for a in edges[:-1]],
@@ -465,7 +518,7 @@ with m_right:
                              hovertemplate="%{customdata[1]} – %{customdata[2]}<br>%{customdata[0]} laps "
                                            "(%{y:.1f}%)<extra></extra>", showlegend=False))
         xs = np.linspace(lo, hi, 300)
-        overall = kde(times, xs) * width * 100
+        overall = kde(ft, xs, fw) * width * 100
         fig.add_trace(go.Scatter(x=xs, y=overall, mode="lines", name="Overall (all drivers)",
                                  line=dict(color=BLUE, width=2.5), hoverinfo="skip"))
         y_top = max(pct.max(), overall.max())
@@ -477,7 +530,7 @@ with m_right:
             y_top = max(y_top, driver_curve.max())
         # size the axis to the tallest of the bars and both curves so no curve is clipped
         fig.update_yaxes(range=[0, y_top * 1.08])
-        fig.add_vline(x=float(np.median(times)), line=dict(color=BLUE, dash="dot", width=1.5))
+        fig.add_vline(x=field_median, line=dict(color=BLUE, dash="dot", width=1.5))
         step = next(s for s in (0.1, 0.2, 0.25, 0.5, 1, 2, 5, 10) if (hi - lo) / s <= 8)
         ticks = np.arange(np.ceil(lo / step) * step, hi, step)
         dec = 0 if step >= 1 else (1 if step in (0.1, 0.2, 0.5) else 2)
@@ -499,9 +552,11 @@ with m_right:
         st.selectbox("Driver", list(labels), key="driver", format_func=labels.get)
     with d2:
         st.button("Clear", on_click=reset, args=("driver",), use_container_width=True)
-    st.caption(f"{len(times):,} clean race laps from {laps.driver.nunique()} drivers (lap 1, pit in/out "
-               "laps and laps slower than 107% of the race's fastest lap, e.g. safety-car laps, are removed).")
+    st.caption(f"{int(fw.sum()):,} clean race laps from {len(driver_opts)} drivers (lap 1, pit in/out laps, "
+               "laps under a safety car, VSC or yellow flag, and laps slower than 107% of the race's fastest lap "
+               "are removed).")
 
-st.caption("Data: race results via FastF1's Jolpica-F1 (Ergast) interface; lap/sector timing and car "
-           "positions from the OpenF1 API; track rotation and corners via FastF1. Grid and map pre-built by "
-           "`scripts/build_data.py`; lap timing is fetched live from OpenF1 and cached. Prototype for DS 511.")
+st.caption("Data: all via FastF1. Race results through its Jolpica-F1 (Ergast) interface, lap/sector timing "
+           "and car positions from F1 live timing, track outline and corners from MultiViewer. Grid, maps and "
+           "the field's time distributions are pre-built by `scripts/build_data.py`; a picked driver's laps are "
+           "loaded live from FastF1 and cached. Prototype for DS 511.")
