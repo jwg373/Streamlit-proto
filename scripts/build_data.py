@@ -12,12 +12,12 @@ Sources (no account needed)
 * Car positions for the track outline: the OpenF1 API (api.openf1.org).
   FastF1's own live-timing loader now needs an F1TV subscription. The app
   itself fetches lap/sector timing from OpenF1 on demand (see f1data.py).
-* Track rotation + corner numbers: FastF1's MultiViewer interface (fastf1.mvapi).
+* Track outline, rotation + corner numbers: FastF1's MultiViewer interface (fastf1.mvapi).
 
 Outputs
 -------
 data/grid_results.csv  one row per driver per race: grid slot and finish
-data/track_map.csv     track outline (x, y) from the fastest race lap, tagged by sector
+data/track_map.csv     track outline (x, y), tagged by timing sector
 data/corners.csv       corner numbers and positions for map labels
 """
 
@@ -30,10 +30,10 @@ import time
 from pathlib import Path
 
 import fastf1
-import fastf1.mvapi
 import numpy as np
 import pandas as pd
 from fastf1.ergast import Ergast
+from fastf1.mvapi.api import get_circuit as mvapi_raw
 
 sys.path.insert(0, str(Path(__file__).resolve().parents[1]))
 import f1data  # noqa: E402
@@ -100,53 +100,176 @@ def rotate(xy: np.ndarray, angle_deg: float) -> np.ndarray:
     return xy @ rot
 
 
+REF_LAPS = 6          # fastest clean laps (one per driver) used to place the sector lines
+# Rotation (degrees, counter-clockwise) that turns each outline to match the official 2026
+# circuit map on formula1.com/en/racing/2026/<event>. Fitted once by overlaying each outline on
+# that image; MultiViewer's own rotation is the fallback for a circuit missing here.
+F1_ROTATION = {
+    "Australia": 45,
+    "China": 238,
+    "Japan": 359,
+    "Miami": 13,
+    "Canada": 57,
+    "Monaco": 315,
+    "Barcelona": 324,
+    "Austria": 9,
+    "Britain": 270,
+    "Belgium": 97,
+    "Hungary": 309,
+    "Netherlands": 359,
+    "Italy": 95,
+    "Madrid": 270,
+    "Azerbaijan": 307,
+    "Malaysia": 355,
+    "Singapore": 0,
+    "Austin": 354,
+    "Mexico": 8,
+    "Brazil": 270,
+    "Las Vegas": 89,
+    "Qatar": 61,
+    "Abu Dhabi": 262,
+}
+
+
+def lap_positions(sess: dict, lap) -> pd.DataFrame:
+    """OpenF1 car positions during one lap, with t = seconds since the lap started."""
+    start = pd.Timestamp(lap.date_start).tz_convert("UTC").tz_localize(None)
+    end = start + pd.Timedelta(seconds=lap.lap_time)
+    fmt = "%Y-%m-%dT%H:%M:%S.%f"
+    loc = pd.DataFrame(openf1("location", session_key=sess["session_key"], driver_number=int(lap.driver_number),
+                              **{"date>": start.strftime(fmt), "date<": end.strftime(fmt)}))
+    if loc.empty:
+        return loc
+    loc["t"] = (pd.to_datetime(loc.date, format="ISO8601").dt.tz_convert("UTC").dt.tz_localize(None)
+                - start).dt.total_seconds()
+    loc = loc[(loc.x != 0) | (loc.y != 0)]          # (0, 0) = no fix
+    return loc.sort_values("t")[["t", "x", "y"]].reset_index(drop=True)
+
+
+def position_at(loc: pd.DataFrame, t: float, max_gap: float = 1.5):
+    """Car position at time t (linear interpolation), or None if the samples around t are too sparse."""
+    i = np.searchsorted(loc.t.values, t)
+    if i == 0 or i >= len(loc):
+        return None
+    a, b = loc.iloc[i - 1], loc.iloc[i]
+    if b.t - a.t > max_gap:
+        return None
+    w = (t - a.t) / (b.t - a.t)
+    return np.array([a.x + w * (b.x - a.x), a.y + w * (b.y - a.y)])
+
+
+def circular_median(idx: list[int], n: int) -> int:
+    """Median of indices on a closed loop of n points (picks the cut that keeps them together)."""
+    idx = np.asarray(idx)
+    ref = idx[0]
+    shifted = (idx - ref + n // 2) % n
+    return int((np.median(shifted) + ref - n // 2) % n)
+
+
+def averaged_outline(lap_locs: list[pd.DataFrame], lap_times: list[float], n: int = 600) -> np.ndarray:
+    """Outline for circuits MultiViewer doesn't cover: each lap resampled on lap fraction,
+    then the per-fraction median across laps, lightly smoothed."""
+    f = np.linspace(0, 1, n, endpoint=False)
+    stack = []
+    for loc, lt in zip(lap_locs, lap_times):
+        frac = loc.t.values / lt
+        gaps = np.diff(frac, prepend=frac[0])
+        xs, ys = np.interp(f, frac, loc.x.values), np.interp(f, frac, loc.y.values)
+        # blank out stretches where this lap had a gap in its samples (> 1.2 s)
+        gap_mask = np.zeros(n, bool)
+        for j in np.where(gaps * lt > 1.2)[0]:
+            gap_mask |= (f > frac[j - 1]) & (f < frac[j])
+        xs[gap_mask], ys[gap_mask] = np.nan, np.nan
+        stack.append(np.c_[xs, ys])
+    xy = np.nanmedian(np.stack(stack), axis=0)
+    k = 5                                           # circular moving average
+    pad = np.r_[xy[-k:], xy, xy[:k]]
+    kernel = np.ones(2 * k + 1) / (2 * k + 1)
+    return np.c_[np.convolve(pad[:, 0], kernel, "same"), np.convolve(pad[:, 1], kernel, "same")][k:-k]
+
+
+def mv_circuit(season: int, circuit_key: int):
+    try:
+        return mvapi_raw(year=season, circuit_key=circuit_key)
+    except Exception as exc:  # MultiViewer has no info for this circuit/year
+        log.warning("multiviewer %s %s: %s", circuit_key, season, exc)
+        return None
+
+
 def track_maps(tracks: list[str]):
-    """Track outline from the fastest clean race lap (OpenF1 car positions), split into
-    the official timing sectors, rotated like the TV graphics (fastf1.mvapi)."""
+    """Track outline split into the official timing sectors, oriented like formula1.com's circuit maps.
+
+    Shape: MultiViewer's track outline (fastf1.mvapi), a dense, clean trace of one lap.
+    Circuits MultiViewer doesn't cover get a median of several OpenF1 laps instead.
+    Start line and sector lines: where cars actually were at the lap start and at their
+    sector 1 / sector 2 split times, over the REF_LAPS fastest clean laps (OpenF1)."""
     map_out, corners_out = [], []
     for track in tracks:
         for season in LAP_SEASONS:          # newest first; fall back if positions are missing
             try:
                 laps, sess = clean_laps(track, season)
+                if laps.empty:
+                    continue
+                ref = laps.sort_values("lap_time").drop_duplicates("driver").head(REF_LAPS)
+                locs = [lap_positions(sess, lap) for lap in ref.itertuples()]
             except Exception as exc:        # keep going; this track keeps its old outline
                 log.warning("map %s %s: %s", track, season, exc)
                 break
-            if laps.empty:
-                continue
-            fl = laps.loc[laps.lap_time.idxmin()]
-            start = pd.Timestamp(fl.date_start).tz_convert("UTC").tz_localize(None)
-            end = start + pd.Timedelta(seconds=fl.lap_time)
-            fmt = "%Y-%m-%dT%H:%M:%S.%f"
-            loc = pd.DataFrame(openf1("location", session_key=sess["session_key"],
-                                      driver_number=int(fl.driver_number),
-                                      **{"date>": start.strftime(fmt), "date<": end.strftime(fmt)}))
-            if len(loc) < 50:
+            good = [(lap, loc) for lap, loc in zip(ref.itertuples(), locs) if len(loc) > 50]
+            if len(good) < 2:
                 log.warning("map %s %s: no position data, trying an earlier season", track, season)
                 continue
-            loc["t"] = (pd.to_datetime(loc.date, format="ISO8601").dt.tz_convert("UTC").dt.tz_localize(None)
-                        - start).dt.total_seconds()
-            loc = loc.sort_values("t")
-            s1_end, s2_end = fl.s1, fl.s1 + fl.s2
-            sector = np.where(loc.t <= s1_end, 1, np.where(loc.t <= s2_end, 2, 3))
-            try:
-                ci = fastf1.mvapi.get_circuit_info(year=season, circuit_key=sess["circuit_key"])
-            except Exception as exc:  # MultiViewer has no info for this circuit/year
-                log.warning("circuit info %s %s: %s", track, season, exc)
-                ci = None
-            rot = ci.rotation if ci is not None else 0.0
-            xy = rotate(loc[["x", "y"]].to_numpy(dtype=float), rot)
+
+            mv = mv_circuit(season, sess["circuit_key"])
+            if mv is not None:
+                outline, source = np.c_[mv["x"], mv["y"]].astype(float), f"MultiViewer {mv['year']}"
+            else:
+                outline = averaged_outline([l for _, l in good], [lap.lap_time for lap, _ in good])
+                source = f"median of {len(good)} OpenF1 laps"
+            n = len(outline)
+
+            def nearest(pt):
+                return int(np.argmin(((outline - pt) ** 2).sum(axis=1)))
+
+            marks = {"start": [], "s1": [], "s2": []}
+            for lap, loc in good:
+                for name, t in (("start", 0.05), ("s1", lap.s1), ("s2", lap.s1 + lap.s2)):
+                    pt = position_at(loc, t)
+                    if pt is not None:
+                        marks[name].append(nearest(pt))
+            if not marks["s1"] or not marks["s2"]:
+                log.warning("map %s %s: couldn't place sector lines, trying an earlier season", track, season)
+                continue
+            # start line: the lap-start position; if that's too sparse, the outline's own first point
+            i0 = circular_median(marks["start"], n) if marks["start"] else 0
+            i1, i2 = circular_median(marks["s1"], n), circular_median(marks["s2"], n)
+            order = (np.arange(n) + i0) % n                     # re-start the outline at the start line
+            pos = (np.arange(n))                                # position along the lap after re-starting
+            b1, b2 = (i1 - i0) % n, (i2 - i0) % n
+            if not 0 < b1 < b2 < n:
+                log.warning("map %s %s: sector lines out of order (%d, %d of %d)", track, season, b1, b2, n)
+                continue
+            sector = np.where(pos < b1, 1, np.where(pos < b2, 2, 3))
+            rot = float(F1_ROTATION.get(track, mv["rotation"] if mv is not None else 0.0))
+            xy = rotate(outline[order], rot)
+            # spread of the per-lap sector marks along the outline, as a share of the lap
+            spread = max(np.ptp([(m - i + n // 2) % n - n // 2 for m in marks[k]]) if marks[k] else 0
+                         for k, i in (("s1", i1), ("s2", i2))) / n
             map_out.append(pd.DataFrame({"track": track, "season": season, "x": xy[:, 0], "y": xy[:, 1],
-                                         "t": loc.t.values, "sector": sector}))
-            if ci is not None:
-                cxy = rotate(ci.corners[["X", "Y"]].to_numpy(dtype=float), rot)
+                                         "sector": sector}))
+            if mv is not None:
+                cn = pd.DataFrame(mv["corners"])
+                cxy = rotate(np.c_[[c["trackPosition"]["x"] for c in mv["corners"]],
+                                   [c["trackPosition"]["y"] for c in mv["corners"]]], rot)
                 corners_out.append(pd.DataFrame({
                     "track": track,
-                    "number": ci.corners["Number"].astype(str) + ci.corners["Letter"].fillna(""),
+                    "number": cn["number"].astype(str) + cn.get("letter", pd.Series([""] * len(cn))).fillna(""),
                     "x": cxy[:, 0], "y": cxy[:, 1],
                 }))
-            log.info("map %s from %s fastest lap (%s, %d points)", track, season, fl.driver, len(loc))
+            log.info("map %s: %s outline (%d points), rotation %.0f, sectors from %s %d laps "
+                     "(spread %.1f%% of a lap)", track, source, n, rot, season, len(good), spread * 100)
             break
-    empty_map = pd.DataFrame(columns=["track", "season", "x", "y", "t", "sector"])
+    empty_map = pd.DataFrame(columns=["track", "season", "x", "y", "sector"])
     empty_cn = pd.DataFrame(columns=["track", "number", "x", "y"])
     return (pd.concat(map_out, ignore_index=True) if map_out else empty_map,
             pd.concat(corners_out, ignore_index=True) if corners_out else empty_cn)
