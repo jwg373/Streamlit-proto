@@ -354,6 +354,19 @@ col = {0: "lap_time", 1: "s1", 2: "s2", 3: "s3"}[sector]
 is_lap = sector == 0
 
 
+def label_spots(track_xy: np.ndarray, pts: np.ndarray, dist: float) -> np.ndarray:
+    """Spots for labels just off the track: from each point, step `dist` along the track's
+    normal, on whichever side is further from the rest of the circuit."""
+    out = []
+    for p in pts:
+        i = int(np.argmin(((track_xy - p) ** 2).sum(1)))
+        tangent = track_xy[(i + 3) % len(track_xy)] - track_xy[(i - 3) % len(track_xy)]
+        normal = np.array([-tangent[1], tangent[0]]) / (np.hypot(*tangent) or 1)
+        cands = [p + normal * dist, p - normal * dist]
+        out.append(max(cands, key=lambda c: np.sqrt(((track_xy - c) ** 2).sum(1)).min()))
+    return np.array(out).reshape(-1, 2)
+
+
 def track_figure(track: str, sector: int) -> go.Figure:
     tm = TRACK_MAP[TRACK_MAP.track == track]
     cn = CORNERS[CORNERS.track == track]
@@ -367,9 +380,9 @@ def track_figure(track: str, sector: int) -> go.Figure:
                              line=dict(color="rgba(137,135,129,.25)", width=16)))
     for s in (1, 2, 3):
         part = tm[tm.sector == s]
-        # include the first point of the next sector so the line has no gap
+        # include the first point of the next sector so the line has no gap (sector 3 closes the loop)
         nxt = tm[tm.sector == (s % 3) + 1].head(1)
-        part = pd.concat([part, nxt]) if s < 3 else part
+        part = pd.concat([part, nxt])
         on = sector in (0, s)
         st_times = laps[f"s{s}"]
         fig.add_trace(go.Scatter(
@@ -380,18 +393,29 @@ def track_figure(track: str, sector: int) -> go.Figure:
             hovertemplate=(f"<b>Sector {s}</b><br>Median: {fmt_time(st_times.median(), False)}"
                            f"<br>Fastest: {fmt_time(st_times.min(), False)}<br>Click to select<extra></extra>"),
         ))
+    xy = tm[["x", "y"]].to_numpy(float)
+    span = max(np.ptp(xy[:, 0]), np.ptp(xy[:, 1]))
     start = tm.iloc[0]
-    fig.add_trace(go.Scatter(x=[start.x], y=[start.y], mode="markers+text", text=["Start / finish"],
-                             textposition="middle left", hoverinfo="skip", showlegend=False,
+    fig.add_trace(go.Scatter(x=[start.x], y=[start.y], mode="markers", hoverinfo="skip", showlegend=False,
                              marker=dict(symbol="square", size=11, color=F1_RED)))
-    fig.add_trace(go.Scatter(x=cn.x, y=cn.y, mode="text", text=cn.number, hoverinfo="skip", showlegend=False,
-                             textfont=dict(size=9, color=MUTED)))
+    sx, sy = label_spots(xy, xy[:1], span * 0.03)[0]
+    side = "right" if sx < start.x else "left"          # text runs away from the track
+    fig.add_annotation(x=sx, y=sy, text="Start / finish", showarrow=False, xanchor=side,
+                       font=dict(size=11, color=F1_RED))
+    if not cn.empty:
+        spots = label_spots(xy, cn[["x", "y"]].to_numpy(float), span * 0.035)
+        fig.add_trace(go.Scatter(x=spots[:, 0], y=spots[:, 1], mode="text", text=cn.number, hoverinfo="skip",
+                                 showlegend=False, textfont=dict(size=10, color="#5f5d58")))
+    pad = span * 0.1
+    x_range = [min(xy[:, 0].min() - pad, sx - span * 0.3 if side == "right" else np.inf),
+               max(xy[:, 0].max() + pad, sx + span * 0.3 if side == "left" else -np.inf)]
+    y_range = [xy[:, 1].min() - pad, xy[:, 1].max() + pad]
     fig.update_layout(
         height=420, margin=dict(l=4, r=4, t=4, b=4), dragmode=False, clickmode="event+select",
         paper_bgcolor="rgba(0,0,0,0)", plot_bgcolor="rgba(0,0,0,0)",
         legend=dict(orientation="h", yanchor="bottom", y=0.0, x=0.0, itemclick=False, itemdoubleclick=False),
-        xaxis=dict(visible=False, fixedrange=True),
-        yaxis=dict(visible=False, fixedrange=True, scaleanchor="x", scaleratio=1),
+        xaxis=dict(visible=False, fixedrange=True, range=x_range),
+        yaxis=dict(visible=False, fixedrange=True, range=y_range, scaleanchor="x", scaleratio=1),
     )
     return fig
 
