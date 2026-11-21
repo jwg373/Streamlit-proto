@@ -28,10 +28,12 @@ BLUE, ORANGE, F1_RED = "#2a78d6", "#eb6834", "#e10600"
 SEQ_LO, SEQ_HI = (205, 226, 251), (13, 54, 107)
 SECTOR_COLORS = {1: "#2a78d6", 2: "#1baf7a", 3: "#6250d6"}
 ASPHALT, PAINT, MUTED = "#3b3b39", "#f4f4f0", "#898781"
+MEDALS = {1: ("#e3b62c", "Gold"), 2: ("#c4c7cc", "Silver"), 3: ("#c27c3e", "Bronze")}
 
 HELP = {
     "grid": "A map of the starting grid. Each slot is coloured by how drivers starting there "
-            "have done at this track (win %, podium % or average finish). Darker = better. "
+            "have done at this track (win %, podium % or average finish; pick one under the map). "
+            "Darker = better, and gold, silver and bronze rings mark the best three slots. "
             "Click a slot to see its details.",
     "segment": "The track is split into its three official timing sectors. Click a sector on the "
                "map (or use the buttons) to update the time distribution.",
@@ -230,19 +232,28 @@ nonce = st.session_state.nonce
 stats = grid_stats(track)
 seasons_grid = GRID.loc[GRID.track == track, "season"]
 
-c1, c2, c3 = st.columns([2.2, 1.6, 1.2], vertical_alignment="bottom")
+c1, c3 = st.columns([3.8, 1.2], vertical_alignment="bottom")
 with c1:
     st.markdown("### <span class='badge'>1</span>Grid Explorer", unsafe_allow_html=True, help=HELP["grid"])
-with c2:
-    st.selectbox("Metric", list(METRICS), key="metric", format_func=METRICS.get)
 with c3:
     st.button("Reset grid ↺", key="reset_grid", on_click=reset, args=("metric", "grid"),
               use_container_width=True)
-metric = st.session_state.metric
+metric = st.session_state.metric   # the selector itself sits under the grid map
+
+
+def medal_ranks(vals: pd.Series, metric: str) -> dict[int, int]:
+    """Grid slots that rank 1st-3rd on the metric (higher win/podium %, lower avg finish).
+    Ties share a medal and skip the next place (1, 2, 2 -> no bronze); 0 % never gets a medal."""
+    v = vals.dropna()
+    if metric != "finish":
+        v = v[v > 0]
+    rank = (v if metric == "finish" else -v).rank(method="min")
+    return {int(gp): int(r) for gp, r in rank.items() if r <= 3}
 
 
 def grid_figure(stats: pd.DataFrame, metric: str, selected: int) -> go.Figure:
     vals = stats[metric]
+    medals = medal_ranks(vals, metric)
     lo, hi = np.nanmin(vals), np.nanmax(vals)
     if metric == "finish":
         norm = lambda v: (hi - v) / (hi - lo) if hi > lo else 0.5  # noqa: E731  lower finish = darker
@@ -279,18 +290,24 @@ def grid_figure(stats: pd.DataFrame, metric: str, selected: int) -> go.Figure:
         shapes.append(dict(type="rect", x0=xc - slot_w / 2, x1=xc + slot_w / 2, y0=yc - slot_h / 2,
                            y1=yc + slot_h / 2, fillcolor=fill, layer="below",
                            line=dict(color=F1_RED if gp == selected else fill, width=4 if gp == selected else 0)))
+        if gp in medals:   # gold / silver / bronze ring just outside the slot (the red selection stays inside)
+            pad = 0.07
+            shapes.append(dict(type="rect", x0=xc - slot_w / 2 - pad, x1=xc + slot_w / 2 + pad,
+                               y0=yc - slot_h / 2 - pad, y1=yc + slot_h / 2 + pad, layer="below",
+                               fillcolor="rgba(0,0,0,0)", line=dict(color=MEDALS[medals[gp]][0], width=3.5)))
         dark = has and norm(v) > 0.45
         xs.append(xc); ys.append(yc)
         texts.append(f"<b>P{gp}</b><br>{fmt_metric(metric, v)}")
         colors_txt.append("#ffffff" if (dark or not has) else "#0b0b0b")
+        medal = f"<br>{MEDALS[medals[gp]][1]}: #{medals[gp]} for {METRICS[metric]}" if gp in medals else ""
         custom.append([gp, fmt_metric("win", stats.at[gp, "win"]), fmt_metric("podium", stats.at[gp, "podium"]),
-                       fmt_metric("finish", stats.at[gp, "finish"]), 0 if pd.isna(r) else int(r)])
+                       fmt_metric("finish", stats.at[gp, "finish"]), 0 if pd.isna(r) else int(r), medal])
     fig.add_trace(go.Scatter(
         x=xs, y=ys, mode="markers+text", text=texts, textfont=dict(color=colors_txt, size=12),
         marker=dict(size=46, symbol="square", color="rgba(0,0,0,0.01)"),
         customdata=custom, showlegend=False,
         hovertemplate="<b>P%{customdata[0]}</b><br>Win: %{customdata[1]}<br>Podium: %{customdata[2]}"
-                      "<br>Avg finish: %{customdata[3]}<br>Starts: %{customdata[4]}<extra></extra>",
+                      "<br>Avg finish: %{customdata[3]}<br>Starts: %{customdata[4]}%{customdata[5]}<extra></extra>",
     ))
     # pole label
     fig.add_annotation(x=front_x - slot_w / 2, y=1 + slot_h / 2 + 0.11, text="POLE", showarrow=False,
@@ -314,6 +331,15 @@ with g_left:
     st.plotly_chart(grid_figure(stats, metric, st.session_state.grid), key=f"gridmap_{nonce}",
                     on_select=on_grid_click, selection_mode="points", use_container_width=True,
                     config={"displayModeBar": False})
+    st.segmented_control("Colour the grid by", list(METRICS), key="metric", format_func=METRICS.get,
+                         required=True, width="stretch")
+    swatch = "display:inline-block;width:13px;height:13px;border:3px solid {};border-radius:2px;" \
+             "vertical-align:-2px;margin:0 3px 0 10px"
+    st.markdown(
+        f"<span style='color:{MUTED};font-size:0.9em'>"
+        + "".join(f"<span style='{swatch.format(c)}'></span>{name}" for c, name in MEDALS.values())
+        + f"&nbsp;&nbsp;= best three slots for {METRICS[metric]} (ties share a medal)</span>",
+        unsafe_allow_html=True)
 
 with g_right:
     gp = st.session_state.grid
