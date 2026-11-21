@@ -404,7 +404,7 @@ def write_merged(name: str, new: pd.DataFrame, replaced_tracks: set[str]) -> Non
     path = DATA / f"{name}.csv"
     old = pd.read_csv(path) if path.exists() else pd.DataFrame(columns=new.columns)
     old = old[old.track.isin(TRACKS) & ~old.track.isin(replaced_tracks)]
-    out = pd.concat([old, new.round(1)], ignore_index=True)
+    out = pd.concat([old, new.round(1)], ignore_index=True)[list(new.columns)]   # drop retired columns
     out["order"] = out.track.map(TRACKS.index)
     out.sort_values("order", kind="stable").drop(columns="order").to_csv(path, index=False)
 
