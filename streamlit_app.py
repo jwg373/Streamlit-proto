@@ -29,6 +29,9 @@ SEQ_LO, SEQ_HI = (205, 226, 251), (13, 54, 107)
 SECTOR_COLORS = {1: "#2a78d6", 2: "#1baf7a", 3: "#6250d6"}
 ASPHALT, PAINT, MUTED = "#3b3b39", "#f4f4f0", "#898781"
 MEDALS = {1: ("#e3b62c", "Gold"), 2: ("#c4c7cc", "Silver"), 3: ("#c27c3e", "Bronze")}
+# one colour per compared driver, in the order they were picked (none of them is the field's blue)
+DRIVER_COLORS = ["#eb6834", "#d6336c", "#2e9e5b", "#8e44ad", "#b8860b"]
+MAX_DRIVERS = len(DRIVER_COLORS)
 
 HELP = {
     "grid": "A map of the starting grid. Each slot is coloured by how drivers starting there "
@@ -38,7 +41,8 @@ HELP = {
     "segment": "The track is split into its three official timing sectors. Click a sector on the "
                "map (or use the buttons) to update the time distribution.",
     "dist": "Bars and the blue curve show every clean race lap for the selected season. "
-            "Pick a driver to overlay their own curve in orange; left of the field = faster.",
+            f"Pick up to {MAX_DRIVERS} drivers to overlay their own curves, each in its own colour; "
+            "left of the field = faster. Remove a driver with the × on their name.",
 }
 
 st.markdown(
@@ -140,15 +144,15 @@ def kde(values: np.ndarray, xs: np.ndarray, weights: np.ndarray | None = None) -
 
 
 # --------------------------------------------------------------------------- state
-DEFAULTS = {"track": "Monaco", "metric": "win", "grid": 1, "sector": 0, "driver": "", "season": None}
+DEFAULTS = {"track": "Monaco", "metric": "win", "grid": 1, "sector": 0, "drivers": [], "season": None}
 for k, v in DEFAULTS.items():
-    st.session_state.setdefault(k, v)
+    st.session_state.setdefault(k, list(v) if isinstance(v, list) else v)
 st.session_state.setdefault("nonce", 0)          # bump to clear chart click selections
 
 
 def reset(*keys: str) -> None:
     for k in keys or DEFAULTS:
-        st.session_state[k] = DEFAULTS[k]
+        st.session_state[k] = list(DEFAULTS[k]) if isinstance(DEFAULTS[k], list) else DEFAULTS[k]
     st.session_state.nonce += 1
 
 
@@ -181,7 +185,7 @@ def on_sector_change() -> None:
 
 def on_track_change() -> None:
     st.session_state.season = None
-    st.session_state.driver = ""
+    st.session_state.drivers = []
     st.session_state.grid = 1
     st.session_state.sector = 0
     st.session_state.nonce += 1
@@ -386,7 +390,7 @@ with s3c:
     st.segmented_control("Segment", list(SECTORS), key="sector", format_func=SECTORS.get,
                          selection_mode="single", on_change=on_sector_change)
 with s4c:
-    st.button("Reset segment ↺", key="reset_seg", on_click=reset, args=("sector", "driver"),
+    st.button("Reset segment ↺", key="reset_seg", on_click=reset, args=("sector", "drivers"),
               use_container_width=True)
 season, sector = st.session_state.season, st.session_state.sector or 0
 
@@ -465,9 +469,15 @@ def track_figure(track: str, sector: int) -> go.Figure:
 
 driver_opts = RACE_DRIVERS[(RACE_DRIVERS.track == track) & (RACE_DRIVERS.season == season)].sort_values(
     ["team", "driver_name"])
-labels = {"": "Driver Name (Team)"} | {r.driver: f"{r.driver_name} ({r.team})" for r in driver_opts.itertuples()}
-if st.session_state.driver not in labels:
-    st.session_state.driver = ""
+labels = {r.driver: f"{r.driver_name} ({r.team})" for r in driver_opts.itertuples()}
+# keep only drivers who raced in this season (the picker hasn't rendered yet, so this is allowed)
+st.session_state.drivers = [d for d in st.session_state.drivers if d in labels][:MAX_DRIVERS]
+drvs = st.session_state.drivers
+# each driver keeps their colour while selected, so removing one doesn't recolour the others
+kept = {d: c for d, c in st.session_state.get("drv_colors", {}).items() if d in drvs}
+free = [c for c in DRIVER_COLORS if c not in kept.values()]
+drv_color = {d: kept[d] if d in kept else free.pop(0) for d in drvs}
+st.session_state.drv_colors = drv_color
 
 m_left, m_right = st.columns(2)
 with m_left:
@@ -476,17 +486,19 @@ with m_left:
     st.plotly_chart(track_figure(track, sector), key=f"trackmap_{track}_{nonce}", on_select=on_map_click,
                     selection_mode="points", use_container_width=True, config={"displayModeBar": False})
 
-    drv = st.session_state.driver
     rl = race_laps(track, season)
-    dtimes = rl.loc[rl.driver == drv, col].to_numpy() if drv else np.array([])
+    dtimes = {d: rl.loc[rl.driver == d, col].to_numpy() for d in drvs}
+    dtimes = {d: t for d, t in dtimes.items() if len(t)}
     field_median = field_stat(track, season, col, "median")
+    gaps = {d: float(np.median(t) - field_median) for d, t in dtimes.items()}
     k1, k2, k3 = st.columns(3)
     k1.metric(f"{SECTORS[sector]} median", fmt_time(field_median, is_lap))
     k2.metric("Fastest clean lap" if is_lap else "Fastest sector", fmt_time(field_stat(track, season, col, "fastest"), is_lap))
-    if len(dtimes):
-        gap = np.median(dtimes) - field_median
-        k3.metric(f"{drv} vs field (median)", f"{gap:+.3f}s",
-                  delta=f"{abs(gap):.3f}s {'faster' if gap < 0 else 'slower'}",
+    if gaps:
+        best = min(gaps, key=gaps.get)
+        gap = gaps[best]
+        k3.metric(f"{best} vs field (median)" if len(gaps) == 1 else f"Quickest of {len(gaps)}: {best}",
+                  f"{gap:+.3f}s", delta=f"{abs(gap):.3f}s {'faster' if gap < 0 else 'slower'}",
                   delta_color="normal" if gap < 0 else "inverse")
     else:
         k3.metric("Driver vs field", "–")
@@ -496,8 +508,8 @@ with m_right:
     fig = go.Figure()
     if len(ft):
         lo, hi = weighted_percentile(ft, fw, [0.5, 99.5])
-        if len(dtimes):
-            dlo, dhi = np.percentile(dtimes, [0.5, 99.5])
+        for t in dtimes.values():
+            dlo, dhi = np.percentile(t, [0.5, 99.5])
             lo, hi = min(lo, dlo), max(hi, dhi)
         pad = (hi - lo) * 0.05
         lo, hi = lo - pad, hi + pad
@@ -517,11 +529,13 @@ with m_right:
         fig.add_trace(go.Scatter(x=xs, y=overall, mode="lines", name="Overall (all drivers)",
                                  line=dict(color=BLUE, width=2.5), hoverinfo="skip"))
         y_top = max(pct.max(), overall.max())
-        if len(dtimes):
-            driver_curve = kde(dtimes, xs) * width * 100
-            fig.add_trace(go.Scatter(x=xs, y=driver_curve, mode="lines", name=labels[drv],
-                                     line=dict(color=ORANGE, width=2.5), hoverinfo="skip"))
-            fig.add_vline(x=float(np.median(dtimes)), line=dict(color=ORANGE, dash="dot", width=1.5))
+        for d, t in dtimes.items():
+            driver_curve = kde(t, xs) * width * 100
+            fig.add_trace(go.Scatter(x=xs, y=driver_curve, mode="lines", name=labels[d],
+                                     line=dict(color=drv_color[d], width=2.5),
+                                     hovertemplate=f"<b>{labels[d]}</b><br>median {fmt_time(float(np.median(t)), is_lap)}"
+                                                   f" ({gaps[d]:+.3f}s vs field)<extra></extra>"))
+            fig.add_vline(x=float(np.median(t)), line=dict(color=drv_color[d], dash="dot", width=1.5))
             y_top = max(y_top, driver_curve.max())
         # size the axis to the tallest of the bars and both curves so no curve is clipped
         fig.update_yaxes(range=[0, y_top * 1.08])
@@ -542,11 +556,26 @@ with m_right:
                       legend=dict(orientation="h", yanchor="bottom", y=1.0, x=0),
                       paper_bgcolor="rgba(0,0,0,0)", plot_bgcolor="rgba(0,0,0,0)")
     st.plotly_chart(fig, key="dist", use_container_width=True, config={"displayModeBar": False})
+    # colour each picked driver's chip to match their curve (chip i is the i-th driver in the list)
+    st.markdown("<style>" + "".join(
+        f".st-key-drivers [data-tag-index='{i}'] {{ background-color: {drv_color[d]} !important; "
+        "color: #fff !important; }" for i, d in enumerate(drvs))
+        + ".st-key-drivers [data-tag-index] * { color: #fff !important; fill: #fff !important; }</style>",
+        unsafe_allow_html=True)
     d1, d2 = st.columns([3, 1], vertical_alignment="bottom")
     with d1:
-        st.selectbox("Driver", list(labels), key="driver", format_func=labels.get)
+        st.multiselect(f"Compare drivers (up to {MAX_DRIVERS})", list(labels), key="drivers",
+                       format_func=labels.get, max_selections=MAX_DRIVERS, select_all=False,
+                       placeholder="Driver Name (Team)", wrap=True)
     with d2:
-        st.button("Clear", on_click=reset, args=("driver",), use_container_width=True)
+        st.button("Clear all", on_click=reset, args=("drivers",), use_container_width=True, disabled=not drvs)
+    if gaps:
+        dot = "display:inline-block;width:10px;height:10px;border-radius:50%;margin-right:5px;background:{}"
+        st.markdown("  \n".join(
+            f"<span style='{dot.format(drv_color[d])}'></span>**{labels[d]}** · median "
+            f"{fmt_time(float(np.median(dtimes[d])), is_lap)} · "
+            f"{abs(g):.3f}s {'faster' if g < 0 else 'slower'} than the field · {len(dtimes[d])} laps"
+            for d, g in sorted(gaps.items(), key=lambda kv: kv[1])), unsafe_allow_html=True)
     st.caption(f"{int(fw.sum()):,} clean race laps from {len(driver_opts)} drivers (lap 1, pit in/out laps, "
                "laps under a safety car, VSC or yellow flag, and laps slower than 107% of the race's fastest lap "
                "are removed).")
