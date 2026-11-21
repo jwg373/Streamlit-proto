@@ -29,8 +29,8 @@ SEQ_LO, SEQ_HI = (205, 226, 251), (13, 54, 107)
 SECTOR_COLORS = {1: "#2a78d6", 2: "#1baf7a", 3: "#6250d6"}
 ASPHALT, PAINT, MUTED = "#3b3b39", "#f4f4f0", "#898781"
 MEDALS = {1: ("#e3b62c", "Gold"), 2: ("#c4c7cc", "Silver"), 3: ("#c27c3e", "Bronze")}
-# one colour per compared driver, in the order they were picked (none of them is the field's blue)
-DRIVER_COLORS = ["#eb6834", "#d6336c", "#2e9e5b", "#8e44ad", "#b8860b"]
+# one colour per compared driver (neither is the field's blue); more than two curves gets too busy
+DRIVER_COLORS = ["#eb6834", "#d6336c"]
 MAX_DRIVERS = len(DRIVER_COLORS)
 
 HELP = {
@@ -294,11 +294,11 @@ def grid_figure(stats: pd.DataFrame, metric: str, selected: int) -> go.Figure:
         shapes.append(dict(type="rect", x0=xc - slot_w / 2, x1=xc + slot_w / 2, y0=yc - slot_h / 2,
                            y1=yc + slot_h / 2, fillcolor=fill, layer="below",
                            line=dict(color=F1_RED if gp == selected else fill, width=4 if gp == selected else 0)))
-        if gp in medals:   # gold / silver / bronze ring just outside the slot (the red selection stays inside)
-            pad = 0.07
-            shapes.append(dict(type="rect", x0=xc - slot_w / 2 - pad, x1=xc + slot_w / 2 + pad,
-                               y0=yc - slot_h / 2 - pad, y1=yc + slot_h / 2 + pad, layer="below",
-                               fillcolor="rgba(0,0,0,0)", line=dict(color=MEDALS[medals[gp]][0], width=3.5)))
+        if gp in medals:   # gold / silver / bronze border just inside the slot, within the red selection edge
+            inset = 0.06
+            shapes.append(dict(type="rect", x0=xc - slot_w / 2 + inset, x1=xc + slot_w / 2 - inset,
+                               y0=yc - slot_h / 2 + inset, y1=yc + slot_h / 2 - inset, layer="below",
+                               fillcolor="rgba(0,0,0,0)", line=dict(color=MEDALS[medals[gp]][0], width=3)))
         dark = has and norm(v) > 0.45
         xs.append(xc); ys.append(yc)
         texts.append(f"<b>P{gp}</b><br>{fmt_metric(metric, v)}")
