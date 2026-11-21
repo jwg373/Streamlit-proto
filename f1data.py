@@ -110,8 +110,21 @@ def pick_clean(session):
     return laps.pick_quicklaps(QUICK)
 
 
+# tyre compounds, softest first. 2018 used Pirelli's absolute names (Hypersoft ... Superhard); from 2019
+# each race's three dry compounds are just Soft / Medium / Hard (relative to what Pirelli brought).
+COMPOUNDS = ["Hypersoft", "Ultrasoft", "Supersoft", "Soft", "Medium", "Hard", "Superhard",
+             "Intermediate", "Wet", "Unknown"]
+
+
+def compound_name(raw) -> str:
+    """FastF1's compound code (e.g. 'SOFT', 'ULTRASOFT', 'TEST_UNKNOWN', NaN) as one of COMPOUNDS."""
+    name = str(raw).strip().title() if isinstance(raw, str) else ""
+    return name if name in COMPOUNDS else "Unknown"
+
+
 def clean_laps(session) -> pd.DataFrame:
-    """pick_clean() as a plain table: driver, driver_name, team, lap, lap_time, s1, s2, s3 (seconds)."""
+    """pick_clean() as a plain table: driver, driver_name, team, lap, lap_time, s1, s2, s3 (seconds),
+    compound (see COMPOUNDS) and tyre_life (laps on that set of tyres, counting this one)."""
     laps = pick_clean(session)
     res = session.results.set_index("Abbreviation") if len(session.results) else pd.DataFrame()
 
@@ -124,5 +137,7 @@ def clean_laps(session) -> pd.DataFrame:
         "team": [field(a, "TeamName") for a in laps.Driver],
         "lap": laps.LapNumber.astype(int).values,
         **{m: laps[c].dt.total_seconds().round(3).values for m, c in METRICS.items()},
+        "compound": [compound_name(c) for c in laps.Compound],
+        "tyre_life": pd.to_numeric(laps.TyreLife, errors="coerce").round().astype("Int64").values,
     })
     return out.reset_index(drop=True)

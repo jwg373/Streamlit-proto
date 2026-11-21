@@ -6,7 +6,8 @@ Albert Park to Yas Marina):
 1. **Grid Explorer**: a map of the starting grid (P1–P20) for the selected track, coloured by
    win %, podium % or average finish from each slot. Click a slot for its details.
 2. **Segment Explorer**: the real track outline split into its three timing sectors. Click a
-   sector to see the lap / sector time distribution, and pick a driver to compare against the field.
+   sector to see the lap / sector time distribution, filter it by tyre compound, and pick up to two
+   drivers to compare against the field.
 
 Live app: https://blank-app-t8weoxwxcf.streamlit.app/
 
@@ -18,7 +19,7 @@ The app never calls FastF1 itself, so it needs no credentials and loads instantl
 | Data | FastF1 source | File |
 |---|---|---|
 | Grid slot + finish for every driver at each circuit (2000–2026) | Jolpica-F1 (Ergast) interface | `data/grid_results.csv` |
-| Every clean race lap with sector times (2018–2026) | F1 live timing | `data/laps.csv.gz`, plus `data/race_drivers.csv` for names and teams |
+| Every clean race lap with sector times, tyre compound and tyre age (2018–2026) | F1 live timing | `data/laps.csv.gz`, plus `data/race_drivers.csv` for names and teams |
 | Track outline split into timing sectors | MultiViewer outline + car positions at the sector split times, oriented like formula1.com's circuit maps | `data/track_map.csv`, `data/corners.csv` |
 
 The track list (app name, Jolpica circuit id) lives in `TRACK_INFO` in `f1data.py`.
