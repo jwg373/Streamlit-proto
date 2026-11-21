@@ -24,7 +24,8 @@ Outputs
 -------
 data/grid_results.csv  one row per driver per race: race date, grid slot and finish
 data/laps.csv.gz       every clean race lap, 2018 onward: track, season, driver, lap,
-                       lap / sector 1-3 times (s). The app's field and driver distributions
+                       lap / sector 1-3 times (s), tyre compound and tyre life (laps on
+                       that set). The app's field and driver distributions
 data/race_drivers.csv  who set clean laps in each race: name, team (fills the driver picker)
 data/track_map.csv     track outline (x, y), tagged by timing sector
 data/corners.csv       corner numbers and positions for map labels
@@ -61,7 +62,7 @@ CACHE = ROOT / ".fastf1_cache"
 SECRETS = ROOT / ".streamlit" / "secrets.toml"
 
 FIRST_SEASON = 2000                       # race results history for the grid explorer
-LAP_COLUMNS = ["track", "season", "driver", "lap", "lap_time", "s1", "s2", "s3"]
+LAP_COLUMNS = ["track", "season", "driver", "lap", "lap_time", "s1", "s2", "s3", "compound", "tyre_life"]
 RACE_KEY = ["track", "season"]
 
 log = logging.getLogger("build_data")

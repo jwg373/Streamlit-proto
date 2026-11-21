@@ -14,7 +14,7 @@ import pandas as pd
 import plotly.graph_objects as go
 import streamlit as st
 
-from f1data import TRACK_LABEL, TRACKS
+from f1data import COMPOUNDS, TRACK_LABEL, TRACKS
 
 st.set_page_config(page_title="F1 Circuit Explorer", page_icon="🏁", layout="wide")
 
@@ -32,6 +32,11 @@ MEDALS = {1: ("#e3b62c", "Gold"), 2: ("#c4c7cc", "Silver"), 3: ("#c27c3e", "Bron
 # one colour per compared driver (neither is the field's blue); more than two curves gets too busy
 DRIVER_COLORS = ["#eb6834", "#d6336c"]
 MAX_DRIVERS = len(DRIVER_COLORS)
+# Pirelli's sidewall colours. 2018 used its own seven-compound scheme, so Soft and Medium differ by era.
+TYRE_DOT = {"Soft": "🔴", "Medium": "🟡", "Hard": "⚪", "Intermediate": "🟢", "Wet": "🔵", "Unknown": "◌"}
+TYRE_DOT_2018 = TYRE_DOT | {"Hypersoft": "🩷", "Ultrasoft": "🟣", "Supersoft": "🔴", "Soft": "🟡",
+                            "Medium": "⚪", "Hard": "🔵", "Superhard": "🟠"}
+MIN_CURVE_LAPS = 15      # fewer field laps than this on a tyre: bars only, no smoothed curve
 
 HELP = {
     "grid": "A map of the starting grid. Each slot is coloured by how drivers starting there "
@@ -42,7 +47,9 @@ HELP = {
                "map (or use the buttons) to update the time distribution.",
     "dist": "Bars and the blue curve show every clean race lap for the selected season. "
             f"Pick up to {MAX_DRIVERS} drivers to overlay their own curves, each in its own colour; "
-            "left of the field = faster. Remove a driver with the × on their name.",
+            "left of the field = faster. Remove a driver with the × on their name. The tyre buttons keep "
+            "only laps on that compound (for the field and the drivers). Harder tyres are often run later in "
+            "the race on less fuel, so they can look quicker than softer ones.",
 }
 
 st.markdown(
@@ -76,14 +83,21 @@ def race_laps(track: str, season: int) -> pd.DataFrame:
     return LAPS[(LAPS.track == track) & (LAPS.season == season)].reset_index(drop=True)
 
 
-def field_bins(track: str, season: int, metric: str) -> tuple[np.ndarray, np.ndarray]:
+@st.cache_data
+def segment_laps(track: str, season: int, tyre: str = "All") -> pd.DataFrame:
+    """The race's clean laps, optionally only those on one tyre compound."""
+    laps = race_laps(track, season)
+    return laps if tyre == "All" else laps[laps.compound == tyre].reset_index(drop=True)
+
+
+def field_bins(track: str, season: int, metric: str, tyre: str = "All") -> tuple[np.ndarray, np.ndarray]:
     """The field's clean laps for one race as (time, weight); every lap counts once."""
-    t = race_laps(track, season)[metric].to_numpy(float)
+    t = segment_laps(track, season, tyre)[metric].to_numpy(float)
     return t, np.ones_like(t)
 
 
-def field_stat(track: str, season: int, metric: str, stat: str) -> float:
-    t = race_laps(track, season)[metric]
+def field_stat(track: str, season: int, metric: str, stat: str, tyre: str = "All") -> float:
+    t = segment_laps(track, season, tyre)[metric]
     if t.empty:
         return np.nan
     return float(t.median() if stat == "median" else t.min())
@@ -144,7 +158,8 @@ def kde(values: np.ndarray, xs: np.ndarray, weights: np.ndarray | None = None) -
 
 
 # --------------------------------------------------------------------------- state
-DEFAULTS = {"track": "Monaco", "metric": "win", "grid": 1, "sector": 0, "drivers": [], "season": None}
+DEFAULTS = {"track": "Monaco", "metric": "win", "grid": 1, "sector": 0, "drivers": [], "season": None,
+            "tyre": "All"}
 for k, v in DEFAULTS.items():
     st.session_state.setdefault(k, list(v) if isinstance(v, list) else v)
 st.session_state.setdefault("nonce", 0)          # bump to clear chart click selections
@@ -186,6 +201,7 @@ def on_sector_change() -> None:
 def on_track_change() -> None:
     st.session_state.season = None
     st.session_state.drivers = []
+    st.session_state.tyre = "All"
     st.session_state.grid = 1
     st.session_state.sector = 0
     st.session_state.nonce += 1
@@ -390,13 +406,21 @@ with s3c:
     st.segmented_control("Segment", list(SECTORS), key="sector", format_func=SECTORS.get,
                          selection_mode="single", on_change=on_sector_change)
 with s4c:
-    st.button("Reset segment ↺", key="reset_seg", on_click=reset, args=("sector", "drivers"),
+    st.button("Reset segment ↺", key="reset_seg", on_click=reset, args=("sector", "drivers", "tyre"),
               use_container_width=True)
 season, sector = st.session_state.season, st.session_state.sector or 0
 
 col = {0: "lap_time", 1: "s1", 2: "s2", 3: "s3"}[sector]
 is_lap = sector == 0
-ft, fw = field_bins(track, season, col)          # the field: bin times + lap counts
+# tyre filter options: the compounds used in this race, softest first, with lap counts
+race_all = race_laps(track, season)
+tyre_counts = race_all.compound.value_counts()
+tyre_opts = ["All"] + [c for c in COMPOUNDS if c in tyre_counts.index]
+dots = TYRE_DOT_2018 if season == 2018 else TYRE_DOT
+if st.session_state.tyre not in tyre_opts:      # e.g. switched to a race without that compound
+    st.session_state.tyre = "All"
+tyre = st.session_state.tyre
+ft, fw = field_bins(track, season, col, tyre)    # the field (on the selected tyre): times + weights
 if not len(ft):
     st.info(f"No lap timing available for {track} {season} yet.")
 
@@ -436,8 +460,8 @@ def track_figure(track: str, sector: int) -> go.Figure:
             line=dict(color=SECTOR_COLORS[s] if on else MUTED, width=9 if sector == s else 5),
             marker=dict(size=10, color="rgba(0,0,0,0.01)"), opacity=1 if on else 0.45,
             customdata=np.full(len(part), s),
-            hovertemplate=(f"<b>Sector {s}</b><br>Median: {fmt_time(field_stat(track, season, f's{s}', 'median'), False)}"
-                           f"<br>Fastest: {fmt_time(field_stat(track, season, f's{s}', 'fastest'), False)}"
+            hovertemplate=(f"<b>Sector {s}</b><br>Median: {fmt_time(field_stat(track, season, f's{s}', 'median', tyre), False)}"
+                           f"<br>Fastest: {fmt_time(field_stat(track, season, f's{s}', 'fastest', tyre), False)}"
                            "<br>Click to select<extra></extra>"),
         ))
     xy = tm[["x", "y"]].to_numpy(float)
@@ -486,14 +510,14 @@ with m_left:
     st.plotly_chart(track_figure(track, sector), key=f"trackmap_{track}_{nonce}", on_select=on_map_click,
                     selection_mode="points", use_container_width=True, config={"displayModeBar": False})
 
-    rl = race_laps(track, season)
+    rl = segment_laps(track, season, tyre)
     dtimes = {d: rl.loc[rl.driver == d, col].to_numpy() for d in drvs}
     dtimes = {d: t for d, t in dtimes.items() if len(t)}
-    field_median = field_stat(track, season, col, "median")
+    field_median = field_stat(track, season, col, "median", tyre)
     gaps = {d: float(np.median(t) - field_median) for d, t in dtimes.items()}
     k1, k2, k3 = st.columns(3)
     k1.metric(f"{SECTORS[sector]} median", fmt_time(field_median, is_lap))
-    k2.metric("Fastest clean lap" if is_lap else "Fastest sector", fmt_time(field_stat(track, season, col, "fastest"), is_lap))
+    k2.metric("Fastest clean lap" if is_lap else "Fastest sector", fmt_time(field_stat(track, season, col, "fastest", tyre), is_lap))
     if gaps:
         best = min(gaps, key=gaps.get)
         gap = gaps[best]
@@ -504,7 +528,12 @@ with m_left:
         k3.metric("Driver vs field", "–")
 
 with m_right:
-    st.markdown(f"**Time distribution · {track} {season} · {SECTORS[sector]}**", help=HELP["dist"])
+    tyre_title = "" if tyre == "All" else f" · {dots.get(tyre, '')} {tyre} tyres"
+    st.markdown(f"**Time distribution · {track} {season} · {SECTORS[sector]}{tyre_title}**", help=HELP["dist"])
+    st.segmented_control(
+        "Tyre", tyre_opts, key="tyre", required=True, width="stretch",
+        format_func=lambda c: "All" if c == "All" else f"{dots.get(c, '')} {'Inter' if c == 'Intermediate' else c}")
+    st.caption("Clean laps per tyre: " + " · ".join(f"{c} {tyre_counts[c]:,}" for c in tyre_opts[1:]))
     fig = go.Figure()
     if len(ft):
         lo, hi = weighted_percentile(ft, fw, [0.5, 99.5])
@@ -525,17 +554,21 @@ with m_right:
                              hovertemplate="%{customdata[1]} – %{customdata[2]}<br>%{customdata[0]} laps "
                                            "(%{y:.1f}%)<extra></extra>", showlegend=False))
         xs = np.linspace(lo, hi, 300)
-        overall = kde(ft, xs, fw) * width * 100
-        fig.add_trace(go.Scatter(x=xs, y=overall, mode="lines", name="Overall (all drivers)",
-                                 line=dict(color=BLUE, width=2.5), hoverinfo="skip"))
-        y_top = max(pct.max(), overall.max())
+        y_top = pct.max()
+        if len(ft) >= MIN_CURVE_LAPS:       # too few laps make a misleading smooth curve
+            overall = kde(ft, xs, fw) * width * 100
+            fig.add_trace(go.Scatter(x=xs, y=overall, mode="lines", name="Overall (all drivers)",
+                                     line=dict(color=BLUE, width=2.5), hoverinfo="skip"))
+            y_top = max(y_top, overall.max())
         for d, t in dtimes.items():
+            fig.add_vline(x=float(np.median(t)), line=dict(color=drv_color[d], dash="dot", width=1.5))
+            if len(t) < 3:                   # median line only
+                continue
             driver_curve = kde(t, xs) * width * 100
             fig.add_trace(go.Scatter(x=xs, y=driver_curve, mode="lines", name=labels[d],
                                      line=dict(color=drv_color[d], width=2.5),
                                      hovertemplate=f"<b>{labels[d]}</b><br>median {fmt_time(float(np.median(t)), is_lap)}"
                                                    f" ({gaps[d]:+.3f}s vs field)<extra></extra>"))
-            fig.add_vline(x=float(np.median(t)), line=dict(color=drv_color[d], dash="dot", width=1.5))
             y_top = max(y_top, driver_curve.max())
         # size the axis to the tallest of the bars and both curves so no curve is clipped
         fig.update_yaxes(range=[0, y_top * 1.08])
@@ -556,6 +589,11 @@ with m_right:
                       legend=dict(orientation="h", yanchor="bottom", y=1.0, x=0),
                       paper_bgcolor="rgba(0,0,0,0)", plot_bgcolor="rgba(0,0,0,0)")
     st.plotly_chart(fig, key="dist", use_container_width=True, config={"displayModeBar": False})
+    if 0 < len(ft) < MIN_CURVE_LAPS:
+        st.caption(f"Only {len(ft)} clean laps on {tyre} tyres in this race: bars only, no smoothed curve.")
+    short = [labels[d] for d, t in dtimes.items() if len(t) < 3]
+    if short:
+        st.caption(f"Fewer than 3 laps for {', '.join(short)} on this selection: median line only.")
     # colour each picked driver's chip to match their curve (chip i is the i-th driver in the list)
     st.markdown("<style>" + "".join(
         f".st-key-drivers [data-tag-index='{i}'] {{ background-color: {drv_color[d]} !important; "
@@ -569,6 +607,9 @@ with m_right:
                        placeholder="Driver Name (Team)", wrap=True)
     with d2:
         st.button("Clear all", on_click=reset, args=("drivers",), use_container_width=True, disabled=not drvs)
+    missing = [labels[d] for d in drvs if d not in dtimes]
+    if missing:
+        st.caption(f"No clean laps{'' if tyre == 'All' else f' on {tyre} tyres'} for {', '.join(missing)}.")
     if gaps:
         dot = "display:inline-block;width:10px;height:10px;border-radius:50%;margin-right:5px;background:{}"
         st.markdown("  \n".join(
@@ -576,7 +617,9 @@ with m_right:
             f"{fmt_time(float(np.median(dtimes[d])), is_lap)} · "
             f"{abs(g):.3f}s {'faster' if g < 0 else 'slower'} than the field · {len(dtimes[d])} laps"
             for d, g in sorted(gaps.items(), key=lambda kv: kv[1])), unsafe_allow_html=True)
-    st.caption(f"{int(fw.sum()):,} clean race laps from {len(driver_opts)} drivers (lap 1, pit in/out laps, "
+    on_tyre = "" if tyre == "All" else f" on {tyre} tyres"
+    st.caption(f"{int(fw.sum()):,} clean race laps{on_tyre} from {segment_laps(track, season, tyre).driver.nunique()} "
+               "drivers (lap 1, pit in/out laps, "
                "laps under a safety car, VSC or yellow flag, and laps slower than 107% of the race's fastest lap "
                "are removed).")
 
