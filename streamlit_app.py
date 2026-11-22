@@ -299,6 +299,7 @@ def grid_figure(stats: pd.DataFrame, metric: str, selected: int) -> go.Figure:
     shapes.append(dict(type="line", x0=-cols, x1=front_x + 0.2, y0=0.5, y1=0.5, layer="below",
                        line=dict(color="rgba(244,244,240,.35)", width=1.5, dash="dash")))
     xs, ys, texts, colors_txt, custom = [], [], [], [], []
+    bx, by, btext, bcolor, bslot = [], [], [], [], []      # +/- badges
     for gp in range(1, GRID_SLOTS + 1):
         col, even = (gp - 1) // 2, gp % 2 == 0
         xc = front_x - col - (0.5 if even else 0) - slot_w / 2
@@ -320,14 +321,20 @@ def grid_figure(stats: pd.DataFrame, metric: str, selected: int) -> go.Figure:
         texts.append(f"<b>P{gp}</b><br>{fmt_metric(metric, v)}")
         colors_txt.append(txt_color)
         shift = shifts.get(gp, 0)
-        if shift:   # places gained / lost when sorted on the metric, small in the slot's bottom-right corner
-            fig.add_annotation(x=xc + slot_w / 2 - 0.04, y=yc - slot_h / 2 + 0.03, xanchor="right",
-                               yanchor="bottom", showarrow=False, text=f"{shift:+d}".replace("-", "−"),
-                               font=dict(size=9, color=txt_color))
+        if shift:   # places gained / lost when sorted on the metric: a small badge in the bottom-right corner
+            bx.append(xc + slot_w / 2 - 0.13); by.append(yc - slot_h / 2 + 0.14)
+            btext.append(f"{shift:+d}".replace("-", "−")); bcolor.append(GAIN if shift > 0 else LOSS)
+            bslot.append([gp])
         place = (f"<br>Sorted by {METRICS[metric]}: #{places[gp]}"
                  + (f" ({shift:+d})".replace("-", "−") if shift else "")) if gp in places else ""
         custom.append([gp, fmt_metric("win", stats.at[gp, "win"]), fmt_metric("podium", stats.at[gp, "podium"]),
                        fmt_metric("finish", stats.at[gp, "finish"]), 0 if pd.isna(r) else int(r), place])
+    # badges carry their slot number, so clicking a badge selects its slot (no tooltip of their own)
+    fig.add_trace(go.Scatter(
+        x=bx, y=by, mode="markers+text", text=btext, customdata=bslot, hoverinfo="none", showlegend=False,
+        marker=dict(size=17, symbol="circle", color=bcolor, line=dict(color="#ffffff", width=1)),
+        textfont=dict(color="#ffffff", size=9),
+    ))
     fig.add_trace(go.Scatter(
         x=xs, y=ys, mode="markers+text", text=texts, textfont=dict(color=colors_txt, size=12),
         marker=dict(size=46, symbol="square", color="rgba(0,0,0,0.01)"),
@@ -360,7 +367,8 @@ with g_left:
     st.segmented_control("Colour the grid by", list(METRICS), key="metric", format_func=METRICS.get,
                          required=True, width="stretch")
     st.markdown(
-        f"<span style='color:{MUTED};font-size:0.9em'>Corner +/− = places a slot moves up or down when the "
+        f"<span style='color:{MUTED};font-size:0.9em'>Corner <span style='color:{GAIN}'>●</span>+ / "
+        f"<span style='color:{LOSS}'>●</span>− = places a slot moves up or down when the "
         f"grid is sorted by {METRICS[metric]} (ties keep grid order; blank = same place)</span>",
         unsafe_allow_html=True)
 
