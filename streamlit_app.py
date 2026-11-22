@@ -28,20 +28,17 @@ BLUE, ORANGE, F1_RED = "#2a78d6", "#eb6834", "#e10600"
 SEQ_LO, SEQ_HI = (205, 226, 251), (13, 54, 107)
 SECTOR_COLORS = {1: "#2a78d6", 2: "#1baf7a", 3: "#6250d6"}
 ASPHALT, PAINT, MUTED = "#3b3b39", "#f4f4f0", "#898781"
-MEDALS = {1: ("#e3b62c", "Gold"), 2: ("#c4c7cc", "Silver"), 3: ("#c27c3e", "Bronze")}
+GAIN, LOSS = "#1a9e5c", "#d93a2b"   # faster / slower than the field
 # one colour per compared driver (neither is the field's blue); more than two curves gets too busy
 DRIVER_COLORS = ["#eb6834", "#d6336c"]
 MAX_DRIVERS = len(DRIVER_COLORS)
-# Pirelli's sidewall colours. 2018 used its own seven-compound scheme, so Soft and Medium differ by era.
-TYRE_DOT = {"Soft": "🔴", "Medium": "🟡", "Hard": "⚪", "Intermediate": "🟢", "Wet": "🔵", "Unknown": "◌"}
-TYRE_DOT_2018 = TYRE_DOT | {"Hypersoft": "🩷", "Ultrasoft": "🟣", "Supersoft": "🔴", "Soft": "🟡",
-                            "Medium": "⚪", "Hard": "🔵", "Superhard": "🟠"}
 MIN_CURVE_LAPS = 15      # fewer field laps than this on a tyre: bars only, no smoothed curve
 
 HELP = {
     "grid": "A map of the starting grid. Each slot is coloured by how drivers starting there "
             "have done at this track (win %, podium % or average finish; pick one under the map). "
-            "Darker = better, and gold, silver and bronze rings mark the best three slots. "
+            "Darker = better. The small +/− in each slot's corner is how many places the slot moves "
+            "when the grid is sorted by that metric (ties keep grid order; blank = no change). "
             "Click a slot to see its details.",
     "segment": "The track is split into its three official timing sectors. Click a sector on the "
                "map (or use the buttons) to update the time distribution.",
@@ -60,6 +57,8 @@ st.markdown(
       .rule {{ border-top: 3px solid {F1_RED}; margin: 0.2rem 0 0.6rem; }}
       .badge {{ background:{F1_RED}; color:#fff; border-radius:4px; padding:0 7px; margin-right:6px; font-size:0.85em; }}
       div[data-testid="stMetricValue"] {{ font-size: 1.6rem; }}
+      .st-key-gap_faster div[data-testid="stMetricValue"] {{ color: {GAIN}; font-size: 1.35rem; }}
+      .st-key-gap_slower div[data-testid="stMetricValue"] {{ color: {LOSS}; font-size: 1.35rem; }}
     </style>
     """,
     unsafe_allow_html=True,
@@ -261,19 +260,24 @@ with c3:
 metric = st.session_state.metric   # the selector itself sits under the grid map
 
 
-def medal_ranks(vals: pd.Series, metric: str) -> dict[int, int]:
-    """Grid slots that rank 1st-3rd on the metric (higher win/podium %, lower avg finish).
-    Ties share a medal and skip the next place (1, 2, 2 -> no bronze); 0 % never gets a medal."""
+def metric_places(vals: pd.Series, metric: str) -> dict[int, int]:
+    """Each grid slot's place when the slots with data are sorted best first on the metric (higher
+    win/podium %, lower avg finish). Ties go to the higher grid slot, so tied slots keep grid order."""
     v = vals.dropna()
-    if metric != "finish":
-        v = v[v > 0]
-    rank = (v if metric == "finish" else -v).rank(method="min")
-    return {int(gp): int(r) for gp, r in rank.items() if r <= 3}
+    order = sorted(v.index, key=lambda gp: (v[gp] if metric == "finish" else -v[gp], gp))
+    return {int(gp): i + 1 for i, gp in enumerate(order)}
+
+
+def place_shifts(places: dict[int, int]) -> dict[int, int]:
+    """Places gained (+) or lost (−) versus grid order: P2 sorted 1st -> +1, P1 sorted 2nd -> −1.
+    Compared with each slot's order among the slots with data, so a slot with no starts shifts nothing."""
+    return {gp: i + 1 - places[gp] for i, gp in enumerate(sorted(places))}
 
 
 def grid_figure(stats: pd.DataFrame, metric: str, selected: int) -> go.Figure:
     vals = stats[metric]
-    medals = medal_ranks(vals, metric)
+    places = metric_places(vals, metric)
+    shifts = place_shifts(places)
     lo, hi = np.nanmin(vals), np.nanmax(vals)
     if metric == "finish":
         norm = lambda v: (hi - v) / (hi - lo) if hi > lo else 0.5  # noqa: E731  lower finish = darker
@@ -309,19 +313,21 @@ def grid_figure(stats: pd.DataFrame, metric: str, selected: int) -> go.Figure:
                                 f"L {x_front},{yc - slot_h / 2 - 0.04} L {x_front - 0.14},{yc - slot_h / 2 - 0.04}"))
         shapes.append(dict(type="rect", x0=xc - slot_w / 2, x1=xc + slot_w / 2, y0=yc - slot_h / 2,
                            y1=yc + slot_h / 2, fillcolor=fill, layer="below",
-                           line=dict(color=F1_RED if gp == selected else fill, width=4 if gp == selected else 0)))
-        if gp in medals:   # gold / silver / bronze border just inside the slot, within the red selection edge
-            inset = 0.06
-            shapes.append(dict(type="rect", x0=xc - slot_w / 2 + inset, x1=xc + slot_w / 2 - inset,
-                               y0=yc - slot_h / 2 + inset, y1=yc + slot_h / 2 - inset, layer="below",
-                               fillcolor="rgba(0,0,0,0)", line=dict(color=MEDALS[medals[gp]][0], width=3)))
+                           line=dict(color=F1_RED if gp == selected else fill, width=2 if gp == selected else 0)))
         dark = has and norm(v) > 0.45
+        txt_color = "#ffffff" if (dark or not has) else "#0b0b0b"
         xs.append(xc); ys.append(yc)
         texts.append(f"<b>P{gp}</b><br>{fmt_metric(metric, v)}")
-        colors_txt.append("#ffffff" if (dark or not has) else "#0b0b0b")
-        medal = f"<br>{MEDALS[medals[gp]][1]}: #{medals[gp]} for {METRICS[metric]}" if gp in medals else ""
+        colors_txt.append(txt_color)
+        shift = shifts.get(gp, 0)
+        if shift:   # places gained / lost when sorted on the metric, small in the slot's bottom-right corner
+            fig.add_annotation(x=xc + slot_w / 2 - 0.04, y=yc - slot_h / 2 + 0.03, xanchor="right",
+                               yanchor="bottom", showarrow=False, text=f"{shift:+d}".replace("-", "−"),
+                               font=dict(size=9, color=txt_color))
+        place = (f"<br>Sorted by {METRICS[metric]}: #{places[gp]}"
+                 + (f" ({shift:+d})".replace("-", "−") if shift else "")) if gp in places else ""
         custom.append([gp, fmt_metric("win", stats.at[gp, "win"]), fmt_metric("podium", stats.at[gp, "podium"]),
-                       fmt_metric("finish", stats.at[gp, "finish"]), 0 if pd.isna(r) else int(r), medal])
+                       fmt_metric("finish", stats.at[gp, "finish"]), 0 if pd.isna(r) else int(r), place])
     fig.add_trace(go.Scatter(
         x=xs, y=ys, mode="markers+text", text=texts, textfont=dict(color=colors_txt, size=12),
         marker=dict(size=46, symbol="square", color="rgba(0,0,0,0.01)"),
@@ -353,19 +359,16 @@ with g_left:
                     config={"displayModeBar": False})
     st.segmented_control("Colour the grid by", list(METRICS), key="metric", format_func=METRICS.get,
                          required=True, width="stretch")
-    swatch = "display:inline-block;width:13px;height:13px;border:3px solid {};border-radius:2px;" \
-             "vertical-align:-2px;margin:0 3px 0 10px"
     st.markdown(
-        f"<span style='color:{MUTED};font-size:0.9em'>"
-        + "".join(f"<span style='{swatch.format(c)}'></span>{name}" for c, name in MEDALS.values())
-        + f"&nbsp;&nbsp;= best three slots for {METRICS[metric]} (ties share a medal)</span>",
+        f"<span style='color:{MUTED};font-size:0.9em'>Corner +/− = places a slot moves up or down when the "
+        f"grid is sorted by {METRICS[metric]} (ties keep grid order; blank = same place)</span>",
         unsafe_allow_html=True)
 
 with g_right:
     gp = st.session_state.grid
     row = stats.loc[gp]
-    rank_vals = stats[metric].dropna().sort_values(ascending=(metric == "finish"))
-    rank = list(rank_vals.index).index(gp) + 1 if gp in rank_vals.index else None
+    places = metric_places(stats[metric], metric)
+    rank = places.get(gp)
     with st.container(border=True):
         st.caption("Details · click a grid slot")
         st.markdown(f"## P{gp} · {track}")
@@ -373,7 +376,7 @@ with g_right:
             st.info(f"No race at {track} has started from P{gp} in this data.")
         else:
             st.write(f"Starting P{gp} at {track}, drivers won **{row['win']:.0%}** of races and reached the "
-                     f"podium **{row['podium']:.0%}** of the time. Ranked **#{rank}** of {len(rank_vals)} "
+                     f"podium **{row['podium']:.0%}** of the time. Ranked **#{rank}** of {len(places)} "
                      f"slots on {METRICS[metric]}.")
             m1, m2 = st.columns(2)
             m1.metric("Win %", f"{row['win']:.0%}")
@@ -416,7 +419,6 @@ is_lap = sector == 0
 race_all = race_laps(track, season)
 tyre_counts = race_all.compound.value_counts()
 tyre_opts = ["All"] + [c for c in COMPOUNDS if c in tyre_counts.index]
-dots = TYRE_DOT_2018 if season == 2018 else TYRE_DOT
 if st.session_state.tyre not in tyre_opts:      # e.g. switched to a race without that compound
     st.session_state.tyre = "All"
 tyre = st.session_state.tyre
@@ -521,18 +523,19 @@ with m_left:
     if gaps:
         best = min(gaps, key=gaps.get)
         gap = gaps[best]
-        k3.metric(f"{best} vs field (median)" if len(gaps) == 1 else f"Quickest of {len(gaps)}: {best}",
-                  f"{gap:+.3f}s", delta=f"{abs(gap):.3f}s {'faster' if gap < 0 else 'slower'}",
-                  delta_color="normal" if gap < 0 else "inverse")
+        # one value only, coloured green (faster) or red (slower) via the container's CSS key
+        with k3.container(key="gap_faster" if gap < 0 else "gap_slower"):
+            st.metric(f"{best} vs field (median)" if len(gaps) == 1 else f"Quickest of {len(gaps)}: {best}",
+                      f"{abs(gap):.3f}s {'faster' if gap < 0 else 'slower'}")
     else:
         k3.metric("Driver vs field", "–")
 
 with m_right:
-    tyre_title = "" if tyre == "All" else f" · {dots.get(tyre, '')} {tyre} tyres"
+    tyre_title = "" if tyre == "All" else f" · {tyre} tyres"
     st.markdown(f"**Time distribution · {track} {season} · {SECTORS[sector]}{tyre_title}**", help=HELP["dist"])
     st.segmented_control(
         "Tyre", tyre_opts, key="tyre", required=True, width="stretch",
-        format_func=lambda c: "All" if c == "All" else f"{dots.get(c, '')} {'Inter' if c == 'Intermediate' else c}")
+        format_func=lambda c: "Inter" if c == "Intermediate" else c)
     st.caption("Clean laps per tyre: " + " · ".join(f"{c} {tyre_counts[c]:,}" for c in tyre_opts[1:]))
     fig = go.Figure()
     if len(ft):
