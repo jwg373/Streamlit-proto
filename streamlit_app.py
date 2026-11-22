@@ -299,7 +299,6 @@ def grid_figure(stats: pd.DataFrame, metric: str, selected: int) -> go.Figure:
     shapes.append(dict(type="line", x0=-cols, x1=front_x + 0.2, y0=0.5, y1=0.5, layer="below",
                        line=dict(color="rgba(244,244,240,.35)", width=1.5, dash="dash")))
     xs, ys, texts, colors_txt, custom = [], [], [], [], []
-    bx, by, btext, bcolor, bslot = [], [], [], [], []      # +/- badges
     for gp in range(1, GRID_SLOTS + 1):
         col, even = (gp - 1) // 2, gp % 2 == 0
         xc = front_x - col - (0.5 if even else 0) - slot_w / 2
@@ -322,19 +321,21 @@ def grid_figure(stats: pd.DataFrame, metric: str, selected: int) -> go.Figure:
         colors_txt.append(txt_color)
         shift = shifts.get(gp, 0)
         if shift:   # places gained / lost when sorted on the metric: a small badge in the bottom-right corner
-            bx.append(xc + slot_w / 2 - 0.13); by.append(yc - slot_h / 2 + 0.14)
-            btext.append(f"{shift:+d}".replace("-", "−")); bcolor.append(GAIN if shift > 0 else LOSS)
-            bslot.append([gp])
+            # sized and offset in pixels from the box corner, so it stays inside however wide the grid is drawn
+            label = f"{shift:+d}".replace("-", "−")
+            w = 13 if abs(shift) < 10 else 17      # a slightly wider oval for two digits
+            right, bottom = xc + slot_w / 2, yc - slot_h / 2
+            shapes.append(dict(type="circle", xref="x", yref="y", layer="above",
+                               xsizemode="pixel", ysizemode="pixel", xanchor=right, yanchor=bottom,
+                               x0=-2 - w, x1=-2, y0=2, y1=15, fillcolor=GAIN if shift > 0 else LOSS,
+                               line=dict(width=0)))
+            fig.add_annotation(x=right, y=bottom, text=label, showarrow=False, xanchor="center",
+                               yanchor="middle", xshift=-2 - w / 2, yshift=8.5,
+                               font=dict(size=8, color="#ffffff"))
         place = (f"<br>Sorted by {METRICS[metric]}: #{places[gp]}"
                  + (f" ({shift:+d})".replace("-", "−") if shift else "")) if gp in places else ""
         custom.append([gp, fmt_metric("win", stats.at[gp, "win"]), fmt_metric("podium", stats.at[gp, "podium"]),
                        fmt_metric("finish", stats.at[gp, "finish"]), 0 if pd.isna(r) else int(r), place])
-    # badges carry their slot number, so clicking a badge selects its slot (no tooltip of their own)
-    fig.add_trace(go.Scatter(
-        x=bx, y=by, mode="markers+text", text=btext, customdata=bslot, hoverinfo="none", showlegend=False,
-        marker=dict(size=17, symbol="circle", color=bcolor, line=dict(color="#ffffff", width=1)),
-        textfont=dict(color="#ffffff", size=9),
-    ))
     fig.add_trace(go.Scatter(
         x=xs, y=ys, mode="markers+text", text=texts, textfont=dict(color=colors_txt, size=12),
         marker=dict(size=46, symbol="square", color="rgba(0,0,0,0.01)"),
@@ -637,3 +638,17 @@ with m_right:
 st.caption("Data: all via FastF1. Race results through its Jolpica-F1 (Ergast) interface, lap/sector timing "
            "and car positions from F1 live timing, track outline and corners from MultiViewer. Grid, maps and "
            "every clean race lap are pre-built by `scripts/build_data.py`. Prototype for DS 511.")
+
+# Plotly's click-to-select uses the point under the last *hover*. Each rerun redraws the charts, so a click
+# or tap with no mouse movement first (touchscreens) selected nothing until the second try. Sending the chart
+# a hover at the pointer just before each press makes the first click count.
+st.html("""<script>
+if (!window.__f1HoverBeforeClick) {
+  window.__f1HoverBeforeClick = true;
+  document.addEventListener("pointerdown", (e) => {
+    const drag = e.target.closest && e.target.closest(".js-plotly-plot .nsewdrag");
+    if (drag) drag.dispatchEvent(new MouseEvent("mousemove",
+        {clientX: e.clientX, clientY: e.clientY, bubbles: true}));
+  }, true);
+}
+</script>""", unsafe_allow_javascript=True)
