@@ -323,15 +323,16 @@ def grid_figure(stats: pd.DataFrame, metric: str, selected: int) -> go.Figure:
         if shift:   # places gained / lost when sorted on the metric: a small badge in the bottom-right corner
             # sized and offset in pixels from the box corner, so it stays inside however wide the grid is drawn
             label = f"{shift:+d}".replace("-", "−")
-            w = 13 if abs(shift) < 10 else 17      # a slightly wider oval for two digits
+            d, inset = 17, 2                       # badge height and gap from the box edges (px)
+            w = d if abs(shift) < 10 else d + 5    # a slightly wider oval for two digits
             right, bottom = xc + slot_w / 2, yc - slot_h / 2
             shapes.append(dict(type="circle", xref="x", yref="y", layer="above",
                                xsizemode="pixel", ysizemode="pixel", xanchor=right, yanchor=bottom,
-                               x0=-2 - w, x1=-2, y0=2, y1=15, fillcolor=GAIN if shift > 0 else LOSS,
-                               line=dict(width=0)))
-            fig.add_annotation(x=right, y=bottom, text=label, showarrow=False, xanchor="center",
-                               yanchor="middle", xshift=-2 - w / 2, yshift=8.5,
-                               font=dict(size=8, color="#ffffff"))
+                               x0=-inset - w, x1=-inset, y0=inset, y1=inset + d,
+                               fillcolor=GAIN if shift > 0 else LOSS, line=dict(width=0)))
+            fig.add_annotation(x=right, y=bottom, text=f"<b>{label}</b>", showarrow=False, xanchor="center",
+                               yanchor="middle", xshift=-inset - w / 2, yshift=inset + d / 2,
+                               font=dict(size=10, color="#ffffff"))
         place = (f"<br>Sorted by {METRICS[metric]}: #{places[gp]}"
                  + (f" ({shift:+d})".replace("-", "−") if shift else "")) if gp in places else ""
         custom.append([gp, fmt_metric("win", stats.at[gp, "win"]), fmt_metric("podium", stats.at[gp, "podium"]),
