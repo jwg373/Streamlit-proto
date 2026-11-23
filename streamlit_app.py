@@ -26,7 +26,12 @@ SECTORS = {0: "Full lap", 1: "Sector 1", 2: "Sector 2", 3: "Sector 3"}
 # palette (validated categorical slots + one-hue blue ramp)
 BLUE, ORANGE, F1_RED = "#2a78d6", "#eb6834", "#e10600"
 SEQ_LO, SEQ_HI = (205, 226, 251), (13, 54, 107)
-SECTOR_COLORS = {1: "#2a78d6", 2: "#1baf7a", 3: "#6250d6"}
+# High-contrast sector colors (matching F1 official style, distinct from the red start/finish marker)
+SECTOR_COLORS = {
+    1: "#FF4D8D",  # Pink / Magenta (Sector 1)
+    2: "#F5C518",  # Yellow (Sector 2)
+    3: "#38BDF8",  # Sky Blue (Sector 3)
+}
 ASPHALT, PAINT, MUTED = "#3b3b39", "#f4f4f0", "#898781"
 GAIN, LOSS = "#1a9e5c", "#d93a2b"   # faster / slower than the field
 # one colour per compared driver (neither is the field's blue); more than two curves gets too busy
@@ -206,10 +211,8 @@ def on_track_change() -> None:
     st.session_state.nonce += 1
 
 
-@st.dialog("F1 Primer")
-def primer() -> None:
-    st.markdown(
-        """
+PRIMER_TEXT = {
+    "English": """
 **Grid position**: where a driver starts the race. P1 (*pole position*) is the front of the
 grid, earned with the fastest qualifying lap. Cars line up in two staggered columns.
 
@@ -224,8 +227,54 @@ shows where on the lap a driver gains or loses time.
 
 **Time distribution**: how lap or sector times are spread across the field. Only clean
 race laps are used (no lap 1, pit laps, safety-car laps or other slow laps).
-        """
-    )
+    """,
+    "Español": """
+**Posición de salida (Grid position)**: lugar desde el que parte un piloto. P1 (*pole position*)
+es el primer puesto de la parrilla, obtenido con la vuelta más rápida en clasificación. Los
+coches se alinean en dos columnas escalonadas.
+
+**% de victorias / % de podios (Win % / Podium %)**: porcentaje de carreras ganadas (o
+terminadas en el top 3) por pilotos que salieron desde esa posición en este circuito.
+
+**Posición media final (Average finish)**: posición promedio al terminar desde ese puesto
+(cuanto más baja, mejor). Los abandonos cuentan según su posición clasificada.
+
+**Sectores (Sectors)**: cada circuito se divide en tres sectores cronometrados. Comparar
+los tiempos por sector muestra en qué parte de la vuelta un piloto gana o pierde tiempo.
+
+**Distribución de tiempos (Time distribution)**: cómo se distribuyen los tiempos de vuelta
+o sector en toda la parrilla. Solo se usan vueltas limpias (sin vuelta 1, paradas en boxes,
+coche de seguridad ni otras vueltas lentas).
+    """,
+    "中文": """
+**发车位 (Grid position)**：车手在正赛开始时的起跑位置。P1（*杆位 / pole position*）是
+最靠前的位置，由排位赛最快单圈获得。赛车按两列交错排布发车。
+
+**胜率 / 领奖台率 (Win % / Podium %)**：在该赛道从这一发车位起步的车手，最终夺冠（或
+进入前三名登上领奖台）的比赛占比。
+
+**平均完赛名次 (Average finish)**：从该发车位起步的平均最终完赛排名（数字越小越好）。
+中途退赛的车手按官方最终排位计入。
+
+**赛段 (Sectors)**：每条赛道都被划分为三个计时赛段。对比各赛段用时可以看出车手在单圈
+的哪一段拉开或损失了时间。
+
+**圈速分布 (Time distribution)**：全场车手单圈或赛段用时的分布情况。统计仅保留“干净
+圈”（已剔除第 1 圈、进出维修区、安全车及其他异常慢圈）。
+    """,
+}
+
+
+@st.dialog("F1 Primer")
+def primer() -> None:
+    # Default to English; fallback to English if the active pill is clicked again
+    lang = st.segmented_control(
+        "Language",
+        options=list(PRIMER_TEXT.keys()),
+        default="English",
+        label_visibility="collapsed",
+    ) or "English"
+    st.markdown(PRIMER_TEXT[lang])
 
 
 # --------------------------------------------------------------------------- header
@@ -476,6 +525,15 @@ def track_figure(track: str, sector: int) -> go.Figure:
                            f"<br>Fastest: {fmt_time(field_stat(track, season, f's{s}', 'fastest', tyre), False)}"
                            "<br>Click to select<extra></extra>"),
         ))
+        # Place S1/S2/S3 badge at the sector midpoint, synced with active/dimmed state
+        mid = part.iloc[len(part) // 2]
+        badge_color = SECTOR_COLORS[s] if on else MUTED
+        fig.add_annotation(
+            x=mid.x, y=mid.y, text=f"<b>S{s}</b>", showarrow=False,
+            font=dict(size=11, color=badge_color),
+            bgcolor="rgba(14, 17, 23, 0.85)", bordercolor=badge_color,
+            borderwidth=1, borderpad=2, opacity=1 if on else 0.45,
+        )
     xy = tm[["x", "y"]].to_numpy(float)
     span = max(np.ptp(xy[:, 0]), np.ptp(xy[:, 1]))
     start = tm.iloc[0]
@@ -635,6 +693,63 @@ with m_right:
                "drivers (lap 1, pit in/out laps, "
                "laps under a safety car, VSC or yellow flag, and laps slower than 107% of the race's fastest lap "
                "are removed).")
+
+
+# NEW PLOT: Top 10 fastest drivers for the current track, season, segment, and tyre selection
+if not rl.empty:
+    top10 = rl.groupby("driver", as_index=False)[col].min().nsmallest(10, col)
+    best_t = float(top10[col].iloc[0])
+    top10["gap"] = top10[col] - best_t
+    top10["label"] = top10["driver"].map(lambda d: labels.get(d, d))
+    top10["text"] = [
+        f"<b>{fmt_time(t, is_lap)} (fastest)</b>" if (g == 0 and d in drv_color)
+        else f"{fmt_time(t, is_lap)} (fastest)" if g == 0
+        else f"<b>+{g:.3f}s ({fmt_time(t, is_lap)})</b>" if d in drv_color
+        else f"+{g:.3f}s ({fmt_time(t, is_lap)})"
+        for d, t, g in zip(top10["driver"], top10[col], top10["gap"])
+    ]
+    # Highlight drivers selected in the comparison picker; use neutral blue/light text for others
+    bar_colors = [drv_color.get(d, "#9ec5f4") for d in top10["driver"]]
+    text_colors = [drv_color.get(d, "#e5e5e0") for d in top10["driver"]]
+    y_ticktext = [
+        f"<span style='color:{drv_color[d]}'><b>{lbl}</b></span>" if d in drv_color else lbl
+        for d, lbl in zip(top10["driver"], top10["label"])
+    ]
+
+    st.markdown(f"**Top 10 fastest drivers · {track} {season} · {SECTORS[sector]}{tyre_title}**")
+    fig_top = go.Figure(go.Bar(
+        x=top10["gap"],
+        y=top10["label"],
+        orientation="h",
+        marker_color=bar_colors,
+        text=top10["text"],
+        textposition="outside",
+        textfont=dict(color=text_colors),
+        cliponaxis=False,
+        customdata=np.stack([[fmt_time(t, is_lap) for t in top10[col]], top10["gap"]], axis=1),
+        hovertemplate="<b>%{y}</b><br>Best: %{customdata[0]} (+%{customdata[1]:.3f}s)<extra></extra>",
+    ))
+    max_gap = float(top10["gap"].max())
+    fig_top.update_layout(
+        height=340,
+        margin=dict(l=8, r=130, t=8, b=8),
+        dragmode=False,
+        paper_bgcolor="rgba(0,0,0,0)",
+        plot_bgcolor="rgba(0,0,0,0)",
+        xaxis=dict(
+            title_text="Gap to fastest (s) →",
+            range=[0, max(max_gap * 1.3, 0.1)],  # keep a true 0 baseline with room for outside labels
+            ticksuffix="s",
+        ),
+        yaxis=dict(
+            autorange="reversed",  # fastest driver at the top
+            title_text="",
+            tickmode="array",
+            tickvals=top10["label"],
+            ticktext=y_ticktext,
+        ),
+    )
+    st.plotly_chart(fig_top, key="top10", use_container_width=True, config={"displayModeBar": False})
 
 st.caption("Data: all via FastF1. Race results through its Jolpica-F1 (Ergast) interface, lap/sector timing "
            "and car positions from F1 live timing, track outline and corners from MultiViewer. Grid, maps and "
