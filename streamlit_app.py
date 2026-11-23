@@ -302,7 +302,11 @@ seasons_grid = GRID.loc[GRID.track == track, "season"]
 
 c1, c3 = st.columns([3.8, 1.2], vertical_alignment="bottom")
 with c1:
-    st.markdown("### <span class='badge'>1</span>Grid Explorer", unsafe_allow_html=True, help=HELP["grid"])
+    st.markdown(
+        "<span style='font-size:1.65rem;font-weight:700;line-height:1.2'>"
+        "<span class='badge'>1</span>Grid Explorer</span>",
+        unsafe_allow_html=True, help=HELP["grid"], width="content",
+    )
 with c3:
     st.button("Reset grid ↺", key="reset_grid", on_click=reset, args=("metric", "grid"),
               use_container_width=True)
@@ -460,8 +464,11 @@ if st.session_state.season not in lap_seasons:
 
 s1c, s2c, s3c, s4c = st.columns([2.0, 0.9, 2.6, 1.1], vertical_alignment="bottom")
 with s1c:
-    st.markdown("### <span class='badge'>2</span>Segment Explorer", unsafe_allow_html=True,
-                help=HELP["segment"])
+    st.markdown(
+        "<span style='font-size:1.65rem;font-weight:700;line-height:1.2'>"
+        "<span class='badge'>2</span>Segment Explorer</span>",
+        unsafe_allow_html=True, help=HELP["segment"], width="content",
+    )
 with s2c:
     st.selectbox("Season", lap_seasons, key="season")
 with s3c:
