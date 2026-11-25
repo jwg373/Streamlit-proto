@@ -709,43 +709,82 @@ if not rl.empty:
     top10["gap"] = top10[col] - best_t
     top10["label"] = top10["driver"].map(lambda d: labels.get(d, d))
     top10["text"] = [
-        f"<b>{fmt_time(t, is_lap)} (fastest)</b>" if (g == 0 and d in drv_color)
+        f"<span style='color:{drv_color[d]}'><b>{fmt_time(t, is_lap)} (fastest)</b></span>" if (g == 0 and d in drv_color)
         else f"{fmt_time(t, is_lap)} (fastest)" if g == 0
-        else f"<b>+{g:.3f}s ({fmt_time(t, is_lap)})</b>" if d in drv_color
+        else f"<span style='color:{drv_color[d]}'><b>+{g:.3f}s ({fmt_time(t, is_lap)})</b></span>" if d in drv_color
         else f"+{g:.3f}s ({fmt_time(t, is_lap)})"
         for d, t, g in zip(top10["driver"], top10[col], top10["gap"])
     ]
-    # Highlight drivers selected in the comparison picker; use neutral blue/light text for others
+    # Highlight drivers selected in the comparison picker; use neutral blue for others
     bar_colors = [drv_color.get(d, "#9ec5f4") for d in top10["driver"]]
-    text_colors = [drv_color.get(d, "#e5e5e0") for d in top10["driver"]]
     y_ticktext = [
         f"<span style='color:{drv_color[d]}'><b>{lbl}</b></span>" if d in drv_color else lbl
         for d, lbl in zip(top10["driver"], top10["label"])
     ]
 
-    st.markdown(f"**Top 10 fastest drivers · {track} {season} · {SECTORS[sector]}{tyre_title}**")
-    fig_top = go.Figure(go.Bar(
+    max_gap = float(top10["gap"].max())
+    x_max = max(max_gap * 1.3, 0.1)
+    top10_key = f"top10_{st.session_state.get('top10_nonce', 0)}"
+
+    def on_top10_click() -> None:
+        pts = st.session_state.get(top10_key, {}).get("selection", {}).get("points", [])
+        if not pts:
+            return
+        cd = pts[0].get("customdata")
+        if not cd or len(cd) < 3:
+            return
+        drv = cd[2]
+        cur = list(st.session_state.drivers)
+        if drv in cur:
+            cur.remove(drv)                    # click again to deselect
+        elif len(cur) < MAX_DRIVERS:
+            cur.append(drv)
+        else:
+            cur = cur[1:] + [drv]              # when full, replace the oldest selection
+        st.session_state.drivers = cur
+        st.session_state.top10_nonce = st.session_state.get("top10_nonce", 0) + 1
+
+    st.markdown(
+        f"**Top 10 fastest drivers · {track} {season} · {SECTORS[sector]}{tyre_title}**  "
+        f"<span style='color:{MUTED}'>click a bar to compare</span>",
+        unsafe_allow_html=True,
+    )
+    fig_top = go.Figure()
+    # Visible bars encoding true gap from 0s
+    fig_top.add_trace(go.Bar(
         x=top10["gap"],
         y=top10["label"],
         orientation="h",
         marker_color=bar_colors,
         text=top10["text"],
         textposition="outside",
-        textfont=dict(color=text_colors),
         cliponaxis=False,
-        customdata=np.stack([[fmt_time(t, is_lap) for t in top10[col]], top10["gap"]], axis=1),
-        hovertemplate="<b>%{y}</b><br>Best: %{customdata[0]} (+%{customdata[1]:.3f}s)<extra></extra>",
+        hoverinfo="skip",
     ))
-    max_gap = float(top10["gap"].max())
+    # Invisible hit-area bars so the 0s fastest row and narrow bars are easy to click
+    fig_top.add_trace(go.Bar(
+        x=np.maximum(top10["gap"], x_max * 0.22),
+        y=top10["label"],
+        orientation="h",
+        marker_color="rgba(0,0,0,0)",
+        customdata=np.stack(
+            [[fmt_time(t, is_lap) for t in top10[col]], top10["gap"], top10["driver"]],
+            axis=1,
+        ),
+        hovertemplate="<b>%{y}</b><br>Best: %{customdata[0]} (+%{customdata[1]:.3f}s)<br>Click to toggle<extra></extra>",
+    ))
     fig_top.update_layout(
         height=340,
         margin=dict(l=8, r=130, t=8, b=8),
+        barmode="overlay",
         dragmode=False,
+        clickmode="event+select",
+        showlegend=False,
         paper_bgcolor="rgba(0,0,0,0)",
         plot_bgcolor="rgba(0,0,0,0)",
         xaxis=dict(
             title_text="Gap to fastest (s) →",
-            range=[0, max(max_gap * 1.3, 0.1)],  # keep a true 0 baseline with room for outside labels
+            range=[0, x_max],  # keep a true 0 baseline with room for outside labels
             ticksuffix="s",
         ),
         yaxis=dict(
@@ -756,7 +795,14 @@ if not rl.empty:
             ticktext=y_ticktext,
         ),
     )
-    st.plotly_chart(fig_top, key="top10", use_container_width=True, config={"displayModeBar": False})
+    st.plotly_chart(
+        fig_top,
+        key=top10_key,
+        on_select=on_top10_click,
+        selection_mode="points",
+        use_container_width=True,
+        config={"displayModeBar": False},
+    )
 
 st.caption("Data: all via FastF1. Race results through its Jolpica-F1 (Ergast) interface, lap/sector timing "
            "and car positions from F1 live timing, track outline and corners from MultiViewer. Grid, maps and "
